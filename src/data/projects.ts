@@ -11,6 +11,7 @@ import carmel2_7 from "@/assets/projects/carmel-2-7.jpg";
 import carmel2_8 from "@/assets/projects/carmel-2-8.jpg";
 import carmel2_9 from "@/assets/projects/carmel-2-9.jpg";
 import carmel2_10 from "@/assets/projects/carmel-2-10.jpg";
+import hillsideCover from "@/assets/projects/hillside-cover.jpg";
 import project1 from "@/assets/projects/2_After.jpg";
 import project2 from "@/assets/projects/4_After.jpg";
 import project3 from "@/assets/projects/5_After.jpg";
@@ -88,8 +89,8 @@ export const projects: Project[] = [
     location: "Monterey Peninsula, CA",
     category: "Commercial",
     description: "A comprehensive restoration project that revitalizes a hillside property while preserving its architectural integrity and enhancing its connection to the dramatic coastal landscape.",
-    image: project3,
-    images: [project3],
+    image: hillsideCover,
+    images: [hillsideCover],
   },
   {
     id: "commercial-finish-lds-churches",
