@@ -135,7 +135,7 @@ export const projects: Project[] = [
     id: "laguna-grande-design-build",
     title: "Laguna Grande Design Build",
     location: "Seaside, CA",
-    category: "Residential",
+    category: "Commercial",
     description: "A complete design-build project that delivers custom solutions from concept through completion, featuring modern amenities and quality construction throughout.",
     image: lagunaGrandeCover,
     images: [lagunaGrandeCover, laguna2, laguna4, laguna5, laguna6, laguna1, laguna3],
