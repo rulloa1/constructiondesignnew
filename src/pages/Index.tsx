@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { VideoHero } from "@/components/VideoHero";
+import { CategoryShowcase } from "@/components/CategoryShowcase";
+import { DesignDevelopment } from "@/components/DesignDevelopment";
 import { PortfolioGrid } from "@/components/PortfolioGrid";
 import { MusicPlayer } from "@/components/MusicPlayer";
 import { About } from "@/components/About";
@@ -9,22 +11,36 @@ import { Chatbot } from "@/components/Chatbot";
 
 const Index: React.FC = () => {
   const [showPortfolio, setShowPortfolio] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+
+  const handleViewProjects = (category: string) => {
+    setSelectedCategory(category);
+    setShowPortfolio(true);
+  };
+
+  const handleClosePortfolio = () => {
+    setShowPortfolio(false);
+    setSelectedCategory("All");
+  };
 
   return (
     <div className="min-h-screen">
       <MusicPlayer />
       
       {!showPortfolio ? (
-        <VideoHero onOpenPortfolio={() => setShowPortfolio(true)} />
-      ) : (
         <>
-          <PortfolioGrid onClose={() => setShowPortfolio(false)} />
-          <main>
-            <About />
-            <Contact />
-          </main>
+          <VideoHero onOpenPortfolio={() => setShowPortfolio(true)} />
+          <CategoryShowcase onViewProjects={handleViewProjects} />
+          <DesignDevelopment />
+          <About />
+          <Contact />
           <Footer />
         </>
+      ) : (
+        <PortfolioGrid 
+          onClose={handleClosePortfolio}
+          initialCategory={selectedCategory}
+        />
       )}
       
       <Chatbot />

@@ -66,10 +66,11 @@ const categoryColors = {
 
 interface PortfolioGridProps {
   onClose: () => void;
+  initialCategory?: string;
 }
 
-export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onClose }) => {
-  const [selectedCategory, setSelectedCategory] = useState<Category>("All");
+export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onClose, initialCategory = "All" }) => {
+  const [selectedCategory, setSelectedCategory] = useState<Category>(initialCategory as Category);
   const [isClosing, setIsClosing] = useState(false);
 
   const filteredProjects = selectedCategory === "All" 
