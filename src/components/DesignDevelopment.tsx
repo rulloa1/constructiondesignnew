@@ -1,7 +1,9 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
-import developmentImg2 from "@/assets/design-development-2.jpg";
-import developmentImg3 from "@/assets/design-development-3.jpg";
+import developmentImg1 from "@/assets/projects/1_Before.jpg";
+import developmentImg2 from "@/assets/projects/2_After.jpg";
+import developmentImg3 from "@/assets/projects/3_Before.jpg";
+import developmentImg4 from "@/assets/projects/4_After.jpg";
 
 const processSteps = [
   {
@@ -48,21 +50,55 @@ export const DesignDevelopment: React.FC = () => {
           </p>
         </div>
 
-        {/* Image gallery */}
+        {/* Before & After Gallery */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           <div className="opacity-0 animate-fade-in delay-200">
-            <img
-              src={developmentImg2}
-              alt="Construction in progress"
-              className="w-full h-96 object-cover rounded-sm hover-lift"
-            />
+            <div className="relative">
+              <span className="absolute top-4 left-4 bg-charcoal/80 text-cream px-3 py-1 rounded-sm text-sm font-medium z-10">
+                Before
+              </span>
+              <img
+                src={developmentImg1}
+                alt="Project before renovation"
+                className="w-full h-96 object-cover rounded-sm hover-lift"
+              />
+            </div>
           </div>
           <div className="opacity-0 animate-fade-in delay-300">
-            <img
-              src={developmentImg3}
-              alt="Material selection and design consultation"
-              className="w-full h-96 object-cover rounded-sm hover-lift"
-            />
+            <div className="relative">
+              <span className="absolute top-4 left-4 bg-gold text-charcoal px-3 py-1 rounded-sm text-sm font-medium z-10">
+                After
+              </span>
+              <img
+                src={developmentImg2}
+                alt="Project after renovation"
+                className="w-full h-96 object-cover rounded-sm hover-lift"
+              />
+            </div>
+          </div>
+          <div className="opacity-0 animate-fade-in delay-400">
+            <div className="relative">
+              <span className="absolute top-4 left-4 bg-charcoal/80 text-cream px-3 py-1 rounded-sm text-sm font-medium z-10">
+                Before
+              </span>
+              <img
+                src={developmentImg3}
+                alt="Project before transformation"
+                className="w-full h-96 object-cover rounded-sm hover-lift"
+              />
+            </div>
+          </div>
+          <div className="opacity-0 animate-fade-in delay-500">
+            <div className="relative">
+              <span className="absolute top-4 left-4 bg-gold text-charcoal px-3 py-1 rounded-sm text-sm font-medium z-10">
+                After
+              </span>
+              <img
+                src={developmentImg4}
+                alt="Project after transformation"
+                className="w-full h-96 object-cover rounded-sm hover-lift"
+              />
+            </div>
           </div>
         </div>
 

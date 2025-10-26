@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
-import project5 from "@/assets/project-5.jpg";
-import project6 from "@/assets/project-6.jpg";
+import project1 from "@/assets/projects/2_After.jpg";
+import project2 from "@/assets/projects/4_After.jpg";
+import project3 from "@/assets/projects/5_After.jpg";
+import project4 from "@/assets/projects/IMGP1302.jpg";
+import project5 from "@/assets/projects/IMGP1303.jpg";
+import project6 from "@/assets/projects/IMGP1305.jpg";
 
 type Category = "All" | "Residential" | "Commercial" | "Hospitality";
 
