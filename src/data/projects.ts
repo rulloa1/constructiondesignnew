@@ -39,6 +39,16 @@ import lds6 from "@/assets/projects/lds-6.jpg";
 import lds7 from "@/assets/projects/lds-7.jpg";
 import lds8 from "@/assets/projects/lds-8.jpg";
 import lds9 from "@/assets/projects/lds-9.jpg";
+import lds10 from "@/assets/projects/lds-10.jpg";
+import lds11 from "@/assets/projects/lds-11.jpg";
+import lds12 from "@/assets/projects/lds-12.jpg";
+import lds13 from "@/assets/projects/lds-13.jpg";
+import lds14 from "@/assets/projects/lds-14.jpg";
+import lds15 from "@/assets/projects/lds-15.jpg";
+import lds16 from "@/assets/projects/lds-16.jpg";
+import lds17 from "@/assets/projects/lds-17.jpg";
+import lds18 from "@/assets/projects/lds-18.jpg";
+import lds19 from "@/assets/projects/lds-19.jpg";
 import project5 from "@/assets/projects/IMGP1303.jpg";
 import project6 from "@/assets/projects/IMGP1305.jpg";
 import lagunaGrandeCover from "@/assets/projects/laguna-cover.jpg";
@@ -129,7 +139,7 @@ export const projects: Project[] = [
     category: "Commercial",
     description: "Specialized commercial finishing work for religious facilities, featuring meticulous attention to detail and high-quality craftsmanship that creates welcoming and inspiring spaces.",
     image: lds7,
-    images: [lds7, lds2, lds3, lds4, lds5, lds6, lds1, lds8, lds9, project4],
+    images: [lds7, lds2, lds3, lds10, lds15, lds4, lds5, lds6, lds1, lds8, lds9, lds11, lds12, lds13, lds14, lds16, lds17, lds18, lds19, project4],
   },
   {
     id: "hillside-cleanup",
