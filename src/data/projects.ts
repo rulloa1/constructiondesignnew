@@ -84,6 +84,8 @@ import bigsur12 from "@/assets/projects/bigsur-12.jpg";
 import bigsur13 from "@/assets/projects/bigsur-13.jpg";
 import bigsur14 from "@/assets/projects/bigsur-14.jpg";
 import bigsur15 from "@/assets/projects/bigsur-15.jpg";
+import carmelValleyCover from "@/assets/projects/carmel-valley-cover.jpg";
+import carmelValley1 from "@/assets/projects/carmel-valley-1.jpg";
 
 // Pacific Grove Design Build album
 import pgCover from "@/assets/projects/pg-12-after.jpg";
@@ -202,6 +204,15 @@ export const projects: Project[] = [
     description: "A spectacular coastal property featuring dramatic ocean views and sophisticated site work, including extensive hillside stabilization and custom driveway construction with stone walls.",
     image: bigsurCover,
     images: [bigsurCover, bigsur1, bigsur2, bigsur3, bigsur4, bigsur5, bigsur6, bigsur7, bigsur8, bigsur9, bigsur10, bigsur11, bigsur12, bigsur13, bigsur14, bigsur15],
+  },
+  {
+    id: "carmel-valley-design-build",
+    title: "Carmel Valley Design Build",
+    location: "Carmel Valley, CA",
+    category: "Design Build",
+    description: "A stunning custom design-build residence featuring elegant architectural details and seamless integration with the natural landscape of Carmel Valley.",
+    image: carmelValleyCover,
+    images: [carmelValleyCover, carmelValley1],
   },
 ];
 
