@@ -36,13 +36,6 @@ const categories = [
     image: designBuildImg,
     color: "gold",
   },
-  {
-    id: "pacific-grove",
-    title: "Pacific Grove Design Build",
-    description: "Complete transformation projects blending traditional character with modern comfort",
-    image: pacificGroveImg,
-    color: "gold",
-  },
 ];
 
 interface CategoryShowcaseProps {
@@ -65,7 +58,7 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({ onViewProjec
         </div>
 
         {/* Categories grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category, index) => (
             <div
               key={category.id}

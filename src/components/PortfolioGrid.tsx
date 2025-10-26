@@ -6,13 +6,12 @@ import { projects, getProjectsByCategory, type ProjectCategory } from "@/data/pr
 
 type Category = "All" | ProjectCategory;
 
-const categories: Category[] = ["All", "Residential", "Commercial", "Hospitality", "Design Build", "Pacific Grove Design Build"];
+const categories: Category[] = ["All", "Residential", "Commercial", "Hospitality", "Design Build"];
 
 const categoryColors: Record<string, string> = {
   Residential: "bg-gold text-charcoal",
   Commercial: "bg-steelBlue text-white",
   Hospitality: "bg-burgundy text-white",
-  "Pacific Grove Design Build": "bg-gold text-charcoal",
   "Design Build": "bg-gold text-charcoal",
 };
 
@@ -21,7 +20,7 @@ interface PortfolioGridProps {
   initialCategory?: string;
 }
 
-export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onClose, initialCategory = "Residential" }) => {
+export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onClose, initialCategory = "All" }) => {
   const [selectedCategory, setSelectedCategory] = useState<Category>(initialCategory as Category);
   const [isClosing, setIsClosing] = useState(false);
 
@@ -64,6 +63,26 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onClose, initialCa
           <p className="font-inter text-muted-foreground text-lg font-light">
             A curated collection of exceptional spaces
           </p>
+        </div>
+
+        {/* Category filters */}
+        <div className="flex flex-wrap justify-center gap-4 mb-16 opacity-0 animate-fade-in delay-200">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`font-inter px-6 py-3 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-gold text-charcoal shadow-lg scale-105'
+                  : 'bg-white text-charcoal hover:bg-gold/10 border border-gold/20'
+              }`}
+            >
+              {category}
+              <span className="ml-2 text-xs opacity-70">
+                ({getCategoryCount(category)})
+              </span>
+            </button>
+          ))}
         </div>
 
 

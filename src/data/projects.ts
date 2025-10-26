@@ -18,7 +18,7 @@ import pgAfter5 from "@/assets/projects/pg-8-after.jpg";
 import pgAfter6 from "@/assets/projects/pg-9-after.jpg";
 import pgAfter7 from "@/assets/projects/pg-10-after.jpg";
 
-export type ProjectCategory = "Residential" | "Commercial" | "Hospitality" | "Pacific Grove Design Build" | "Design Build";
+export type ProjectCategory = "Residential" | "Commercial" | "Hospitality" | "Design Build";
 
 export interface Project {
   id: string;
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     id: "pacific-grove-design-build",
     title: "Pacific Grove Design Build",
     location: "Pacific Grove, CA",
-    category: "Pacific Grove Design Build",
+    category: "Design Build",
     description: "A comprehensive transformation of a historic property, seamlessly blending traditional craftsman character with modern comfort and functionality. This complete design-build project showcases our expertise in preserving neighborhood heritage while creating contemporary living spaces.",
     image: pgAfter1,
     images: [
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     id: "coastal-hillside-restoration",
     title: "Coastal Hillside Restoration",
     location: "Monterey Peninsula, CA",
-    category: "Residential",
+    category: "Commercial",
     description: "A comprehensive restoration project that revitalizes a hillside property while preserving its architectural integrity and enhancing its connection to the dramatic coastal landscape.",
     image: project3,
     images: [project3],
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     id: "hillside-cleanup",
     title: "Hillside Cleanup",
     location: "Monterey Peninsula, CA",
-    category: "Residential",
+    category: "Commercial",
     description: "Comprehensive site preparation and environmental restoration services that transform challenging hillside properties into beautiful, buildable lots.",
     image: project5,
     images: [project5],
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     id: "laguna-grande-design-build",
     title: "Laguna Grande Design Build",
     location: "Seaside, CA",
-    category: "Design Build",
+    category: "Residential",
     description: "A complete design-build project that delivers custom solutions from concept through completion, featuring modern amenities and quality construction throughout.",
     image: project6,
     images: [project6],
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     id: "southcoast-remodel-design-build",
     title: "Southcoast Remodel Design Build",
     location: "South Coast, CA",
-    category: "Design Build",
+    category: "Residential",
     description: "A comprehensive remodel and design-build project that transforms existing spaces into modern, functional, and aesthetically stunning environments.",
     image: project1,
     images: [project1],
