@@ -51,6 +51,14 @@ import lds18 from "@/assets/projects/lds-18.jpg";
 import lds19 from "@/assets/projects/lds-19.jpg";
 import lds20 from "@/assets/projects/lds-20.jpg";
 import lds21 from "@/assets/projects/lds-21.jpg";
+import southcoast1 from "@/assets/projects/southcoast-1.jpg";
+import southcoast2 from "@/assets/projects/southcoast-2.jpg";
+import southcoast3 from "@/assets/projects/southcoast-3.jpg";
+import southcoast4 from "@/assets/projects/southcoast-4.jpg";
+import southcoast5 from "@/assets/projects/southcoast-5.jpg";
+import southcoast6 from "@/assets/projects/southcoast-6.jpg";
+import southcoast7 from "@/assets/projects/southcoast-7.jpg";
+import southcoast8 from "@/assets/projects/southcoast-8.jpg";
 import project5 from "@/assets/projects/IMGP1303.jpg";
 import project6 from "@/assets/projects/IMGP1305.jpg";
 import lagunaGrandeCover from "@/assets/projects/laguna-cover.jpg";
@@ -167,8 +175,8 @@ export const projects: Project[] = [
     location: "South Coast, CA",
     category: "Residential",
     description: "A comprehensive remodel and design-build project that transforms existing spaces into modern, functional, and aesthetically stunning environments.",
-    image: project1,
-    images: [project1],
+    image: southcoast4,
+    images: [southcoast4, southcoast3, southcoast1, southcoast2, southcoast5, southcoast6, southcoast7, southcoast8, project1],
   },
 ];
 
