@@ -102,19 +102,19 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onClose, initialCa
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
                 
                 {/* Overlay content */}
-                <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <span className={`inline-block w-fit px-3 py-1 rounded-full text-xs uppercase tracking-wider font-medium mb-3 ${
+                <div className="absolute inset-0 p-6 flex flex-col justify-end transition-all duration-500">
+                  <span className={`inline-block w-fit px-3 py-1 rounded-full text-xs uppercase tracking-wider font-medium mb-3 transition-colors duration-300 ${
                     categoryColors[project.category]
                   }`}>
                     {project.category}
                   </span>
-                  <h3 className="font-playfair text-2xl font-semibold text-cream mb-2">
+                  <h3 className="font-playfair text-2xl font-semibold text-cream group-hover:text-gold mb-2 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="font-inter text-sm text-cream/80 font-light">
+                  <p className="font-inter text-sm text-cream/80 group-hover:text-cream font-light transition-colors duration-300">
                     {project.location}
                   </p>
                 </div>
