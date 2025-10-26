@@ -251,4 +251,60 @@ All colors MUST be HSL.
   .bg-gradient-radial {
     background: radial-gradient(circle, var(--tw-gradient-stops));
   }
+
+  /* Pulse animation */
+  @keyframes pulseSubtle {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.95;
+      transform: scale(1.02);
+    }
+  }
+
+  .animate-pulse-subtle {
+    animation: pulseSubtle 3s ease-in-out infinite;
+  }
+
+  /* Perspective for 3D effects */
+  .perspective-\[2000px\] {
+    perspective: 2000px;
+  }
+
+  /* Page flip animations */
+  @keyframes flipForward {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(-10deg);
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
+  }
+
+  @keyframes flipBackward {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(10deg);
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
+  }
+
+  .animate-flip-forward {
+    animation: flipForward 0.6s ease-in-out;
+    transform-style: preserve-3d;
+  }
+
+  .animate-flip-backward {
+    animation: flipBackward 0.6s ease-in-out;
+    transform-style: preserve-3d;
+  }
 }
