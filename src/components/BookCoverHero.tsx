@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/mc-logo.png";
 
@@ -6,7 +6,7 @@ interface BookCoverHeroProps {
   onOpenBook: () => void;
 }
 
-export const BookCoverHero = ({ onOpenBook }: BookCoverHeroProps) => {
+export const BookCoverHero: React.FC<BookCoverHeroProps> = ({ onOpenBook }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { BookCoverHero } from "@/components/BookCoverHero";
 import { PortfolioGrid } from "@/components/PortfolioGrid";
 import { MusicPlayer } from "@/components/MusicPlayer";
@@ -7,7 +7,7 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Chatbot } from "@/components/Chatbot";
 
-const Index = () => {
+const Index: React.FC = () => {
   const [showPortfolio, setShowPortfolio] = useState(false);
 
   return (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -68,7 +68,7 @@ interface PortfolioGridProps {
   onClose: () => void;
 }
 
-export const PortfolioGrid = ({ onClose }: PortfolioGridProps) => {
+export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onClose }) => {
   const [selectedCategory, setSelectedCategory] = useState<Category>("All");
   const [isClosing, setIsClosing] = useState(false);
 
