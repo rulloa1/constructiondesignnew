@@ -12,6 +12,13 @@ import carmel2_8 from "@/assets/projects/carmel-2-8.jpg";
 import carmel2_9 from "@/assets/projects/carmel-2-9.jpg";
 import carmel2_10 from "@/assets/projects/carmel-2-10.jpg";
 import hillsideCover from "@/assets/projects/hillside-cover.jpg";
+import hillside1 from "@/assets/projects/hillside-1.jpg";
+import hillside2 from "@/assets/projects/hillside-2.jpg";
+import hillside3 from "@/assets/projects/hillside-3.jpg";
+import hillside4 from "@/assets/projects/hillside-4.jpg";
+import hillside5 from "@/assets/projects/hillside-5.jpg";
+import hillside6 from "@/assets/projects/hillside-6.jpg";
+import hillside7 from "@/assets/projects/hillside-7.jpg";
 import project1 from "@/assets/projects/2_After.jpg";
 import project2 from "@/assets/projects/4_After.jpg";
 import project3 from "@/assets/projects/5_After.jpg";
@@ -87,10 +94,10 @@ export const projects: Project[] = [
     id: "coastal-hillside-restoration",
     title: "Coastal Hillside Restoration",
     location: "Monterey Peninsula, CA",
-    category: "Commercial",
+    category: "Residential",
     description: "A comprehensive restoration project that revitalizes a hillside property while preserving its architectural integrity and enhancing its connection to the dramatic coastal landscape.",
     image: hillsideCover,
-    images: [hillsideCover],
+    images: [hillsideCover, hillside1, hillside2, hillside3, hillside4, hillside5, hillside6, hillside7],
   },
   {
     id: "commercial-finish-lds-churches",
