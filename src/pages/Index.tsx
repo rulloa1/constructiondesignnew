@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BookCoverHero } from "@/components/BookCoverHero";
+import { VideoHero } from "@/components/VideoHero";
 import { PortfolioGrid } from "@/components/PortfolioGrid";
 import { MusicPlayer } from "@/components/MusicPlayer";
 import { About } from "@/components/About";
@@ -15,7 +15,7 @@ const Index: React.FC = () => {
       <MusicPlayer />
       
       {!showPortfolio ? (
-        <BookCoverHero onOpenBook={() => setShowPortfolio(true)} />
+        <VideoHero onOpenPortfolio={() => setShowPortfolio(true)} />
       ) : (
         <>
           <PortfolioGrid onClose={() => setShowPortfolio(false)} />
