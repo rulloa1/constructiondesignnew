@@ -32,6 +32,13 @@ import project3 from "@/assets/projects/5_After.jpg";
 import project4 from "@/assets/projects/IMGP1302.jpg";
 import project5 from "@/assets/projects/IMGP1303.jpg";
 import project6 from "@/assets/projects/IMGP1305.jpg";
+import lagunaGrandeCover from "@/assets/projects/laguna-cover.jpg";
+import laguna1 from "@/assets/projects/laguna-1.jpg";
+import laguna2 from "@/assets/projects/laguna-2.jpg";
+import laguna3 from "@/assets/projects/laguna-3.jpg";
+import laguna4 from "@/assets/projects/laguna-4.jpg";
+import laguna5 from "@/assets/projects/laguna-5.jpg";
+import laguna6 from "@/assets/projects/laguna-6.jpg";
 
 // Pacific Grove Design Build album
 import pgCover from "@/assets/projects/pg-12-after.jpg";
@@ -130,8 +137,8 @@ export const projects: Project[] = [
     location: "Seaside, CA",
     category: "Residential",
     description: "A complete design-build project that delivers custom solutions from concept through completion, featuring modern amenities and quality construction throughout.",
-    image: project6,
-    images: [project6],
+    image: lagunaGrandeCover,
+    images: [lagunaGrandeCover, laguna2, laguna4, laguna5, laguna6, laguna1, laguna3],
   },
   {
     id: "southcoast-remodel-design-build",
