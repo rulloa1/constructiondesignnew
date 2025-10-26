@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import residentialImg from "@/assets/category-residential.jpg";
 import commercialImg from "@/assets/category-commercial.jpg";
 import hospitalityImg from "@/assets/category-hospitality.jpg";
+import pacificGroveImg from "@/assets/category-pacific-grove.jpg";
 
 const categories = [
   {
@@ -27,6 +28,13 @@ const categories = [
     image: hospitalityImg,
     color: "burgundy",
   },
+  {
+    id: "pacific-grove",
+    title: "Pacific Grove Design Build",
+    description: "Complete transformation projects blending traditional character with modern comfort",
+    image: pacificGroveImg,
+    color: "gold",
+  },
 ];
 
 interface CategoryShowcaseProps {
@@ -49,7 +57,7 @@ export const CategoryShowcase: React.FC<CategoryShowcaseProps> = ({ onViewProjec
         </div>
 
         {/* Categories grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category, index) => (
             <div
               key={category.id}
