@@ -1,5 +1,14 @@
 // Project imports
-import carmel1Cover from "@/assets/projects/carmel-1-cover.jpg";
+import carmel1_1 from "@/assets/projects/carmel1-1-before.jpg";
+import carmel1_2 from "@/assets/projects/carmel1-2-after.jpg";
+import carmel1_3 from "@/assets/projects/carmel1-3-after.jpg";
+import carmel1_4 from "@/assets/projects/carmel1-4-after.jpg";
+import carmel1_5 from "@/assets/projects/carmel1-5-before.jpg";
+import carmel1_6 from "@/assets/projects/carmel1-6-after.jpg";
+import carmel1_7 from "@/assets/projects/carmel1-7-before.jpg";
+import carmel1_8 from "@/assets/projects/carmel1-8-after.jpg";
+import carmel1_9 from "@/assets/projects/carmel1-9-before.jpg";
+import carmel1_10 from "@/assets/projects/carmel1-10-after.jpg";
 import carmel2Cover from "@/assets/projects/carmel-2-cover.jpg";
 import carmel2_1 from "@/assets/projects/carmel-2-1.jpg";
 import carmel2_2 from "@/assets/projects/carmel-2-2.jpg";
@@ -139,8 +148,8 @@ export const projects: Project[] = [
     location: "Carmel, CA",
     category: "Residential",
     description: "An elegant coastal residence featuring custom architectural details and high-end finishes that capture the essence of Carmel's sophisticated charm.",
-    image: carmel1Cover,
-    images: [carmel1Cover],
+    image: carmel1_1,
+    images: [carmel1_1, carmel1_2, carmel1_3, carmel1_4, carmel1_5, carmel1_6, carmel1_7, carmel1_8, carmel1_9, carmel1_10],
   },
   {
     id: "carmel-house-2",
