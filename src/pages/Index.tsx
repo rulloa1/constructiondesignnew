@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { VideoHero } from "@/components/VideoHero";
+import { Hero } from "@/components/Hero";
 import { CategoryShowcase } from "@/components/CategoryShowcase";
 import { DesignDevelopment } from "@/components/DesignDevelopment";
 import { PortfolioGrid } from "@/components/PortfolioGrid";
@@ -23,7 +23,7 @@ const Index: React.FC = () => {
       <MusicPlayer />
       
       {!showPortfolio ? <>
-          <VideoHero onOpenPortfolio={() => setShowPortfolio(true)} />
+          <Hero />
           <CategoryShowcase onViewProjects={handleViewProjects} />
           
           <About />
