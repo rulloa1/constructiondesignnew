@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/mc-logo.png";
 
 interface BookCoverHeroProps {
   onOpenBook: () => void;
@@ -43,11 +42,6 @@ export const BookCoverHero: React.FC<BookCoverHeroProps> = ({ onOpenBook }) => {
           
           {/* Content */}
           <div className="relative h-full flex flex-col items-center justify-center p-12 space-y-8">
-            {/* Logo */}
-            <div className="mb-8 opacity-0 animate-fade-in">
-              <img src={logo} alt="MC Logo" className="h-24 w-auto opacity-80" />
-            </div>
-
             {/* Main title */}
             <div className="text-center space-y-4 opacity-0 animate-fade-in delay-200">
               <h1 className="font-playfair text-5xl md:text-6xl font-semibold tracking-wider text-gold">
