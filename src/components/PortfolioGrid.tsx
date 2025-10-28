@@ -9,10 +9,10 @@ type Category = "All" | ProjectCategory;
 const categories: Category[] = ["All", "Residential", "Commercial", "Hospitality", "Design Build"];
 
 const categoryColors: Record<string, string> = {
-  Residential: "bg-charcoal/90 text-cream",
-  Commercial: "bg-charcoal/90 text-cream",
-  Hospitality: "bg-charcoal/90 text-cream",
-  "Design Build": "bg-charcoal/90 text-cream",
+  Residential: "bg-gold text-charcoal",
+  Commercial: "bg-steelBlue text-white",
+  Hospitality: "bg-burgundy text-white",
+  "Design Build": "bg-gold text-charcoal",
 };
 
 interface PortfolioGridProps {
@@ -87,7 +87,7 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onClose, initialCa
 
 
         {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {filteredProjects.map((project, index) => (
             <Link
               key={project.id}
@@ -106,11 +106,6 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onClose, initialCa
                 
                 {/* Overlay content */}
                 <div className="absolute inset-0 p-6 flex flex-col justify-end transition-all duration-500">
-                  {project.featured && (
-                    <span className="inline-block w-fit px-3 py-1 rounded-full text-xs uppercase tracking-wider font-bold mb-2 bg-burgundy text-white animate-pulse">
-                      ★ Featured
-                    </span>
-                  )}
                   <span className={`inline-block w-fit px-3 py-1 rounded-full text-xs uppercase tracking-wider font-medium mb-3 transition-colors duration-300 ${
                     categoryColors[project.category]
                   }`}>

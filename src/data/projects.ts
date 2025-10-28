@@ -106,14 +106,6 @@ import bigsur15 from "@/assets/projects/bigsur-15.jpg";
 import carmelValleyCover from "@/assets/projects/carmel-valley-cover.jpg";
 import carmelValley1 from "@/assets/projects/carmel-valley-1.jpg";
 
-// Featured video project
-import featuredVideo from "@/assets/projects/featured-video.mov";
-
-// Pool project album
-import poolCover from "@/assets/projects/pool-cover.jpg";
-import pool1 from "@/assets/projects/pool-1.jpg";
-import pool2 from "@/assets/projects/pool-2.jpg";
-
 // Pacific Grove Design Build album
 import pgCover from "@/assets/projects/pg-12-after.jpg";
 import pgBefore1 from "@/assets/projects/pg-1-before.jpg";
@@ -137,73 +129,37 @@ export interface Project {
   description: string;
   image: string;
   images: string[];
-  video?: string;
-  featured?: boolean;
 }
 
 export const projects: Project[] = [
   {
-    id: "carmel-valley-design-build",
-    title: "Carmel Valley Design Build",
-    location: "Carmel Valley, CA",
+    id: "pacific-grove-design-build",
+    title: "Pacific Grove Design Build",
+    location: "Pacific Grove, CA",
     category: "Design Build",
-    description: "A stunning custom design-build residence featuring elegant architectural details and seamless integration with the natural landscape of Carmel Valley.",
-    image: carmelValleyCover,
-    images: [carmelValleyCover, carmelValley1],
+    description: "A comprehensive transformation of a historic property, seamlessly blending traditional craftsman character with modern comfort and functionality. This complete design-build project showcases our expertise in preserving neighborhood heritage while creating contemporary living spaces.",
+    image: pgBefore1,
+    images: [
+      pgBefore1,
+      pgAfter1,
+      pgBefore2,
+      pgAfter2,
+      pgBefore3,
+      pgAfter3,
+      pgAfter4,
+      pgAfter5,
+      pgAfter6,
+      pgAfter7,
+    ],
   },
   {
-    id: "big-sur-house",
-    title: "Big Sur House",
-    location: "Big Sur, CA",
+    id: "carmel-house-1",
+    title: "Carmel House #1",
+    location: "Carmel, CA",
     category: "Residential",
-    description: "A spectacular coastal property featuring dramatic ocean views and sophisticated site work, including extensive hillside stabilization and custom driveway construction with stone walls.",
-    image: bigsurCover,
-    images: [bigsurCover, bigsur1, bigsur2, bigsur3, bigsur4, bigsur5, bigsur6, bigsur7, bigsur8, bigsur9, bigsur10, bigsur11, bigsur12, bigsur13, bigsur14, bigsur15],
-  },
-  {
-    id: "southcoast-remodel-design-build",
-    title: "Southcoast Remodel Design Build",
-    location: "South Coast, CA",
-    category: "Residential",
-    description: "A comprehensive remodel and design-build project that transforms existing spaces into modern, functional, and aesthetically stunning environments.",
-    image: southcoast4,
-    images: [southcoast4, southcoast3, southcoast1, southcoast2, southcoast5, southcoast6, southcoast7, southcoast8, project1],
-  },
-  {
-    id: "laguna-grande-design-build",
-    title: "Laguna Grande Design Build",
-    location: "Seaside, CA",
-    category: "Commercial",
-    description: "A complete design-build project that delivers custom solutions from concept through completion, featuring modern amenities and quality construction throughout.",
-    image: lagunaGrandeCover,
-    images: [lagunaGrandeCover, laguna2, laguna4, laguna5, laguna6, laguna1, laguna3],
-  },
-  {
-    id: "hillside-cleanup",
-    title: "Hillside Cleanup",
-    location: "Monterey Peninsula, CA",
-    category: "Commercial",
-    description: "Comprehensive site preparation and environmental restoration services that transform challenging hillside properties into beautiful, buildable lots.",
-    image: cleanup1,
-    images: [cleanupCover, cleanup1, cleanup2, cleanup3, cleanup4, cleanup5, cleanup6],
-  },
-  {
-    id: "commercial-finish-lds-churches",
-    title: "Commercial Finish LDS Churches",
-    location: "Central California",
-    category: "Commercial",
-    description: "Specialized commercial finishing work for religious facilities, featuring meticulous attention to detail and high-quality craftsmanship that creates welcoming and inspiring spaces.",
-    image: lds7,
-    images: [lds7, lds2, lds3, lds10, lds15, lds20, lds4, lds5, lds6, lds1, lds8, lds9, lds11, lds12, lds13, lds14, lds16, lds17, lds18, lds19, lds21, project4],
-  },
-  {
-    id: "coastal-hillside-restoration",
-    title: "Coastal Hillside Restoration",
-    location: "Monterey Peninsula, CA",
-    category: "Residential",
-    description: "A comprehensive restoration project that revitalizes a hillside property while preserving its architectural integrity and enhancing its connection to the dramatic coastal landscape.",
-    image: hillsideCover,
-    images: [hillsideCover, hillside1, hillside2, hillside3, hillside4, hillside5, hillside6, hillside7],
+    description: "An elegant coastal residence featuring custom architectural details and high-end finishes that capture the essence of Carmel's sophisticated charm.",
+    image: carmel1_1,
+    images: [carmel1_1, carmel1_2, carmel1_3, carmel1_4, carmel1_5, carmel1_6, carmel1_7, carmel1_8, carmel1_9, carmel1_10, carmel1_11, carmel1_12, carmel1_13, carmel1_14, carmel1_15, carmel1_16, carmel1_17, carmel1_18, carmel1_19, carmel1_20],
   },
   {
     id: "carmel-house-2",
@@ -215,54 +171,67 @@ export const projects: Project[] = [
     images: [carmel2Cover, carmel2_1, carmel2_2, carmel2_3, carmel2_4, carmel2_5, carmel2_6, carmel2_7, carmel2_8, carmel2_9, carmel2_10],
   },
   {
-    id: "carmel-house-1",
-    title: "Carmel House #1",
-    location: "Carmel, CA",
+    id: "coastal-hillside-restoration",
+    title: "Coastal Hillside Restoration",
+    location: "Monterey Peninsula, CA",
     category: "Residential",
-    description: "An elegant coastal residence featuring custom architectural details and high-end finishes that capture the essence of Carmel's sophisticated charm.",
-    image: carmel1_1,
-    images: [carmel1_1, carmel1_5, carmel1_7, carmel1_9, carmel1_11, carmel1_12, carmel1_14, carmel1_16, carmel1_19, carmel1_2, carmel1_3, carmel1_4, carmel1_6, carmel1_8, carmel1_10, carmel1_13, carmel1_15, carmel1_17, carmel1_18, carmel1_20],
+    description: "A comprehensive restoration project that revitalizes a hillside property while preserving its architectural integrity and enhancing its connection to the dramatic coastal landscape.",
+    image: hillsideCover,
+    images: [hillsideCover, hillside1, hillside2, hillside3, hillside4, hillside5, hillside6, hillside7],
   },
   {
-    id: "pacific-grove-design-build",
-    title: "Pacific Grove Design Build",
-    location: "Pacific Grove, CA",
-    category: "Design Build",
-    description: "A comprehensive transformation of a historic property, seamlessly blending traditional craftsman character with modern comfort and functionality. This complete design-build project showcases our expertise in preserving neighborhood heritage while creating contemporary living spaces.",
-    image: pgBefore1,
-    images: [
-      pgBefore1,
-      pgBefore2,
-      pgBefore3,
-      pgAfter1,
-      pgAfter2,
-      pgAfter3,
-      pgAfter4,
-      pgAfter5,
-      pgAfter6,
-      pgAfter7,
-      pgCover,
-    ],
+    id: "commercial-finish-lds-churches",
+    title: "Commercial Finish LDS Churches",
+    location: "Central California",
+    category: "Commercial",
+    description: "Specialized commercial finishing work for religious facilities, featuring meticulous attention to detail and high-quality craftsmanship that creates welcoming and inspiring spaces.",
+    image: lds7,
+    images: [lds7, lds2, lds3, lds10, lds15, lds20, lds4, lds5, lds6, lds1, lds8, lds9, lds11, lds12, lds13, lds14, lds16, lds17, lds18, lds19, lds21, project4],
   },
   {
-    id: "custom-pool-design",
-    title: "Custom Pool Design & Construction",
+    id: "hillside-cleanup",
+    title: "Hillside Cleanup",
     location: "Monterey Peninsula, CA",
-    category: "Design Build",
-    description: "Premium pool design and construction featuring modern aesthetics, quality materials, and expert craftsmanship.",
-    image: poolCover,
-    images: [poolCover, pool1, pool2],
+    category: "Commercial",
+    description: "Comprehensive site preparation and environmental restoration services that transform challenging hillside properties into beautiful, buildable lots.",
+    image: cleanup1,
+    images: [cleanup1, cleanup2, cleanup3, cleanup4, cleanup5, cleanup6, cleanupCover],
   },
   {
-    id: "featured-showcase",
-    title: "Featured Showcase",
-    location: "Monterey Peninsula, CA",
+    id: "laguna-grande-design-build",
+    title: "Laguna Grande Design Build",
+    location: "Seaside, CA",
+    category: "Commercial",
+    description: "A complete design-build project that delivers custom solutions from concept through completion, featuring modern amenities and quality construction throughout.",
+    image: lagunaGrandeCover,
+    images: [lagunaGrandeCover, laguna2, laguna4, laguna5, laguna6, laguna1, laguna3],
+  },
+  {
+    id: "southcoast-remodel-design-build",
+    title: "Southcoast Remodel Design Build",
+    location: "South Coast, CA",
+    category: "Residential",
+    description: "A comprehensive remodel and design-build project that transforms existing spaces into modern, functional, and aesthetically stunning environments.",
+    image: southcoast4,
+    images: [southcoast4, southcoast3, southcoast1, southcoast2, southcoast5, southcoast6, southcoast7, southcoast8, project1],
+  },
+  {
+    id: "big-sur-house",
+    title: "Big Sur House",
+    location: "Big Sur, CA",
+    category: "Residential",
+    description: "A spectacular coastal property featuring dramatic ocean views and sophisticated site work, including extensive hillside stabilization and custom driveway construction with stone walls.",
+    image: bigsurCover,
+    images: [bigsurCover, bigsur1, bigsur2, bigsur3, bigsur4, bigsur5, bigsur6, bigsur7, bigsur8, bigsur9, bigsur10, bigsur11, bigsur12, bigsur13, bigsur14, bigsur15],
+  },
+  {
+    id: "carmel-valley-design-build",
+    title: "Carmel Valley Design Build",
+    location: "Carmel Valley, CA",
     category: "Design Build",
-    description: "An exclusive showcase of our premium construction and design expertise, featuring exceptional craftsmanship and innovative solutions.",
-    image: pgCover,
-    images: [pgCover],
-    video: featuredVideo,
-    featured: true,
+    description: "A stunning custom design-build residence featuring elegant architectural details and seamless integration with the natural landscape of Carmel Valley.",
+    image: carmelValleyCover,
+    images: [carmelValleyCover, carmelValley1],
   },
 ];
 
