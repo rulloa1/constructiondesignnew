@@ -120,6 +120,16 @@ import pgAfter5 from "@/assets/projects/pg-8-after.jpg";
 import pgAfter6 from "@/assets/projects/pg-9-after.jpg";
 import pgAfter7 from "@/assets/projects/pg-10-after.jpg";
 
+// The Links Residential Development
+import linksCover from "@/assets/projects/links-cover.jpg";
+import links1 from "@/assets/projects/links-1.jpg";
+import links2 from "@/assets/projects/links-2.jpg";
+import links3 from "@/assets/projects/links-3.jpg";
+import links4 from "@/assets/projects/links-4.jpg";
+import links5 from "@/assets/projects/links-5.jpg";
+import links6 from "@/assets/projects/links-6.jpg";
+import links7 from "@/assets/projects/links-7.jpg";
+
 export type ProjectCategory = "Residential" | "Commercial" | "Hospitality" | "Design Build";
 
 export interface Project {
@@ -242,6 +252,15 @@ export const projects: Project[] = [
     description: "Comprehensive site planning and development layout for a master-planned residential community, featuring over 100 lots with thoughtful integration of natural water features, green spaces, and infrastructure.",
     image: siteMap,
     images: [siteMap],
+  },
+  {
+    id: "the-links-residential-development",
+    title: "The Links Residential Development",
+    location: "Southeast Texas",
+    category: "Residential",
+    description: "A prestigious residential community featuring elegant estates set among manicured landscapes, tranquil water features, and thoughtfully designed outdoor spaces that create a refined living experience.",
+    image: linksCover,
+    images: [linksCover, links1, links2, links3, links4, links5, links6, links7],
   },
 ];
 
