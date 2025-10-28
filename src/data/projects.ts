@@ -237,7 +237,7 @@ export const projects: Project[] = [
   {
     id: "residential-development-site-plan",
     title: "Residential Development Site Plan",
-    location: "California",
+    location: "Southeast Texas",
     category: "Design Build",
     description: "Comprehensive site planning and development layout for a master-planned residential community, featuring over 100 lots with thoughtful integration of natural water features, green spaces, and infrastructure.",
     image: siteMap,
