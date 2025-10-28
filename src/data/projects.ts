@@ -105,6 +105,7 @@ import bigsur14 from "@/assets/projects/bigsur-14.jpg";
 import bigsur15 from "@/assets/projects/bigsur-15.jpg";
 import carmelValleyCover from "@/assets/projects/carmel-valley-cover.jpg";
 import carmelValley1 from "@/assets/projects/carmel-valley-1.jpg";
+import siteMap from "@/assets/projects/site-map.jpg";
 
 // Pacific Grove Design Build album
 import pgCover from "@/assets/projects/pg-12-after.jpg";
@@ -232,6 +233,15 @@ export const projects: Project[] = [
     description: "A stunning custom design-build residence featuring elegant architectural details and seamless integration with the natural landscape of Carmel Valley.",
     image: carmelValleyCover,
     images: [carmelValleyCover, carmelValley1],
+  },
+  {
+    id: "residential-development-site-plan",
+    title: "Residential Development Site Plan",
+    location: "California",
+    category: "Design Build",
+    description: "Comprehensive site planning and development layout for a master-planned residential community, featuring over 100 lots with thoughtful integration of natural water features, green spaces, and infrastructure.",
+    image: siteMap,
+    images: [siteMap],
   },
 ];
 
