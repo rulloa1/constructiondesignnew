@@ -250,20 +250,11 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onClose }) => {
               </div>
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent">
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-cream">
                   <h3 className="font-playfair text-xl mb-2">{project.title}</h3>
                   <p className="text-sm text-cream/80">{project.location}</p>
                 </div>
-              </div>
-
-              {/* Category badge */}
-              <div className="absolute top-4 left-4">
-                <span className={`px-3 py-1 text-xs uppercase tracking-wider font-medium rounded-sm ${
-                  categoryColors[project.category] || "bg-muted text-foreground"
-                }`}>
-                  {project.category}
-                </span>
               </div>
             </Link>
           ))}
