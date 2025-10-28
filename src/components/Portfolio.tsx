@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, HardHat, Hammer, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { projects, ProjectCategory } from "@/data/projects";
 import { Link } from "react-router-dom";
@@ -58,26 +58,77 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onClose }) => {
           animation: 'luxuryPatternMove 120s linear infinite'
         }} />
         
-        {/* Floating art deco shapes */}
+        {/* Floating construction tools */}
         <div className="absolute inset-0">
-          {/* Elegant diamonds */}
-          {[...Array(8)].map((_, i) => (
+          {/* Hard Hats */}
+          {[...Array(3)].map((_, i) => (
             <div
-              key={`diamond-${i}`}
+              key={`hardhat-${i}`}
               className="absolute"
               style={{
-                width: `${60 + i * 30}px`,
-                height: `${60 + i * 30}px`,
-                left: `${5 + i * 12}%`,
-                top: `${10 + i * 8}%`,
-                background: `linear-gradient(135deg, hsl(var(--gold) / ${0.08 + i * 0.02}), transparent)`,
-                transform: 'rotate(45deg)',
-                borderRadius: '8px',
-                animation: `float-luxury-${i % 3} ${25 + i * 2}s ease-in-out infinite`,
-                animationDelay: `${i * 0.8}s`,
-                boxShadow: `0 0 30px hsl(var(--gold) / ${0.1 + i * 0.02})`
+                left: `${10 + i * 30}%`,
+                top: `${15 + i * 25}%`,
+                animation: `float-luxury-${i % 3} ${25 + i * 3}s ease-in-out infinite`,
+                animationDelay: `${i * 1}s`,
+                opacity: 0.2
               }}
-            />
+            >
+              <HardHat 
+                size={40 + i * 10} 
+                className="text-gold"
+                style={{
+                  filter: `drop-shadow(0 0 20px hsl(var(--gold) / ${0.3 + i * 0.1}))`
+                }}
+              />
+            </div>
+          ))}
+          
+          {/* Hammers */}
+          {[...Array(3)].map((_, i) => (
+            <div
+              key={`hammer-${i}`}
+              className="absolute"
+              style={{
+                left: `${20 + i * 25}%`,
+                top: `${20 + i * 20}%`,
+                animation: `float-luxury-${(i + 1) % 3} ${28 + i * 2}s ease-in-out infinite`,
+                animationDelay: `${i * 1.2}s`,
+                opacity: 0.18,
+                transform: 'rotate(-15deg)'
+              }}
+            >
+              <Hammer 
+                size={35 + i * 12} 
+                className="text-steelBlue"
+                style={{
+                  filter: `drop-shadow(0 0 20px hsl(var(--steelBlue) / ${0.3 + i * 0.1}))`
+                }}
+              />
+            </div>
+          ))}
+          
+          {/* Wrenches (as ladder substitute) */}
+          {[...Array(2)].map((_, i) => (
+            <div
+              key={`wrench-${i}`}
+              className="absolute"
+              style={{
+                left: `${60 + i * 20}%`,
+                top: `${30 + i * 30}%`,
+                animation: `float-luxury-${(i + 2) % 3} ${30 + i * 4}s ease-in-out infinite`,
+                animationDelay: `${i * 1.5}s`,
+                opacity: 0.15,
+                transform: 'rotate(25deg)'
+              }}
+            >
+              <Wrench 
+                size={45 + i * 15} 
+                className="text-burgundy"
+                style={{
+                  filter: `drop-shadow(0 0 20px hsl(var(--burgundy) / ${0.3 + i * 0.1}))`
+                }}
+              />
+            </div>
           ))}
         </div>
 
