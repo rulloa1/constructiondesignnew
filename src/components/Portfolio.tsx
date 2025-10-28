@@ -30,9 +30,9 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="min-h-screen bg-background relative">
       {/* Construction-themed animated background */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-40 z-0">
+      <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-50" style={{ zIndex: -1 }}>
         {/* Animated blueprint grid */}
         <div className="absolute inset-0" style={{
           backgroundImage: `
