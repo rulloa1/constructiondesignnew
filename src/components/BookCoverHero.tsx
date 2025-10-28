@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/mc-logo.png";
+import logo from "@/assets/mc-logo-new.png";
 interface BookCoverHeroProps {
   onOpenBook: () => void;
 }
@@ -40,9 +40,6 @@ export const BookCoverHero: React.FC<BookCoverHeroProps> = ({
                 src={logo} 
                 alt="MC Logo" 
                 className="h-40 w-auto opacity-100" 
-                style={{
-                  filter: 'brightness(1.2) sepia(1) saturate(3) hue-rotate(10deg)'
-                }}
               />
             </div>
 
