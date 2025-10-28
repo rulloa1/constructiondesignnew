@@ -236,25 +236,29 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onClose }) => {
             <Link
               key={project.id}
               to={`/project/${project.id}`}
-              className="group relative overflow-hidden rounded-sm opacity-0 animate-fade-in-up"
+              className="group opacity-0 animate-fade-in-up"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               {/* Project image */}
-              <div className="aspect-[4/5] overflow-hidden bg-muted">
+              <div className="aspect-[4/5] overflow-hidden bg-muted rounded-sm mb-4 relative">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-75"
                   loading="lazy"
                 />
+                {/* Subtle overlay on hover */}
+                <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/20 transition-all duration-500" />
               </div>
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent">
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-cream">
-                  <h3 className="font-playfair text-xl mb-2">{project.title}</h3>
-                  <p className="text-sm text-cream/80">{project.location}</p>
-                </div>
+              {/* Project info below image */}
+              <div className="space-y-2">
+                <h3 className="font-playfair text-xl text-foreground transition-colors duration-300 group-hover:text-gold">
+                  {project.title}
+                </h3>
+                <p className="text-sm font-inter text-muted-foreground font-light tracking-wide transition-all duration-300 group-hover:text-foreground group-hover:translate-x-1">
+                  {project.location}
+                </p>
               </div>
             </Link>
           ))}
