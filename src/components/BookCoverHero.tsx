@@ -39,9 +39,9 @@ export const BookCoverHero: React.FC<BookCoverHeroProps> = ({
               <img 
                 src={logo} 
                 alt="MC Logo" 
-                className="h-40 w-auto opacity-100" 
+                className="h-40 w-auto" 
                 style={{
-                  filter: 'brightness(0) invert(1)'
+                  filter: 'brightness(0) saturate(100%) invert(66%) sepia(48%) saturate(458%) hue-rotate(359deg) brightness(96%) contrast(87%)'
                 }}
               />
             </div>
