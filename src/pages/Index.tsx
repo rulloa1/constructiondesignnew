@@ -94,18 +94,18 @@ const Index: React.FC = () => {
         </> : <>
           {/* Portfolio view with navigation header */}
           <div className="sticky top-0 z-30 bg-charcoal/95 backdrop-blur-sm border-b border-white/10">
-            <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-              <button onClick={handleCloseBook} disabled={animating} className="flex items-center gap-2 text-white hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed group" aria-label="Close portfolio and return to home">
+            <div className="container mx-auto px-4 py-4">
+              <button 
+                onClick={handleCloseBook} 
+                disabled={animating} 
+                className="flex items-center gap-2 text-cream bg-cream/10 hover:bg-cream/20 px-6 py-3 rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed group font-medium shadow-lg hover:shadow-xl" 
+                aria-label="Close portfolio and return to home"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:-translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                 </svg>
-                <span className="font-semibold">Back to Home</span>
+                <span>Back to Home</span>
               </button>
-
-              <h1 className="text-xl md:text-2xl font-bold text-white">Portfolio</h1>
-
-              {/* Spacer for centering */}
-              <div className="w-32"></div>
             </div>
           </div>
 
