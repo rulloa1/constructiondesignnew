@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
 import { BookCoverHero } from "@/components/BookCoverHero";
 import { Portfolio } from "@/components/Portfolio";
 import { MusicPlayer } from "@/components/MusicPlayer";
@@ -31,7 +33,24 @@ const Index: React.FC = () => {
       )}
 
       {!bookOpened ? (
-        <BookCoverHero onOpenBook={handleOpenBook} />
+        <>
+          <Header />
+          <Hero />
+          
+          {/* 30+ Years Section */}
+          <section className="relative py-16 bg-background">
+            <div className="container mx-auto px-6 text-center">
+              <h2 className="text-4xl md:text-5xl font-light text-foreground mb-4">
+                30+ Years of Quality Craftsmanship
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                From architectural design to landscape restoration, explore our diverse portfolio of projects
+              </p>
+            </div>
+          </section>
+
+          <BookCoverHero onOpenBook={handleOpenBook} />
+        </>
       ) : (
         <>
           <MusicPlayer />
