@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { Contact } from "@/components/Contact";
 import { BookCoverHero } from "@/components/BookCoverHero";
 import { Portfolio } from "@/components/Portfolio";
 import { MusicPlayer } from "@/components/MusicPlayer";
@@ -92,7 +91,6 @@ const Index: React.FC = () => {
           <About />
           <Services />
           <BookCoverHero onOpenBook={handleOpenBook} />
-          <Contact />
         </> : <>
           {/* Portfolio view with navigation header */}
           <div className="sticky top-0 z-30 bg-charcoal/95 backdrop-blur-sm border-b border-white/10">
