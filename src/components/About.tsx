@@ -1,15 +1,9 @@
 import michaelPhoto from "@/assets/michael-chandler.jpg";
-
 export const About = () => {
-  return (
-    <section id="about" className="relative py-24 overflow-hidden">
+  return <section id="about" className="relative py-24 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img 
-          src={michaelPhoto} 
-          alt="Michael Chandler background" 
-          className="w-full h-full object-cover object-top opacity-35"
-        />
+        <img src={michaelPhoto} alt="Michael Chandler background" className="w-full h-full object-cover object-top opacity-35" />
         <div className="absolute inset-0 bg-background/70" />
       </div>
 
@@ -47,20 +41,10 @@ export const About = () => {
                 </ul>
               </div>
               
-              <div className="transition-all duration-300 hover:translate-x-1">
-                <h3 className="text-sm font-medium tracking-wider text-accent mb-3">
-                  RECOGNITION
-                </h3>
-                <ul className="space-y-2 text-base md:text-lg font-light">
-                  <li className="transition-colors duration-300 hover:text-accent">Design Excellence Award, 2023</li>
-                  <li className="transition-colors duration-300 hover:text-accent">Best Residential Project, 2022</li>
-                  <li className="transition-colors duration-300 hover:text-accent">Featured in Design Magazine, 2021</li>
-                </ul>
-              </div>
+              
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
