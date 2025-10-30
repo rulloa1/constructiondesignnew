@@ -1,11 +1,55 @@
-import michaelPhoto from "@/assets/michael-chandler.jpg";
+import { Hammer, HardHat, Wrench } from "lucide-react";
+
 export const About = () => {
-  return <section id="about" className="relative py-24 overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
-        <img src={michaelPhoto} alt="Michael Chandler background" className="w-full h-full object-cover object-top opacity-35" />
-        <div className="absolute inset-0 bg-background/70" />
+  return <section id="about" className="relative py-24 overflow-hidden bg-background">
+      {/* Animated Construction Icons Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Floating Icons */}
+        {[...Array(15)].map((_, i) => {
+          const icons = [Hammer, HardHat, Wrench];
+          const Icon = icons[i % 3];
+          const delay = i * 0.8;
+          const duration = 15 + (i % 5) * 3;
+          const size = 24 + (i % 3) * 16;
+          const startX = (i * 7) % 100;
+          const startY = (i * 13) % 100;
+          
+          return (
+            <div
+              key={i}
+              className="absolute opacity-5"
+              style={{
+                left: `${startX}%`,
+                top: `${startY}%`,
+                animation: `float-diagonal ${duration}s ease-in-out ${delay}s infinite alternate`,
+              }}
+            >
+              <Icon size={size} className="text-accent" />
+            </div>
+          );
+        })}
       </div>
+
+      {/* Floating animation keyframes */}
+      <style>{`
+        @keyframes float-diagonal {
+          0% {
+            transform: translate(0, 0) rotate(0deg);
+          }
+          25% {
+            transform: translate(30px, -40px) rotate(90deg);
+          }
+          50% {
+            transform: translate(-20px, -80px) rotate(180deg);
+          }
+          75% {
+            transform: translate(-40px, -40px) rotate(270deg);
+          }
+          100% {
+            transform: translate(0, 0) rotate(360deg);
+          }
+        }
+      `}</style>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="max-w-5xl mx-auto">
