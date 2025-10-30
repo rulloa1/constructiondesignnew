@@ -11,6 +11,14 @@ export const Hero = () => {
         />
       </div>
       
+      {/* Edge Fade Effect */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 70% 65% at 50% 45%, transparent 0%, transparent 50%, hsl(var(--background)) 100%)'
+        }}
+      />
+      
       {/* Text Overlay */}
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent py-16 px-6">
         <div className="container mx-auto text-center">
