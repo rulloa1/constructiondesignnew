@@ -1,33 +1,25 @@
 import { Hammer, HardHat, Wrench } from "lucide-react";
-
 export const About = () => {
   return <section id="about" className="relative py-24 overflow-hidden bg-background">
       {/* Animated Construction Icons Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating Icons */}
         {[...Array(15)].map((_, i) => {
-          const icons = [Hammer, HardHat, Wrench];
-          const Icon = icons[i % 3];
-          const delay = i * 0.8;
-          const duration = 15 + (i % 5) * 3;
-          const size = 24 + (i % 3) * 16;
-          const startX = (i * 7) % 100;
-          const startY = (i * 13) % 100;
-          
-          return (
-            <div
-              key={i}
-              className="absolute opacity-5"
-              style={{
-                left: `${startX}%`,
-                top: `${startY}%`,
-                animation: `float-diagonal ${duration}s ease-in-out ${delay}s infinite alternate`,
-              }}
-            >
+        const icons = [Hammer, HardHat, Wrench];
+        const Icon = icons[i % 3];
+        const delay = i * 0.8;
+        const duration = 15 + i % 5 * 3;
+        const size = 24 + i % 3 * 16;
+        const startX = i * 7 % 100;
+        const startY = i * 13 % 100;
+        return <div key={i} className="absolute opacity-5" style={{
+          left: `${startX}%`,
+          top: `${startY}%`,
+          animation: `float-diagonal ${duration}s ease-in-out ${delay}s infinite alternate`
+        }}>
               <Icon size={size} className="text-accent" />
-            </div>
-          );
-        })}
+            </div>;
+      })}
       </div>
 
       {/* Floating animation keyframes */}
@@ -53,9 +45,7 @@ export const About = () => {
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8 opacity-0 animate-slide-in-left">
-            About
-          </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-8 opacity-0 animate-slide-in-left">                            About</h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <div className="space-y-4 md:space-y-6 text-base md:text-lg font-light leading-relaxed text-foreground/80 opacity-0 animate-fade-in-up delay-200">
               <p className="transition-all duration-300 hover:text-foreground/90">
