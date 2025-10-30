@@ -8,7 +8,7 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-background">
       <Hero />
-      
+
       <div id="portfolio-section">
         <PortfolioPreview />
       </div>
