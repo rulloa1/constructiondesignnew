@@ -45,27 +45,23 @@ export const About = () => {
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair text-center mb-8 opacity-0 animate-slide-in-left">About</h2>
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-4 md:space-y-6 text-base md:text-lg font-light leading-relaxed text-foreground/80 opacity-0 animate-fade-in-up delay-200">
-              <p className="transition-all duration-300 hover:text-foreground/90">
-                With over a decade of experience in design, I specialize in creating spaces
-                that seamlessly blend functionality with aesthetic excellence. My approach
-                centers on understanding the unique needs of each client and translating
-                their vision into reality.
-              </p>
-              <p className="transition-all duration-300 hover:text-foreground/90">
-                Every project is an opportunity to push creative boundaries while maintaining
-                a commitment to timeless design principles. I believe great design should
-                enhance the way people live and work, creating environments that inspire
-                and endure.
-              </p>
-            </div>
-            
-            <div className="space-y-8 opacity-0 animate-fade-in-up delay-400">
-              
-              
-              
+          <h2 className="text-5xl md:text-6xl font-playfair font-semibold text-center mb-8 text-charcoal opacity-0 animate-slide-in-left">About</h2>
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-1 opacity-0 animate-fade-in-up delay-200">
+              <div className="space-y-6 text-lg font-inter font-light leading-relaxed text-charcoal/80">
+                <p className="transition-all duration-300">
+                  With over a decade of experience in design, I specialize in creating spaces
+                  that seamlessly blend functionality with aesthetic excellence. My approach
+                  centers on understanding the unique needs of each client and translating
+                  their vision into reality.
+                </p>
+                <p className="transition-all duration-300">
+                  Every project is an opportunity to push creative boundaries while maintaining
+                  a commitment to timeless design principles. I believe great design should
+                  enhance the way people live and work, creating environments that inspire
+                  and endure.
+                </p>
+              </div>
             </div>
           </div>
         </div>
