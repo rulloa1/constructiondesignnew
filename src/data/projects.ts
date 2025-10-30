@@ -155,6 +155,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "mediterranean-lakefront-estate",
+    title: "Mediterranean Lakefront Estate",
+    location: "Southeast Texas",
+    category: "Residential",
+    description: "A stunning Mediterranean-style estate featuring classic architectural details with terra cotta tile roofing, elegant columns, and arched windows. Situated on a serene lakefront property with beautifully landscaped grounds and tranquil water views.",
+    image: linksEstate,
+    images: [linksEstate, linksEstate2, linksEstate3],
+  },
+  {
     id: "pacific-grove-design-build",
     title: "Pacific Grove Design Build",
     location: "Pacific Grove, CA",
@@ -273,15 +282,6 @@ export const projects: Project[] = [
     description: "A prestigious residential community featuring elegant estates set among manicured landscapes, tranquil water features, and thoughtfully designed outdoor spaces that create a refined living experience.",
     image: linksCover,
     images: [linksCover, links1, links2, links3, links4, links5, links6, links7, links8],
-  },
-  {
-    id: "mediterranean-lakefront-estate",
-    title: "Mediterranean Lakefront Estate",
-    location: "Southeast Texas",
-    category: "Residential",
-    description: "A stunning Mediterranean-style estate featuring classic architectural details with terra cotta tile roofing, elegant columns, and arched windows. Situated on a serene lakefront property with beautifully landscaped grounds and tranquil water views.",
-    image: linksEstate,
-    images: [linksEstate, linksEstate2, linksEstate3],
   },
 ];
 
