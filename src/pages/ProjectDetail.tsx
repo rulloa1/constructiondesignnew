@@ -48,17 +48,8 @@ const ProjectDetail = () => {
 
   return (
     <>
-      <div className="relative min-h-screen overflow-hidden">
-        {/* Full-screen background image */}
-        <div 
-          className="fixed inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${project.images[0]})` }}
-        />
-        
-        {/* Dark gradient overlay */}
-        <div className="fixed inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/50 to-charcoal/30" />
-
-        {/* Content overlay */}
+      <div className="relative min-h-screen bg-charcoal">
+        {/* Content */}
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Back button */}
           <div className="p-4 sm:p-6 lg:p-8">
