@@ -47,9 +47,6 @@ const Index: React.FC = () => {
         <>
           <MusicPlayer />
           <Portfolio onClose={handleClosebook} />
-          <Services />
-          <About />
-          <Contact />
         </>
       )}
 
