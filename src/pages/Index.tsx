@@ -99,7 +99,7 @@ const Index: React.FC = () => {
       {!bookOpened ? <>
           <Header onPortfolioClick={handleOpenBook} />
           <Hero />
-          <About />
+          <About onPortfolioClick={handleOpenBook} />
           <Services />
           <BookCoverHero onOpenBook={handleOpenBook} />
         </> : <>
