@@ -114,18 +114,16 @@ import carmelValley1 from "@/assets/projects/carmel-valley-1.jpg";
 import siteMap from "@/assets/projects/site-map.jpg";
 
 // Pacific Grove Design Build album
-import pgCover from "@/assets/projects/pg-12-after.jpg";
-import pgBefore1 from "@/assets/projects/pg-1-before.jpg";
-import pgBefore2 from "@/assets/projects/pg-2-before.jpg";
-import pgBefore3 from "@/assets/projects/pg-3-before.jpg";
-import pgAfter1 from "@/assets/projects/pg-4-after.jpg";
-import pgAfter2 from "@/assets/projects/pg-5-after.jpg";
-import pgAfter3 from "@/assets/projects/pg-6-after.jpg";
-import pgAfter4 from "@/assets/projects/pg-7-after.jpg";
-import pgAfter5 from "@/assets/projects/pg-8-after.jpg";
-import pgAfter6 from "@/assets/projects/pg-9-after.jpg";
-import pgAfter7 from "@/assets/projects/pg-10-after.jpg";
-import pgAfter8 from "@/assets/projects/pg-13-after.jpg";
+import pgCover from "@/assets/projects/pg-cover.jpg";
+import pg1 from "@/assets/projects/pg-1.jpg";
+import pg2 from "@/assets/projects/pg-2.png";
+import pg3 from "@/assets/projects/pg-3.png";
+import pg4 from "@/assets/projects/pg-4.jpg";
+import pg5 from "@/assets/projects/pg-5.jpg";
+import pg6 from "@/assets/projects/pg-6.jpg";
+import pg7 from "@/assets/projects/pg-7.jpg";
+import pg8 from "@/assets/projects/pg-8.jpg";
+import pg9 from "@/assets/projects/pg-9.jpg";
 
 // The Links Residential Development
 import linksCover from "@/assets/projects/links-cover.jpg";
@@ -195,19 +193,18 @@ export const projects: Project[] = [
     location: "Pacific Grove, CA",
     category: "Design Build",
     description: "A comprehensive transformation of a historic property, seamlessly blending traditional craftsman character with modern comfort and functionality. This complete design-build project showcases our expertise in preserving neighborhood heritage while creating contemporary living spaces.",
-    image: pgBefore1,
+    image: pgCover,
     images: [
-      pgBefore1,
-      pgAfter1,
-      pgBefore2,
-      pgAfter2,
-      pgBefore3,
-      pgAfter3,
-      pgAfter4,
-      pgAfter5,
-      pgAfter6,
-      pgAfter7,
-      pgAfter8,
+      pgCover,
+      pg1,
+      pg2,
+      pg3,
+      pg4,
+      pg5,
+      pg6,
+      pg7,
+      pg8,
+      pg9,
     ],
   },
   {
