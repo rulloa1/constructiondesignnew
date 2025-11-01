@@ -175,6 +175,18 @@ import carmel3_13 from "@/assets/projects/carmel-3-13.jpg";
 import carmel3_14 from "@/assets/projects/carmel-3-14.jpg";
 import carmel3_15 from "@/assets/projects/carmel-3-15.jpg";
 
+// Coastal Hillside Restoration
+import coastalRestorationCover from "@/assets/projects/coastal-restoration-cover.jpg";
+import coastalRestoration1 from "@/assets/projects/coastal-restoration-1.jpg";
+import coastalRestoration2 from "@/assets/projects/coastal-restoration-2.jpg";
+import coastalRestoration3 from "@/assets/projects/coastal-restoration-3.jpg";
+import coastalRestoration4 from "@/assets/projects/coastal-restoration-4.jpg";
+import coastalRestoration5 from "@/assets/projects/coastal-restoration-5.jpg";
+import coastalRestoration6 from "@/assets/projects/coastal-restoration-6.jpg";
+import coastalRestoration7 from "@/assets/projects/coastal-restoration-7.jpg";
+import coastalRestoration8 from "@/assets/projects/coastal-restoration-8.jpg";
+import coastalRestoration9 from "@/assets/projects/coastal-restoration-9.jpg";
+
 export type ProjectCategory = "Residential" | "Commercial" | "Hospitality" | "Design Build";
 
 export interface Project {
@@ -366,6 +378,17 @@ export const projects: Project[] = [
     description: "A complete remodel showcasing the transformation from original condition to a beautifully finished home with updated decking, new windows, architectural improvements, and custom exterior details.",
     image: carmel3Cover,
     images: [carmel3Cover, carmel3_1, carmel3_2, carmel3_3, carmel3_4, carmel3_5, carmel3_6, carmel3_7, carmel3_8, carmel3_9, carmel3_10, carmel3_11, carmel3_12, carmel3_13, carmel3_14, carmel3_15],
+  },
+  {
+    id: "coastal-hillside-restoration-2",
+    title: "Coastal Hillside Restoration",
+    subtitle: "",
+    location: "Residential",
+    additionalInfo: "Monterey Peninsula, CA",
+    category: "Residential",
+    description: "A dramatic coastal restoration project showcasing erosion repair and hillside stabilization. This comprehensive project transformed an eroded coastal property through extensive retaining wall systems, foundation work, and structural reinforcement to preserve and restore this spectacular oceanfront site.",
+    image: coastalRestorationCover,
+    images: [coastalRestorationCover, coastalRestoration1, coastalRestoration2, coastalRestoration3, coastalRestoration4, coastalRestoration5, coastalRestoration6, coastalRestoration7, coastalRestoration8, coastalRestoration9],
   },
 ];
 
