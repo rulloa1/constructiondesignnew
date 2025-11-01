@@ -141,6 +141,23 @@ import linksEstate from "@/assets/projects/links-estate.jpg";
 import linksEstate2 from "@/assets/projects/links-estate-2.jpg";
 import linksEstate3 from "@/assets/projects/links-estate-3.jpg";
 
+// N. FL Des Consult
+import nfl001 from "@/assets/projects/nfl-001-cover.webp";
+import nfl002 from "@/assets/projects/nfl-002.webp";
+import nfl003 from "@/assets/projects/nfl-003.png";
+import nfl004 from "@/assets/projects/nfl-004.png";
+import nfl005 from "@/assets/projects/nfl-005.jpg";
+import nfl006 from "@/assets/projects/nfl-006.jpg";
+import nfl007 from "@/assets/projects/nfl-007.jpg";
+import nfl008 from "@/assets/projects/nfl-008.jpg";
+import nfl009 from "@/assets/projects/nfl-009.jpg";
+import nfl010 from "@/assets/projects/nfl-010.jpg";
+import nfl011 from "@/assets/projects/nfl-011.jpg";
+import nfl012 from "@/assets/projects/nfl-012.jpg";
+import nfl013 from "@/assets/projects/nfl-013.jpg";
+import nfl014 from "@/assets/projects/nfl-014.jpg";
+import nfl015 from "@/assets/projects/nfl-015.jpg";
+
 export type ProjectCategory = "Residential" | "Commercial" | "Hospitality" | "Design Build";
 
 export interface Project {
@@ -273,6 +290,15 @@ export const projects: Project[] = [
     description: "A prestigious residential community featuring elegant estates set among manicured landscapes, tranquil water features, and thoughtfully designed outdoor spaces that create a refined living experience.",
     image: linksCover,
     images: [linksCover, links1, links2, links3, links4, links5, links6, links7, links8],
+  },
+  {
+    id: "nfl-des-consult",
+    title: "N. FL Des Consult",
+    location: "North Florida",
+    category: "Design Build",
+    description: "A comprehensive design-build project showcasing quality construction from foundation to finish, featuring custom framing, concrete block construction, and meticulous attention to architectural details.",
+    image: nfl001,
+    images: [nfl001, nfl002, nfl003, nfl004, nfl005, nfl006, nfl007, nfl008, nfl009, nfl010, nfl011, nfl012, nfl013, nfl014, nfl015],
   },
 ];
 
