@@ -169,6 +169,12 @@ import carmel3_6 from "@/assets/projects/carmel-3-6.jpg";
 import carmel3_7 from "@/assets/projects/carmel-3-7.jpg";
 import carmel3_8 from "@/assets/projects/carmel-3-8.jpg";
 import carmel3_9 from "@/assets/projects/carmel-3-9.jpg";
+import carmel3_10 from "@/assets/projects/carmel-3-10.jpg";
+import carmel3_11 from "@/assets/projects/carmel-3-11.jpg";
+import carmel3_12 from "@/assets/projects/carmel-3-12.jpg";
+import carmel3_13 from "@/assets/projects/carmel-3-13.jpg";
+import carmel3_14 from "@/assets/projects/carmel-3-14.jpg";
+import carmel3_15 from "@/assets/projects/carmel-3-15.jpg";
 
 export type ProjectCategory = "Residential" | "Commercial" | "Hospitality" | "Design Build";
 
@@ -328,7 +334,7 @@ export const projects: Project[] = [
     category: "Residential",
     description: "A complete remodel showcasing the transformation from original condition to a beautifully finished home with updated decking, new windows, architectural improvements, and custom exterior details.",
     image: carmel3Cover,
-    images: [carmel3Cover, carmel3_1, carmel3_2, carmel3_3, carmel3_4, carmel3_5, carmel3_6, carmel3_7, carmel3_8, carmel3_9],
+    images: [carmel3Cover, carmel3_1, carmel3_2, carmel3_3, carmel3_4, carmel3_5, carmel3_6, carmel3_7, carmel3_8, carmel3_9, carmel3_10, carmel3_11, carmel3_12, carmel3_13, carmel3_14, carmel3_15],
   },
 ];
 
