@@ -300,6 +300,15 @@ export const projects: Project[] = [
     image: nfl001,
     images: [nfl001, nfl002, nfl003, nfl004, nfl005, nfl006, nfl007, nfl008, nfl009, nfl010, nfl011, nfl012, nfl013, nfl014, nfl015],
   },
+  {
+    id: "bigsur-mountain-remodel",
+    title: "Big Sur Mountain Remodel",
+    location: "Big Sur",
+    category: "Residential",
+    description: "Scenic mountain remodel project featuring stunning ocean views, retaining wall construction, custom garage building, and comprehensive site development with careful attention to the natural landscape.",
+    image: bigsurCover,
+    images: [bigsurCover, bigsur1, bigsur2, bigsur3, bigsur4, bigsur5, bigsur6, bigsur7],
+  },
 ];
 
 export const getProjectById = (id: string): Project | undefined => {
