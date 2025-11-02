@@ -58,7 +58,7 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
               <img
                 src={michaelImage}
                 alt=""
-                className="absolute inset-0 w-full h-full object-cover opacity-20 -scale-x-100"
+                className="absolute inset-0 w-full h-full object-cover object-top opacity-20 -scale-x-100"
               />
               
               {/* Arrow pointing to Portfolio */}
