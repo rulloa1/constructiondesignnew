@@ -117,12 +117,6 @@ import bigsur12 from "@/assets/projects/bigsur-12.jpg";
 import bigsur13 from "@/assets/projects/bigsur-13.jpg";
 import bigsur14 from "@/assets/projects/bigsur-14.jpg";
 import bigsur15 from "@/assets/projects/bigsur-15.jpg";
-import bigsur16 from "@/assets/projects/bigsur-16.jpg";
-import bigsur17 from "@/assets/projects/bigsur-17.jpg";
-import bigsur18 from "@/assets/projects/bigsur-18.jpg";
-import bigsur19 from "@/assets/projects/bigsur-19.jpg";
-import bigsur20 from "@/assets/projects/bigsur-20.jpg";
-import bigsur21 from "@/assets/projects/bigsur-21.jpg";
 import carmelValleyCover from "@/assets/projects/carmel-valley-cover.jpg";
 import carmelValley1 from "@/assets/projects/carmel-valley-1.jpg";
 import carmelValley2 from "@/assets/projects/carmel-valley-2.jpg";
@@ -324,17 +318,6 @@ export const projects: Project[] = [
     description: "A comprehensive remodel and design-build project that transforms existing spaces into modern, functional, and aesthetically stunning environments.",
     image: southcoast4,
     images: [southcoast4, southcoast3, southcoast1, southcoast2, southcoast5, southcoast6, southcoast7, southcoast8, project1],
-  },
-  {
-    id: "big-sur-house",
-    title: "Big Sur",
-    subtitle: "House",
-    location: "Residential",
-    additionalInfo: "Big Sur, CA",
-    category: "Residential",
-    description: "A spectacular coastal property featuring dramatic ocean views and sophisticated site work, including extensive hillside stabilization and custom driveway construction with stone walls.",
-    image: bigsurCover,
-    images: [bigsurCover, bigsur1, bigsur2, bigsur3, bigsur4, bigsur5, bigsur6, bigsur7, bigsur8, bigsur9, bigsur10, bigsur11, bigsur12, bigsur13, bigsur14, bigsur15, bigsur16, bigsur17, bigsur18, bigsur19, bigsur20, bigsur21],
   },
   {
     id: "carmel-valley-design-build",
