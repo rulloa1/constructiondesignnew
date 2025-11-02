@@ -1,6 +1,4 @@
 import { Hammer, HardHat, Wrench, ArrowDown } from "lucide-react";
-import michaelImage from "@/assets/michael-chandler.jpg";
-
 interface AboutProps {
   onPortfolioClick?: () => void;
 }
@@ -53,24 +51,17 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-5xl md:text-6xl font-playfair font-semibold text-center mb-8 text-charcoal opacity-0 animate-slide-in-left">About Me</h2>
           <div className="max-w-3xl mx-auto">
-            <div className="relative bg-white/80 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-1 opacity-0 animate-fade-in-up delay-200 overflow-hidden">
-              {/* Flipped Image Background */}
-              <img
-                src={michaelImage}
-                alt=""
-                className="absolute inset-0 w-full h-full object-cover object-top opacity-20 -scale-x-100"
-              />
-              
+            <div className="relative bg-white/80 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-1 opacity-0 animate-fade-in-up delay-200">
               {/* Arrow pointing to Portfolio */}
               <button 
                 onClick={onPortfolioClick}
-                className="absolute bottom-4 right-4 opacity-40 hover:opacity-70 transition-all duration-300 flex flex-col items-center gap-1 cursor-pointer group z-10"
+                className="absolute bottom-4 right-4 opacity-40 hover:opacity-70 transition-all duration-300 flex flex-col items-center gap-1 cursor-pointer group"
                 aria-label="Open Portfolio"
               >
                 <ArrowDown size={48} className="text-accent animate-bounce group-hover:animate-none" strokeWidth={2.5} />
                 <span className="text-sm font-playfair font-semibold text-accent">Portfolio</span>
               </button>
-              <div className="space-y-8 text-lg font-inter font-light leading-relaxed text-charcoal/80 relative z-10">
+              <div className="space-y-8 text-lg font-inter font-light leading-relaxed text-charcoal/80">
                 <p className="transition-all duration-300">
                   I'm Michael, a construction professional who believes that exceptional results come from exceptional teams. My approach is simple: bring together the right people, create an environment built on mutual respect, and stay closely attuned to client feedback throughout every phase of a project.
                 </p>
