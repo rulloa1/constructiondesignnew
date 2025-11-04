@@ -298,6 +298,18 @@ import civil6 from "@/assets/projects/civil-6.jpg";
 import civil7 from "@/assets/projects/civil-7.jpg";
 import civil8 from "@/assets/projects/civil-8.jpg";
 import civil9 from "@/assets/projects/civil-9.jpg";
+import civil10 from "@/assets/projects/civil-10.jpg";
+import civil11 from "@/assets/projects/civil-11.jpg";
+import civil12 from "@/assets/projects/civil-12.jpg";
+import civil13 from "@/assets/projects/civil-13.jpg";
+import civil14 from "@/assets/projects/civil-14.jpg";
+import civil15 from "@/assets/projects/civil-15.jpg";
+import civil16 from "@/assets/projects/civil-16.jpg";
+import civil17 from "@/assets/projects/civil-17.jpg";
+import civil18 from "@/assets/projects/civil-18.jpg";
+import civil19 from "@/assets/projects/civil-19.jpg";
+import civil20 from "@/assets/projects/civil-20.jpg";
+import civil21 from "@/assets/projects/civil-21.jpg";
 
 export type ProjectCategory = "Residential" | "Commercial" | "Hospitality" | "Design Build";
 
@@ -522,7 +534,7 @@ export const projects: Project[] = [
     category: "Commercial",
     description: "Comprehensive civil engineering projects including excavation, coastal restoration, retaining wall systems, hillside stabilization, and site grading. Our expertise in heavy construction and infrastructure development delivers exceptional results for complex sites and challenging terrain.",
     image: civilCover,
-    images: [civilCover, civil1, civil2, civil3, civil4, civil5, civil6, civil7, civil8, civil9],
+    images: [civilCover, civil1, civil2, civil3, civil4, civil5, civil6, civil7, civil8, civil9, civil10, civil11, civil12, civil13, civil14, civil15, civil16, civil17, civil18, civil19, civil20, civil21],
   },
 ];
 
