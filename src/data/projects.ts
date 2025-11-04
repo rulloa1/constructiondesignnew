@@ -348,17 +348,6 @@ export const projects: Project[] = [
     images: [carmel2Cover, carmel2_4, carmel2_5, carmel2_6, carmel2_7, carmel2_8],
   },
   {
-    id: "commercial-finish-lds-churches",
-    title: "Central California - Commercial Finish",
-    subtitle: "Religious Facility Finishing",
-    location: "Commercial",
-    additionalInfo: "Central California",
-    category: "Commercial",
-    description: "Specialized commercial finishing work for religious facilities, featuring meticulous attention to detail and high-quality craftsmanship that creates welcoming and inspiring spaces.",
-    image: lds7,
-    images: [lds7, lds2, lds3, lds10, lds15, lds20, lds4, lds5, lds6, lds1, lds8, lds9, lds11, lds12, lds13, lds14, lds16, lds17, lds18, lds19, lds21, project4],
-  },
-  {
     id: "hillside-cleanup",
     title: "Monterey Peninsula - Hillside Restoration",
     subtitle: "Environmental Cleanup & Restoration",
