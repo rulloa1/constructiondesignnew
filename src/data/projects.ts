@@ -328,7 +328,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "pacific-grove-design-build",
-    title: "Pacific Grove - Design Build",
+    title: "Pacific Grove",
     subtitle: "Historic Home Transformation",
     location: "Design Build",
     additionalInfo: "Pacific Grove, CA",
@@ -351,7 +351,7 @@ export const projects: Project[] = [
   },
   {
     id: "carmel-house-1",
-    title: "Carmel - Residential Home",
+    title: "Carmel Residence",
     subtitle: "Coastal Custom Residence",
     location: "Residential",
     additionalInfo: "Carmel, CA",
@@ -362,7 +362,7 @@ export const projects: Project[] = [
   },
   {
     id: "carmel-house-2",
-    title: "Carmel - Coastal Residence",
+    title: "Carmel Coastal",
     subtitle: "Custom Coastal Home",
     location: "Residential",
     additionalInfo: "Carmel, CA",
@@ -373,7 +373,7 @@ export const projects: Project[] = [
   },
   {
     id: "hillside-cleanup",
-    title: "Monterey Peninsula - Hillside Restoration",
+    title: "Hillside Restoration",
     subtitle: "Environmental Cleanup & Restoration",
     location: "Commercial",
     additionalInfo: "Monterey Peninsula, CA",
@@ -384,7 +384,7 @@ export const projects: Project[] = [
   },
   {
     id: "laguna-grande-design-build",
-    title: "Laguna Grande - Commercial Design Build",
+    title: "Laguna Grande",
     subtitle: "Spanish Colonial Revival Complex",
     location: "Commercial",
     additionalInfo: "Seaside, CA",
@@ -395,7 +395,7 @@ export const projects: Project[] = [
   },
   {
     id: "southcoast-remodel-design-build",
-    title: "South Coast - Residential Remodel",
+    title: "South Coast Remodel",
     subtitle: "Complete Design Build Renovation",
     location: "Residential",
     additionalInfo: "South Coast, CA",
@@ -406,7 +406,7 @@ export const projects: Project[] = [
   },
   {
     id: "carmel-valley-design-build",
-    title: "Carmel Valley - Design Build",
+    title: "Carmel Valley",
     subtitle: "Custom Residence",
     location: "Design Build",
     additionalInfo: "Carmel Valley, CA",
@@ -417,7 +417,7 @@ export const projects: Project[] = [
   },
   {
     id: "residential-development-site-plan",
-    title: "Southeast Texas - Master Planned Development",
+    title: "Southeast Texas",
     subtitle: "Site Planning & Development",
     location: "Design Build",
     additionalInfo: "Southeast Texas",
@@ -428,7 +428,7 @@ export const projects: Project[] = [
   },
   {
     id: "the-links-residential-development",
-    title: "The Links - Residential Development",
+    title: "The Links",
     subtitle: "Prestigious Community Development",
     location: "Residential",
     additionalInfo: "Southeast Texas",
@@ -439,7 +439,7 @@ export const projects: Project[] = [
   },
   {
     id: "nfl-des-consult",
-    title: "North Florida - Design Build",
+    title: "North Florida",
     subtitle: "Foundation to Finish Construction",
     location: "Design Build",
     additionalInfo: "North Florida",
@@ -450,7 +450,7 @@ export const projects: Project[] = [
   },
   {
     id: "bigsur-mountain-remodel",
-    title: "Big Sur - Mountain Remodel",
+    title: "Big Sur",
     subtitle: "Site Development & Construction",
     location: "Residential",
     additionalInfo: "Big Sur, CA",
@@ -461,7 +461,7 @@ export const projects: Project[] = [
   },
   {
     id: "carmel-house-remdl-23",
-    title: "Carmel Knolls - Residential Remodel",
+    title: "Carmel Knolls",
     subtitle: "Full Renovation",
     location: "Residential",
     additionalInfo: "Carmel, CA",
@@ -472,7 +472,7 @@ export const projects: Project[] = [
   },
   {
     id: "coastal-hillside-restoration-2",
-    title: "Coastal Hillside - Restoration Project",
+    title: "Coastal Restoration",
     subtitle: "Erosion Repair & Stabilization",
     location: "Residential",
     additionalInfo: "Monterey Peninsula, CA",
@@ -494,7 +494,7 @@ export const projects: Project[] = [
   },
   {
     id: "bahamas-abaco-development",
-    title: "Abaco Islands - Residential Development",
+    title: "Abaco Islands",
     subtitle: "Comprehensive Development Project",
     location: "Residential",
     additionalInfo: "Abaco Islands, Bahamas",
@@ -516,7 +516,7 @@ export const projects: Project[] = [
   },
   {
     id: "hospitality-pool",
-    title: "Hospitality - Pool Design",
+    title: "Pool Design",
     subtitle: "Luxury Outdoor Living Space",
     location: "Hospitality",
     additionalInfo: "California",
@@ -527,7 +527,7 @@ export const projects: Project[] = [
   },
   {
     id: "civil-engineering",
-    title: "Civil Engineering & Site Work",
+    title: "Civil Engineering",
     subtitle: "Infrastructure & Grading Excellence",
     location: "Commercial",
     additionalInfo: "Various Locations",
