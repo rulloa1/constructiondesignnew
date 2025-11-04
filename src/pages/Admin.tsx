@@ -42,8 +42,31 @@ export default function Admin() {
     }
 
     setUserId(session.user.id);
-    setIsAdmin(true); // Assume admin, let RLS enforce access control
-    fetchLeads(); // If fetch fails due to RLS, user will see "Access Denied"
+
+    // Verify admin role server-side
+    const { data: isAdminUser, error } = await (supabase as any).rpc('has_role', {
+      _user_id: session.user.id,
+      _role: 'admin'
+    });
+    
+    if (error) {
+      console.error('Error checking admin role:', error);
+      toast({
+        title: "Error",
+        description: "Failed to verify admin privileges.",
+        variant: "destructive",
+      });
+      setLoading(false);
+      return;
+    }
+
+    if (!isAdminUser) {
+      setLoading(false);
+      return;
+    }
+    
+    setIsAdmin(true);
+    fetchLeads();
   };
 
   const fetchLeads = async () => {

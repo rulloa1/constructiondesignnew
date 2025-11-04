@@ -34,6 +34,16 @@ export const Chatbot = () => {
   const sendMessage = async () => {
     if (!input.trim() || isLoading) return;
 
+    const MAX_MESSAGE_LENGTH = 5000;
+    if (input.length > MAX_MESSAGE_LENGTH) {
+      toast({
+        title: "Message too long",
+        description: `Please keep messages under ${MAX_MESSAGE_LENGTH} characters.`,
+        variant: "destructive",
+      });
+      return;
+    }
+
     const userMessage = input.trim();
     setInput("");
     setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
