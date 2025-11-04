@@ -483,7 +483,7 @@ export const projects: Project[] = [
   },
   {
     id: "bahamas-beachfront-estate",
-    title: "Beachfront Estate - Bahamas",
+    title: "Beachfront Estate Property",
     subtitle: "Premier Estate Development",
     location: "Residential",
     additionalInfo: "Bahamas",
