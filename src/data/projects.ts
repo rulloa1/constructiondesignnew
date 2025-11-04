@@ -310,6 +310,17 @@ import civil18 from "@/assets/projects/civil-18.jpg";
 import civil19 from "@/assets/projects/civil-19.jpg";
 import civil20 from "@/assets/projects/civil-20.jpg";
 import civil21 from "@/assets/projects/civil-21.jpg";
+import montanaCover from "@/assets/projects/montana-cover.jpg";
+import montana1 from "@/assets/projects/montana-1.jpg";
+import montana2 from "@/assets/projects/montana-2.jpg";
+import montana3 from "@/assets/projects/montana-3.jpg";
+import montana4 from "@/assets/projects/montana-4.jpg";
+import montana5 from "@/assets/projects/montana-5.jpg";
+import montana6 from "@/assets/projects/montana-6.jpg";
+import montana7 from "@/assets/projects/montana-7.jpg";
+import montana8 from "@/assets/projects/montana-8.jpg";
+import montana9 from "@/assets/projects/montana-9.jpg";
+import montana10 from "@/assets/projects/montana-10.jpg";
 
 export type ProjectCategory = "Residential" | "Commercial" | "Hospitality" | "Design Build";
 
@@ -524,6 +535,17 @@ export const projects: Project[] = [
     description: "Comprehensive civil engineering projects including excavation, coastal restoration, retaining wall systems, hillside stabilization, and site grading. Our expertise in heavy construction and infrastructure development delivers exceptional results for complex sites and challenging terrain.",
     image: civilCover,
     images: [civilCover, civil1, civil2, civil3, civil4, civil5, civil6, civil7, civil8, civil9, civil10, civil11, civil12, civil13, civil14, civil15, civil16, civil17, civil18, civil19, civil20, civil21],
+  },
+  {
+    id: "montana-condo",
+    title: "Montana Condo",
+    subtitle: "Contemporary Mountain Retreat",
+    location: "Residential",
+    additionalInfo: "Montana",
+    category: "Residential",
+    description: "Sophisticated condo renovation featuring contemporary finishes, custom millwork, and luxurious bathroom design. This mountain retreat showcases elegant material selections including dramatic marble, warm wood tones, and refined fixtures that create a seamless blend of modern comfort and mountain living.",
+    image: montanaCover,
+    images: [montanaCover, montana1, montana2, montana3, montana4, montana5, montana6, montana7, montana8, montana9, montana10],
   },
 ];
 
