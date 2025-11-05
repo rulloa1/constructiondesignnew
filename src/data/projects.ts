@@ -315,6 +315,32 @@ import poolDesign13 from "@/assets/projects/pool-design-13.jpg";
 import poolDesign14 from "@/assets/projects/pool-design-14.jpg";
 import poolDesign15 from "@/assets/projects/pool-design-15.jpg";
 import poolDesign16 from "@/assets/projects/pool-design-16.jpg";
+import poolDesign17 from "@/assets/projects/pool-design-17.jpg";
+import poolDesign18 from "@/assets/projects/pool-design-18.jpg";
+import poolDesign19 from "@/assets/projects/pool-design-19.jpg";
+import poolDesign20 from "@/assets/projects/pool-design-20.jpg";
+import poolDesign21 from "@/assets/projects/pool-design-21.jpg";
+import poolDesign22 from "@/assets/projects/pool-design-22.jpg";
+import poolDesign23 from "@/assets/projects/pool-design-23.jpg";
+import poolDesign24 from "@/assets/projects/pool-design-24.jpg";
+import poolDesign25 from "@/assets/projects/pool-design-25.jpg";
+import poolDesign26 from "@/assets/projects/pool-design-26.jpg";
+import poolDesign27 from "@/assets/projects/pool-design-27.jpg";
+import poolDesign28 from "@/assets/projects/pool-design-28.jpg";
+import poolDesign29 from "@/assets/projects/pool-design-29.jpg";
+import poolDesign30 from "@/assets/projects/pool-design-30.jpg";
+import poolDesign31 from "@/assets/projects/pool-design-31.jpg";
+import poolDesign32 from "@/assets/projects/pool-design-32.jpg";
+import poolDesign33 from "@/assets/projects/pool-design-33.jpg";
+import poolDesign34 from "@/assets/projects/pool-design-34.jpg";
+import poolDesign35 from "@/assets/projects/pool-design-35.jpg";
+import poolDesign36 from "@/assets/projects/pool-design-36.jpg";
+import poolDesign37 from "@/assets/projects/pool-design-37.jpg";
+import poolDesign38 from "@/assets/projects/pool-design-38.jpg";
+import poolDesign39 from "@/assets/projects/pool-design-39.jpg";
+import poolDesign40 from "@/assets/projects/pool-design-40.jpg";
+import poolDesign41 from "@/assets/projects/pool-design-41.jpg";
+import poolDesign42 from "@/assets/projects/pool-design-42.jpg";
 
 // Civil Engineering
 import civilCover from "@/assets/projects/civil-cover.jpg";
@@ -466,7 +492,7 @@ export const projects: Project[] = [
     category: "Hospitality",
     description: "Luxury pool and outdoor living space design featuring custom stone work, pool house structures, and beautifully landscaped entertainment areas.",
     image: poolDesignCover,
-    images: [poolDesignCover, poolDesign2, poolDesign5, poolDesign1, poolDesign3, poolDesign4, hospitalityPool1, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16],
+    images: [poolDesignCover, poolDesign2, poolDesign5, poolDesign1, poolDesign3, poolDesign4, hospitalityPool1, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37, poolDesign38, poolDesign39, poolDesign40, poolDesign41, poolDesign42],
   },
   {
     id: "bahamas-beachfront-estate",
