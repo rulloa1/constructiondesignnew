@@ -1,5 +1,5 @@
 import heroImage from "@/assets/hero-mc-portfolio.png";
-import { VantaBirdsBackground } from "./VantaBirdsBackground";
+import { AnimatedBackground } from "./AnimatedBackground";
 
 export const Hero = () => {
   return <section className="relative h-screen w-full overflow-hidden">
@@ -7,8 +7,8 @@ export const Hero = () => {
         <img src={heroImage} alt="Michael Chandler Portfolio - Construction site leader" className="w-full h-full object-cover object-center" />
       </div>
       
-      {/* Vanta Birds 3D Background */}
-      <VantaBirdsBackground />
+      {/* Animated Blueprint Background */}
+      <AnimatedBackground />
       
       {/* Edge Fade Effect */}
       <div className="absolute inset-0 pointer-events-none" style={{
