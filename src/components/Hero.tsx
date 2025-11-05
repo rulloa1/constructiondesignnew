@@ -1,5 +1,4 @@
 import heroImage from "@/assets/hero-mc-portfolio.png";
-import { VantaCloudsBackground } from "./VantaCloudsBackground";
 
 export const Hero = () => {
   return <section className="relative h-screen w-full overflow-hidden">
@@ -10,9 +9,6 @@ export const Hero = () => {
           className="w-full h-full object-contain object-center md:object-cover" 
         />
       </div>
-      
-      {/* Vanta Clouds Background */}
-      <VantaCloudsBackground />
       
       {/* Edge Fade Effect */}
       <div className="absolute inset-0 pointer-events-none" style={{
