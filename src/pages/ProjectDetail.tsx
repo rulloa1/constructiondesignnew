@@ -72,10 +72,10 @@ const ProjectDetail = () => {
           </div>
 
           {/* Simple gallery grid */}
-          <div className="pt-12 pb-8 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 ${project.category === "Design Build" ? "gap-1" : "gap-4 md:gap-6"}`}>
-                {project.images.map((image, index) => <button key={`${image}-${index}`} onClick={() => setSelectedImageIndex(index)} className="relative aspect-square overflow-hidden rounded-xl bg-white border border-charcoal/10 group cursor-pointer transition-all hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-charcoal/30">
+          <div className="pt-6 pb-6 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 ${project.category === "Design Build" ? "gap-1" : "gap-3 md:gap-4"}`}>
+                {project.images.map((image, index) => <button key={`${image}-${index}`} onClick={() => setSelectedImageIndex(index)} className="relative aspect-square overflow-hidden rounded-lg bg-white border border-charcoal/10 group cursor-pointer transition-all hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-charcoal/30">
                     <img 
                       src={image} 
                       alt={`${project.title} - Image ${index + 1}`} 
