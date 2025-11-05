@@ -429,7 +429,7 @@ export const projects: Project[] = [
   },
   {
     id: "hospitality-pool",
-    title: "Pool Design",
+    title: "Luxury Pool Design",
     subtitle: "Luxury Pool Design",
     location: "Hospitality",
     additionalInfo: "California",
