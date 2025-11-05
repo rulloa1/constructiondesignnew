@@ -3,6 +3,7 @@ import { ArrowLeft, HardHat, Hammer, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { projects, ProjectCategory } from "@/data/projects";
 import { Link } from "react-router-dom";
+import { VantaBirdsBackground } from "./VantaBirdsBackground";
 interface PortfolioProps {
   onClose: () => void;
 }
@@ -23,12 +24,14 @@ export const Portfolio: React.FC<PortfolioProps> = ({
     return projects.filter(p => p.category === category).length;
   };
   return <div className="min-h-screen bg-background relative">
-      {/* Luxurious animated background */}
+      {/* Vanta Birds 3D Background */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{
       zIndex: -1
     }}>
+        <VantaBirdsBackground />
+        
         {/* Rich gradient base */}
-        <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-background to-charcoal/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-background to-charcoal/95 opacity-70" />
         
         {/* Elegant art deco pattern */}
         <div className="absolute inset-0 opacity-[0.15]" style={{
