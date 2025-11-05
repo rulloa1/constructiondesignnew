@@ -1,12 +1,25 @@
+import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-mc-portfolio.png";
 
 export const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0 bg-background">
         <img 
           src={heroImage} 
           alt="Michael Chandler Portfolio - Construction site leader" 
-          className="w-full h-full object-contain object-center md:object-cover" 
+          className="w-full h-full object-contain object-center md:object-cover transition-transform duration-100 ease-out"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
         />
       </div>
       
