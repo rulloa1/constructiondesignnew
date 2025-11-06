@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-mc-portfolio.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
+  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,7 +15,12 @@ export const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return <section className="relative h-screen w-full overflow-hidden">
+  return <section 
+    ref={elementRef as React.RefObject<HTMLElement>}
+    className={`relative h-screen w-full overflow-hidden transition-all duration-1000 ${
+      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+    }`}
+  >
       <div className="absolute inset-0 bg-background">
         <img 
           src={heroImage} 

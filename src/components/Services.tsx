@@ -1,4 +1,5 @@
 import { Compass, Pencil, Hammer, ClipboardCheck, Shield, Leaf } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const services = [
   {
@@ -70,11 +71,17 @@ const services = [
 ];
 
 export const Services = () => {
+  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.15 });
   // Duplicate services for seamless loop
   const duplicatedServices = [...services, ...services];
 
   return (
-    <section className="py-16 bg-background overflow-hidden">
+    <section 
+      ref={elementRef as React.RefObject<HTMLElement>}
+      className={`py-16 bg-background overflow-hidden transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+      }`}
+    >
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-16">

@@ -1,10 +1,20 @@
 import { Hammer, HardHat, Wrench, ArrowDown } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 interface AboutProps {
   onPortfolioClick?: () => void;
 }
 
 export const About = ({ onPortfolioClick }: AboutProps) => {
-  return <section id="about" className="relative py-24 overflow-hidden bg-background">
+  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.15 });
+
+  return <section 
+    id="about" 
+    ref={elementRef as React.RefObject<HTMLElement>}
+    className={`relative py-24 overflow-hidden bg-background transition-all duration-1000 ${
+      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+    }`}
+  >
       {/* Animated Construction Icons Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating Icons */}
