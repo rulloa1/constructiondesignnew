@@ -297,13 +297,7 @@ import development9 from "@/assets/projects/development-9.jpg";
 import development10 from "@/assets/projects/development-10.jpg";
 
 // Hospitality Pool
-import hospitalityPool1 from "@/assets/projects/hospitality-pool-1.jpg";
 import poolDesignCover from "@/assets/projects/pool-design-cover.jpg";
-import poolDesign1 from "@/assets/projects/pool-design-1.jpg";
-import poolDesign2 from "@/assets/projects/pool-design-2.jpg";
-import poolDesign3 from "@/assets/projects/pool-design-3.jpg";
-import poolDesign4 from "@/assets/projects/pool-design-4.jpg";
-import poolDesign5 from "@/assets/projects/pool-design-5.jpg";
 import poolDesign6 from "@/assets/projects/pool-design-6.jpg";
 import poolDesign7 from "@/assets/projects/pool-design-7.jpg";
 import poolDesign8 from "@/assets/projects/pool-design-8.jpg";
