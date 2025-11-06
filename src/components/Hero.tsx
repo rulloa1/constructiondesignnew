@@ -32,7 +32,7 @@ export const Hero = () => {
       
       {/* Edge Fade Effect */}
       <div className="absolute inset-0 pointer-events-none" style={{
-      background: 'radial-gradient(ellipse 70% 65% at 50% 45%, transparent 0%, transparent 50%, hsl(var(--background)) 100%)'
+      background: 'radial-gradient(ellipse 75% 70% at 50% 40%, transparent 0%, transparent 40%, hsl(var(--background) / 0.3) 65%, hsl(var(--background)) 100%)'
     }} />
       
       {/* Text Overlay */}
