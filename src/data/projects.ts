@@ -252,10 +252,6 @@ import coastalRestoration13 from "@/assets/projects/coastal-restoration-13.jpg";
 import coastalRestoration14 from "@/assets/projects/coastal-restoration-14.jpg";
 import coastalRestoration15 from "@/assets/projects/coastal-restoration-15.jpg";
 
-// Bakers Bay
-import bakersBay1 from "@/assets/projects/bakers-bay-1.png";
-import bakersBay2 from "@/assets/projects/bakers-bay-2.png";
-
 // Beachfront Estate
 import beachfront1 from "@/assets/projects/beachfront-1.jpg";
 import beachfront2 from "@/assets/projects/beachfront-2.jpg";
@@ -270,16 +266,6 @@ import abacoDevelopment1 from "@/assets/projects/abaco-development-1.png";
 
 // Development
 import developmentCover from "@/assets/projects/development-cover.jpg";
-import development1 from "@/assets/projects/development-1.jpg";
-import development2 from "@/assets/projects/development-2.jpg";
-import development3 from "@/assets/projects/development-3.jpg";
-import development4 from "@/assets/projects/development-4.jpg";
-import development5 from "@/assets/projects/development-5.jpg";
-import development6 from "@/assets/projects/development-6.jpg";
-import development7 from "@/assets/projects/development-7.jpg";
-import development8 from "@/assets/projects/development-8.jpg";
-import development9 from "@/assets/projects/development-9.jpg";
-import development10 from "@/assets/projects/development-10.jpg";
 import development11 from "@/assets/projects/development-11.png";
 import development12 from "@/assets/projects/development-12.png";
 import development13 from "@/assets/projects/development-13.jpg";
@@ -508,7 +494,7 @@ export const projects: Project[] = [
     category: "Residential",
     description: "A collection of development projects showcasing comprehensive construction and site development work.",
     image: developmentCover,
-    images: [developmentCover, development1, development2, development3, development4, development5, development6, development7, development8, development9, development10, development11, development12, development13, development14, development15, development16, development17, development18, development19, development20, development21, development22, development23, development24, development25, bakersBay1, bakersBay2],
+    images: [developmentCover, development11, development12, development13, development14, development15, development16, development17, development18, development19, development20, development21, development22, development23, development24, development25],
   },
   {
     id: "pacific-grove-design-build",
