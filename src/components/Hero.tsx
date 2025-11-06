@@ -25,7 +25,7 @@ export const Hero = () => {
         <img 
           src={heroImage} 
           alt="Michael Chandler Portfolio - Construction site leader" 
-          className="w-full h-full object-contain object-center md:object-cover transition-transform duration-100 ease-out"
+          className="w-full h-full object-cover object-[center_40%] transition-transform duration-100 ease-out"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
         />
       </div>
