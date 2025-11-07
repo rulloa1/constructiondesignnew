@@ -305,6 +305,8 @@ All colors MUST be HSL.
   }
 
   /* 3D Gallery Effect */
+  /**** 3D Gallery ****/
+
   @media (min-width: 1001px) {
     .gallery-3d {
       perspective: 500px;
@@ -360,22 +362,13 @@ All colors MUST be HSL.
     }
   }
 
-  /* Tablet 3D Gallery */
-  @media (max-width: 1000px) and (min-width: 751px) {
-    .gallery-3d .card {
-      transition: 0.4s;
-      filter: brightness(0.5) grayscale(1);
-      will-change: transform, filter;
-
-      &:hover {
-        filter: brightness(1) grayscale(0);
-        width: 50vw;
-      }
-    }
+  /*** Tablet ****/
+  @media (max-width: 1000px) {
+    /* ... */
   }
 
-  /* Mobile 3D Gallery */
-  @media (max-width: 750px) {
+  /**** Mobile ****/
+  @media (max-width: 751px) {
     .gallery-3d .card {
       transition: 0.4s;
       filter: brightness(0.5) grayscale(1);
