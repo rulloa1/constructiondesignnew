@@ -165,12 +165,6 @@ import bigsur12 from "@/assets/projects/bigsur-12.jpg";
 import bigsur13 from "@/assets/projects/bigsur-13.jpg";
 import bigsur14 from "@/assets/projects/bigsur-14.jpg";
 import bigsur15 from "@/assets/projects/bigsur-15.jpg";
-import bigsur16 from "@/assets/projects/bigsur-16.jpg";
-import bigsur17 from "@/assets/projects/bigsur-17.jpg";
-import bigsur18 from "@/assets/projects/bigsur-18.jpg";
-import bigsur19 from "@/assets/projects/bigsur-19.jpg";
-import bigsur20 from "@/assets/projects/bigsur-20.jpg";
-import bigsur21 from "@/assets/projects/bigsur-21.jpg";
 import carmelValleyCover from "@/assets/projects/carmel-valley-cover.jpg";
 import carmelValley1 from "@/assets/projects/carmel-valley-1.jpg";
 import carmelValley2 from "@/assets/projects/carmel-valley-2.jpg";
@@ -286,6 +280,11 @@ import development17 from "@/assets/projects/development-17.jpg";
 
 // Hospitality Pool
 import poolDesignCover from "@/assets/projects/pool-design-cover.jpg";
+import poolDesign1 from "@/assets/projects/pool-design-1.jpg";
+import poolDesign2 from "@/assets/projects/pool-design-2.jpg";
+import poolDesign3 from "@/assets/projects/pool-design-3.jpg";
+import poolDesign4 from "@/assets/projects/pool-design-4.jpg";
+import poolDesign5 from "@/assets/projects/pool-design-5.jpg";
 import poolDesign6 from "@/assets/projects/pool-design-6.jpg";
 import poolDesign7 from "@/assets/projects/pool-design-7.jpg";
 import poolDesign8 from "@/assets/projects/pool-design-8.jpg";
@@ -317,12 +316,6 @@ import poolDesign33 from "@/assets/projects/pool-design-33.jpg";
 import poolDesign34 from "@/assets/projects/pool-design-34.jpg";
 import poolDesign35 from "@/assets/projects/pool-design-35.jpg";
 import poolDesign36 from "@/assets/projects/pool-design-36.jpg";
-import poolDesign37 from "@/assets/projects/pool-design-37.jpg";
-import poolDesign38 from "@/assets/projects/pool-design-38.jpg";
-import poolDesign39 from "@/assets/projects/pool-design-39.jpg";
-import poolDesign40 from "@/assets/projects/pool-design-40.jpg";
-import poolDesign41 from "@/assets/projects/pool-design-41.jpg";
-import poolDesign42 from "@/assets/projects/pool-design-42.jpg";
 
 // Civil Engineering
 import civilCover from "@/assets/projects/civil-cover.jpg";
@@ -474,7 +467,7 @@ export const projects: Project[] = [
     category: "Hospitality",
     description: "Luxury pool and outdoor living space design featuring custom stone work, pool house structures, and beautifully landscaped entertainment areas.",
     image: poolDesignCover,
-    images: [poolDesignCover, poolDesign6, poolDesign15, poolDesign16, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign17, poolDesign7, poolDesign18, poolDesign14, poolDesign19, poolDesign12, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37, poolDesign38, poolDesign20, poolDesign39, poolDesign13, poolDesign40, poolDesign41, poolDesign42, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25],
+    images: [poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36],
   },
   {
     id: "bahamas-beachfront-estate",
@@ -596,7 +589,7 @@ export const projects: Project[] = [
     category: "Residential",
     description: "Scenic mountain remodel project featuring stunning ocean views, retaining wall construction, custom garage building, and comprehensive site development with careful attention to the natural landscape.",
     image: bigsurCover,
-    images: [bigsurCover, bigsur1, bigsur2, bigsur3, bigsur4, bigsur5, bigsur6, bigsur7, bigsur8, bigsur9, bigsur10, bigsur11, bigsur12, bigsur13, bigsur14, bigsur15, bigsur16, bigsur17, bigsur18, bigsur19, bigsur20, bigsur21],
+    images: [bigsurCover, bigsur1, bigsur2, bigsur3, bigsur4, bigsur5, bigsur6, bigsur7, bigsur8, bigsur9, bigsur10, bigsur11, bigsur12, bigsur13, bigsur14, bigsur15],
   },
   {
     id: "carmel-house-remdl-23",
