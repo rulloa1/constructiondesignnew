@@ -1,5 +1,6 @@
-import { Hammer, HardHat, Wrench, ArrowDown } from "lucide-react";
+import { Hammer, HardHat, Wrench, ArrowDown, Target, Award } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface AboutProps {
   onPortfolioClick?: () => void;
@@ -58,42 +59,77 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
       `}</style>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-playfair font-semibold text-center mb-8 text-charcoal opacity-0 animate-slide-in-left">About Me</h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="relative bg-white/80 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-1 opacity-0 animate-fade-in-up delay-200">
-              {/* Arrow pointing to Portfolio */}
-              <button 
-                onClick={onPortfolioClick}
-                className="absolute bottom-4 right-4 opacity-40 hover:opacity-70 transition-all duration-300 flex flex-col items-center gap-1 cursor-pointer group"
-                aria-label="Open Portfolio"
-              >
-                <ArrowDown size={48} className="text-accent animate-bounce group-hover:animate-none" strokeWidth={2.5} />
-                <span className="text-sm font-playfair font-semibold text-accent">Portfolio</span>
-              </button>
-              <div className="space-y-8 text-lg font-inter font-light leading-relaxed text-charcoal/80">
-                <p className="transition-all duration-300">
-                  I'm Michael, a construction professional who believes that exceptional results come from exceptional teams. My approach is simple: bring together the right people, create an environment built on mutual respect, and stay closely attuned to client feedback throughout every phase of a project.
-                </p>
-                <p className="transition-all duration-300">
-                  I've built my career on the principle that quality construction isn't just about meeting standards—it's about exceeding them. By combining rigorous processes with forward-thinking design and fostering a collaborative team culture, I've found that excellence becomes not just achievable, but inevitable.
-                </p>
-                
-                <div className="pt-4">
-                  <h3 className="text-2xl font-playfair font-semibold mb-4 text-charcoal">My Philosophy</h3>
-                  <p className="transition-all duration-300">
-                    Superior construction is accomplished through three core elements: assembling the right group of people, empowering them with the respect and environment they need to thrive, and making thoughtful course corrections based on real-time feedback from project owners and end users. When these elements align, teams don't just meet expectations—they consistently surpass them.
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl md:text-6xl font-playfair font-semibold text-center mb-16 text-foreground opacity-0 animate-slide-in-left">
+            About Me
+          </h2>
+          
+          {/* Main intro section */}
+          <div className="max-w-4xl mx-auto mb-16 opacity-0 animate-fade-in-up delay-200">
+            <Card className="bg-card/80 backdrop-blur-sm border-border shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-1">
+              <CardContent className="p-8 md:p-12">
+                <div className="space-y-6 text-lg font-inter font-light leading-relaxed text-foreground/90">
+                  <p className="text-xl md:text-2xl font-medium text-foreground">
+                    I'm Michael, a construction professional who believes that exceptional results come from exceptional teams.
+                  </p>
+                  <p>
+                    My approach is simple: bring together the right people, create an environment built on mutual respect, and stay closely attuned to client feedback throughout every phase of a project.
+                  </p>
+                  <p>
+                    I've built my career on the principle that quality construction isn't just about meeting standards—it's about exceeding them. By combining rigorous processes with forward-thinking design and fostering a collaborative team culture, I've found that excellence becomes not just achievable, but inevitable.
                   </p>
                 </div>
+              </CardContent>
+            </Card>
+          </div>
 
-                <div className="pt-4">
-                  <h3 className="text-2xl font-playfair font-semibold mb-4 text-charcoal">My Commitment</h3>
-                  <p className="transition-all duration-300">
-                    Every client, every project, every time: I'm dedicated to exceeding expectations under all conditions. It's not just a goal—it's the standard by which I measure success.
-                  </p>
+          {/* Philosophy and Commitment Cards */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Philosophy Card */}
+            <Card className="opacity-0 animate-fade-in-up delay-300 bg-card/80 backdrop-blur-sm border-border shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="p-3 rounded-lg bg-accent/10">
+                    <Target className="w-8 h-8 text-accent" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-playfair font-semibold text-foreground mt-2">
+                    My Philosophy
+                  </h3>
                 </div>
-              </div>
-            </div>
+                <p className="text-base md:text-lg font-inter font-light leading-relaxed text-foreground/80">
+                  Superior construction is accomplished through three core elements: assembling the right group of people, empowering them with the respect and environment they need to thrive, and making thoughtful course corrections based on real-time feedback from project owners and end users. When these elements align, teams don't just meet expectations—they consistently surpass them.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Commitment Card */}
+            <Card className="opacity-0 animate-fade-in-up delay-400 bg-card/80 backdrop-blur-sm border-border shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="p-3 rounded-lg bg-accent/10">
+                    <Award className="w-8 h-8 text-accent" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-playfair font-semibold text-foreground mt-2">
+                    My Commitment
+                  </h3>
+                </div>
+                <p className="text-base md:text-lg font-inter font-light leading-relaxed text-foreground/80">
+                  Every client, every project, every time: I'm dedicated to exceeding expectations under all conditions. It's not just a goal—it's the standard by which I measure success.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Arrow pointing to Portfolio */}
+          <div className="flex justify-center opacity-0 animate-fade-in delay-500">
+            <button 
+              onClick={onPortfolioClick}
+              className="flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer group"
+              aria-label="View Portfolio"
+            >
+              <span className="text-lg font-playfair font-semibold text-accent">View My Work</span>
+              <ArrowDown size={48} className="text-accent animate-bounce group-hover:animate-none" strokeWidth={2.5} />
+            </button>
           </div>
         </div>
       </div>
