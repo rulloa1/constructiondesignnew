@@ -286,6 +286,11 @@ import development17 from "@/assets/projects/development-17.jpg";
 
 // Hospitality Pool
 import poolDesignCover from "@/assets/projects/pool-design-cover.jpg";
+import poolDesign1 from "@/assets/projects/pool-design-1.jpg";
+import poolDesign2 from "@/assets/projects/pool-design-2.jpg";
+import poolDesign3 from "@/assets/projects/pool-design-3.jpg";
+import poolDesign4 from "@/assets/projects/pool-design-4.jpg";
+import poolDesign5 from "@/assets/projects/pool-design-5.jpg";
 import poolDesign6 from "@/assets/projects/pool-design-6.jpg";
 import poolDesign7 from "@/assets/projects/pool-design-7.jpg";
 import poolDesign8 from "@/assets/projects/pool-design-8.jpg";
@@ -318,11 +323,6 @@ import poolDesign34 from "@/assets/projects/pool-design-34.jpg";
 import poolDesign35 from "@/assets/projects/pool-design-35.jpg";
 import poolDesign36 from "@/assets/projects/pool-design-36.jpg";
 import poolDesign37 from "@/assets/projects/pool-design-37.jpg";
-import poolDesign38 from "@/assets/projects/pool-design-38.jpg";
-import poolDesign39 from "@/assets/projects/pool-design-39.jpg";
-import poolDesign40 from "@/assets/projects/pool-design-40.jpg";
-import poolDesign41 from "@/assets/projects/pool-design-41.jpg";
-import poolDesign42 from "@/assets/projects/pool-design-42.jpg";
 
 // Civil Engineering
 import civilCover from "@/assets/projects/civil-cover.jpg";
@@ -474,7 +474,7 @@ export const projects: Project[] = [
     category: "Hospitality",
     description: "Luxury pool and outdoor living space design featuring custom stone work, pool house structures, and beautifully landscaped entertainment areas.",
     image: poolDesignCover,
-    images: [poolDesignCover, poolDesign6, poolDesign15, poolDesign16, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign17, poolDesign7, poolDesign18, poolDesign14, poolDesign19, poolDesign12, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37, poolDesign38, poolDesign20, poolDesign39, poolDesign13, poolDesign40, poolDesign41, poolDesign42, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25],
+    images: [poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37],
   },
   {
     id: "bahamas-beachfront-estate",
