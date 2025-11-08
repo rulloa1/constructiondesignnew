@@ -81,6 +81,7 @@ import lds18 from "@/assets/projects/lds-18.jpg";
 import lds19 from "@/assets/projects/lds-19.jpg";
 import lds20 from "@/assets/projects/lds-20.jpg";
 import lds21 from "@/assets/projects/lds-21.jpg";
+import southcoast1 from "@/assets/projects/southcoast-1.jpg";
 import southcoast2 from "@/assets/projects/southcoast-2.jpg";
 import southcoast3 from "@/assets/projects/southcoast-3.jpg";
 import southcoast4 from "@/assets/projects/southcoast-4.jpg";
@@ -168,6 +169,8 @@ import carmelValley4 from "@/assets/projects/carmel-valley-4.jpg";
 // Pacific Grove Design Build album
 import pgCover from "@/assets/projects/pg-cover.jpg";
 import pg1 from "@/assets/projects/pg-1.jpg";
+import pg2 from "@/assets/projects/pg-2.png";
+import pg3 from "@/assets/projects/pg-3.png";
 import pg4 from "@/assets/projects/pg-4.jpg";
 import pg5 from "@/assets/projects/pg-5.jpg";
 import pg6 from "@/assets/projects/pg-6.jpg";
@@ -175,6 +178,21 @@ import pg7 from "@/assets/projects/pg-7.jpg";
 import pg8 from "@/assets/projects/pg-8.jpg";
 import pg9 from "@/assets/projects/pg-9.jpg";
 import pg10 from "@/assets/projects/pg-10.jpg";
+
+// N. FL Des Consult
+import nfl001 from "@/assets/projects/nfl-001-cover.webp";
+import nfl002 from "@/assets/projects/nfl-002.webp";
+import nfl003 from "@/assets/projects/nfl-003.png";
+import nfl004 from "@/assets/projects/nfl-004.png";
+import nfl005 from "@/assets/projects/nfl-005.jpg";
+import nfl006 from "@/assets/projects/nfl-006.jpg";
+import nfl007 from "@/assets/projects/nfl-007.jpg";
+import nfl008 from "@/assets/projects/nfl-008.jpg";
+import nfl009 from "@/assets/projects/nfl-009.jpg";
+import nfl010 from "@/assets/projects/nfl-010.jpg";
+import nfl011 from "@/assets/projects/nfl-011.jpg";
+import nfl012 from "@/assets/projects/nfl-012.jpg";
+import nfl013 from "@/assets/projects/nfl-013.jpg";
 
 // Carmel House Remdl No.23
 import carmel3Cover from "@/assets/projects/carmel-3-cover-new.png";
@@ -322,6 +340,54 @@ import montana8 from "@/assets/projects/montana-8.jpg";
 import montana9 from "@/assets/projects/montana-9.jpg";
 import montana10 from "@/assets/projects/montana-10.jpg";
 import montana11 from "@/assets/projects/montana-11.jpg";
+import miamiBeachCover from "@/assets/projects/miami-beach-cover.jpg";
+import miamiBeach1 from "@/assets/projects/miami-beach-1.png";
+import miamiBeach2 from "@/assets/projects/miami-beach-2.png";
+import miamiBeach3 from "@/assets/projects/miami-beach-3.jpg";
+import miamiBeach4 from "@/assets/projects/miami-beach-4.jpg";
+import miamiBeach5 from "@/assets/projects/miami-beach-5.jpg";
+import miamiBeach6 from "@/assets/projects/miami-beach-6.jpg";
+import miamiBeach7 from "@/assets/projects/miami-beach-7.jpg";
+import miamiBeach8 from "@/assets/projects/miami-beach-8.jpg";
+import miamiBeach9 from "@/assets/projects/miami-beach-9.jpg";
+import miamiBeach10 from "@/assets/projects/miami-beach-10.jpg";
+import miamiBeach11 from "@/assets/projects/miami-beach-11.jpg";
+import miamiBeach12 from "@/assets/projects/miami-beach-12.jpg";
+import miamiBeach13 from "@/assets/projects/miami-beach-13.jpg";
+import miamiBeach14 from "@/assets/projects/miami-beach-14.jpg";
+import miamiBeach15 from "@/assets/projects/miami-beach-15.jpg";
+import miamiBeach16 from "@/assets/projects/miami-beach-16.jpg";
+import miamiBeach17 from "@/assets/projects/miami-beach-17.jpg";
+import miamiBeach18 from "@/assets/projects/miami-beach-18.jpg";
+import miamiBeach19 from "@/assets/projects/miami-beach-19.jpg";
+import miamiBeach20 from "@/assets/projects/miami-beach-20.jpg";
+import miamiBeach21 from "@/assets/projects/miami-beach-21.jpg";
+import miamiBeach22 from "@/assets/projects/miami-beach-22.jpg";
+import miamiBeach23 from "@/assets/projects/miami-beach-23.jpg";
+import miamiBeach24 from "@/assets/projects/miami-beach-24.jpg";
+import miamiBeach25 from "@/assets/projects/miami-beach-25.jpg";
+import miamiBeach26 from "@/assets/projects/miami-beach-26.jpg";
+import miamiBeach27 from "@/assets/projects/miami-beach-27.jpg";
+import miamiBeach28 from "@/assets/projects/miami-beach-28.jpg";
+import miamiBeach29 from "@/assets/projects/miami-beach-29.jpg";
+import miamiBeach30 from "@/assets/projects/miami-beach-30.jpg";
+import miamiBeach31 from "@/assets/projects/miami-beach-31.jpg";
+import miamiBeach32 from "@/assets/projects/miami-beach-32.jpg";
+import miamiBeach33 from "@/assets/projects/miami-beach-33.jpg";
+import miamiBeach34 from "@/assets/projects/miami-beach-34.jpg";
+import miamiBeach35 from "@/assets/projects/miami-beach-35.jpg";
+import miamiBeach36 from "@/assets/projects/miami-beach-36.jpg";
+import miamiBeach37 from "@/assets/projects/miami-beach-37.jpg";
+import miamiBeach38 from "@/assets/projects/miami-beach-38.jpg";
+import miamiBeach39 from "@/assets/projects/miami-beach-39.jpg";
+import miamiBeach40 from "@/assets/projects/miami-beach-40.jpg";
+import miamiBeach41 from "@/assets/projects/miami-beach-41.jpg";
+import miamiBeach42 from "@/assets/projects/miami-beach-42.jpg";
+import miamiBeach43 from "@/assets/projects/miami-beach-43.jpg";
+import miamiBeach44 from "@/assets/projects/miami-beach-44.jpg";
+import miamiBeach45 from "@/assets/projects/miami-beach-45.jpg";
+import miamiBeach46 from "@/assets/projects/miami-beach-46.jpg";
+import miamiBeach47 from "@/assets/projects/miami-beach-47.jpg";
 import syracuseCover from "@/assets/projects/syracuse-cover.webp";
 import syracuse1 from "@/assets/projects/syracuse-1.webp";
 import syracuse2 from "@/assets/projects/syracuse-2.webp";
@@ -378,6 +444,17 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: "miami-beach-condo",
+    title: "Miami Beach Condo",
+    subtitle: "Modern Luxury Residence",
+    location: "Residential",
+    additionalInfo: "Miami Beach, FL",
+    category: "Residential",
+    description: "Contemporary luxury condominium featuring sophisticated interior design, premium finishes, and breathtaking ocean views. This beachfront residence showcases modern aesthetics with clean lines, custom millwork, and elegant material selections that complement the coastal lifestyle.",
+    image: miamiBeachCover,
+    images: [miamiBeachCover, miamiBeach1, miamiBeach2, miamiBeach3, miamiBeach4, miamiBeach5, miamiBeach6, miamiBeach7, miamiBeach8, miamiBeach9, miamiBeach10, miamiBeach11, miamiBeach12, miamiBeach13, miamiBeach14, miamiBeach15, miamiBeach16, miamiBeach17, miamiBeach18, miamiBeach19, miamiBeach20, miamiBeach21, miamiBeach22, miamiBeach23, miamiBeach24, miamiBeach25, miamiBeach26, miamiBeach27, miamiBeach28, miamiBeach29, miamiBeach30, miamiBeach31, miamiBeach32, miamiBeach33, miamiBeach34, miamiBeach35, miamiBeach36, miamiBeach37, miamiBeach38, miamiBeach39, miamiBeach40, miamiBeach41, miamiBeach42, miamiBeach43, miamiBeach44, miamiBeach45, miamiBeach46, miamiBeach47],
+  },
   {
     id: "high-alpine-ranch",
     title: "High Alpine Ranch",
@@ -453,7 +530,7 @@ export const projects: Project[] = [
     category: "Design Build",
     description: "A comprehensive transformation of a historic property, seamlessly blending traditional craftsman character with modern comfort and functionality. This complete design-build project showcases our expertise in preserving neighborhood heritage while creating contemporary living spaces.",
     image: pgCover,
-    images: [pgCover, pg1, pg4, pg5, pg6, pg7, pg8, pg9, pg10],
+    images: [pgCover, pg1, pg2, pg3, pg4, pg5, pg6, pg7, pg8, pg9, pg10],
   },
   {
     id: "carmel-house-2",
@@ -497,7 +574,7 @@ export const projects: Project[] = [
     category: "Residential",
     description: "A comprehensive remodel and design-build project that transforms existing spaces into modern, functional, and aesthetically stunning coastal living featuring ocean views, custom skylights, designer flooring, sophisticated interior finishes, gourmet kitchen, luxury master suite, spa-quality bathrooms, and complete structural renovations with custom architectural details.",
     image: southcoastCover,
-    images: [southcoastCover, southcoast2, southcoast3, southcoast4, southcoast5, southcoast6, southcoast7, southcoast8, southcoast9, southcoast10, southcoast11, southcoast12, southcoast13, southcoast14, southcoast15, southcoast16, southcoast17, southcoast18, southcoast19, southcoast20, southcoast21, southcoast22, southcoast23, southcoast24, southcoast25, southcoast26, southcoast27, southcoast28, southcoast29, southcoast30, southcoast31, southcoast32, southcoast33, southcoast34, southcoast35, southcoast36, southcoast37, southcoast38, southcoast39, southcoast40, southcoast41, southcoast42, southcoast43, southcoast44, southcoast45, southcoast46, southcoast47, southcoast48, southcoast49, southcoast50, southcoast51, southcoast52, southcoast53],
+    images: [southcoastCover, southcoast1, southcoast2, southcoast3, southcoast4, southcoast5, southcoast6, southcoast7, southcoast8, southcoast9, southcoast10, southcoast11, southcoast12, southcoast13, southcoast14, southcoast15, southcoast16, southcoast17, southcoast18, southcoast19, southcoast20, southcoast21, southcoast22, southcoast23, southcoast24, southcoast25, southcoast26, southcoast27, southcoast28, southcoast29, southcoast30, southcoast31, southcoast32, southcoast33, southcoast34, southcoast35, southcoast36, southcoast37, southcoast38, southcoast39, southcoast40, southcoast41, southcoast42, southcoast43, southcoast44, southcoast45, southcoast46, southcoast47, southcoast48, southcoast49, southcoast50, southcoast51, southcoast52, southcoast53],
   },
   {
     id: "carmel-valley-design-build",
@@ -511,8 +588,19 @@ export const projects: Project[] = [
     images: [carmelValleyCover, carmelValley1, carmelValley2, carmelValley3, carmelValley4],
   },
   {
+    id: "nfl-des-consult",
+    title: "North Florida",
+    subtitle: "Foundation to Finish",
+    location: "Design Build",
+    additionalInfo: "Vero Beach, Florida",
+    category: "Design Build",
+    description: "A comprehensive design-build project showcasing quality construction from foundation to finish, featuring custom framing, concrete block construction, and meticulous attention to architectural details.",
+    image: nfl001,
+    images: [nfl001, nfl002, nfl003, nfl004, nfl005, nfl006, nfl007, nfl008, nfl009, nfl010, nfl011, nfl012, nfl013],
+  },
+  {
     id: "bigsur-mountain-remodel",
-    title: "Partington Ridge Big Sur",
+    title: "Big Sur",
     subtitle: "Coastal Site Work",
     location: "Residential",
     additionalInfo: "Big Sur, CA",

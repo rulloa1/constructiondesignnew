@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { getProjectById } from "@/data/projects";
 import { useState, useEffect } from "react";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 const ProjectDetail = () => {
   const {
     id
@@ -72,26 +71,19 @@ const ProjectDetail = () => {
             </div>
           </div>
 
-          {/* Image Gallery */}
-          <div className="pt-6 pb-12 px-4 sm:px-6 lg:px-8">
-            <ScrollArea className="w-full whitespace-nowrap">
-              <div className="flex gap-4 pb-4">
-                {project.images.map((image, index) => (
-                  <button
-                    key={`${image}-${index}`}
-                    onClick={() => setSelectedImageIndex(index)}
-                    className="relative inline-block h-[60vh] min-h-[400px] w-auto overflow-hidden rounded-lg bg-white border border-charcoal/10 cursor-pointer hover:shadow-lg transition-shadow duration-300 focus:outline-none flex-shrink-0"
-                  >
+          {/* Simple gallery grid */}
+          <div className="pt-6 pb-6 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 ${project.category === "Design Build" ? "gap-1" : "gap-3 md:gap-4"}`}>
+                {project.images.map((image, index) => <button key={`${image}-${index}`} onClick={() => setSelectedImageIndex(index)} className="relative aspect-square overflow-hidden rounded-lg bg-white border border-charcoal/10 group cursor-pointer transition-all hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-charcoal/30">
                     <img 
                       src={image} 
                       alt={`${project.title} - Image ${index + 1}`} 
-                      className="h-full w-auto object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
-                  </button>
-                ))}
+                  </button>)}
               </div>
-              <ScrollBar orientation="horizontal" />
-            </ScrollArea>
+            </div>
           </div>
         </div>
       </div>
@@ -126,12 +118,7 @@ const ProjectDetail = () => {
 
           {/* Image */}
           <div className="flex items-center justify-center h-full p-16" onClick={e => e.stopPropagation()}>
-            <img 
-              key={selectedImageIndex}
-              src={project.images[selectedImageIndex]} 
-              alt={`${project.title} - Image ${selectedImageIndex + 1}`} 
-              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-fade-in border border-charcoal/10" 
-            />
+            <img src={project.images[selectedImageIndex]} alt={`${project.title} - Image ${selectedImageIndex + 1}`} className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-scale-in border border-charcoal/10" />
           </div>
         </div>}
     </>;
