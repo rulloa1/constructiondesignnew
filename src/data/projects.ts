@@ -426,7 +426,7 @@ import alpineRanch10 from "@/assets/projects/alpine-ranch-10.jpg";
 import alpineRanch11 from "@/assets/projects/alpine-ranch-11.jpg";
 import alpineRanch12 from "@/assets/projects/alpine-ranch-12.jpg";
 
-export type ProjectCategory = "Residential Construction" | "Commercial" | "Hospitality" | "Design Build";
+export type ProjectCategory = "Residential Construction" | "Residential Development" | "Commercial" | "Hospitality" | "Design Build";
 
 export interface Project {
   id: string;
@@ -500,9 +500,9 @@ export const projects: Project[] = [
     id: "bahamas-beachfront-estate",
     title: "Beachfront Estate",
     subtitle: "Residence",
-    location: "Residential Construction",
+    location: "Residential Development",
     additionalInfo: "Abaco, Bahamas",
-    category: "Residential Construction",
+    category: "Residential Development",
     description: "Premier beachfront estate property development showcasing luxury coastal living in the Bahamas.",
     image: beachfront1,
     images: [beachfront1, beachfront2, beachfront3, beachfront4, beachfront5, beachfront6, beachfront7],
