@@ -111,10 +111,9 @@ export const About = ({
                     My Commitment
                   </h3>
                 </div>
-                <p className="text-base md:text-lg font-inter font-light leading-relaxed text-foreground/80">Every client, every project, every time: I'm dedicated to exceeding expectations under all conditions. It's not just a goal—it's the standard by which I measure success.
-
-
-Exceeding the clients expectastions every time, </p>
+                <p className="text-base md:text-lg font-inter font-light leading-relaxed text-foreground/80">
+                  Every client, every project, every time: I'm dedicated to exceeding expectations under all conditions. It's not just a goal—it's the standard by which I measure success.
+                </p>
               </CardContent>
             </Card>
           </div>
