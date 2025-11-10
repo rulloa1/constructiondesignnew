@@ -245,7 +245,7 @@ export const Portfolio: React.FC<PortfolioProps> = ({
           animationDelay: `${index * 50}ms`
         }}>
               {/* Project image */}
-              <div className="aspect-[4/5] overflow-hidden bg-muted rounded-sm mb-4 relative">
+              <div className="aspect-[3/4] overflow-hidden bg-muted rounded-sm mb-4 relative">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-75" loading="lazy" />
                 {/* Subtle overlay on hover */}
                 <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/20 transition-all duration-500">
