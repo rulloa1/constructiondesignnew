@@ -730,7 +730,7 @@ export const projects: Project[] = [
   },
   {
     id: "hillside-cleanup",
-    title: "Hillside Restoration & Environmental Clean Up",
+    title: "Hillside Restoration & Environmental Cleanup",
     subtitle: "Environmental Restoration",
     location: "Civil • Residential",
     additionalInfo: "Carmel, CA",
