@@ -465,32 +465,40 @@ import syracuse23 from "@/assets/projects/syracuse-23.png";
 import syracuse24 from "@/assets/projects/syracuse-24.png";
 import syracuse25 from "@/assets/projects/syracuse-25.png";
 import syracuse26 from "@/assets/projects/syracuse-26.png";
-import syracuse27 from "@/assets/projects/syracuse-27.png";
-import syracuse28 from "@/assets/projects/syracuse-28.png";
-import syracuse29 from "@/assets/projects/syracuse-29.png";
-import syracuse30 from "@/assets/projects/syracuse-30.png";
-import syracuse31 from "@/assets/projects/syracuse-31.png";
-import syracuse32 from "@/assets/projects/syracuse-32.png";
-import syracuse33 from "@/assets/projects/syracuse-33.png";
-import syracuse34 from "@/assets/projects/syracuse-34.png";
-import syracuse35 from "@/assets/projects/syracuse-35.png";
-import syracuse36 from "@/assets/projects/syracuse-36.png";
-import syracuse37 from "@/assets/projects/syracuse-37.png";
-import syracuse38 from "@/assets/projects/syracuse-38.png";
-import syracuse39 from "@/assets/projects/syracuse-39.png";
-import syracuse40 from "@/assets/projects/syracuse-40.png";
-import syracuse41 from "@/assets/projects/syracuse-41.png";
-import syracuse42 from "@/assets/projects/syracuse-42.png";
-import syracuse43 from "@/assets/projects/syracuse-43.png";
-import syracuse44 from "@/assets/projects/syracuse-44.png";
-import syracuse45 from "@/assets/projects/syracuse-45.png";
-import syracuse46 from "@/assets/projects/syracuse-46.png";
-import syracuse47 from "@/assets/projects/syracuse-47.png";
-import syracuse48 from "@/assets/projects/syracuse-48.png";
-import syracuse49 from "@/assets/projects/syracuse-49.png";
-import syracuse50 from "@/assets/projects/syracuse-50.png";
-import syracuse51 from "@/assets/projects/syracuse-51.png";
-import syracuse52 from "@/assets/projects/syracuse-52.png";
+import syracuse27 from "@/assets/projects/syracuse-27.jpg";
+import syracuse28 from "@/assets/projects/syracuse-28.jpg";
+import syracuse29 from "@/assets/projects/syracuse-29.jpg";
+import syracuse30 from "@/assets/projects/syracuse-30.jpg";
+import syracuse31 from "@/assets/projects/syracuse-31.jpg";
+import syracuse32 from "@/assets/projects/syracuse-32.jpg";
+import syracuse33 from "@/assets/projects/syracuse-33.jpg";
+import syracuse34 from "@/assets/projects/syracuse-34.jpg";
+import syracuse35 from "@/assets/projects/syracuse-35.jpg";
+import syracuse36 from "@/assets/projects/syracuse-36.jpg";
+import syracuse37 from "@/assets/projects/syracuse-37.jpg";
+import syracuse38 from "@/assets/projects/syracuse-38.jpg";
+import syracuse39 from "@/assets/projects/syracuse-39.jpg";
+import syracuse40 from "@/assets/projects/syracuse-40.jpg";
+import syracuse41 from "@/assets/projects/syracuse-41.jpg";
+import syracuse42 from "@/assets/projects/syracuse-42.jpg";
+import syracuse43 from "@/assets/projects/syracuse-43.jpg";
+import syracuse44 from "@/assets/projects/syracuse-44.jpg";
+import syracuse45 from "@/assets/projects/syracuse-45.jpg";
+import syracuse46 from "@/assets/projects/syracuse-46.jpg";
+import syracuse47 from "@/assets/projects/syracuse-47.jpg";
+import syracuse48 from "@/assets/projects/syracuse-48.jpg";
+import syracuse49 from "@/assets/projects/syracuse-49.jpg";
+import syracuse50 from "@/assets/projects/syracuse-50.jpg";
+import syracuse51 from "@/assets/projects/syracuse-51.jpg";
+import syracuse52 from "@/assets/projects/syracuse-52.jpg";
+import syracuse53 from "@/assets/projects/syracuse-53.jpg";
+import syracuse54 from "@/assets/projects/syracuse-54.jpg";
+import syracuse55 from "@/assets/projects/syracuse-55.jpg";
+import syracuse56 from "@/assets/projects/syracuse-56.jpg";
+import syracuse57 from "@/assets/projects/syracuse-57.jpg";
+import syracuse58 from "@/assets/projects/syracuse-58.jpg";
+import syracuse59 from "@/assets/projects/syracuse-59.jpg";
+import syracuse60 from "@/assets/projects/syracuse-60.jpg";
 import alpineRanchCover from "@/assets/projects/alpine-ranch-cover.jpg";
 import alpineRanch1 from "@/assets/projects/alpine-ranch-1.jpg";
 import alpineRanch2 from "@/assets/projects/alpine-ranch-2.jpg";
@@ -574,7 +582,9 @@ export const projects: Project[] = [
       // Attic/Bonus Rooms
       syracuse45, syracuse46, syracuse47, syracuse48, syracuse49,
       // Basement
-      syracuse50, syracuse51, syracuse52
+      syracuse50, syracuse51, syracuse52,
+      // Additional Images
+      syracuse53, syracuse54, syracuse55, syracuse56, syracuse57, syracuse58, syracuse59, syracuse60
     ],
   },
   {
