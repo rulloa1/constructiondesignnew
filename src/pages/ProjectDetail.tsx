@@ -67,11 +67,7 @@ const ProjectDetail = () => {
   }, [id]);
 
   // Use only database images to respect display_order from admin panel
-  // Filter out invalid/relative URLs from database (static import paths that were migrated incorrectly)
-  const validDbImages = dbImages.filter(img => 
-    img.image_url && 
-    (img.image_url.startsWith('http') || img.image_url.startsWith('https://'))
-  );
+  const validDbImages = dbImages.filter(img => img.image_url);
   const allImages = validDbImages.map(img => img.image_url);
 
   // Helper function to get image label
