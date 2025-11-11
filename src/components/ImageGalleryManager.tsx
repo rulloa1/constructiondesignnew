@@ -215,7 +215,7 @@ export const ImageGalleryManager = () => {
           <h2 className="text-xl font-playfair font-semibold mb-4">
             Project Images ({images.length})
           </h2>
-          <div className="space-y-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {images.map((image, index) => (
               <div
                 key={image.id}
@@ -223,41 +223,45 @@ export const ImageGalleryManager = () => {
                 onDragStart={() => handleDragStart(index)}
                 onDragOver={(e) => handleDragOver(e, index)}
                 onDragEnd={handleDragEnd}
-                className="flex items-center gap-4 p-3 bg-cream/20 rounded-lg hover:bg-cream/30 transition-colors cursor-move"
+                className="relative group bg-cream/20 rounded-lg hover:bg-cream/30 transition-colors cursor-move overflow-hidden"
               >
-                <GripVertical className="h-5 w-5 text-charcoal/50" />
+                <div className="absolute top-2 left-2 z-10">
+                  <GripVertical className="h-5 w-5 text-white drop-shadow-lg" />
+                </div>
                 <img
                   src={image.image_url}
                   alt={image.title || "Project image"}
-                  className="w-20 h-20 object-cover rounded"
+                  className="w-full aspect-square object-cover"
                 />
-                <div className="flex-1">
-                  <p className="text-sm font-medium">Image {index + 1}</p>
-                  <p className="text-xs text-charcoal/60">Order: {image.display_order}</p>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <Checkbox
-                      checked={image.is_before}
-                      onCheckedChange={() => toggleBeforeAfter(image, 'is_before')}
-                    />
-                    <Label className="text-sm">Before</Label>
+                <div className="p-3 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm font-medium">Image {index + 1}</p>
+                    <Button
+                      variant="destructive"
+                      size="sm"
+                      onClick={() => handleDelete(image)}
+                      className="h-8 w-8 p-0"
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Checkbox
-                      checked={image.is_after}
-                      onCheckedChange={() => toggleBeforeAfter(image, 'is_after')}
-                    />
-                    <Label className="text-sm">After</Label>
+                  <div className="flex items-center gap-3 text-xs">
+                    <div className="flex items-center gap-1.5">
+                      <Checkbox
+                        checked={image.is_before}
+                        onCheckedChange={() => toggleBeforeAfter(image, 'is_before')}
+                      />
+                      <Label className="text-xs cursor-pointer">Before</Label>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Checkbox
+                        checked={image.is_after}
+                        onCheckedChange={() => toggleBeforeAfter(image, 'is_after')}
+                      />
+                      <Label className="text-xs cursor-pointer">After</Label>
+                    </div>
                   </div>
                 </div>
-                <Button
-                  variant="destructive"
-                  size="sm"
-                  onClick={() => handleDelete(image)}
-                >
-                  <Trash2 className="h-4 w-4" />
-                </Button>
               </div>
             ))}
           </div>
