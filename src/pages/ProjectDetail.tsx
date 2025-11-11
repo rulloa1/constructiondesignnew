@@ -19,14 +19,6 @@ const ProjectDetail = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [videos, setVideos] = useState<ProjectVideo[]>([]);
 
-  // Helper function to detect before/after from image path
-  const getImageLabel = (imagePath: string): "Before" | "After" | null => {
-    const lowerPath = imagePath.toLowerCase();
-    if (lowerPath.includes('before')) return "Before";
-    if (lowerPath.includes('after')) return "After";
-    return null;
-  };
-
   // Fetch videos for this project
   useEffect(() => {
     if (!id) return;
@@ -134,31 +126,13 @@ const ProjectDetail = () => {
           <div className="pt-6 pb-6 px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 ${project.category === "Design Build" ? "gap-1" : "gap-3 md:gap-4"}`}>
-                {project.images.map((image, index) => {
-                  const label = getImageLabel(image);
-                  return (
-                    <button 
-                      key={`${image}-${index}`} 
-                      onClick={() => setSelectedImageIndex(index)} 
-                      className="relative aspect-square overflow-hidden rounded-lg bg-white border border-charcoal/10 group cursor-pointer transition-all hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-charcoal/30"
-                    >
-                      <img 
-                        src={image} 
-                        alt={`${project.title} - Image ${index + 1}`} 
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      {label && (
-                        <div className={`absolute top-2 left-2 px-3 py-1 rounded-full text-xs font-bold tracking-wider shadow-lg z-10 ${
-                          label === "Before" 
-                            ? "bg-amber-500/90 text-white" 
-                            : "bg-emerald-500/90 text-white"
-                        }`}>
-                          {label}
-                        </div>
-                      )}
-                    </button>
-                  );
-                })}
+                {project.images.map((image, index) => <button key={`${image}-${index}`} onClick={() => setSelectedImageIndex(index)} className="relative aspect-square overflow-hidden rounded-lg bg-white border border-charcoal/10 group cursor-pointer transition-all hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-charcoal/30">
+                    <img 
+                      src={image} 
+                      alt={`${project.title} - Image ${index + 1}`} 
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </button>)}
               </div>
             </div>
           </div>
@@ -195,18 +169,7 @@ const ProjectDetail = () => {
 
           {/* Image */}
           <div className="flex items-center justify-center h-full p-16" onClick={e => e.stopPropagation()}>
-            <div className="relative">
-              <img src={project.images[selectedImageIndex]} alt={`${project.title} - Image ${selectedImageIndex + 1}`} className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-scale-in border border-charcoal/10" />
-              {getImageLabel(project.images[selectedImageIndex]) && (
-                <div className={`absolute top-4 left-4 px-4 py-2 rounded-full text-sm font-bold tracking-wider shadow-lg ${
-                  getImageLabel(project.images[selectedImageIndex]) === "Before" 
-                    ? "bg-amber-500/90 text-white" 
-                    : "bg-emerald-500/90 text-white"
-                }`}>
-                  {getImageLabel(project.images[selectedImageIndex])}
-                </div>
-              )}
-            </div>
+            <img src={project.images[selectedImageIndex]} alt={`${project.title} - Image ${selectedImageIndex + 1}`} className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-scale-in border border-charcoal/10" />
           </div>
         </div>}
     </>;
