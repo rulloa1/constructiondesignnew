@@ -16,8 +16,19 @@ export const VideoUpload = ({ projectId, onUploadComplete }: VideoUploadProps) =
   const [description, setDescription] = useState("");
 
   const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('=== VIDEO UPLOAD STARTED ===');
     const file = event.target.files?.[0];
-    if (!file) return;
+    if (!file) {
+      console.log('No file selected');
+      return;
+    }
+
+    console.log('File details:', {
+      name: file.name,
+      type: file.type,
+      size: file.size,
+      sizeMB: (file.size / (1024 * 1024)).toFixed(2)
+    });
 
     const validTypes = ['video/mp4', 'video/webm', 'video/quicktime', 'video/x-msvideo'];
     if (!validTypes.includes(file.type)) {
@@ -32,36 +43,80 @@ export const VideoUpload = ({ projectId, onUploadComplete }: VideoUploadProps) =
 
     setUploading(true);
     try {
-      const fileExt = file.name.split('.').pop();
-      const fileName = `${projectId}/${Date.now()}.${fileExt}`;
+      // Check session
+      const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+      console.log('Session check:', { 
+        hasSession: !!session, 
+        userId: session?.user?.id,
+        email: session?.user?.email,
+        sessionError 
+      });
 
-      const { error: uploadError } = await supabase.storage
-        .from('project-videos')
-        .upload(fileName, file);
-
-      if (uploadError) {
-        console.error('Storage upload error details:', uploadError);
-        throw new Error(`Upload failed: ${uploadError.message}`);
+      if (!session) {
+        throw new Error('Not authenticated. Please log in again.');
       }
 
+      // Check admin role
+      const { data: roleCheck, error: roleError } = await supabase
+        .from('user_roles')
+        .select('role')
+        .eq('user_id', session.user.id)
+        .eq('role', 'admin');
+      
+      console.log('Role check:', { roleCheck, roleError, hasRole: roleCheck && roleCheck.length > 0 });
+
+      if (roleError) {
+        throw new Error(`Role check failed: ${roleError.message}`);
+      }
+
+      if (!roleCheck || roleCheck.length === 0) {
+        throw new Error('Admin privileges required to upload videos');
+      }
+
+      // Prepare upload
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${projectId}/${Date.now()}.${fileExt}`;
+      console.log('Uploading to:', fileName);
+
+      // Upload to storage
+      const { data: uploadData, error: uploadError } = await supabase.storage
+        .from('project-videos')
+        .upload(fileName, file, {
+          cacheControl: '3600',
+          upsert: false
+        });
+
+      console.log('Storage upload result:', { uploadData, uploadError });
+
+      if (uploadError) {
+        throw new Error(`Storage upload failed: ${uploadError.message} (${JSON.stringify(uploadError)})`);
+      }
+
+      // Get public URL
       const { data: { publicUrl } } = supabase.storage
         .from('project-videos')
         .getPublicUrl(fileName);
 
-      const { error: dbError } = await supabase
+      console.log('Public URL generated:', publicUrl);
+
+      // Save to database
+      const { data: dbData, error: dbError } = await supabase
         .from('project_videos')
         .insert({
           project_id: projectId,
           video_url: publicUrl,
           title: title || file.name,
           description: description || null,
-        });
+        })
+        .select();
+
+      console.log('Database insert result:', { dbData, dbError });
 
       if (dbError) {
-        console.error('Database error details:', dbError);
-        throw new Error(`Database error: ${dbError.message}`);
+        throw new Error(`Database insert failed: ${dbError.message}`);
       }
 
+      console.log('=== VIDEO UPLOAD SUCCESSFUL ===');
       toast.success("Video uploaded successfully!");
       setTitle("");
       setDescription("");
@@ -69,9 +124,10 @@ export const VideoUpload = ({ projectId, onUploadComplete }: VideoUploadProps) =
       
       if (event.target) event.target.value = '';
     } catch (error: any) {
-      console.error('Full error:', error);
+      console.error('=== VIDEO UPLOAD FAILED ===');
+      console.error('Error details:', error);
       const errorMessage = error.message || "Failed to upload video";
-      toast.error(errorMessage, { duration: 5000 });
+      toast.error(errorMessage, { duration: 8000 });
     } finally {
       setUploading(false);
     }
