@@ -3,6 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { Trash2 } from "lucide-react";
+import { VideoPlayer } from "@/components/VideoPlayer";
 
 interface Video {
   id: string;
@@ -47,14 +48,6 @@ export const VideoList = ({ projectId, refreshTrigger }: VideoListProps) => {
     if (!confirm("Are you sure you want to delete this video?")) return;
 
     try {
-      const fileName = video.video_url.split('/').slice(-2).join('/');
-      
-      const { error: storageError } = await supabase.storage
-        .from('project-videos')
-        .remove([fileName]);
-
-      if (storageError) throw storageError;
-
       const { error: dbError } = await supabase
         .from('project_videos')
         .delete()
@@ -83,11 +76,7 @@ export const VideoList = ({ projectId, refreshTrigger }: VideoListProps) => {
       <div className="grid gap-4">
         {videos.map((video) => (
           <div key={video.id} className="border border-border rounded-lg overflow-hidden bg-card">
-            <video
-              src={video.video_url}
-              controls
-              className="w-full aspect-video bg-black"
-            />
+            <VideoPlayer url={video.video_url} />
             <div className="p-4 space-y-2">
               <div className="flex justify-between items-start">
                 <div>

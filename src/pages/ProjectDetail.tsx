@@ -4,6 +4,7 @@ import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { getProjectById } from "@/data/projects";
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { VideoPlayer } from "@/components/VideoPlayer";
 
 interface ProjectVideo {
   id: string;
@@ -141,11 +142,7 @@ const ProjectDetail = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   {videos.map((video) => (
                     <div key={video.id} className="bg-white rounded-lg overflow-hidden border border-charcoal/10 shadow-md">
-                      <video
-                        src={video.video_url}
-                        controls
-                        className="w-full aspect-video bg-black"
-                      />
+                      <VideoPlayer url={video.video_url} />
                       {(video.title || video.description) && (
                         <div className="p-4">
                           {video.title && (
