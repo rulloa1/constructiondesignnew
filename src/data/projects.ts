@@ -492,6 +492,16 @@ import syracuse49 from "@/assets/projects/syracuse-49.png";
 import syracuse50 from "@/assets/projects/syracuse-50.png";
 import syracuse51 from "@/assets/projects/syracuse-51.png";
 import syracuse52 from "@/assets/projects/syracuse-52.png";
+import syracuse53 from "@/assets/projects/syracuse-53.jpg";
+import syracuse54 from "@/assets/projects/syracuse-54.jpg";
+import syracuse55 from "@/assets/projects/syracuse-55.jpg";
+import syracuse56 from "@/assets/projects/syracuse-56.jpg";
+import syracuse57 from "@/assets/projects/syracuse-57.jpg";
+import syracuse58 from "@/assets/projects/syracuse-58.jpg";
+import syracuse59 from "@/assets/projects/syracuse-59.jpg";
+import syracuse60 from "@/assets/projects/syracuse-60.jpg";
+import syracuse61 from "@/assets/projects/syracuse-61.jpg";
+import syracuse62 from "@/assets/projects/syracuse-62.jpg";
 import alpineRanchCover from "@/assets/projects/alpine-ranch-cover.jpg";
 import alpineRanch1 from "@/assets/projects/alpine-ranch-1.jpg";
 import alpineRanch2 from "@/assets/projects/alpine-ranch-2.jpg";
@@ -554,14 +564,16 @@ export const projects: Project[] = [
     image: syracuseCover,
     images: [
       syracuseCover, // Cover/Exterior
+      // Exterior Views
+      syracuse54, syracuse56, syracuse57, syracuse58, syracuse59, syracuse60, syracuse61,
       // Entryway/Foyer
       syracuse11, syracuse12,
       // Main Living Rooms (fireplace, sofas, piano)
       syracuse1, syracuse2, syracuse13, syracuse14, syracuse15, syracuse16, syracuse17, syracuse18, syracuse19, syracuse20, syracuse21, syracuse22, syracuse23, syracuse24, syracuse25, syracuse26,
       // Kitchen
-      syracuse9,
+      syracuse9, syracuse55,
       // Dining Areas
-      syracuse27, syracuse28,
+      syracuse27, syracuse28, syracuse53,
       // Bedrooms
       syracuse3, syracuse4, syracuse5, syracuse6, syracuse7, syracuse8, syracuse29, syracuse30, syracuse31, syracuse32, syracuse33, syracuse34, syracuse35, syracuse36, syracuse37, syracuse38,
       // Bathrooms
@@ -575,7 +587,7 @@ export const projects: Project[] = [
       // Attic/Bonus Rooms
       syracuse45, syracuse46, syracuse47, syracuse48, syracuse49,
       // Basement
-      syracuse50, syracuse51, syracuse52
+      syracuse50, syracuse51, syracuse62
     ],
   },
   {
