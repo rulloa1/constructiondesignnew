@@ -5,11 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
-import { Upload, Trash2, GripVertical } from "lucide-react";
+import { Trash2, GripVertical } from "lucide-react";
 import { projects } from "@/data/projects";
 import { Checkbox } from "@/components/ui/checkbox";
-import { StaticImageMigration } from "@/components/admin/StaticImageMigration";
-import { BulkStaticImageMigration } from "@/components/admin/BulkStaticImageMigration";
 
 interface ProjectImage {
   id: string;
@@ -48,67 +46,38 @@ export const ImageGalleryManager = () => {
     }
   };
 
-  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!e.target.files || e.target.files.length === 0 || !selectedProject) {
-      toast.error("Please select a project first");
+  const [imageUrl, setImageUrl] = useState("");
+  const [imageTitle, setImageTitle] = useState("");
+
+  const handleAddImage = async () => {
+    if (!imageUrl.trim() || !selectedProject) {
+      toast.error("Please enter an image URL and select a project");
       return;
     }
 
     setUploading(true);
-    let successCount = 0;
-    let failCount = 0;
 
-    for (const file of Array.from(e.target.files)) {
-      const fileExt = file.name.split('.').pop();
-      const fileName = `${selectedProject}/${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
-
-      console.log('Attempting to upload:', fileName);
-      
-      const { error: uploadError, data } = await supabase.storage
-        .from('project-images')
-        .upload(fileName, file);
-
-      if (uploadError) {
-        console.error('Storage upload error:', uploadError);
-        toast.error(`Upload failed: ${uploadError.message || 'Permission denied. Please ensure you are logged in as an admin.'}`);
-        failCount++;
-        continue;
-      }
-
-      console.log('Upload successful, getting public URL...');
-      const { data: { publicUrl } } = supabase.storage
-        .from('project-images')
-        .getPublicUrl(fileName);
-
-      console.log('Saving to database:', publicUrl);
-      const { error: dbError } = await supabase
-        .from('project_images')
-        .insert({
-          project_id: selectedProject,
-          image_url: publicUrl,
-          display_order: images.length + successCount,
-          is_before: false,
-          is_after: false,
-        });
-
-      if (dbError) {
-        console.error('Database insert error:', dbError);
-        toast.error(`Database error: ${dbError.message}`);
-        failCount++;
-      } else {
-        successCount++;
-      }
-    }
+    const { error } = await supabase
+      .from('project_images')
+      .insert({
+        project_id: selectedProject,
+        image_url: imageUrl.trim(),
+        title: imageTitle.trim() || `Image ${images.length + 1}`,
+        display_order: images.length,
+        is_before: false,
+        is_after: false,
+      });
 
     setUploading(false);
-    
-    if (successCount > 0) {
-      toast.success(`${successCount} image(s) uploaded successfully`);
+
+    if (error) {
+      console.error('Database insert error:', error);
+      toast.error(`Failed to add image: ${error.message}`);
+    } else {
+      toast.success("Image added successfully");
+      setImageUrl("");
+      setImageTitle("");
       fetchImages();
-    }
-    
-    if (failCount > 0) {
-      toast.error(`${failCount} image(s) failed to upload. Check console for details.`);
     }
   };
 
@@ -184,8 +153,6 @@ export const ImageGalleryManager = () => {
 
   return (
     <div className="space-y-6">
-      <BulkStaticImageMigration />
-      
       <div className="bg-white p-6 rounded-lg shadow-md border border-charcoal/10">
         <Label htmlFor="project">Select Project</Label>
         <Select value={selectedProject} onValueChange={setSelectedProject}>
@@ -203,28 +170,44 @@ export const ImageGalleryManager = () => {
 
         {selectedProject && (
           <>
-            <StaticImageMigration projectId={selectedProject} />
-            <div className="mt-4">
-              <Label htmlFor="file-upload" className="cursor-pointer">
-              <div className="flex items-center justify-center w-full h-32 border-2 border-dashed border-charcoal/30 rounded-lg hover:border-charcoal/50 transition-colors">
-                <div className="text-center">
-                  <Upload className="mx-auto h-8 w-8 text-charcoal/50 mb-2" />
-                  <span className="text-sm text-charcoal/60">
-                    Click to upload images (or drag & drop)
-                  </span>
-                </div>
+            <div className="mt-4 space-y-4">
+              <div>
+                <Label htmlFor="image-url">Image URL or Path</Label>
+                <Input
+                  id="image-url"
+                  type="text"
+                  placeholder="/assets/project-name/image.jpg or https://..."
+                  value={imageUrl}
+                  onChange={(e) => setImageUrl(e.target.value)}
+                  disabled={uploading}
+                  className="mt-1"
+                />
+                <p className="text-xs text-charcoal/60 mt-1">
+                  Enter a path to an image in your assets folder or an external URL
+                </p>
               </div>
-            </Label>
-            <Input
-              id="file-upload"
-              type="file"
-              multiple
-              accept="image/*"
-              onChange={handleFileUpload}
-              disabled={uploading}
-              className="hidden"
-            />
-          </div>
+              
+              <div>
+                <Label htmlFor="image-title">Image Title (optional)</Label>
+                <Input
+                  id="image-title"
+                  type="text"
+                  placeholder="e.g., Living Room View"
+                  value={imageTitle}
+                  onChange={(e) => setImageTitle(e.target.value)}
+                  disabled={uploading}
+                  className="mt-1"
+                />
+              </div>
+
+              <Button 
+                onClick={handleAddImage}
+                disabled={uploading || !imageUrl.trim()}
+                className="w-full"
+              >
+                {uploading ? "Adding..." : "Add Image"}
+              </Button>
+            </div>
           </>
         )}
       </div>
