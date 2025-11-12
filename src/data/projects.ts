@@ -145,13 +145,13 @@ import southcoast52 from "@/assets/projects/southcoast-52.jpg";
 import southcoast53 from "@/assets/projects/southcoast-53.jpg";
 import project5 from "@/assets/projects/IMGP1303.jpg";
 import project6 from "@/assets/projects/IMGP1305.jpg";
-import lagunaGrandeCover from "@/assets/projects/laguna-grande-cover.png";
-import laguna1 from "@/assets/projects/laguna-grande-1.png";
-import laguna2 from "@/assets/projects/laguna-grande-2.png";
-import laguna3 from "@/assets/projects/laguna-grande-3.png";
-import laguna4 from "@/assets/projects/laguna-grande-4.png";
-import laguna5 from "@/assets/projects/laguna-grande-5.png";
-import laguna6 from "@/assets/projects/laguna-grande-6.png";
+import lagunaGrandeCover from "@/assets/projects/laguna-grande-cover.jpg";
+import laguna1 from "@/assets/projects/laguna-grande-1.jpg";
+import laguna2 from "@/assets/projects/laguna-grande-2.jpg";
+import laguna3 from "@/assets/projects/laguna-grande-3.jpg";
+import laguna4 from "@/assets/projects/laguna-grande-4.jpg";
+import laguna5 from "@/assets/projects/laguna-grande-5.jpg";
+import laguna6 from "@/assets/projects/laguna-grande-6.jpg";
 import laguna7 from "@/assets/projects/laguna-grande-7.jpg";
 import bigsurCover from "@/assets/projects/bigsur-cover.jpg";
 import bigsur1 from "@/assets/projects/bigsur-1.jpg";
@@ -176,11 +176,11 @@ import carmelValley3 from "@/assets/projects/carmel-valley-3.jpg";
 import carmelValley4 from "@/assets/projects/carmel-valley-4.jpg";
 
 // Carmel Valley New (updated images)
-import carmelValleyNewCover from "@/assets/projects/carmel-valley-new-cover.png";
-import carmelValleyNew1 from "@/assets/projects/carmel-valley-new-1.png";
+import carmelValleyNewCover from "@/assets/projects/carmel-valley-new-cover.jpg";
+import carmelValleyNew1 from "@/assets/projects/carmel-valley-new-1.jpg";
 import carmelValleyNew2 from "@/assets/projects/carmel-valley-new-2.jpg";
-import carmelValleyNew3 from "@/assets/projects/carmel-valley-new-3.png";
-import carmelValleyNew4 from "@/assets/projects/carmel-valley-new-4.png";
+import carmelValleyNew3 from "@/assets/projects/carmel-valley-new-3.jpg";
+import carmelValleyNew4 from "@/assets/projects/carmel-valley-new-4.jpg";
 
 // North Florida Renovation/Addition
 import veroBeachCover from "@/assets/vero-beach-cover.jpeg";
@@ -195,14 +195,14 @@ import northFlorida7 from "@/assets/projects/north-florida-7.jpg";
 import northFlorida8 from "@/assets/projects/north-florida-8.jpg";
 import northFlorida9 from "@/assets/projects/north-florida-9.jpg";
 import northFlorida10 from "@/assets/projects/north-florida-10.jpg";
-import northFlorida11 from "@/assets/projects/north-florida-11.png";
-import northFlorida12 from "@/assets/projects/north-florida-12.png";
+import northFlorida11 from "@/assets/projects/north-florida-11.jpg";
+import northFlorida12 from "@/assets/projects/north-florida-12.jpg";
 
 // Pacific Grove Design Build album
 import pgCover from "@/assets/projects/pg-cover.jpg";
 import pg1 from "@/assets/projects/pg-1.jpg";
-import pg2 from "@/assets/projects/pg-2.png";
-import pg3 from "@/assets/projects/pg-3.png";
+import pg2 from "@/assets/projects/pg-2.jpg";
+import pg3 from "@/assets/projects/pg-3.jpg";
 import pg4 from "@/assets/projects/pg-4.jpg";
 import pg5 from "@/assets/projects/pg-5.jpg";
 import pg6 from "@/assets/projects/pg-6.jpg";
@@ -213,7 +213,7 @@ import pg10 from "@/assets/projects/pg-10.jpg";
 
 
 // Carmel House Remdl No.23
-import carmel3Cover from "@/assets/projects/carmel-3-cover-new.png";
+import carmel3Cover from "@/assets/projects/carmel-3-cover-new.jpg";
 import carmel3_1 from "@/assets/projects/carmel-3-1.jpg";
 import carmel3_2 from "@/assets/projects/carmel-3-2.jpg";
 import carmel3_3 from "@/assets/projects/carmel-3-3.jpg";
@@ -296,14 +296,14 @@ import beachfront6 from "@/assets/projects/beachfront-6.jpg";
 import beachfront7 from "@/assets/projects/beachfront-7.jpg";
 
 // Abaco Development
-import abacoDevelopment1 from "@/assets/projects/abaco-development-1.png";
+import abacoDevelopment1 from "@/assets/projects/abaco-development-1.jpg";
 
 // Abaco Luxe Boat House
-import abacoLuxeBoathouseCover from "@/assets/projects/abaco-luxe-boathouse-cover.png";
-import abacoLuxeBoathouse1 from "@/assets/projects/abaco-luxe-boathouse-1.png";
+import abacoLuxeBoathouseCover from "@/assets/projects/abaco-luxe-boathouse-cover.jpg";
+import abacoLuxeBoathouse1 from "@/assets/projects/abaco-luxe-boathouse-1.jpg";
 
 // Development
-import development1 from "@/assets/projects/development-1.png";
+import development1 from "@/assets/projects/development-1.jpg";
 import development2 from "@/assets/projects/development-2.jpg";
 import development3 from "@/assets/projects/development-3.jpg";
 import development4 from "@/assets/projects/development-4.jpg";
@@ -394,8 +394,8 @@ import montana10 from "@/assets/projects/montana-10.jpg";
 import montana11 from "@/assets/projects/montana-11.jpg";
 import miamiBeachCover from "@/assets/projects/miami-beach-cover.jpg";
 import miamiBeach1 from "@/assets/projects/miami-beach-1.jpg";
-import miamiBeach2 from "@/assets/projects/miami-beach-2.png";
-import miamiBeach3 from "@/assets/projects/miami-beach-3.png";
+import miamiBeach2 from "@/assets/projects/miami-beach-2.jpg";
+import miamiBeach3 from "@/assets/projects/miami-beach-3.jpg";
 import miamiBeach4 from "@/assets/projects/miami-beach-4.jpg";
 import miamiBeach5 from "@/assets/projects/miami-beach-5.jpg";
 import miamiBeach6 from "@/assets/projects/miami-beach-6.jpg";
@@ -410,7 +410,7 @@ import miamiBeach14 from "@/assets/projects/miami-beach-14.jpg";
 import miamiBeach15 from "@/assets/projects/miami-beach-15.jpg";
 import miamiBeach16 from "@/assets/projects/miami-beach-16.jpg";
 import miamiBeach17 from "@/assets/projects/miami-beach-17.jpg";
-import miamiBeach18 from "@/assets/projects/miami-beach-18.png";
+import miamiBeach18 from "@/assets/projects/miami-beach-18.jpg";
 import miamiBeach19 from "@/assets/projects/miami-beach-19.jpg";
 import miamiBeach20 from "@/assets/projects/miami-beach-20.jpg";
 import miamiBeach21 from "@/assets/projects/miami-beach-21.jpg";
@@ -440,33 +440,33 @@ import miamiBeach44 from "@/assets/projects/miami-beach-44.jpg";
 import miamiBeach45 from "@/assets/projects/miami-beach-45.jpg";
 import miamiBeach46 from "@/assets/projects/miami-beach-46.jpg";
 import miamiBeach47 from "@/assets/projects/miami-beach-47.jpg";
-import syracuseCover from "@/assets/projects/syracuse-cover.png";
-import syracuse1 from "@/assets/projects/syracuse-1.png";
-import syracuse2 from "@/assets/projects/syracuse-2.png";
-import syracuse3 from "@/assets/projects/syracuse-3.png";
-import syracuse4 from "@/assets/projects/syracuse-4.png";
-import syracuse5 from "@/assets/projects/syracuse-5.png";
-import syracuse6 from "@/assets/projects/syracuse-6.png";
-import syracuse7 from "@/assets/projects/syracuse-7.png";
-import syracuse8 from "@/assets/projects/syracuse-8.png";
-import syracuse9 from "@/assets/projects/syracuse-9.png";
-import syracuse10 from "@/assets/projects/syracuse-10.png";
-import syracuse11 from "@/assets/projects/syracuse-11.png";
-import syracuse12 from "@/assets/projects/syracuse-12.png";
-import syracuse13 from "@/assets/projects/syracuse-13.png";
-import syracuse14 from "@/assets/projects/syracuse-14.png";
-import syracuse15 from "@/assets/projects/syracuse-15.png";
-import syracuse16 from "@/assets/projects/syracuse-16.png";
-import syracuse17 from "@/assets/projects/syracuse-17.png";
-import syracuse18 from "@/assets/projects/syracuse-18.png";
-import syracuse19 from "@/assets/projects/syracuse-19.png";
-import syracuse20 from "@/assets/projects/syracuse-20.png";
-import syracuse21 from "@/assets/projects/syracuse-21.png";
-import syracuse22 from "@/assets/projects/syracuse-22.png";
-import syracuse23 from "@/assets/projects/syracuse-23.png";
-import syracuse24 from "@/assets/projects/syracuse-24.png";
-import syracuse25 from "@/assets/projects/syracuse-25.png";
-import syracuse26 from "@/assets/projects/syracuse-26.png";
+import syracuseCover from "@/assets/projects/syracuse-cover.jpg";
+import syracuse1 from "@/assets/projects/syracuse-1.jpg";
+import syracuse2 from "@/assets/projects/syracuse-2.jpg";
+import syracuse3 from "@/assets/projects/syracuse-3.jpg";
+import syracuse4 from "@/assets/projects/syracuse-4.jpg";
+import syracuse5 from "@/assets/projects/syracuse-5.jpg";
+import syracuse6 from "@/assets/projects/syracuse-6.jpg";
+import syracuse7 from "@/assets/projects/syracuse-7.jpg";
+import syracuse8 from "@/assets/projects/syracuse-8.jpg";
+import syracuse9 from "@/assets/projects/syracuse-9.jpg";
+import syracuse10 from "@/assets/projects/syracuse-10.jpg";
+import syracuse11 from "@/assets/projects/syracuse-11.jpg";
+import syracuse12 from "@/assets/projects/syracuse-12.jpg";
+import syracuse13 from "@/assets/projects/syracuse-13.jpg";
+import syracuse14 from "@/assets/projects/syracuse-14.jpg";
+import syracuse15 from "@/assets/projects/syracuse-15.jpg";
+import syracuse16 from "@/assets/projects/syracuse-16.jpg";
+import syracuse17 from "@/assets/projects/syracuse-17.jpg";
+import syracuse18 from "@/assets/projects/syracuse-18.jpg";
+import syracuse19 from "@/assets/projects/syracuse-19.jpg";
+import syracuse20 from "@/assets/projects/syracuse-20.jpg";
+import syracuse21 from "@/assets/projects/syracuse-21.jpg";
+import syracuse22 from "@/assets/projects/syracuse-22.jpg";
+import syracuse23 from "@/assets/projects/syracuse-23.jpg";
+import syracuse24 from "@/assets/projects/syracuse-24.jpg";
+import syracuse25 from "@/assets/projects/syracuse-25.jpg";
+import syracuse26 from "@/assets/projects/syracuse-26.jpg";
 import syracuse27 from "@/assets/projects/syracuse-27.jpg";
 import syracuse28 from "@/assets/projects/syracuse-28.jpg";
 import syracuse29 from "@/assets/projects/syracuse-29.jpg";
@@ -501,7 +501,7 @@ import syracuse57 from "@/assets/projects/syracuse-57.jpg";
 import syracuse58 from "@/assets/projects/syracuse-58.jpg";
 import syracuse59 from "@/assets/projects/syracuse-59.jpg";
 import syracuse60 from "@/assets/projects/syracuse-60.jpg";
-import syracuse62 from "@/assets/projects/syracuse-62.jpg";
+import syracuse61 from "@/assets/projects/syracuse-61.jpg";
 import alpineRanchCover from "@/assets/projects/alpine-ranch-cover.jpg";
 import alpineRanch1 from "@/assets/projects/alpine-ranch-1.jpg";
 import alpineRanch2 from "@/assets/projects/alpine-ranch-2.jpg";
@@ -528,6 +528,7 @@ export interface Project {
   description: string;
   image: string;
   images: string[];
+  testimonial?: string;
 }
 
 export const projects: Project[] = [
@@ -570,7 +571,7 @@ export const projects: Project[] = [
       syracuse31, syracuse32, syracuse33, syracuse34, syracuse35, syracuse36, syracuse37, syracuse38, syracuse39, syracuse40,
       syracuse41, syracuse42, syracuse43, syracuse44, syracuse45, syracuse46, syracuse47, syracuse48, syracuse49, syracuse50,
       syracuse51, syracuse52, syracuse53, syracuse54, syracuse55, syracuse56, syracuse57, syracuse58, syracuse59, syracuse60,
-      syracuse62
+      syracuse61
     ],
   },
   {
@@ -594,6 +595,7 @@ export const projects: Project[] = [
     description: "Luxury pool and outdoor living space design featuring custom stone work, pool house structures, and beautifully landscaped entertainment areas.",
     image: poolDesignCover,
     images: [poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37],
+    testimonial: "While this is my need to showcase my work, I do not want to take anything away from the extraordinary and beautiful work done by Michael and Robert Smelek. Truly gifted, always professionals, and absolute gentlemen!\n\nMichael and Robert designed all of the large element items on this pool, and surrounding structures, and I picked up and did all of the more finite detail work, including establishing the look and feel of the bathrooms, which were purposely patterned to have the look and design aesthetic of a 1950's NY Men's Smoking Club. While this was my initial idea, it was easily integrated into the project and plans, flawlessly by Smelek Design.\n\nI also designed the more finite details of this project, including making final decisions for all of the furniture and fabrics, pool plaster color, swim-up bar front design and back-bar layout and design and even including a custom 'blue' granite backsplash. Also included in this was the custom post and rail design for the railing, leading to the pool slides. The reason behind the meticulous design of these detail items is that with some forethought, subtle design elements make each of these items, extraordinary, and seamlessly blend with the surrounding Architecture and Landscaping, which all must be integral to the park-like setting, in which it sits.\n\nAt no time do I want to take away from the truly beautiful design work of Michael and Robert Smelek!\n\nThank you, both for your work!\n\n— Michael E. Chandler\n8215 Winding Hills Ln, Spring, Texas 77379\nCellular (435) 237-7373\nEmail mike.rcccon@yahoo.com",
   },
   {
     id: "southcoast-remodel-design-build",

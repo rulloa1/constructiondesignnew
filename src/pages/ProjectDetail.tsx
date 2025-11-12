@@ -148,6 +148,35 @@ const ProjectDetail = () => {
             </div>
           </div>
 
+          {/* Testimonial Section */}
+          {project.testimonial && (
+            <div className="pt-6 pb-6 px-4 sm:px-6 lg:px-8">
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 lg:p-10 shadow-lg border border-charcoal/10">
+                  <h2 className="font-playfair text-2xl sm:text-3xl font-semibold text-charcoal mb-6 md:mb-8">
+                    Project Statement
+                  </h2>
+                  <div className="font-inter text-base sm:text-lg text-charcoal/90 font-light leading-relaxed whitespace-pre-line space-y-4">
+                    {project.testimonial.split('\n\n').map((paragraph, index, arr) => {
+                      // Check if this is the signature/contact section (last few paragraphs)
+                      const isSignature = index >= arr.length - 3;
+                      if (isSignature) {
+                        return (
+                          <div key={index} className={index === arr.length - 3 ? "mt-6 pt-6 border-t border-charcoal/10" : ""}>
+                            <p className={index === arr.length - 3 ? "font-semibold text-charcoal" : "text-sm text-charcoal/70 font-light"}>
+                              {paragraph}
+                            </p>
+                          </div>
+                        );
+                      }
+                      return <p key={index}>{paragraph}</p>;
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Videos Section */}
           {videos.length > 0 && (
             <div className="pt-6 pb-6 px-4 sm:px-6 lg:px-8">
