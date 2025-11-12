@@ -8,8 +8,6 @@ import { toast } from "sonner";
 import { Upload, Trash2, GripVertical } from "lucide-react";
 import { projects } from "@/data/projects";
 import { Checkbox } from "@/components/ui/checkbox";
-import { StaticImageMigration } from "@/components/admin/StaticImageMigration";
-import { BulkStaticImageMigration } from "@/components/admin/BulkStaticImageMigration";
 
 interface ProjectImage {
   id: string;
@@ -184,8 +182,6 @@ export const ImageGalleryManager = () => {
 
   return (
     <div className="space-y-6">
-      <BulkStaticImageMigration />
-      
       <div className="bg-white p-6 rounded-lg shadow-md border border-charcoal/10">
         <Label htmlFor="project">Select Project</Label>
         <Select value={selectedProject} onValueChange={setSelectedProject}>
@@ -203,7 +199,6 @@ export const ImageGalleryManager = () => {
 
         {selectedProject && (
           <>
-            <StaticImageMigration projectId={selectedProject} />
             <div className="mt-4">
               <Label htmlFor="file-upload" className="cursor-pointer">
               <div className="flex items-center justify-center w-full h-32 border-2 border-dashed border-charcoal/30 rounded-lg hover:border-charcoal/50 transition-colors">
