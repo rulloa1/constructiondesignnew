@@ -441,7 +441,6 @@ import miamiBeach44 from "@/assets/projects/miami-beach-44.jpg";
 import miamiBeach45 from "@/assets/projects/miami-beach-45.jpg";
 import miamiBeach46 from "@/assets/projects/miami-beach-46.jpg";
 import miamiBeach47 from "@/assets/projects/miami-beach-47.jpg";
-import syracuseCover from "@/assets/projects/syracuse-cover.jpg";
 import syracuse1 from "@/assets/projects/syracuse-1.jpg";
 import syracuse2 from "@/assets/projects/syracuse-2.jpg";
 import syracuse3 from "@/assets/projects/syracuse-3.jpg";
@@ -451,46 +450,6 @@ import syracuse6 from "@/assets/projects/syracuse-6.jpg";
 import syracuse7 from "@/assets/projects/syracuse-7.jpg";
 import syracuse8 from "@/assets/projects/syracuse-8.jpg";
 import syracuse9 from "@/assets/projects/syracuse-9.jpg";
-import syracuse10 from "@/assets/projects/syracuse-10.jpg";
-import syracuse11 from "@/assets/projects/syracuse-11.jpg";
-import syracuse12 from "@/assets/projects/syracuse-12.jpg";
-import syracuse13 from "@/assets/projects/syracuse-13.jpg";
-import syracuse14 from "@/assets/projects/syracuse-14.jpg";
-import syracuse15 from "@/assets/projects/syracuse-15.jpg";
-import syracuse16 from "@/assets/projects/syracuse-16.jpg";
-import syracuse17 from "@/assets/projects/syracuse-17.jpg";
-import syracuse18 from "@/assets/projects/syracuse-18.jpg";
-import syracuse19 from "@/assets/projects/syracuse-19.jpg";
-import syracuse20 from "@/assets/projects/syracuse-20.jpg";
-import syracuse21 from "@/assets/projects/syracuse-21.jpg";
-import syracuse22 from "@/assets/projects/syracuse-22.jpg";
-import syracuse23 from "@/assets/projects/syracuse-23.jpg";
-import syracuse24 from "@/assets/projects/syracuse-24.jpg";
-import syracuse25 from "@/assets/projects/syracuse-25.jpg";
-import syracuse26 from "@/assets/projects/syracuse-26.jpg";
-import syracuse27 from "@/assets/projects/syracuse-27.jpg";
-import syracuse28 from "@/assets/projects/syracuse-28.jpg";
-import syracuse29 from "@/assets/projects/syracuse-29.jpg";
-import syracuse30 from "@/assets/projects/syracuse-30.jpg";
-import syracuse31 from "@/assets/projects/syracuse-31.jpg";
-import syracuse32 from "@/assets/projects/syracuse-32.jpg";
-import syracuse33 from "@/assets/projects/syracuse-33.jpg";
-import syracuse34 from "@/assets/projects/syracuse-34.jpg";
-import syracuse35 from "@/assets/projects/syracuse-35.jpg";
-import syracuse36 from "@/assets/projects/syracuse-36.jpg";
-import syracuse37 from "@/assets/projects/syracuse-37.jpg";
-import syracuse38 from "@/assets/projects/syracuse-38.jpg";
-import syracuse39 from "@/assets/projects/syracuse-39.jpg";
-import syracuse40 from "@/assets/projects/syracuse-40.jpg";
-import syracuse41 from "@/assets/projects/syracuse-41.jpg";
-import syracuse42 from "@/assets/projects/syracuse-42.jpg";
-import syracuse43 from "@/assets/projects/syracuse-43.jpg";
-import syracuse44 from "@/assets/projects/syracuse-44.jpg";
-import syracuse45 from "@/assets/projects/syracuse-45.jpg";
-import syracuse46 from "@/assets/projects/syracuse-46.jpg";
-import syracuse47 from "@/assets/projects/syracuse-47.jpg";
-import syracuse48 from "@/assets/projects/syracuse-48.jpg";
-import syracuse49 from "@/assets/projects/syracuse-49.jpg";
 import alpineRanchCover from "@/assets/projects/alpine-ranch-cover.jpg";
 import alpineRanch1 from "@/assets/projects/alpine-ranch-1.jpg";
 import alpineRanch2 from "@/assets/projects/alpine-ranch-2.jpg";
@@ -552,14 +511,9 @@ export const projects: Project[] = [
     additionalInfo: "N. Utah",
     category: "Residential Construction",
     description: "Stunning craftsman-style estate featuring professional landscaping, custom stone work, and dramatic evening lighting. This comprehensive project showcases exceptional attention to detail in both architecture and landscape design, with native plantings, decorative rock features, and elegant outdoor spaces.",
-    image: syracuse27,
+    image: syracuse1,
     images: [
-      syracuseCover,
-      syracuse1, syracuse2, syracuse3, syracuse4, syracuse5, syracuse6, syracuse7, syracuse8, syracuse9, syracuse10,
-      syracuse11, syracuse12, syracuse13, syracuse14, syracuse15, syracuse16, syracuse17, syracuse18, syracuse19, syracuse20,
-      syracuse21, syracuse22, syracuse23, syracuse24, syracuse25, syracuse26, syracuse27, syracuse28, syracuse29, syracuse30,
-      syracuse31, syracuse32, syracuse33, syracuse34, syracuse35, syracuse36, syracuse37, syracuse38, syracuse39, syracuse40,
-      syracuse41, syracuse42, syracuse43, syracuse44, syracuse45, syracuse46, syracuse47, syracuse48, syracuse49
+      syracuse1, syracuse2, syracuse3, syracuse4, syracuse5, syracuse6, syracuse7, syracuse8, syracuse9
     ],
   },
   {
