@@ -63,18 +63,11 @@ const ProjectDetail = () => {
   }, [id]);
 
   // Filter out invalid/relative URLs from database (static import paths that were migrated incorrectly)
-  const validDbImages = dbImages.filter(img => 
-    img.image_url && 
-    (img.image_url.startsWith('http') || img.image_url.startsWith('https://'))
-  );
-  
+  const validDbImages = dbImages.filter(img => img.image_url && (img.image_url.startsWith('http') || img.image_url.startsWith('https://')));
+
   // Prioritize database images if they exist and are valid, otherwise use static images
   // For syracuse-house, always prefer static images if they exist
-  const allImages = (id === 'syracuse-house' && project?.images && project.images.length > 0)
-    ? project.images
-    : (validDbImages.length > 0 
-      ? validDbImages.map(img => img.image_url)
-      : (project?.images || []));
+  const allImages = id === 'syracuse-house' && project?.images && project.images.length > 0 ? project.images : validDbImages.length > 0 ? validDbImages.map(img => img.image_url) : project?.images || [];
 
   // Helper function to get image label
   const getImageLabel = (imageUrl: string, index: number): string | null => {
@@ -172,7 +165,7 @@ const ProjectDetail = () => {
                 const label = getImageLabel(image, index);
                 return <ImageWithWatermark key={`${image}-${index}`}>
                       <button onClick={() => setSelectedImageIndex(index)} className="relative aspect-square overflow-hidden rounded-lg bg-white border border-charcoal/10 group cursor-pointer transition-all hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-charcoal/30 w-full">
-                        <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                        
                         {label && <span className={`absolute top-2 right-2 px-2 py-1 text-xs font-semibold text-white rounded ${label === "Before" ? "bg-amber-500/90" : "bg-emerald-500/90"}`}>
                             {label}
                           </span>}
