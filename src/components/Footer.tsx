@@ -1,33 +1,25 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/mc-logo-new.png";
-
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <footer id="contact" className="bg-[#1a1f2e] text-white">
+  return <footer id="contact" className="bg-[#1a1f2e] text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-12 sm:py-16 md:py-20">
         <div className="grid md:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
           {/* Left Column - Brand */}
           <div>
             <div className="mb-4 sm:mb-5">
-              <img 
-                src={logo} 
-                alt="Michael Chandler Logo" 
-                className="h-12 w-auto mb-3"
-              />
-              <h3 className="text-xl sm:text-2xl font-playfair text-white mb-2 leading-tight">
-                Michael Chandler
-              </h3>
+              <img src={logo} alt="Michael Chandler Logo" className="h-12 w-auto mb-3" />
+              
               <p className="text-gray-400 text-sm sm:text-base font-inter mb-4 leading-relaxed">
                 Fine Construction & Design
               </p>
@@ -44,38 +36,34 @@ export const Footer = () => {
             </h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a 
-                  href="#services" 
-                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} 
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
-                >
+                <a href="#services" onClick={e => {
+                e.preventDefault();
+                scrollToSection('services');
+              }} className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed">
                   Architectural Design
                 </a>
               </li>
               <li>
-                <a 
-                  href="#services" 
-                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} 
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
-                >
+                <a href="#services" onClick={e => {
+                e.preventDefault();
+                scrollToSection('services');
+              }} className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed">
                   Construction Management
                 </a>
               </li>
               <li>
-                <a 
-                  href="#services" 
-                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} 
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
-                >
+                <a href="#services" onClick={e => {
+                e.preventDefault();
+                scrollToSection('services');
+              }} className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed">
                   Project Planning
                 </a>
               </li>
               <li>
-                <a 
-                  href="#services" 
-                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} 
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
-                >
+                <a href="#services" onClick={e => {
+                e.preventDefault();
+                scrollToSection('services');
+              }} className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed">
                   Quality Assurance
                 </a>
               </li>
@@ -96,19 +84,13 @@ export const Footer = () => {
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <a 
-                  href="tel:+14352377373" 
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
-                >
+                <a href="tel:+14352377373" className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed">
                   +1 (435) 237-7373
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <a 
-                  href="mailto:mike.rcccon@yahoo.com" 
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed break-all"
-                >
+                <a href="mailto:mike.rcccon@yahoo.com" className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed break-all">
                   mike.rcccon@yahoo.com
                 </a>
               </div>
@@ -127,25 +109,22 @@ export const Footer = () => {
             
             <div className="flex items-center gap-4 sm:gap-6">
               <nav className="flex gap-4 sm:gap-6">
-                <a 
-                  href="#about" 
-                  onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
-                >
+                <a href="#about" onClick={e => {
+                e.preventDefault();
+                scrollToSection('about');
+              }} className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed">
                   About
                 </a>
-                <a 
-                  href="#services" 
-                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
-                >
+                <a href="#services" onClick={e => {
+                e.preventDefault();
+                scrollToSection('services');
+              }} className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed">
                   Services
                 </a>
-                <a 
-                  href="#contact" 
-                  onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}
-                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
-                >
+                <a href="#contact" onClick={e => {
+                e.preventDefault();
+                scrollToSection('contact');
+              }} className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed">
                   Contact
                 </a>
               </nav>
@@ -153,6 +132,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
