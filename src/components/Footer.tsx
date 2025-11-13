@@ -1,52 +1,158 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import logo from "@/assets/mc-logo-new.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer id="contact" className="py-12 sm:py-16 md:py-20 border-t border-white/10 bg-charcoal/70 shadow-2xl">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="max-w-4xl mx-auto mb-6 sm:mb-8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-playfair font-semibold mb-6 sm:mb-8 text-center text-cream leading-tight">
-            Get In Touch
-          </h2>
-          
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 mb-8 sm:mb-10">
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent/10 mb-3 transition-all duration-300 group-hover:bg-accent/20 group-hover:scale-110">
-                <Mail className="w-4 h-4 text-accent transition-transform duration-300 group-hover:scale-110" />
-              </div>
-              <h3 className="text-xs font-medium tracking-wider text-cream/60 mb-3 font-inter">
-                EMAIL
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <footer id="contact" className="bg-[#1a1f2e] text-white">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-12 sm:py-16 md:py-20">
+        <div className="grid md:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
+          {/* Left Column - Brand */}
+          <div>
+            <div className="mb-4 sm:mb-5">
+              <img 
+                src={logo} 
+                alt="Michael Chandler Logo" 
+                className="h-12 w-auto mb-3"
+              />
+              <h3 className="text-xl sm:text-2xl font-playfair text-white mb-2 leading-tight">
+                Michael Chandler
               </h3>
-              <a href="mailto:mike.rcccon@yahoo.com" className="text-base font-inter font-light text-cream hover:text-accent transition-all duration-300 hover:tracking-wide leading-relaxed">mike.rcccon@yahoo.com</a>
+              <p className="text-gray-400 text-sm sm:text-base font-inter mb-4 leading-relaxed">
+                Fine Construction & Design
+              </p>
             </div>
-            
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent/10 mb-3 transition-all duration-300 group-hover:bg-accent/20 group-hover:scale-110">
-                <Phone className="w-4 h-4 text-accent transition-transform duration-300 group-hover:scale-110" />
+            <p className="text-gray-400 text-sm sm:text-base font-inter leading-relaxed">
+              37+ years of construction excellence in Spring, Texas. Delivering quality craftsmanship and exceptional service for residential and commercial projects.
+            </p>
+          </div>
+
+          {/* Middle Column - Services */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-playfair font-semibold mb-4 sm:mb-5 leading-tight">
+              Services
+            </h3>
+            <ul className="space-y-2 sm:space-y-3">
+              <li>
+                <a 
+                  href="#services" 
+                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} 
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
+                >
+                  Architectural Design
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#services" 
+                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} 
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
+                >
+                  Construction Management
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#services" 
+                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} 
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
+                >
+                  Project Planning
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#services" 
+                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} 
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
+                >
+                  Quality Assurance
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Right Column - Contact */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-playfair font-semibold mb-4 sm:mb-5 leading-tight">
+              Contact
+            </h3>
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-400 text-sm sm:text-base font-inter leading-relaxed">
+                  Spring, Texas
+                </span>
               </div>
-              <h3 className="text-xs font-medium tracking-wider text-cream/60 mb-3 font-inter">
-                PHONE
-              </h3>
-              <a href="tel:+14352377373" className="text-base font-inter font-light text-cream hover:text-accent transition-all duration-300 hover:tracking-wide leading-relaxed">+1 (435) 237-7373</a>
-            </div>
-            
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent/10 mb-3 transition-all duration-300 group-hover:bg-accent/20 group-hover:scale-110">
-                <MapPin className="w-4 h-4 text-accent transition-transform duration-300 group-hover:scale-110" />
+              <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <a 
+                  href="tel:+14352377373" 
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
+                >
+                  +1 (435) 237-7373
+                </a>
               </div>
-              <h3 className="text-xs font-medium tracking-wider text-cream/60 mb-3 font-inter">
-                LOCATION
-              </h3>
-              <p className="text-base font-inter font-light text-cream leading-relaxed">Spring, Texas</p>
+              <div className="flex items-start gap-3">
+                <Mail className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <a 
+                  href="mailto:mike.rcccon@yahoo.com" 
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed break-all"
+                >
+                  mike.rcccon@yahoo.com
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 sm:pt-8 border-t border-border">
-          <p className="text-sm font-inter font-light text-cream/70 leading-relaxed">
-            © {currentYear} Michael Chandler. All rights reserved.
-          </p>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-700">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-4 sm:py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
+            <p className="text-gray-400 text-sm sm:text-base font-inter leading-relaxed">
+              © {currentYear} Michael Chandler Fine Construction & Design. All rights reserved.
+            </p>
+            
+            <div className="flex items-center gap-4 sm:gap-6">
+              <nav className="flex gap-4 sm:gap-6">
+                <a 
+                  href="#about" 
+                  onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
+                >
+                  About
+                </a>
+                <a 
+                  href="#services" 
+                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
+                >
+                  Services
+                </a>
+                <a 
+                  href="#contact" 
+                  onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm sm:text-base font-inter leading-relaxed"
+                >
+                  Contact
+                </a>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };

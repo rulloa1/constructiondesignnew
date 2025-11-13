@@ -1,158 +1,117 @@
-import { Compass, Pencil, Hammer, ClipboardCheck, Shield, Leaf } from "lucide-react";
+import { Lightbulb, Ruler, Hammer, ClipboardList, ShieldCheck, Leaf, Check } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const services = [
-  {
-    icon: Compass,
-    title: "Planning & Feasibility",
-    description: "Strategic planning to ensure project viability",
-    items: [
-      "Feasibility Studies",
-      "Site Analysis",
-      "Permitting & Entitlements",
-      "Financial Planning"
-    ]
-  },
-  {
-    icon: Pencil,
-    title: "Design",
-    description: "Comprehensive design solutions",
-    items: [
-      "Architectural Design",
-      "Interior Design",
-      "Landscape Design",
-      "3D Visualization"
-    ]
-  },
-  {
-    icon: Hammer,
-    title: "Construction",
-    description: "Expert execution and quality craftsmanship",
-    items: [
-      "Ground-Up Construction",
-      "Renovations & Remodels",
-      "Structural Work",
-      "Finish Carpentry"
-    ]
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Project Management",
-    description: "Seamless coordination from start to finish",
-    items: [
-      "Schedule Management",
-      "Budget Control",
-      "Vendor Coordination",
-      "Progress Reporting"
-    ]
-  },
-  {
-    icon: Shield,
-    title: "Quality Assurance",
-    description: "Rigorous standards and inspections",
-    items: [
-      "Quality Control",
-      "Safety Compliance",
-      "Code Compliance",
-      "Final Inspections"
-    ]
-  },
-  {
-    icon: Leaf,
-    title: "Sustainability",
-    description: "Environmentally responsible practices",
-    items: [
-      "Green Building",
-      "Energy Efficiency",
-      "Sustainable Materials",
-      "LEED Consulting"
-    ]
-  }
-];
+interface Service {
+  icon: typeof Lightbulb;
+  title: string;
+  description: string;
+  items: string[];
+}
+
+const services: Service[] = [{
+  icon: Lightbulb,
+  title: "Planning & Feasibility",
+  description: "Strategic planning to ensure project viability",
+  items: ["Feasibility Studies", "Site Analysis", "Permitting & Entitlements", "Financial Planning"]
+}, {
+  icon: Ruler,
+  title: "Design",
+  description: "Comprehensive design solutions",
+  items: ["Architectural Design", "Interior Design", "Landscape Design", "3D Visualization"]
+}, {
+  icon: Hammer,
+  title: "Construction",
+  description: "Expert execution and quality craftsmanship",
+  items: ["Ground-Up Construction", "Renovations & Remodels", "Structural Work", "Finish Carpentry"]
+}, {
+  icon: ClipboardList,
+  title: "Project Management",
+  description: "Seamless coordination from start to finish",
+  items: ["Schedule Management", "Budget Control", "Vendor Coordination", "Progress Reporting"]
+}, {
+  icon: ShieldCheck,
+  title: "Quality Assurance",
+  description: "Rigorous standards and inspections",
+  items: ["Quality Control", "Safety Compliance", "Code Compliance", "Final Inspections"]
+}, {
+  icon: Leaf,
+  title: "Sustainability",
+  description: "Environmentally responsible practices",
+  items: ["Green Building", "Energy Efficiency", "Sustainable Materials", "LEED Consulting"]
+}];
 
 export const Services = () => {
-  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.15 });
-  // Duplicate services for seamless loop
-  const duplicatedServices = [...services, ...services];
+  const {
+    elementRef,
+    isVisible
+  } = useScrollAnimation({
+    threshold: 0.1
+  });
 
   return (
     <section 
-      ref={elementRef as React.RefObject<HTMLElement>}
-      className={`py-16 sm:py-20 md:py-24 bg-background overflow-hidden transition-all duration-1000 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-      }`}
+      id="services" 
+      ref={elementRef as React.RefObject<HTMLElement>} 
+      className="relative py-16 sm:py-20 md:py-24 bg-muted/30"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        {/* Header */}
-        <div className="text-center mb-10 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-semibold tracking-tight mb-4 sm:mb-5 md:mb-6 px-2 leading-tight">
-            Comprehensive Construction & Development Services
-          </h2>
-          <p className="text-base sm:text-lg font-inter text-muted-foreground max-w-3xl mx-auto px-2 leading-relaxed">
-            End-to-end expertise for projects of any scale or complexity
-          </p>
-        </div>
+        <div className="max-w-7xl mx-auto">
+          {/* Heading */}
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-semibold mb-4 sm:mb-5 md:mb-6 text-foreground tracking-tight leading-tight">
+              Comprehensive Construction & Development Services
+            </h2>
+            <p className="text-base sm:text-lg font-inter text-foreground/70 max-w-3xl mx-auto text-center leading-relaxed">
+              End-to-end expertise for projects of any scale or complexity
+            </p>
+          </div>
 
-        {/* Marquee Container */}
-        <div className="relative">
-          <div className="flex gap-6 animate-marquee">
-            {duplicatedServices.map((service, index) => {
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+            {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div
-                  key={index}
-                  className="flex-shrink-0 w-72 sm:w-80 bg-card border border-border rounded-lg shadow-md hover:shadow-[0_0_30px_rgba(228,179,33,0.4),0_0_60px_rgba(228,179,33,0.2)] transition-all duration-500 hover:-translate-y-2 hover:border-[#E4B321]/50"
+                <Card 
+                  key={service.title} 
+                  className="bg-card border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1" 
+                  style={{
+                    animation: isVisible ? `fade-in 0.6s ease-out ${index * 0.1}s forwards` : 'none',
+                    opacity: isVisible ? 1 : 0
+                  }}
                 >
-                  <div className="p-6 sm:p-8 h-full flex flex-col">
-                    {/* Icon and Title */}
-                    <div className="flex items-start gap-3 sm:gap-4 mb-5 sm:mb-6">
-                      <div className="flex-shrink-0 p-2 sm:p-3 rounded-lg bg-[#E4B321]/10">
-                        <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#E4B321]" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg sm:text-xl font-playfair font-semibold tracking-tight mb-2 sm:mb-3 leading-tight">
-                          {service.title}
-                        </h3>
-                        <p className="text-xs sm:text-sm font-inter text-muted-foreground leading-relaxed">
-                          {service.description}
-                        </p>
+                  <CardContent className="p-6 sm:p-8">
+                    {/* Icon */}
+                    <div className="mb-4 sm:mb-5">
+                      <div className="w-14 h-14 rounded-full bg-amber-500/10 flex items-center justify-center">
+                        <Icon className="w-7 h-7 text-amber-600" />
                       </div>
                     </div>
 
-                    {/* Items List */}
-                    <ul className="flex-grow space-y-2.5 sm:space-y-3">
-                      {service.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-3 text-sm font-inter text-muted-foreground leading-relaxed">
-                          <span className="text-[#E4B321] font-bold flex-shrink-0 mt-0.5">✓</span>
+                    {/* Title & Description */}
+                    <h3 className="text-xl sm:text-2xl font-playfair font-semibold text-foreground mb-2 sm:mb-3 leading-tight">
+                      {service.title}
+                    </h3>
+                    <p className="text-foreground/70 mb-4 sm:mb-5 text-sm sm:text-base font-inter leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    {/* Service Items */}
+                    <ul className="space-y-2 sm:space-y-2.5">
+                      {service.items.map(item => (
+                        <li key={item} className="flex items-start gap-2 sm:gap-3 text-foreground/80 text-sm font-inter leading-relaxed">
+                          <Check className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               );
             })}
           </div>
         </div>
       </div>
-
-      {/* Marquee Animation */}
-      <style>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-marquee {
-          animation: marquee 30s linear infinite;
-        }
-        .animate-marquee:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 };

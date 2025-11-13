@@ -1,9 +1,11 @@
-import { Hammer, HardHat, Wrench, ArrowDown, Target, Award } from "lucide-react";
+import { Lightbulb, Star, ArrowDown } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Card, CardContent } from "@/components/ui/card";
+
 interface AboutProps {
   onPortfolioClick?: () => void;
 }
+
 export const About = ({
   onPortfolioClick
 }: AboutProps) => {
@@ -13,122 +15,100 @@ export const About = ({
   } = useScrollAnimation({
     threshold: 0.15
   });
-  return <section id="about" ref={elementRef as React.RefObject<HTMLElement>} className={`relative py-16 sm:py-20 md:py-24 overflow-hidden bg-background transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-      {/* Animated Construction Icons Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Floating Icons */}
-        {[...Array(15)].map((_, i) => {
-        const icons = [Hammer, HardHat, Wrench];
-        const Icon = icons[i % 3];
-        const delay = i * 0.8;
-        const duration = 15 + i % 5 * 3;
-        const size = 24 + i % 3 * 16;
-        const startX = i * 7 % 100;
-        const startY = i * 13 % 100;
-        return <div key={i} className="absolute opacity-5" style={{
-          left: `${startX}%`,
-          top: `${startY}%`,
-          animation: `float-diagonal ${duration}s ease-in-out ${delay}s infinite alternate`
-        }}>
-              <Icon size={size} className="text-accent" />
-            </div>;
-      })}
-      </div>
 
-      {/* Floating animation keyframes */}
-      <style>{`
-        @keyframes float-diagonal {
-          0% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(30px, -40px) rotate(90deg);
-          }
-          50% {
-            transform: translate(-20px, -80px) rotate(180deg);
-          }
-          75% {
-            transform: translate(-40px, -40px) rotate(270deg);
-          }
-          100% {
-            transform: translate(0, 0) rotate(360deg);
-          }
-        }
-      `}</style>
-
+  return (
+    <section 
+      id="about" 
+      ref={elementRef as React.RefObject<HTMLElement>} 
+      className="relative py-16 sm:py-20 md:py-24 overflow-hidden bg-background"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-semibold text-center mb-8 sm:mb-12 md:mb-16 text-foreground opacity-0 animate-slide-in-left leading-tight">
+          {/* Heading */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-semibold text-center mb-10 sm:mb-12 md:mb-16 text-foreground leading-tight">
             About Me
           </h2>
           
-          {/* Main intro section */}
-          <div className="max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16 opacity-0 animate-fade-in-up delay-200">
-            <Card className="bg-card/80 backdrop-blur-sm border-border shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-1">
-              <CardContent className="p-6 sm:p-8 md:p-12">
-                <div className="space-y-4 sm:space-y-5 text-base sm:text-lg font-inter font-light leading-relaxed text-foreground/90">
-                  <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground leading-relaxed">I am Michael Chandler, and have been a construction professional who believes that exceptional results come from exceptional teams.</p>
-                  <p className="leading-relaxed">
-                    My approach is simple: bring together the right people, create an environment built on mutual respect, and stay closely attuned to client feedback throughout every phase of a project.
-                  </p>
-                  <p className="leading-relaxed">
-                    I've built my career on the principle that quality construction isn't just about meeting standards—it's about exceeding them. By combining rigorous processes with forward-thinking design and fostering a collaborative team culture, I've found that excellence becomes not just achievable, but inevitable.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Philosophy and Commitment Cards */}
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
-            {/* Philosophy Card */}
-            <Card className="opacity-0 animate-fade-in-up delay-300 bg-card/80 backdrop-blur-sm border-border shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-1">
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex items-start gap-3 sm:gap-4 mb-4">
-                  <div className="p-2 sm:p-3 rounded-lg bg-accent/10">
-                    <Target className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
-                  </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-playfair font-semibold text-foreground mt-1 sm:mt-2 leading-tight">
-                    My Philosophy
-                  </h3>
-                </div>
-                <p className="text-sm sm:text-base md:text-lg font-inter font-light leading-relaxed text-foreground/80 mt-2">
-                  Superior construction is accomplished through three core elements: assembling the right group of people, empowering them with the respect and environment they need to thrive, and through supportive leadership, thoughtful course corrections based on real-time feedback from project owners and end users. When these elements align, teams don't just meet expectations—they consistently surpass them.
+          {/* Main Content Grid */}
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 max-w-6xl mx-auto mb-8 sm:mb-12">
+            {/* Left Column - Main Text with Border */}
+            <div className="border-l-4 border-amber-500 pl-6 sm:pl-8 py-4">
+              <div className="space-y-4 sm:space-y-5 text-base sm:text-lg font-inter leading-relaxed text-foreground/90">
+                <p className="leading-relaxed">
+                  Through my experience of <span className="font-semibold text-foreground">37 years</span> as a Business, Design, and Construction professional, I have found that exceptional results come from exceptional teams.
                 </p>
-              </CardContent>
-            </Card>
+                <p className="leading-relaxed">
+                  My approach is simple: bring together the right people, create an environment built on mutual respect, and stay closely attuned to client feedback throughout every phase of a project. I've built my career on the universal business principle that quality construction isn't just about meeting standards—it's about exceeding them by combining rigorous processes with forward-thinking design and fostering a collaborative team culture. Excellence is no longer simply a goal, but an inevitable result.
+                </p>
+                <p className="italic text-foreground/70 font-inter leading-relaxed">
+                  -Michael Chandler
+                </p>
+              </div>
+            </div>
 
-            {/* Commitment Card */}
-            <Card className="opacity-0 animate-fade-in-up delay-400 bg-card/80 backdrop-blur-sm border-border shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-1">
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex items-start gap-3 sm:gap-4 mb-4">
-                  <div className="p-2 sm:p-3 rounded-lg bg-accent/10">
-                    <Award className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
+            {/* Right Column - Cards */}
+            <div className="space-y-6 sm:space-y-8">
+              {/* Philosophy Card */}
+              <Card className="bg-card border-border shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="p-6 sm:p-8">
+                  <div className="flex items-start gap-4 sm:gap-5">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-amber-500/10 flex items-center justify-center">
+                        <Lightbulb className="w-5 h-5 sm:w-6 sm:h-6 text-amber-600" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-playfair font-semibold text-foreground mb-3 sm:mb-4 leading-tight">
+                        My Philosophy
+                      </h3>
+                      <p className="text-foreground/80 leading-relaxed font-inter text-sm sm:text-base">
+                        Superior construction is accomplished through three core elements: assembling the right group of people, empowering them with respect and environment, and providing supportive leadership with real-time feedback.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-playfair font-semibold text-foreground mt-1 sm:mt-2 leading-tight">
-                    My Commitment
-                  </h3>
-                </div>
-                <div className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg font-inter font-light leading-relaxed text-foreground/80 mt-2">
-                  <p>
-                    Every client, every project, every time: I'm dedicated to exceeding expectations under all conditions. It's not just a goal—it's the standard by which I measure success.
-                  </p>
-                  <p>
-                    Exceeding The Clients Expectations Every Time.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+
+              {/* Commitment Card */}
+              <Card className="bg-card border-border shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="p-6 sm:p-8">
+                  <div className="flex items-start gap-4 sm:gap-5">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-amber-500/10 flex items-center justify-center">
+                        <Star className="w-5 h-5 sm:w-6 sm:h-6 text-amber-600" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-playfair font-semibold text-foreground mb-3 sm:mb-4 leading-tight">
+                        My Commitment
+                      </h3>
+                      <p className="text-foreground/80 leading-relaxed font-inter text-sm sm:text-base">
+                        Every client, every project, every time: I'm dedicated to exceeding expectations under all conditions. It's not just a goal—it's the standard by which I measure success.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           {/* Arrow pointing to Portfolio */}
-          <div className="flex justify-center mt-8 sm:mt-10 md:mt-12 opacity-0 animate-fade-in delay-500">
-            <button onClick={onPortfolioClick} className="flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer group" aria-label="View Portfolio">
-              <span className="text-lg sm:text-xl font-playfair font-semibold text-accent leading-relaxed">View My Work</span>
-              <ArrowDown size={48} className="text-accent animate-bounce group-hover:animate-none" strokeWidth={2.5} />
-            </button>
-          </div>
+          {onPortfolioClick && (
+            <div className="flex justify-center mt-8 sm:mt-10 md:mt-12">
+              <button 
+                onClick={onPortfolioClick} 
+                className="flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer group" 
+                aria-label="View Portfolio"
+              >
+                <span className="text-lg sm:text-xl font-playfair font-semibold text-accent leading-relaxed">
+                  View My Work
+                </span>
+                <ArrowDown size={48} className="text-accent animate-bounce group-hover:animate-none" strokeWidth={2.5} />
+              </button>
+            </div>
+          )}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

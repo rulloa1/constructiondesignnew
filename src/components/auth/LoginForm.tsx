@@ -11,7 +11,12 @@ import { toast } from "sonner";
 
 const formSchema = z.object({
   email: z.string().email("Invalid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
+  password: z.string()
+    .min(8, "Password must be at least 8 characters")
+    .max(72, "Password must be less than 72 characters")
+    .regex(/[A-Z]/, "Password must contain an uppercase letter")
+    .regex(/[a-z]/, "Password must contain a lowercase letter")
+    .regex(/[0-9]/, "Password must contain a number"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -40,8 +45,9 @@ export const LoginForm = () => {
 
       toast.success("Logged in successfully");
       navigate("/admin");
-    } catch (error: any) {
-      toast.error(error.message || "Failed to login");
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error ? error.message : "Failed to login";
+      toast.error(errorMessage);
     } finally {
       setIsLoading(false);
     }
