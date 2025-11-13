@@ -1,52 +1,135 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer id="contact" className="py-8 border-t border-white/10 bg-charcoal/70 shadow-2xl">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-4xl mx-auto mb-4">
-          <h2 className="text-2xl md:text-3xl font-light mb-4 text-center text-cream">
-            Get In Touch
-          </h2>
-          
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-6">
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent/10 mb-3 transition-all duration-300 group-hover:bg-accent/20 group-hover:scale-110">
-                <Mail className="w-4 h-4 text-accent transition-transform duration-300 group-hover:scale-110" />
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <footer id="contact" className="bg-[#1a1f2e] text-white">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-6 lg:px-12 py-12">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          {/* Left Column - Brand */}
+          <div>
+            <div className="mb-4">
+              <div className="bg-white px-3 py-1 inline-block mb-3">
+                <span className="text-[#1a1f2e] font-bold text-sm">MICHAEL CHANDLER</span>
               </div>
-              <h3 className="text-xs font-medium tracking-wider text-cream/60 mb-2">
-                EMAIL
-              </h3>
-              <a href="mailto:mike.rcccon@yahoo.com" className="text-base font-light text-cream hover:text-accent transition-all duration-300 hover:tracking-wide">mike.rcccon@yahoo.com</a>
+              <h3 className="text-xl font-playfair text-white mb-2">Michael Chandler</h3>
+              <p className="text-gray-400 text-sm mb-4">Fine Construction & Design</p>
             </div>
-            
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent/10 mb-3 transition-all duration-300 group-hover:bg-accent/20 group-hover:scale-110">
-                <Phone className="w-4 h-4 text-accent transition-transform duration-300 group-hover:scale-110" />
+            <p className="text-gray-400 text-sm leading-relaxed">
+              37+ years of construction excellence in Spring, Texas. Delivering quality craftsmanship and exceptional service for residential and commercial projects.
+            </p>
+          </div>
+
+          {/* Middle Column - Services */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
+                  Architectural Design
+                </a>
+              </li>
+              <li>
+                <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
+                  Construction Management
+                </a>
+              </li>
+              <li>
+                <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
+                  Project Planning
+                </a>
+              </li>
+              <li>
+                <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }} className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
+                  Quality Assurance
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Right Column - Contact */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Contact</h3>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-400 text-sm">Spring, Texas</span>
               </div>
-              <h3 className="text-xs font-medium tracking-wider text-cream/60 mb-2">
-                PHONE
-              </h3>
-              <a href="tel:+14352377373" className="text-base font-light text-cream hover:text-accent transition-all duration-300 hover:tracking-wide">+1 (435) 237-7373</a>
-            </div>
-            
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent/10 mb-3 transition-all duration-300 group-hover:bg-accent/20 group-hover:scale-110">
-                <MapPin className="w-4 h-4 text-accent transition-transform duration-300 group-hover:scale-110" />
+              <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <a href="tel:+14352377373" className="text-gray-400 hover:text-amber-500 transition-colors text-sm">
+                  +1 (435) 237-7373
+                </a>
               </div>
-              <h3 className="text-xs font-medium tracking-wider text-cream/60 mb-2">
-                LOCATION
-              </h3>
-              <p className="text-base font-light text-cream">Spring, Texas</p>
+              <div className="flex items-start gap-3">
+                <Mail className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <a href="mailto:mike.rcccon@yahoo.com" className="text-gray-400 hover:text-amber-500 transition-colors text-sm break-all">
+                  mike.rcccon@yahoo.com
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-4 border-t border-border">
-          <p className="text-sm font-light text-cream/70">
-            © {currentYear} Michael Chandler. All rights reserved.
-          </p>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-700">
+        <div className="container mx-auto px-6 lg:px-12 py-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-sm">
+              © {currentYear} Michael Chandler Fine Construction & Design. All rights reserved.
+            </p>
+            
+            <div className="flex items-center gap-6">
+              <nav className="flex gap-6">
+                <a 
+                  href="#about" 
+                  onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm"
+                >
+                  About
+                </a>
+                <a 
+                  href="#services" 
+                  onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm"
+                >
+                  Services
+                </a>
+                <a 
+                  href="#contact" 
+                  onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}
+                  className="text-gray-400 hover:text-amber-500 transition-colors text-sm"
+                >
+                  Contact
+                </a>
+              </nav>
+              
+              <Button 
+                onClick={() => {
+                  const chatbot = document.querySelector('[data-chatbot-trigger]') as HTMLElement;
+                  if (chatbot) chatbot.click();
+                }}
+                className="bg-amber-500 hover:bg-amber-600 text-white text-sm"
+                size="sm"
+              >
+                <MessageCircle className="w-4 h-4 mr-2" />
+                Talk with Us
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
