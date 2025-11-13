@@ -76,7 +76,7 @@ export const Services = () => {
                   key={service.title} 
                   className="bg-card border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1" 
                   style={{
-                    animation: isVisible ? `fade-in 0.6s ease-out ${index * 0.1}s forwards` : 'none',
+                    animation: isVisible ? `fadeIn 0.6s ease-out ${index * 0.1}s forwards` : 'none',
                     opacity: isVisible ? 1 : 0
                   }}
                 >
