@@ -50,10 +50,10 @@ export const Services = () => {
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-playfair font-semibold mb-4 text-foreground">
+            <h2 className="text-4xl sm:text-5xl font-playfair font-semibold mb-4 text-foreground md:text-4xl text-center">
               Comprehensive Construction & Development Services
             </h2>
-            <p className="text-lg sm:text-xl text-foreground/70 max-w-3xl mx-auto">End-to-end expertise for projects of any scale or complexity                                    </p>
+            <p className="text-lg text-foreground/70 max-w-3xl mx-auto sm:text-lg text-center">                                                                                                                                                                  End-to-end expertise for projects of any scale or complexity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </p>
           </div>
 
           {/* Services Grid */}
