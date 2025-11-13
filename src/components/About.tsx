@@ -1,22 +1,19 @@
 import { Lightbulb, Star } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Card, CardContent } from "@/components/ui/card";
-
 interface AboutProps {
   onPortfolioClick?: () => void;
 }
-
-export const About = ({ onPortfolioClick }: AboutProps) => {
-  const { elementRef, isVisible } = useScrollAnimation({
+export const About = ({
+  onPortfolioClick
+}: AboutProps) => {
+  const {
+    elementRef,
+    isVisible
+  } = useScrollAnimation({
     threshold: 0.15
   });
-
-  return (
-    <section 
-      id="about" 
-      ref={elementRef as React.RefObject<HTMLElement>} 
-      className="relative py-12 sm:py-16 md:py-20 overflow-hidden bg-background"
-    >
+  return <section id="about" ref={elementRef as React.RefObject<HTMLElement>} className="relative py-12 sm:py-16 md:py-20 overflow-hidden bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
@@ -33,7 +30,10 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
                   Through my experience of <span className="font-semibold text-foreground">37 years</span> as a Business, Design, and Construction professional, I have found that exceptional results come from exceptional teams.
                 </p>
                 <p>
-                  My approach is simple: bring together the right people, create an environment built on mutual respect, and stay closely attuned to client feedback throughout every phase of a project. I've built my career on the universal business principle that quality construction isn't just about meeting standards—it's about exceeding them.
+                  My approach is simple: bring together the right people, create an environment built on mutual respect, and stay closely attuned to client feedback throughout every phase of a project. 
+
+
+I've built my career on the universal business principle that quality construction isn't just about meeting standards—it's about exceeding them by combining rigorous processes with forward-thinking design and fostering a collaborative team culture excellence is no longer simply a goal, but an inevitable result.                                                  
                 </p>
                 <p className="italic text-foreground/70">
                   -Michael Chandler
@@ -88,6 +88,5 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
