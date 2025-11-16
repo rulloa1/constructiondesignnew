@@ -197,7 +197,7 @@ import northFlorida10 from "@/assets/projects/north-florida-10.jpg";
 import northFlorida11 from "@/assets/projects/north-florida-11.jpg";
 import northFlorida12 from "@/assets/projects/north-florida-12.jpg";
 
-// Pacific Grove Design Build album
+// Pacific Grove Design/Build album
 import pgCover from "@/assets/projects/pg-cover.jpg";
 import pg1 from "@/assets/projects/pg-1.jpg";
 import pg2 from "@/assets/projects/pg-2.jpg";
@@ -315,6 +315,19 @@ import development10 from "@/assets/projects/development-10.jpg";
 import development11 from "@/assets/projects/development-11.jpg";
 import development12 from "@/assets/projects/development-12.jpg";
 import development13 from "@/assets/projects/development-13.jpg";
+import linksCover from "@/assets/projects/links-cover.jpg";
+import links1 from "@/assets/projects/links-1.jpg";
+import links2 from "@/assets/projects/links-2.jpg";
+import links3 from "@/assets/projects/links-3.jpg";
+import links4 from "@/assets/projects/links-4.jpg";
+import links5 from "@/assets/projects/links-5.jpg";
+import links6 from "@/assets/projects/links-6.jpg";
+import links7 from "@/assets/projects/links-7.jpg";
+import links8 from "@/assets/projects/links-8.jpg";
+import linksEstate from "@/assets/projects/links-estate.jpg";
+import linksEstate2 from "@/assets/projects/links-estate-2.jpg";
+import linksEstate3 from "@/assets/projects/links-estate-3.jpg";
+import siteMap from "@/assets/projects/site-map.jpg";
 
 // Hospitality Pool
 import poolTestimonialImage from "@/assets/pool-testimonial.jpg";
@@ -500,7 +513,7 @@ import alpineRanch10 from "@/assets/projects/alpine-ranch-10.jpg";
 import alpineRanch11 from "@/assets/projects/alpine-ranch-11.jpg";
 import alpineRanch12 from "@/assets/projects/alpine-ranch-12.jpg";
 
-export type ProjectCategory = "Residential Construction" | "Residential Development" | "Civil" | "Hospitality" | "Design Build";
+export type ProjectCategory = "Residential Construction" | "Residential Development" | "Civil" | "Hospitality" | "Design/Build";
 
 export interface Project {
   id: string;
@@ -543,9 +556,9 @@ export const projects: Project[] = [
     id: "syracuse-house",
     title: "Syracuse House",
     subtitle: "N. Utah Craftsman Estate",
-    location: "Residential • Design Build",
+    location: "Residential • Design/Build",
     additionalInfo: "N. Utah",
-    category: "Design Build",
+    category: "Design/Build",
     description: "Stunning craftsman-style estate featuring professional landscaping, custom stone work, and dramatic evening lighting. This comprehensive project showcases exceptional attention to detail in both architecture and landscape design, with native plantings, decorative rock features, and elegant outdoor spaces.",
     image: syracuse1,
     images: [
@@ -574,9 +587,9 @@ export const projects: Project[] = [
     id: "hospitality-pool",
     title: "Ultra Luxe Private Club",
     subtitle: "Resort Pool",
-    location: "Hospitality • Design Build",
+    location: "Hospitality • Design/Build",
     additionalInfo: "SE Texas",
-    category: "Design Build",
+    category: "Design/Build",
     description: "Luxury pool and outdoor living space design featuring custom stone work, pool house structures, and beautifully landscaped entertainment areas.",
     image: poolDesignCover,
     images: [poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37, poolTestimonialImage],
@@ -586,9 +599,9 @@ export const projects: Project[] = [
     id: "southcoast-remodel-design-build",
     title: "South Coast Renovation",
     subtitle: "Complete Remodel",
-    location: "Design Build",
+    location: "Design/Build",
     additionalInfo: "Big Sur, CA",
-    category: "Design Build",
+    category: "Design/Build",
     description: "A comprehensive remodel and design-build project that transforms existing spaces into modern, functional, and aesthetically stunning coastal living featuring ocean views, custom skylights, designer flooring, sophisticated interior finishes, gourmet kitchen, luxury master suite, spa-quality bathrooms, and complete structural renovations with custom architectural details.",
     image: southcoastCover,
     images: [southcoastCover, southcoast2, southcoast3, southcoast4, southcoast5, southcoast6, southcoast7, southcoast8, southcoast9, southcoast10, southcoast11, southcoast12, southcoast13, southcoast14, southcoast15, southcoast16, southcoast17, southcoast18, southcoast19, southcoast20, southcoast21, southcoast22, southcoast23, southcoast24, southcoast25, southcoast26, southcoast27, southcoast28, southcoast29, southcoast30, southcoast31, southcoast32, southcoast33, southcoast34, southcoast35, southcoast36, southcoast37, southcoast38, southcoast39, southcoast40, southcoast41, southcoast42, southcoast43, southcoast44, southcoast45, southcoast46, southcoast47, southcoast48, southcoast49, southcoast50, southcoast51, southcoast52, southcoast53],
@@ -597,9 +610,9 @@ export const projects: Project[] = [
     id: "carmel-valley-design-build",
     title: "Carmel Valley New",
     subtitle: "Custom Residence",
-    location: "Design Build • Civil",
+    location: "Design/Build • Civil",
     additionalInfo: "Carmel Valley, CA",
-    category: "Design Build",
+    category: "Design/Build",
     description: "A stunning custom design-build residence featuring elegant architectural details and seamless integration with the natural landscape of Carmel Valley.",
     image: carmelValleyNewCover,
     images: [carmelValleyNewCover, carmelValleyNew1, carmelValleyNew2, carmelValleyNew3, carmelValleyNew4],
@@ -690,15 +703,42 @@ export const projects: Project[] = [
     category: "Residential Development",
     description: "A collection of development projects showcasing comprehensive construction and site development work.",
     image: development1,
-    images: [development1, development2, development3, development4, development5, development6, development7, development8, development9, development10, development11, development12, development13],
+    images: [
+      development1,
+      development2,
+      development3,
+      development4,
+      development5,
+      development6,
+      development7,
+      development8,
+      development9,
+      development10,
+      development11,
+      development12,
+      development13,
+      linksCover,
+      links1,
+      links2,
+      links3,
+      links4,
+      links5,
+      links6,
+      links7,
+      links8,
+      linksEstate,
+      linksEstate2,
+      linksEstate3,
+      siteMap,
+    ],
   },
   {
     id: "pacific-grove-design-build",
     title: "New Residential Construction",
     subtitle: "In Historic Neighborhood",
-    location: "Design Build",
+    location: "Design/Build",
     additionalInfo: "Central Coast, CA",
-    category: "Design Build",
+    category: "Design/Build",
     description: "A comprehensive transformation of a historic property, seamlessly blending traditional craftsman character with modern comfort and functionality. This complete design-build project showcases our expertise in preserving neighborhood heritage while creating contemporary living spaces.",
     image: pgCover,
     images: [
