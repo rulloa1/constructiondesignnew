@@ -629,7 +629,6 @@ export const projects: Project[] = [
   {
     id: "north-florida-renovation",
     title: "North Florida Renovation/Addition",
-    subtitle: "Renovation/Addition",
     location: "N. Florida",
     additionalInfo: "N. Florida",
     category: "Residential Construction",
@@ -661,17 +660,6 @@ export const projects: Project[] = [
   },
   // CIVIL
   {
-    id: "coastal-hillside-restoration-2",
-    title: "Coastal Restoration",
-    subtitle: "Erosion Repair",
-    location: "Monterey Peninsula, CA",
-    additionalInfo: "Monterey Peninsula, CA",
-    category: "Civil",
-    description: "A dramatic coastal restoration project showcasing erosion repair and hillside stabilization. This comprehensive project transformed an eroded coastal property through extensive retaining wall systems, foundation work, and structural reinforcement to preserve and restore this spectacular oceanfront site.",
-    image: coastalRestorationCover,
-    images: [coastalRestorationCover, coastalRestoration1, coastalRestoration2, coastalRestoration3, coastalRestoration4, coastalRestoration5, coastalRestoration6, coastalRestoration7, coastalRestoration8, coastalRestoration9, coastalRestoration10, coastalRestoration11, coastalRestoration12, coastalRestoration13, coastalRestoration14, coastalRestoration15],
-  },
-  {
     id: "bigsur-mountain-remodel",
     title: "Coastal Mountain Residence",
     subtitle: "Civil Site Work",
@@ -692,6 +680,17 @@ export const projects: Project[] = [
     description: "A complete remodel showcasing the transformation from original condition to a beautifully finished home with updated decking, new windows, architectural improvements, and custom exterior details.",
     image: carmelKnollsCover,
     images: [carmelKnollsCover, carmelKnolls1, carmelKnolls2, carmelKnolls3, carmelKnolls4, carmelKnolls5, carmelKnolls6, carmelKnolls7, carmelKnolls8, carmelKnolls9, carmelKnolls10, carmelKnolls11, carmelKnolls12, carmelKnolls13, carmelKnolls14, carmelKnolls15, carmelKnolls16, carmelKnolls17, carmelKnolls18, carmelKnolls19, carmelKnolls20, carmelKnolls21, carmelKnolls22, carmelKnolls23, carmelKnolls24, carmelKnolls25],
+  },
+  {
+    id: "coastal-hillside-restoration-2",
+    title: "Coastal Restoration",
+    subtitle: "Erosion Repair",
+    location: "Monterey Peninsula, CA",
+    additionalInfo: "Monterey Peninsula, CA",
+    category: "Civil",
+    description: "A dramatic coastal restoration project showcasing erosion repair and hillside stabilization. This comprehensive project transformed an eroded coastal property through extensive retaining wall systems, foundation work, and structural reinforcement to preserve and restore this spectacular oceanfront site.",
+    image: coastalRestorationCover,
+    images: [coastalRestorationCover, coastalRestoration1, coastalRestoration2, coastalRestoration3, coastalRestoration4, coastalRestoration5, coastalRestoration6, coastalRestoration7, coastalRestoration8, coastalRestoration9, coastalRestoration10, coastalRestoration11, coastalRestoration12, coastalRestoration13, coastalRestoration14, coastalRestoration15],
   },
   {
     id: "civil-engineering",
