@@ -196,8 +196,6 @@ import northFlorida10 from "@/assets/projects/north-florida-10.jpg";
 import northFlorida11 from "@/assets/projects/north-florida-11.jpg";
 import northFlorida12 from "@/assets/projects/north-florida-12.jpg";
 
-import veroBeachCover from "@/assets/projects/vero-beach-cover.jpg";
-
 import abacoLuxeBoathouseCover from "@/assets/projects/abaco-luxe-boathouse-cover.jpg";
 import abacoLuxeBoathouse1 from "@/assets/projects/abaco-luxe-boathouse-1.jpg";
 
@@ -577,8 +575,8 @@ export const projects: Project[] = [
     additionalInfo: "N. Florida",
     category: "Residential Construction",
     description: "We revitalized this 3,600 sq ft home with a 1,200 sq ft addition over a 10-month period. Our comprehensive approach included a new roof, impact windows, and updated electrical and plumbing systems. The interior was completely refreshed, and our estate management services ensured a seamless coordination of all trades. The result is a home that is not only more spacious and modern but also fortified and meticulously detailed.",
-    image: veroBeachCover,
-    images: [veroBeachCover, northFloridaCover, northFlorida1, northFlorida2, northFlorida3, northFlorida4, northFlorida5, northFlorida6, northFlorida7, northFlorida8, northFlorida9, northFlorida10, northFlorida11, northFlorida12],
+    image: northFloridaCover,
+    images: [northFloridaCover, northFlorida1, northFlorida2, northFlorida3, northFlorida4, northFlorida5, northFlorida6, northFlorida7, northFlorida8, northFlorida9, northFlorida10, northFlorida11, northFlorida12],
   },
   {
     id: "bahamas-abaco-development",
