@@ -169,11 +169,11 @@ import bigsur12 from "@/assets/projects/bigsur-mountain-remodel/bigsur-12.jpg";
 import bigsur13 from "@/assets/projects/bigsur-mountain-remodel/bigsur-13.jpg";
 import bigsur14 from "@/assets/projects/bigsur-mountain-remodel/bigsur-14.jpg";
 import bigsur15 from "@/assets/projects/bigsur-mountain-remodel/bigsur-15.jpg";
-import carmelValleyCover from "@/assets/projects/carmel-valley-cover.jpg";
-import carmelValley1 from "@/assets/projects/carmel-valley-1.jpg";
-import carmelValley2 from "@/assets/projects/carmel-valley-2.jpg";
-import carmelValley3 from "@/assets/projects/carmel-valley-3.jpg";
-import carmelValley4 from "@/assets/projects/carmel-valley-4.jpg";
+import carmelValleyCover from "@/assets/projects/carmel-valley-design-build/carmel-valley-cover.jpg";
+import carmelValley1 from "@/assets/projects/carmel-valley-design-build/carmel-valley-1.jpg";
+import carmelValley2 from "@/assets/projects/carmel-valley-design-build/carmel-valley-2.jpg";
+import carmelValley3 from "@/assets/projects/carmel-valley-design-build/carmel-valley-3.jpg";
+import carmelValley4 from "@/assets/projects/carmel-valley-design-build/carmel-valley-4.jpg";
 
 // Carmel Valley New (updated images)
 import carmelValleyNewCover from "@/assets/projects/carmel-valley-design-build/carmel-valley-new-cover.jpg";
@@ -295,15 +295,15 @@ import beachfront5 from "@/assets/projects/bahamas-beachfront-estate/beachfront-
 import beachfront6 from "@/assets/projects/bahamas-beachfront-estate/beachfront-6.jpg";
 import beachfront7 from "@/assets/projects/bahamas-beachfront-estate/beachfront-7.jpg";
 
-import developmentTrail from "@/assets/projects/development-trail.jpg";
-import developmentPlan from "@/assets/projects/development-plan.jpg";
-import developmentSite from "@/assets/projects/development-site.jpg";
-import developmentAerialBefore from "@/assets/projects/development-aerial-before.jpg";
-import developmentAerialAfter from "@/assets/projects/development-aerial-after.jpg";
-import developmentConstruction1 from "@/assets/projects/development-construction-1.jpg";
-import developmentConstruction2 from "@/assets/projects/development-construction-2.jpg";
-import developmentEntrance1 from "@/assets/projects/development-entrance-1.jpg";
-import developmentEntrance2 from "@/assets/projects/development-entrance-2.jpg";
+import developmentTrail from "@/assets/projects/development/development-trail.jpg";
+import developmentPlan from "@/assets/projects/development/development-plan.jpg";
+import developmentSite from "@/assets/projects/development/development-site.jpg";
+import developmentAerialBefore from "@/assets/projects/development/development-aerial-before.jpg";
+import developmentAerialAfter from "@/assets/projects/development/development-aerial-after.jpg";
+import developmentConstruction1 from "@/assets/projects/development/development-construction-1.jpg";
+import developmentConstruction2 from "@/assets/projects/development/development-construction-2.jpg";
+import developmentEntrance1 from "@/assets/projects/development/development-entrance-1.jpg";
+import developmentEntrance2 from "@/assets/projects/development/development-entrance-2.jpg";
 
 // Abaco Luxe Boat House
 import abacoLuxeBoathouseCover from "@/assets/projects/bahamas-abaco-development/abaco-luxe-boathouse-cover.jpg";
