@@ -702,17 +702,6 @@ export const projects: Project[] = [
       pg10,
     ],
   },
-  {
-    id: "carmel-house-2",
-    title: "Carmel Forest to Ocean View",
-    subtitle: "Custom Addition",
-    location: "Carmel By the Sea, CA",
-    additionalInfo: "Carmel By the Sea, CA",
-    category: "Residential Construction",
-    description: "We expanded this stunning coastal home with a 2,400 sq ft custom addition over 12 months. The project was an exercise in craftsmanship, featuring hand-selected old-growth redwood and custom steel windows. We created a new master suite and expanded the living areas, with a focus on seamless indoor-outdoor transitions. The result is a home that feels both grander and more intimately connected to the natural beauty of the Carmel coastline.",
-    image: carmel2Cover,
-    images: [carmel2Cover, carmel2_1, carmel2_2, carmel2_3, carmel2_4, carmel2_5],
-  },
   // CIVIL
   {
     id: "hillside-cleanup",
