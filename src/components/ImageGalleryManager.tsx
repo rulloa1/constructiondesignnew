@@ -290,9 +290,15 @@ export const ImageGalleryManager = () => {
 
       {images.length > 0 && (
         <div className="bg-white p-6 rounded-lg shadow-md border border-charcoal/10">
-          <h2 className="text-xl font-playfair font-semibold mb-4">
-            Project Images ({images.length})
-          </h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-playfair font-semibold">
+              Project Images ({images.length})
+            </h2>
+            <p className="text-sm text-charcoal/60 flex items-center gap-2">
+              <GripVertical className="h-4 w-4" />
+              Drag to reorder
+            </p>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {images.map((image, index) => {
               const isDragging = draggedIndex === index;
@@ -306,17 +312,18 @@ export const ImageGalleryManager = () => {
                   onDragOver={(e) => handleDragOver(e, index)}
                   onDragEnd={handleDragEnd}
                   onDragLeave={() => setDragOverIndex(null)}
-                  className={`relative group rounded-lg transition-all duration-200 cursor-move overflow-hidden ${
+                  className={`relative group rounded-lg transition-all duration-200 cursor-move overflow-hidden border-2 ${
                     isDragging 
-                      ? 'opacity-40 scale-95 ring-2 ring-primary' 
+                      ? 'opacity-40 scale-95 ring-2 ring-primary border-primary' 
                       : isDropTarget
-                      ? 'ring-4 ring-accent scale-105 shadow-lg'
-                      : 'bg-cream/20 hover:bg-cream/30 hover:scale-102'
+                      ? 'ring-4 ring-accent scale-105 shadow-lg border-accent'
+                      : 'bg-cream/20 hover:bg-cream/40 hover:shadow-md border-transparent hover:border-primary/30'
                   }`}
                 >
-                  <div className="absolute top-2 left-2 z-10 bg-primary/80 rounded-full p-1">
+                  <div className="absolute top-2 left-2 z-10 bg-primary/90 rounded-full p-1.5 shadow-md group-hover:bg-primary transition-colors">
                     <GripVertical className="h-5 w-5 text-white" />
                   </div>
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors pointer-events-none" />
                 <img
                   src={image.image_url}
                   alt={image.title || "Project image"}
