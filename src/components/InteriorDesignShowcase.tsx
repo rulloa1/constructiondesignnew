@@ -43,17 +43,18 @@ export const InteriorDesignShowcase = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16 md:mb-20">
-            
-            <p className="text-base sm:text-lg font-inter text-foreground/70 max-w-3xl leading-relaxed">Architectural</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-semibold mb-4 sm:mb-5 md:mb-6 text-foreground tracking-tight leading-tight">
+              Architecture
+            </h2>
           </div>
 
           {loading ? <div className="flex justify-center py-12">
               <Loader2 className="h-8 w-8 animate-spin text-primary" />
             </div> : projects.length === 0 ? <div className="text-center py-12 text-muted-foreground">
               No interior design projects available yet.
-            </div> : <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {projects.map(project => <Card key={project.id} className="overflow-hidden bg-card border-border hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                  {project.image_url && <div className="relative aspect-[4/3] overflow-hidden">
+            </div> : <div className="max-w-4xl mx-auto">
+              {projects.slice(0, 1).map(project => <Card key={project.id} className="overflow-hidden bg-card border-border hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                  {project.image_url && <div className="relative aspect-[16/9] overflow-hidden">
                       <img src={project.image_url} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" style={{
                 transform: `rotate(${project.rotation_angle || 0}deg)`
               }} />
