@@ -26,18 +26,9 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-background">
         <picture>
           <source srcSet={heroImageWebP} type="image/webp" />
-          <img 
-            src={heroImagePng} 
-            alt="Michael Chandler leading construction project - 37 years of quality craftsmanship in architectural design, landscape restoration, and construction excellence" 
-            width={1920}
-            height={1080}
-            className="w-full h-full object-cover object-[center_40%] transition-transform duration-100 ease-out" 
-            style={{
-              transform: `translateY(${scrollY * 0.3}px)`
-            }}
-            loading="eager"
-            fetchPriority="high"
-          />
+          <img src={heroImagePng} alt="Michael Chandler leading construction project - 37 years of quality craftsmanship in architectural design, landscape restoration, and construction excellence" width={1920} height={1080} className="w-full h-full object-cover object-[center_40%] transition-transform duration-100 ease-out" style={{
+          transform: `translateY(${scrollY * 0.3}px)`
+        }} loading="eager" fetchPriority="high" />
         </picture>
       </div>
       
@@ -55,21 +46,12 @@ export const Hero = () => {
           <p className="text-base sm:text-lg md:text-xl font-inter font-light text-white max-w-3xl mx-auto leading-relaxed drop-shadow-md [text-shadow:0_2px_8px_rgba(0,0,0,0.8)] px-2">
             Architectural Design | Landscape Restoration | Construction Excellence
           </p>
-          <p className="text-sm sm:text-base md:text-lg font-inter font-light text-white/90 max-w-2xl mx-auto mt-3 sm:mt-4 leading-relaxed drop-shadow-md [text-shadow:0_2px_8px_rgba(0,0,0,0.8)] px-2">
-            Through 37 years of experience as a Business, Design, and Construction professional, exceptional results come from exceptional teams.
-          </p>
+          
           <div className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-3 sm:gap-4">
-            <Button
-              onClick={() => navigate("/portfolio")}
-              className="bg-accent text-white hover:bg-accent/90 text-sm sm:text-base px-6 sm:px-8 py-2.5 uppercase tracking-[0.2em] font-semibold shadow-lg"
-            >
+            <Button onClick={() => navigate("/portfolio")} className="bg-accent text-white hover:bg-accent/90 text-sm sm:text-base px-6 sm:px-8 py-2.5 uppercase tracking-[0.2em] font-semibold shadow-lg">
               View Portfolio
             </Button>
-            <Button
-              onClick={() => navigate("/contact")}
-              variant="outline"
-              className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-charcoal text-sm sm:text-base px-6 sm:px-8 py-2.5 uppercase tracking-[0.2em] font-semibold"
-            >
+            <Button onClick={() => navigate("/contact")} variant="outline" className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-charcoal text-sm sm:text-base px-6 sm:px-8 py-2.5 uppercase tracking-[0.2em] font-semibold">
               Get In Touch
             </Button>
           </div>
