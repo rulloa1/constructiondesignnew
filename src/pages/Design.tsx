@@ -1,145 +1,77 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { LucideIcon, Droplets, PenTool, Compass, Layers, Ruler, Sofa, PenSquare, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-type ColumnGroup = {
-  heading: string;
-  items: string[];
-};
-
-type DesignBlock = {
+type DesignSection = {
   id: string;
   label: string;
-  title: string;
-  description: string;
-  tags?: string[];
+  category: string;
   span: string;
   tone: string;
-  icon: LucideIcon;
-  feature?: string;
-  columnGroups?: ColumnGroup[];
 };
 
-const designBlocks: DesignBlock[] = [
+const designSections: DesignSection[] = [
+  // Left column
   {
-    id: "identity",
-    label: "Studio Identity",
-    title: "Michael Chandler Design Album",
-    description: "A tactile index of sketches, studies, and curated finishes that guide every commission.",
-    feature: "Logo, wordmark, and presentation system",
-    tags: ["Brand System", "Client Narratives"],
-    span: "md:col-span-3 md:row-span-2",
-    tone: "bg-charcoal text-cream border-charcoal/60",
-    icon: Sparkles,
+    id: "architecture-left",
+    label: "Architecture",
+    category: "Architecture",
+    span: "md:col-span-6 md:row-span-4",
+    tone: "bg-gradient-to-br from-cream via-white to-gold/20 text-charcoal border-gold/30",
+  },
+  {
+    id: "interiors-left",
+    label: "Interiors",
+    category: "Interiors",
+    span: "md:col-span-6 md:row-span-3",
+    tone: "bg-white/95 text-charcoal border-charcoal/10",
   },
   {
     id: "concepts",
     label: "Concepts",
-    title: "Concept Boards & Mood Narratives",
-    description: "Layered boards blending site photography with charcoal renders for fast approvals.",
-    tags: ["Storyboard", "Palette Drafts"],
-    span: "md:col-span-3 md:row-span-2",
+    category: "Design/Build",
+    span: "md:col-span-6 md:row-span-3",
     tone: "bg-white/90 text-charcoal border-gold/20",
-    icon: PenSquare,
+  },
+  // Right column
+  {
+    id: "interiors-right",
+    label: "Interiors",
+    category: "Interiors",
+    span: "md:col-span-6 md:row-span-2",
+    tone: "bg-white/95 text-charcoal border-charcoal/10",
   },
   {
-    id: "architecture",
+    id: "architecture-right",
     label: "Architecture",
-    title: "Architectural Design Grids",
-    description: "Massings, axial studies, and proportion rules for bespoke residences and hospitality.",
-    tags: ["Axonometric", "Elevation Sets"],
-    span: "md:col-span-4 md:row-span-3",
+    category: "Architecture",
+    span: "md:col-span-6 md:row-span-3",
     tone: "bg-gradient-to-br from-cream via-white to-gold/20 text-charcoal border-gold/30",
-    icon: Compass,
   },
   {
-    id: "pools",
-    label: "Pools",
-    title: "Pools & Water Features",
-    description: "Hydro-thermic details, perimeter overflow sections, and lighting sequences.",
-    tags: ["LED Ribbons", "Thermal Decks"],
-    span: "md:col-span-2 md:row-span-2",
-    tone: "bg-gradient-to-br from-sky-100 via-sky-200/70 to-sky-300/50 text-steelBlue border-sky-200",
-    icon: Droplets,
+    id: "exterior-spaces",
+    label: "Exterior Spaces",
+    category: "Civil",
+    span: "md:col-span-6 md:row-span-3",
+    tone: "bg-gradient-to-br from-emerald-50 to-emerald-200/70 text-emerald-900 border-emerald-200",
   },
   {
     id: "development",
     label: "Development & Concepts",
-    title: "Pre-Development Sketches",
-    description: "Site flow diagrams, entry sequences, and density studies for early capital reviews.",
-    tags: ["Entitlements", "Site Logistics"],
-    span: "md:col-span-3 md:row-span-2",
+    category: "Residential Development",
+    span: "md:col-span-6 md:row-span-2",
     tone: "bg-gradient-to-br from-steelBlue/90 via-steelBlue/80 to-charcoal text-cream border-white/10",
-    icon: Layers,
-  },
-  {
-    id: "exterior",
-    label: "Exterior Spaces",
-    title: "Exterior Spaces & Landscape",
-    description: "Desert xeriscape palettes, olive groves, and soft-path lighting concepts.",
-    tags: ["Planting Plans", "Night Studies"],
-    span: "md:col-span-3 md:row-span-2",
-    tone: "bg-gradient-to-br from-emerald-50 to-emerald-200/70 text-emerald-900 border-emerald-200",
-    icon: Ruler,
-  },
-  {
-    id: "furniture",
-    label: "Custom Furniture",
-    title: "Custom Furniture Atelier",
-    description: "Dining tables, wine walls, and gallery consoles carved in charred oak, bronze, and limestone.",
-    tags: ["Millwork", "Material Specs"],
-    span: "md:col-span-4 md:row-span-2",
-    tone: "bg-gradient-to-br from-burgundy/90 to-charcoal text-cream border-white/10",
-    icon: PenTool,
-  },
-  {
-    id: "interiors",
-    label: "Interiors",
-    title: "Interior Studios",
-    description: "Layered interior architecture packages with lighting, casework, and styling schedules.",
-    tags: ["FF&E", "Lighting Scripts"],
-    span: "md:col-span-3 md:row-span-3",
-    tone: "bg-white/95 text-charcoal border-charcoal/10",
-    icon: Sofa,
-    columnGroups: [
-      {
-        heading: "Private Suites",
-        items: ["Ensuite layouts", "Material matrices", "Tailored storage"],
-      },
-      {
-        heading: "Social Spaces",
-        items: ["Great room vignettes", "Bar elevations", "Art placement"],
-      },
-      {
-        heading: "Galleries",
-        items: ["Sightline curation", "Lighting fades", "Curatorial notes"],
-      },
-    ],
-  },
-];
-
-const designFilters = ["Architecture", "Interior Design", "Exterior Spaces", "Landscape", "Custom Furniture", "Pools", "Pre-Development", "Sketches", "Lighting", "Styling"];
-
-const processColumns: ColumnGroup[] = [
-  {
-    heading: "Development & Concepts",
-    items: ["Project briefing workshops", "Live sketch charrettes", "Capital partner decks"],
-  },
-  {
-    heading: "Exterior Spaces",
-    items: ["Pools + hydrology", "Outdoor kitchens", "Fire + water courtyards"],
-  },
-  {
-    heading: "Interiors",
-    items: ["Spatial sequencing", "Material storyboards", "Custom furnishing directives"],
   },
 ];
 
 const Design = () => {
   const navigate = useNavigate();
   
+  const handleSectionClick = (category: string) => {
+    navigate(`/portfolio?category=${encodeURIComponent(category)}`);
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-cream via-white to-gold/10" />
@@ -153,7 +85,7 @@ const Design = () => {
 
       <main className="relative z-10">
         <section className="pt-24 pb-14 px-4 sm:px-6 lg:px-12">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-7xl">
             <div className="flex flex-wrap items-center gap-4 mb-8">
               <Button
                 variant="ghost"
@@ -167,116 +99,57 @@ const Design = () => {
               </Badge>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 mb-12">
               <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
-                Interior & Architectural Design Album
+                Design Album
               </h1>
               <p className="font-inter text-lg text-charcoal/80 max-w-3xl leading-relaxed">
                 A dedicated archive for sketches, elevations, and tactile studies across architecture, interiors, landscape, and custom furniture.
-                Each tile mirrors the studio walls—charcoal strokes, vellum overlays, and digital renders living together.
+                Each section showcases curated projects from our portfolio.
               </p>
-
-              <div className="flex flex-wrap gap-2 pt-2">
-                {designFilters.map((filter) => (
-                  <span key={filter} className="px-4 py-2 text-xs uppercase tracking-[0.2em] font-medium bg-white/80 border border-gold/20 rounded-full text-charcoal/80">
-                    {filter}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </section>
 
         <section className="pb-20 px-4 sm:px-6 lg:px-12">
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid gap-4 sm:gap-5 md:gap-6 auto-rows-[160px] md:auto-rows-[200px] grid-cols-1 md:grid-cols-12">
-              {designBlocks.map((block) => {
-                const Icon = block.icon;
-
-                if (block.columnGroups) {
-                  return (
-                    <div key={block.id} className={`rounded-3xl border p-6 flex flex-col ${block.tone} ${block.span}`}>
-                      <div className="flex items-center justify-between mb-4">
-                        <div>
-                          <p className="text-xs uppercase tracking-[0.3em] font-semibold text-charcoal/60">{block.label}</p>
-                          <h3 className="font-playfair text-2xl mt-2">{block.title}</h3>
-                        </div>
-                        <Icon className="h-8 w-8 text-gold" />
-                      </div>
-                      <p className="text-sm text-charcoal/70 mb-5 leading-relaxed">{block.description}</p>
-                      <div className="grid grid-cols-3 gap-4 text-sm">
-                        {block.columnGroups.map((group) => (
-                          <div key={group.heading} className="bg-white/60 rounded-2xl p-4 shadow-sm border border-charcoal/5">
-                            <p className="uppercase text-[10px] tracking-[0.3em] text-charcoal/60">{group.heading}</p>
-                            <ul className="mt-3 space-y-1.5 text-charcoal/80">
-                              {group.items.map((item) => (
-                                <li key={item} className="text-xs">{item}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                }
-
-                return (
-                  <div key={block.id} className={`rounded-3xl border p-6 flex flex-col ${block.tone} ${block.span}`}>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center border border-white/40">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <p className="text-xs uppercase tracking-[0.3em] font-semibold opacity-80">{block.label}</p>
-                    </div>
-                    <h3 className="font-playfair text-2xl mb-2">{block.title}</h3>
-                    <p className="text-sm opacity-80 leading-relaxed flex-1">{block.description}</p>
-                    {block.feature && (
-                      <p className="text-xs uppercase tracking-[0.3em] mt-4 opacity-70">{block.feature}</p>
-                    )}
-                    {block.tags && (
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {block.tags.map((tag) => (
-                          <Badge key={tag} variant="outline" className="border-white/40 text-xs">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                    )}
+          <div className="container mx-auto max-w-7xl">
+            <div className="grid gap-4 sm:gap-5 md:gap-6 auto-rows-[180px] md:auto-rows-[220px] grid-cols-1 md:grid-cols-12">
+              {designSections.map((section) => (
+                <button
+                  key={section.id}
+                  onClick={() => handleSectionClick(section.category)}
+                  className={`rounded-3xl border p-8 flex flex-col items-start justify-end ${section.tone} ${section.span} 
+                    transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer group relative overflow-hidden`}
+                >
+                  <div className="absolute inset-0 bg-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10">
+                    <h3 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-2">
+                      {section.label}
+                    </h3>
+                    <p className="text-sm uppercase tracking-[0.3em] opacity-70 group-hover:opacity-100 transition-opacity">
+                      View Gallery →
+                    </p>
                   </div>
-                );
-              })}
+                </button>
+              ))}
             </div>
           </div>
         </section>
 
         <section className="pb-24 px-4 sm:px-6 lg:px-12">
-          <div className="container mx-auto max-w-6xl">
-            <div className="rounded-3xl border border-gold/20 bg-white/80 p-8 shadow-xl">
-              <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.3em] text-charcoal/60">Filters & Workflow</p>
-                  <h2 className="font-playfair text-3xl mt-2">From Development Concepts to Interiors</h2>
-                </div>
-                <Button variant="outline" className="border-gold/30 text-charcoal hover:border-gold hover:text-gold" onClick={() => navigate("/contact")}>
-                  Schedule a Design Review
-                </Button>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                {processColumns.map((column) => (
-                  <div key={column.heading} className="bg-white rounded-2xl p-6 border border-charcoal/5 shadow-sm">
-                    <h3 className="text-sm uppercase tracking-[0.3em] text-charcoal/60 mb-3">{column.heading}</h3>
-                    <ul className="space-y-2 text-sm text-charcoal/80">
-                      {column.items.map((item) => (
-                        <li key={item} className="flex items-start gap-2">
-                          <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-gold"></span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+          <div className="container mx-auto max-w-7xl">
+            <div className="rounded-3xl border border-gold/20 bg-white/80 p-8 shadow-xl text-center">
+              <h2 className="font-playfair text-3xl mb-4">Ready to Start Your Project?</h2>
+              <p className="font-inter text-charcoal/80 mb-6 max-w-2xl mx-auto">
+                Schedule a design review to discuss how we can bring your vision to life.
+              </p>
+              <Button 
+                variant="default" 
+                className="bg-accent text-white hover:bg-accent/90" 
+                onClick={() => navigate("/contact")}
+              >
+                Schedule a Design Review
+              </Button>
             </div>
           </div>
         </section>
