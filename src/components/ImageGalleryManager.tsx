@@ -102,8 +102,9 @@ export const ImageGalleryManager = () => {
       toast.success("Image uploaded successfully");
       setImageTitle("");
       fetchImages();
-    } catch (error: any) {
-      toast.error(`Failed to upload: ${error.message}`);
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : "An unexpected error occurred";
+      toast.error(`Failed to upload: ${message}`);
     } finally {
       setUploading(false);
     }

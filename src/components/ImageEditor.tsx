@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import Cropper from "react-easy-crop";
+import Cropper, { Area } from "react-easy-crop";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
@@ -13,12 +13,7 @@ interface ImageEditorProps {
   fileName: string;
 }
 
-interface CropArea {
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-}
+type CropArea = Area;
 
 const createImage = (url: string): Promise<HTMLImageElement> =>
   new Promise((resolve, reject) => {
@@ -81,7 +76,7 @@ export const ImageEditor = ({ imageUrl, onSave, onCancel, fileName }: ImageEdito
   const [rotation, setRotation] = useState(0);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState<CropArea | null>(null);
 
-  const onCropComplete = useCallback((_: any, croppedAreaPixels: CropArea) => {
+  const onCropComplete = useCallback((_: Area, croppedAreaPixels: CropArea) => {
     setCroppedAreaPixels(croppedAreaPixels);
   }, []);
 

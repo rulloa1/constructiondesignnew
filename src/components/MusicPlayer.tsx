@@ -3,9 +3,11 @@ import { Music, Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 
+const DEFAULT_VOLUME = 30;
+
 export const MusicPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(30);
+  const [volume, setVolume] = useState(DEFAULT_VOLUME);
   const [showControls, setShowControls] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -15,7 +17,7 @@ export const MusicPlayer: React.FC = () => {
     // Using a royalty-free ambient music URL from a CDN
     audioRef.current.src = "https://assets.mixkit.co/music/preview/mixkit-dreaming-big-31.mp3";
     audioRef.current.loop = true;
-    audioRef.current.volume = volume / 100;
+    audioRef.current.volume = DEFAULT_VOLUME / 100;
     audioRef.current.preload = "none";
 
     return () => {

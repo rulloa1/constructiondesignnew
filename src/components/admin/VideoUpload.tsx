@@ -93,8 +93,9 @@ export const VideoUpload = ({ projectId, onUploadComplete }: VideoUploadProps) =
       setTitle("");
       setDescription("");
       onUploadComplete();
-    } catch (error: any) {
-      toast.error(`Failed to upload: ${error.message}`);
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : "Failed to upload video";
+      toast.error(`Failed to upload: ${message}`);
     } finally {
       setUploading(false);
       setUploadProgress(0);

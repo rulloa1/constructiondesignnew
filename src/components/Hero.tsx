@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import heroImageWebP from "@/assets/hero-mc-portfolio.webp";
 import heroImagePng from "@/assets/hero-mc-portfolio.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 export const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
+  const navigate = useNavigate();
   const {
     elementRef,
     isVisible
@@ -52,6 +55,14 @@ export const Hero = () => {
           <p className="text-base sm:text-lg md:text-xl font-inter font-light text-white max-w-3xl mx-auto leading-relaxed drop-shadow-md [text-shadow:0_2px_8px_rgba(0,0,0,0.8)] px-2">
             Architectural Design | Landscape Restoration | Construction Excellence
           </p>
+          <div className="mt-6 flex justify-center">
+            <Button
+              onClick={() => navigate("/design")}
+              className="bg-white/90 text-charcoal hover:bg-white border border-white/40 text-sm sm:text-base px-6 sm:px-8 py-2.5 uppercase tracking-[0.3em] font-semibold"
+            >
+              View Design Album
+            </Button>
+          </div>
         </div>
       </div>
     </section>;

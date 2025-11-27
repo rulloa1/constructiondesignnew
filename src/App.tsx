@@ -17,6 +17,7 @@ const AdminUsers = lazy(() => import("./pages/AdminUsers"));
 const Login = lazy(() => import("./pages/Login"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Design = lazy(() => import("./pages/Design"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Loading fallback component
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/design",
+    element: <Design />,
   },
   {
     path: "*",
