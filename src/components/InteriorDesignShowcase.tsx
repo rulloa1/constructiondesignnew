@@ -1,119 +1,154 @@
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { supabase } from "@/integrations/supabase/client";
+import { Loader2 } from "lucide-react";
+import { ProjectGallery } from "./ProjectGallery";
 
-interface Project {
-  title: string;
-  description: string;
-  highlights: string[];
+interface ProjectImage {
+  id: string;
+  image_url: string;
+  rotation_angle: number;
 }
 
-const projects: Project[] = [
-  {
-    title: "Contemporary Maximalism Living",
-    description:
-      "A bold interior design featuring layered textures, vibrant accent colors, and curated artwork. The space demonstrates how maximalist principles can create sophisticated, livable environments.",
-    highlights: [
-      "Layered textures and bold color accents",
-      "Geometric patterns and curated artwork",
-      "Dramatic lighting and spatial composition",
-    ],
-  },
-  {
-    title: "Minimalist Luxury",
-    description:
-      "An understated approach to luxury featuring refined materials, neutral palettes, and strategic accent elements. The design emphasizes quality over quantity.",
-    highlights: [
-      "Refined materials and neutral color schemes",
-      "Strategic accent elements for visual interest",
-      "Quality-focused design philosophy",
-    ],
-  },
-  {
-    title: "Transitional Family Home",
-    description:
-      "A balanced approach combining traditional warmth with modern functionality, creating spaces that are both beautiful and livable for active families.",
-    highlights: [
-      "Warm traditional elements with modern touches",
-      "Functional family-focused design",
-      "Timeless aesthetic appeal",
-    ],
-  },
-];
-
+interface Project {
+  id: string;
+  title: string;
+  description: string | null;
+  image_url?: string;
+  rotation_angle?: number;
+  images?: ProjectImage[];
+}
 export const InteriorDesignShowcase = () => {
-  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
-  const { elementRef: headingRef, isVisible: headingVisible } = useScrollAnimation({ threshold: 0.3 });
+  const [architectureProjects, setArchitectureProjects] = useState<Project[]>([]);
+  const [interiorProjects, setInteriorProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  useEffect(() => {
+    fetchProjects();
+  }, []);
+  const fetchProjects = async () => {
+    try {
+      // Fetch Architecture projects
+      const {
+        data: archData,
+        error: archError
+      } = await supabase.from("projects").select("*").eq("category", "Architecture").order("display_order");
+      if (archError) throw archError;
 
-  return (
-    <section
-      id="interior-design"
-      ref={elementRef as React.RefObject<HTMLElement>}
-      className="relative py-16 sm:py-20 md:py-24 bg-background"
-    >
+      // Fetch Interior projects
+      const {
+        data: intData,
+        error: intError
+      } = await supabase.from("projects").select("*").eq("category", "Interiors").order("display_order");
+      if (intError) throw intError;
+
+      const archWithImages = await Promise.all((archData || []).map(async project => {
+        const {
+          data: allImages
+        } = await supabase.from("project_images").select("id, image_url, rotation_angle").eq("project_id", project.id).order("display_order");
+        const images = allImages || [];
+        return {
+          ...project,
+          image_url: images[0]?.image_url,
+          rotation_angle: images[0]?.rotation_angle || 0,
+          images: images
+        };
+      }));
+
+      const intWithImages = await Promise.all((intData || []).map(async project => {
+        const {
+          data: allImages
+        } = await supabase.from("project_images").select("id, image_url, rotation_angle").eq("project_id", project.id).order("display_order");
+        const images = allImages || [];
+        return {
+          ...project,
+          image_url: images[0]?.image_url,
+          rotation_angle: images[0]?.rotation_angle || 0,
+          images: images
+        };
+      }));
+
+      setArchitectureProjects(archWithImages);
+      setInteriorProjects(intWithImages);
+    } catch (error) {
+      console.error("Error fetching projects:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+    setGalleryOpen(true);
+  };
+
+  return <>
+    <section id="interior-design" className="relative py-16 sm:py-20 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="max-w-7xl mx-auto">
-          {/* Heading */}
-          <div
-            ref={headingRef as React.RefObject<HTMLDivElement>}
-            className={`mb-12 sm:mb-16 md:mb-20 transition-all duration-1000 ${
-              headingVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-semibold mb-4 sm:mb-5 md:mb-6 text-foreground tracking-tight leading-tight">
-              Interior Design Showcase
-            </h2>
-            <p className="text-base sm:text-lg font-inter text-foreground/70 max-w-3xl leading-relaxed">
-              Complete interior design projects that demonstrate our approach to creating cohesive, beautiful spaces
-            </p>
-          </div>
-
-          {/* Projects Grid */}
-          <div className="space-y-8 sm:space-y-10 lg:space-y-12">
-            {projects.map((project, index) => (
-              <Card
-                key={project.title}
-                className="bg-card border-border shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
-                style={{
-                  animation: isVisible ? `fadeIn 0.6s ease-out ${index * 0.15}s forwards` : "none",
-                  opacity: isVisible ? 1 : 0,
-                }}
-              >
-                <div className="grid md:grid-cols-2 gap-0">
-                  {/* Image Side */}
-                  <div className="h-64 sm:h-80 md:h-96 bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center overflow-hidden relative group">
-                    <div className="text-7xl group-hover:scale-110 transition-transform duration-300">
-                      {index === 0 ? "🎨" : index === 1 ? "✨" : "🏡"}
-                    </div>
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
-                  </div>
-
-                  {/* Content Side */}
-                  <CardContent className="p-6 sm:p-8 md:p-10 flex flex-col justify-center">
-                    <h3 className="text-2xl sm:text-3xl font-playfair font-semibold text-foreground mb-3 sm:mb-4 leading-tight">
-                      {project.title}
-                    </h3>
-                    <p className="text-foreground/70 font-inter text-sm sm:text-base mb-6 leading-relaxed">
-                      {project.description}
-                    </p>
-
-                    {/* Highlights */}
-                    <div className="space-y-2 sm:space-y-3">
-                      {project.highlights.map((highlight) => (
-                        <div key={highlight} className="flex items-start gap-3">
-                          <div className="w-2 h-2 rounded-full bg-amber-600 mt-2 flex-shrink-0" />
-                          <span className="text-foreground/80 font-inter text-sm sm:text-base">
-                            {highlight}
-                          </span>
+          {loading ? <div className="flex justify-center py-12">
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
+            </div> : <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+              {/* Architecture Section - Left */}
+              <div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-semibold mb-6 sm:mb-8 text-foreground tracking-tight">
+                  Architecture
+                </h2>
+                {architectureProjects.length === 0 ? <div className="text-center py-12 text-muted-foreground">
+                    No architecture projects available yet.
+                  </div> : architectureProjects.slice(0, 1).map(project => <Card key={project.id} onClick={() => handleProjectClick(project)} className="overflow-hidden bg-card border-border hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer group">
+                    {project.image_url && <div className="relative aspect-[16/9] overflow-hidden">
+                        <img src={project.image_url} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" style={{
+                  transform: `rotate(${project.rotation_angle || 0}deg)`
+                }} />
+                        <div className="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                          <span className="text-cream text-lg font-inter">View Gallery</span>
                         </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </div>
-              </Card>
-            ))}
-          </div>
+                      </div>}
+                    <CardContent className="p-6">
+                      <h3 className="text-xl sm:text-2xl font-playfair font-semibold mb-3 text-foreground">
+                        {project.title}
+                      </h3>
+                      {project.description && <p className="text-sm sm:text-base font-inter font-light text-muted-foreground leading-relaxed">
+                          {project.description}
+                        </p>}
+                    </CardContent>
+                  </Card>)}
+              </div>
+
+              {/* Interiors Section - Right */}
+              <div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-semibold mb-6 sm:mb-8 text-foreground tracking-tight">
+                  Interiors
+                </h2>
+                {interiorProjects.length === 0 ? <div className="text-center py-12 text-muted-foreground">
+                    No interior projects available yet.
+                  </div> : <div className="flex flex-col gap-6">
+                    {interiorProjects.slice(0, 3).map(project => <Card key={project.id} onClick={() => handleProjectClick(project)} className="overflow-hidden bg-card border-border hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer group">
+                        {project.image_url && <div className="relative aspect-[3/4] overflow-hidden">
+                            <img src={project.image_url} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" style={{
+                      transform: `rotate(${project.rotation_angle || 0}deg)`
+                    }} />
+                            <div className="absolute inset-0 bg-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                              <span className="text-cream text-lg font-inter">View Gallery</span>
+                            </div>
+                          </div>}
+                        <CardContent className="p-6">
+                          <h3 className="text-xl sm:text-2xl font-playfair font-semibold mb-3 text-foreground">
+                            {project.title}
+                          </h3>
+                          {project.description && <p className="text-sm sm:text-base font-inter font-light text-muted-foreground leading-relaxed">
+                              {project.description}
+                            </p>}
+                        </CardContent>
+                      </Card>)}
+                  </div>}
+              </div>
+            </div>}
         </div>
       </div>
     </section>
-  );
+    
+    {selectedProject && <ProjectGallery open={galleryOpen} onOpenChange={setGalleryOpen} projectTitle={selectedProject.title} images={selectedProject.images || []} />}
+  </>;
 };

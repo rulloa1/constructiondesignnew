@@ -139,7 +139,7 @@ const processColumns: ColumnGroup[] = [
 
 const Design = () => {
   const navigate = useNavigate();
-
+  
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-cream via-white to-gold/10" />

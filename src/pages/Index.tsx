@@ -4,11 +4,8 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { BookCoverHero } from "@/components/BookCoverHero";
-import { Portfolio } from "@/components/Portfolio";
-import { MusicPlayer } from "@/components/MusicPlayer";
-import { Chatbot } from "@/components/Chatbot";
+import { PortfolioGrid } from "@/components/PortfolioGrid";
 import { Services } from "@/components/Services";
-import { BrandIdentity } from "@/components/BrandIdentity";
 import { DesignConcepts } from "@/components/DesignConcepts";
 import { ArchitecturalRenderings } from "@/components/ArchitecturalRenderings";
 import { CustomFurniture } from "@/components/CustomFurniture";
@@ -39,7 +36,6 @@ const Index: React.FC = () => {
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
-
   const handleOpenBook = useCallback(() => {
     if (animating) return; // Prevent double-clicks
 
@@ -56,7 +52,6 @@ const Index: React.FC = () => {
       setAnimating(false);
     }, 1500);
   }, [animating, prefersReducedMotion]);
-
   const handleCloseBook = useCallback(() => {
     if (animating) return; // Prevent double-clicks
 
@@ -107,11 +102,10 @@ const Index: React.FC = () => {
           <Header onPortfolioClick={handleOpenBook} />
           <Hero />
           <About onPortfolioClick={handleOpenBook} />
-          <BrandIdentity />
-          <DesignConcepts />
-          <ArchitecturalRenderings />
-          <CustomFurniture />
-          <InteriorDesignShowcase />
+          
+          
+          
+          
           <Services />
           <BookCoverHero onOpenBook={handleOpenBook} />
           <Footer />
@@ -119,12 +113,7 @@ const Index: React.FC = () => {
           {/* Portfolio view with navigation header */}
           <div className="sticky top-0 z-30 bg-charcoal/95 backdrop-blur-sm border-b border-white/10">
             <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
-              <button 
-                onClick={handleCloseBook} 
-                disabled={animating} 
-                className="flex items-center gap-2 text-cream bg-cream/10 hover:bg-cream/20 px-4 sm:px-6 py-3 sm:py-3 rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed group font-medium shadow-lg hover:shadow-xl text-sm sm:text-base touch-manipulation" 
-                aria-label="Close portfolio and return to home"
-              >
+              <button onClick={handleCloseBook} disabled={animating} className="flex items-center gap-2 text-cream bg-cream/10 hover:bg-cream/20 px-4 sm:px-6 py-3 sm:py-3 rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed group font-medium shadow-lg hover:shadow-xl text-sm sm:text-base touch-manipulation" aria-label="Close portfolio and return to home">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 group-hover:-translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                 </svg>
@@ -133,10 +122,8 @@ const Index: React.FC = () => {
             </div>
           </div>
 
-          <Portfolio onClose={handleCloseBook} />
+          <PortfolioGrid onClose={handleCloseBook} />
         </>}
-
-      <Chatbot />
     </div>;
 };
 export default Index;

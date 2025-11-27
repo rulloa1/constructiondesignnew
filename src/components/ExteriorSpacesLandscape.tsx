@@ -11,7 +11,7 @@ interface Project {
   rotation_angle?: number;
 }
 
-export const CustomFurniture = () => {
+export const ExteriorSpacesLandscape = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -24,7 +24,7 @@ export const CustomFurniture = () => {
       const { data: projectsData, error: projectsError } = await supabase
         .from("projects")
         .select("*")
-        .eq("category", "Custom Furniture")
+        .eq("category", "Pools")
         .order("display_order");
 
       if (projectsError) throw projectsError;
@@ -56,15 +56,16 @@ export const CustomFurniture = () => {
   };
 
   return (
-    <section id="custom-furniture" className="relative py-16 sm:py-20 md:py-24 bg-muted/30">
+    <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-background via-muted/20 to-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-semibold mb-4 sm:mb-5 md:mb-6 text-foreground tracking-tight leading-tight">
-              Custom Furniture & Millwork
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold mb-4 sm:mb-6 text-foreground tracking-tight">
+              Pools & Water Features
             </h2>
-            <p className="text-base sm:text-lg font-inter text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-              Beyond standard furnishings, we design and craft custom pieces that perfectly integrate with architectural spaces
+            <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="text-base sm:text-lg md:text-xl font-inter font-light text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Custom pool designs and luxurious outdoor water features that enhance your living space
             </p>
           </div>
 
@@ -74,31 +75,32 @@ export const CustomFurniture = () => {
             </div>
           ) : projects.length === 0 ? (
             <div className="text-center py-12 text-muted-foreground">
-              No custom furniture projects available yet.
+              No pool projects available yet.
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {projects.map((project) => (
                 <Card
                   key={project.id}
                   className="group overflow-hidden bg-card border-border hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                 >
                   {project.image_url && (
-                    <div className="relative aspect-square overflow-hidden">
+                    <div className="relative aspect-[16/9] overflow-hidden">
                       <img
                         src={project.image_url}
                         alt={project.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         style={{ transform: `rotate(${project.rotation_angle || 0}deg)` }}
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   )}
-                  <CardContent className="p-4">
-                    <h3 className="text-lg font-playfair font-semibold mb-2 text-foreground group-hover:text-accent transition-colors">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl sm:text-2xl font-playfair font-semibold mb-3 text-foreground group-hover:text-accent transition-colors">
                       {project.title}
                     </h3>
                     {project.description && (
-                      <p className="text-sm font-inter font-light text-muted-foreground leading-relaxed line-clamp-2">
+                      <p className="text-sm sm:text-base font-inter font-light text-muted-foreground leading-relaxed">
                         {project.description}
                       </p>
                     )}
