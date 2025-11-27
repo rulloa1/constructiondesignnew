@@ -8,6 +8,11 @@ import { Portfolio } from "@/components/Portfolio";
 import { MusicPlayer } from "@/components/MusicPlayer";
 import { Chatbot } from "@/components/Chatbot";
 import { Services } from "@/components/Services";
+import { BrandIdentity } from "@/components/BrandIdentity";
+import { DesignConcepts } from "@/components/DesignConcepts";
+import { ArchitecturalRenderings } from "@/components/ArchitecturalRenderings";
+import { CustomFurniture } from "@/components/CustomFurniture";
+import { InteriorDesignShowcase } from "@/components/InteriorDesignShowcase";
 import { Footer } from "@/components/Footer";
 const Index: React.FC = () => {
   const location = useLocation();
@@ -102,6 +107,11 @@ const Index: React.FC = () => {
           <Header onPortfolioClick={handleOpenBook} />
           <Hero />
           <About onPortfolioClick={handleOpenBook} />
+          <BrandIdentity />
+          <DesignConcepts />
+          <ArchitecturalRenderings />
+          <CustomFurniture />
+          <InteriorDesignShowcase />
           <Services />
           <BookCoverHero onOpenBook={handleOpenBook} />
           <Footer />
