@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Portfolio Report</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #fff;
+        }
+
+        h1.main-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 60px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .project-card {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+            border: 1px solid #eee;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: #fcfcfc;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .project-titles h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #222;
+        }
+
+        .project-titles h3 {
+            margin: 5px 0 0;
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-meta {
+            text-align: right;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .project-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        .project-image {
+            flex: 0 0 300px;
+            height: 200px;
+            background-color: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-details {
+            flex: 1;
+        }
+
+        .description {
+            margin-bottom: 20px;
+            font-size: 15px;
+            color: #444;
+        }
+
+        .testimonial {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #ddd;
+            font-style: italic;
+            font-size: 14px;
+            color: #555;
+            white-space: pre-wrap;
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 2px;
+        }
+
+        .stat-value {
+            font-weight: 600;
+            color: #333;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .project-card {
+                break-inside: avoid;
+                border: none;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .project-image {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="no-print"
+        style="position: sticky; top: 0; background: white; padding: 15px; border-bottom: 1px solid #eee; text-align: right; z-index: 1000; margin-bottom: 20px;">
+        <button onclick="window.print()"
+            style="padding: 10px 20px; font-size: 16px; background: #222; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-family: sans-serif; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">🖨️
+            Print / Save as PDF</button>
+    </div>
+    <h1 class="main-title">Project Portfolio Details</h1>
+
+    <!-- 1. miami-beach-condo -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>S. Florida</h2>
+                <h3>High Rise Luxe Condo</h3>
+            </div>
+            <div class="project-meta">
+                <div>S. Florida</div>
+                <div>Residential Construction</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/miami-beach-cover.webp" alt="S. Florida"
+                    style="transform: rotate(180deg);">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    Over 14 months, we transformed a 4,200 sq ft condominium into a beachfront sanctuary of modern
+                    design. This complete renovation introduces a new standard of coastal living, where breathtaking
+                    ocean views are framed by floor-to-ceiling hurricane-rated windows. We infused the space with custom
+                    Italian marble, integrated smart home technology, and crafted bespoke millwork, culminating in a
+                    chef's kitchen equipped with professional-grade appliances. The result is a seamless blend of clean
+                    aesthetics and sophisticated comfort.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">4,200</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Bedrooms</span><span class="stat-value">4</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Baths</span><span class="stat-value">4</span></div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">14
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">Ocean Views,
+                            Smart Home, Chef's Kitchen, Custom Millwork, Italian Marble</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. high-alpine-ranch -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>High Alpine Mtn.</h2>
+                <h3>Ranch Luxe Retreat</h3>
+            </div>
+            <div class="project-meta">
+                <div>Montana</div>
+                <div>Residential Construction</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/alpine-ranch-cover.webp" alt="High Alpine Mtn.">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    Nestled in the high-alpine region of Montana, this 8,500 sq ft luxury ranch was brought to life over
+                    24 months. We merged modern mountain architecture with rustic charm, using exposed timber and custom
+                    stone masonry to complement the panoramic landscape. The residence features 22-foot vaulted ceilings
+                    and floor-to-ceiling windows that dissolve the boundary between the interior and the breathtaking
+                    mountain views. Radiant floor heating, a gourmet kitchen with natural stone countertops, and custom
+                    millwork throughout ensure that comfort and elegance are felt in every corner.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">8,500</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Bedrooms</span><span class="stat-value">5</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Baths</span><span class="stat-value">6</span></div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">24
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">Mountain
+                            Views, Vaulted Ceilings, Radiant Heating, Stone Masonry, Gourmet Kitchen</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. syracuse-house -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Syracuse House</h2>
+                <h3>N. Utah Craftsman Estate</h3>
+            </div>
+            <div class="project-meta">
+                <div>N. Utah</div>
+                <div>Design/Build</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/syracuse-1.webp" alt="Syracuse House">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over
+                    18 months, we orchestrated the creation of not just a home, but a complete two-acre landscape. The
+                    project’s exterior is defined by over 400 tons of decorative stone, professional hardscaping, and
+                    dramatic low-voltage evening lighting. Our design embraced drought-tolerant native plantings and
+                    elegant water features, creating a seamless transition between the built and natural environments.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">6,200</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">18
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">Craftsman
+                            Style, 2-Acre Landscape, Water Features, 400 Tons Stone</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. montana-condo -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Mtn. Mid-Rise Luxe</h2>
+                <h3>Condo</h3>
+            </div>
+            <div class="project-meta">
+                <div>Montana</div>
+                <div>Residential Construction</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/montana-cover.webp" alt="Mtn. Mid-Rise Luxe"
+                    style="transform: rotate(90deg);">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    In just eight months, we reimagined this 2,800 sq ft condo as a sophisticated mountain retreat. The
+                    renovation focused on creating a sanctuary of modern comfort, featuring spa-inspired bathrooms with
+                    heated floors and contemporary finishes throughout. We selected a palette of Calacatta marble, warm
+                    walnut, and refined brass fixtures to evoke a sense of understated luxury. The result is a space
+                    that perfectly balances modern living with the tranquility of a mountain setting.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">2,800</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">8
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">Mountain
+                            Retreat, Heated Floors, Walnut & Brass, Calacatta Marble</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. hospitality-pool -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Ultra Luxe Private Club</h2>
+                <h3>Resort Pool</h3>
+            </div>
+            <div class="project-meta">
+                <div>SE Texas</div>
+                <div>Hospitality</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/pool-design-cover.webp" alt="Ultra Luxe Private Club">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    We orchestrated the creation of a 3-acre ultra-luxury private club amenity, a project that demanded
+                    the coordination of over 15 specialty trades. The centerpiece is a 4,500 sq ft free-form pool with a
+                    swim-up bar, complemented by two 1,200 sq ft pool houses. The design, inspired by 1950s New York
+                    smoking clubs, features imported travertine and custom stonework. This 18-month project delivered a
+                    resort-style oasis with professional landscaping, fire pits, and an outdoor kitchen, setting a new
+                    standard for private club luxury.
+                </div>
+                <div class="testimonial">
+                    "While this is my need to showcase my work, I do not want to take anything away from the
+                    extraordinary and beautiful work done by Michael and Robert Smelek. Truly gifted, always
+                    professionals, and absolute gentlemen!
+
+                    Michael and Robert designed all of the large element items on this pool, and surrounding structures,
+                    and I picked up and did all of the more finite detail work, including establishing the look and feel
+                    of the bathrooms, which were purposely patterned to have the look and design aesthetic of a 1950's
+                    NY Men's Smoking Club. While this was my initial idea, it was easily integrated into the project and
+                    plans, flawlessly by Smelek Design.
+
+                    I also designed the more finite details of this project, including making final decisions for all of
+                    the furniture and fabrics, pool plaster color, swim-up bar front design and back-bar layout and
+                    design and even including a custom 'blue' granite backsplash. Also included in this was the custom
+                    post and rail design for the railing, leading to the pool slides. The reason behind the meticulous
+                    design of these detail items is that with some forethought, subtle design elements make each of
+                    these items, extraordinary, and seamlessly blend with the surrounding Architecture and Landscaping,
+                    which all must be integral to the park-like setting, in which it sits.
+
+                    At no time do I want to take away from the truly beautiful design work of Michael and Robert Smelek!
+
+                    Thank you, both for your work!
+
+                    — Michael E. Chandler
+                    8215 Winding Hills Ln, Spring, Texas 77379"
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">4,500</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">18
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">3-Acre
+                            Amenity, Swim-up Bar, Pool Houses, Imported Travertine</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. southcoast-remodel-design-build -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>South Coast Renovation</h2>
+                <h3>Complete Remodel</h3>
+            </div>
+            <div class="project-meta">
+                <div>Big Sur, CA</div>
+                <div>Design/Build</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/southcoast-cover.webp" alt="South Coast Renovation">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    This 3,800 sq ft residence was completely reimagined through our design-build process. Over 16
+                    months, we opened up the home to panoramic ocean views with new floor-to-ceiling windows and custom
+                    skylights. The interior transformation features white oak flooring, a gourmet kitchen with waterfall
+                    quartzite countertops, and spa-quality bathrooms with radiant heat. We undertook a complete
+                    structural renovation, culminating in a home that is as solid as it is beautiful, a true sanctuary
+                    on the Big Sur coast.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">3,800</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">16
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">Ocean Views,
+                            Skylights, Waterfall Counters, Radiant Heat</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. carmel-valley-design-build -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Carmel Valley New</h2>
+                <h3>Custom Residence</h3>
+            </div>
+            <div class="project-meta">
+                <div>Carmel Valley, CA</div>
+                <div>Design/Build</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/carmel-valley-new-cover.webp" alt="Carmel Valley New">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    In the heart of Carmel Valley, we crafted a 4,800 sq ft custom residence that is a dialogue between
+                    architecture and nature. This 20-month design-build project features exposed steel beams and
+                    floor-to-ceiling glass walls that frame the oak-studded landscape. We integrated the home with its
+                    surroundings through extensive site work and native habitat restoration, creating a dwelling that is
+                    both a part of and a tribute to the natural beauty of the valley.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">4,800</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">20
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">Exposed
+                            Steel, Glass Walls, Native Restoration, Oak Landscape</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. north-florida-renovation -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>North Florida Renovation/Addition</h2>
+            </div>
+            <div class="project-meta">
+                <div>N. Florida</div>
+                <div>Residential Construction</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/north-florida-cover.webp" alt="North Florida Renovation/Addition">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    We revitalized this 3,600 sq ft home with a 1,200 sq ft addition over a 10-month period. Our
+                    comprehensive approach included a new roof, impact windows, and updated electrical and plumbing
+                    systems. The interior was completely refreshed, and our estate management services ensured a
+                    seamless coordination of all trades. The result is a home that is not only more spacious and modern
+                    but
+                    also fortified and meticulously detailed.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">3,600</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">10
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">1,200 sq ft
+                            Addition, New Roof, Impact Windows, Estate Management</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. bahamas-abaco-development -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Abaco Luxe Boat House</h2>
+                <h3>Construction</h3>
+            </div>
+            <div class="project-meta">
+                <div>Abaco, Bahamas</div>
+                <div>Residential Construction</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/abaco-luxe-boathouse-cover.webp" alt="Abaco Luxe Boat House">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    On the pristine shores of the Abaco Islands, we constructed an 1,800 sq ft luxury boat house in just
+                    six months. Built to withstand the Caribbean climate, this waterfront structure features
+                    hurricane-resistant construction and premium marine-grade finishes. Custom mahogany millwork and
+                    covered dock access provide a touch of elegance, creating a functional and beautiful gateway to the
+                    open water.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">1,800</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">6
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">Waterfront,
+                            Hurricane Resistant, Mahogany Millwork, Covered Dock</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10. carmel-house-2 -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Carmel Forest to Ocean View</h2>
+                <h3>Custom Addition</h3>
+            </div>
+            <div class="project-meta">
+                <div>Carmel By the Sea, CA</div>
+                <div>Residential Construction</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/carmel-2-cover.webp" alt="Carmel Forest to Ocean View">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    This project is a celebration of its stunning location, a coastal home that harmonizes with the
+                    natural
+                    beauty of the Carmel coastline. Our focus was on refined craftsmanship and thoughtful design,
+                    creating a space that feels both luxurious and deeply connected to its environment. The result is a
+                    home
+                    that is more than a structure; it is a serene retreat.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">Ocean View,
+                            Custom Addition, Refined Craftsmanship</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 11. bigsur-mountain-remodel -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Coastal Mountain Residence</h2>
+                <h3>Civil Site Work</h3>
+            </div>
+            <div class="project-meta">
+                <div>Big Sur, CA</div>
+                <div>Civil</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/bigsur-cover.webp" alt="Coastal Mountain Residence">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    Over 11 months, we reshaped a 1.2-acre mountain site in Big Sur, a project that required both heavy
+                    machinery and a delicate touch. We moved over 3,000 cubic yards of earth, constructed 320 linear
+                    feet of retaining walls, and built a 900 sq ft custom garage and workshop. Our work focused on
+                    erosion control and drainage systems, all while preserving the property’s stunning ocean views and
+                    protecting the natural landscape.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">11
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">1.2-Acre
+                            Site, 3,000 cu yds Earthwork, Retaining Walls, Custom Garage</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 12. carmel-house-remdl-23 -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Carmel Knolls</h2>
+                <h3>More Than Lipstick on an Old Lady!</h3>
+            </div>
+            <div class="project-meta">
+                <div>Carmel, CA</div>
+                <div>Civil</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/carmel-knolls-cover.webp" alt="Carmel Knolls">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    This was more than a remodel; it was a complete transformation. Over 12 months, we took a 2,200 sq
+                    ft house and revitalized it from the ground up. The project included a new roofline, foundation
+                    repairs, 18 energy-efficient windows, and 1,400 sq ft of new composite decking. We also undertook
+                    extensive site work, including 200 linear feet of retaining walls and a complete landscape
+                    renovation, proving that with the right vision, any property can be reborn.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">2,200</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">12
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">New
+                            Foundation, Energy-Efficient Windows, Composite Decking, Landscape Renovation</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 13. coastal-hillside-restoration-2 -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Coastal Restoration</h2>
+                <h3>Erosion Repair</h3>
+            </div>
+            <div class="project-meta">
+                <div>Monterey Peninsula, CA</div>
+                <div>Civil</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/coastal-restoration-cover.webp" alt="Coastal Restoration">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    Faced with a dramatically eroded coastal property, we undertook a nine-month restoration project to
+                    preserve this spectacular oceanfront site. We moved over 2,500 cubic yards of material, installed
+                    180 linear feet of engineered retaining walls, and performed comprehensive foundation work. This
+                    project was a battle against the elements, a successful effort to stabilize and restore a piece of
+                    the California coastline for generations to come.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">9
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">2,500 cu yds
+                            Material, Engineered Walls, Foundation Work, Coastal Stabilization</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 14. civil-engineering -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Civil Engineering</h2>
+                <h3>Infrastructure Projects</h3>
+            </div>
+            <div class="project-meta">
+                <div>CA, TX, NM, CO, MT</div>
+                <div>Civil</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/civil-cover.webp" alt="Civil Engineering">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    Our civil engineering portfolio is a testament to our ability to tackle complex infrastructure
+                    challenges across five states. From 2015 to 2024, we have moved over 50,000 cubic yards of earth,
+                    installed more than 2,500 linear feet of retaining walls, and executed numerous coastal restoration
+                    and hillside stabilization projects. Our expertise in heavy construction and infrastructure
+                    development allows us to deliver exceptional results, even in the most challenging terrains.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">2015 -
+                            2024</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">50,000 cu
+                            yds Earthwork, 2,500 ft Retaining Walls, Slope Stabilization, Multi-State Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 15. bahamas-beachfront-estate -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Beachfront Estate</h2>
+                <h3>Residence</h3>
+            </div>
+            <div class="project-meta">
+                <div>Abaco, Bahamas</div>
+                <div>Residential Development</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/beachfront-1.webp" alt="Beachfront Estate">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    We developed a 2.5-acre beachfront estate, creating a 6,800 sq ft main residence that embodies
+                    luxury Caribbean living. This premier property features 180 feet of private beach frontage and is
+                    fortified with Category 5 hurricane-resistant construction. The estate is a self-sufficient oasis,
+                    with an infinity pool, guest cottage, dock facilities, solar power backup, and rainwater collection
+                    systems. This is more than a home; it is a legacy property on the shores of the Atlantic.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">6,800</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">2.5 Acres,
+                            180ft Beach Frontage, Solar Power, Infinity Pool, Guest Cottage</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 16. development -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Development Civil</h2>
+                <h3>Construction</h3>
+            </div>
+            <div class="project-meta">
+                <div>SE Texas</div>
+                <div>Residential Development</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/development-1.webp" alt="Development Civil">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    Over 36 months, we executed a 45-acre master-planned residential development, laying the groundwork
+                    for a new community. This comprehensive project included infrastructure for over 120 home sites, 3.2
+                    miles of roads, and complete utility installation. We also created 2 miles of walking trails and
+                    community amenities, all while adhering to environmental compliance measures and coordinating with
+                    multiple municipal agencies. This project was about more than construction; it was about building a
+                    neighborhood.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">36
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">45 Acres,
+                            120 Home Sites, 3.2 Miles Roads, Community Amenities</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 17. pacific-grove-design-build -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>New Residential Construction</h2>
+                <h3>In Historic Neighborhood</h3>
+            </div>
+            <div class="project-meta">
+                <div>Central Coast, CA</div>
+                <div>Design/Build</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/pg-cover.webp" alt="New Residential Construction">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    Building a new 2,600 sq ft home in a historic neighborhood required a delicate balance of tradition
+                    and modernity. Over 14 months, our design-build team navigated historic district guidelines to
+                    create a home that respects its context while offering contemporary comforts. The exterior features
+                    period-appropriate details like cedar shingle siding and covered porches, while the interior boasts
+                    an open floor plan and energy-efficient systems. This project is a bridge between past and present.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">2,600</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">14
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">Historic
+                            District, Cedar Shingle, Energy Efficient, Open Floor Plan</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 18. hillside-cleanup -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Hillside Restoration & Environmental Cleanup</h2>
+                <h3>Environmental Restoration</h3>
+            </div>
+            <div class="project-meta">
+                <div>Carmel, CA</div>
+                <div>Civil</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/cleanup-cover.webp" alt="Hillside Restoration & Environmental Cleanup">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    In just four months, we executed a critical environmental cleanup on a 1.5-acre hillside. We removed
+                    over 80 tons of debris, including abandoned vehicles and construction waste. But our work didn’t
+                    stop there. We implemented erosion control measures, restored the native plant life with over 200
+                    new specimens, and improved drainage systems. This project was about more than just cleaning up; it
+                    was about healing a piece of the natural landscape.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">4
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">1.5 Acres,
+                            80 Tons Debris Removed, Native Planting, Drainage Improvement</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 19. laguna-grande-design-build -->
+    <div class="project-card">
+        <div class="project-header">
+            <div class="project-titles">
+                <h2>Laguna Grande</h2>
+                <h3>Spanish Revival Commercial</h3>
+            </div>
+            <div class="project-meta">
+                <div>Seaside, CA</div>
+                <div>Design/Build</div>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="project-image">
+                <img src="./src/assets/projects/laguna-grande-cover.webp" alt="Laguna Grande">
+            </div>
+            <div class="project-details">
+                <div class="description">
+                    We brought the timeless beauty of Spanish Colonial Revival architecture to a new 12,000 sq ft
+                    commercial complex. This 22-month design-build project features authentic details like hand-formed
+                    clay roof tiles, custom ironwork, and arched colonnades. We balanced traditional aesthetics with the
+                    demands of modern commercial spaces, creating a complex that is both beautiful and functional, a
+                    landmark in its coastal location.
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><span class="stat-label">SQFT</span><span class="stat-value">12,000</span>
+                    </div>
+                    <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">22
+                            months</span></div>
+                    <div class="stat-item"><span class="stat-label">Features</span><span class="stat-value">Spanish
+                            Colonial Revival, Clay Roof Tiles, Custom Ironwork, Arched Colonnades</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
