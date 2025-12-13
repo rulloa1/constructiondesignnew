@@ -474,6 +474,7 @@ export interface Project {
   baths?: number;
   features?: string[];
   duration?: string;
+  roles?: string;
 }
 
 // Projects are organized in the exact order they appear on the portfolio page
@@ -488,15 +489,16 @@ export const projects: Project[] = [
     location: "S. Florida",
     additionalInfo: "S. Florida",
     category: "Residential Construction",
-    description: "Over 14 months, we transformed a 4,200 sq ft condominium into a beachfront sanctuary of modern design. This complete renovation introduces a new standard of coastal living, where breathtaking ocean views are framed by floor-to-ceiling hurricane-rated windows. We infused the space with custom Italian marble, integrated smart home technology, and crafted bespoke millwork, culminating in a chef's kitchen equipped with professional-grade appliances. The result is a seamless blend of clean aesthetics and sophisticated comfort.",
+    description: "Completed in just 5 months, this renovation installed cutting-edge Smart-Home Technology and rare South American solid wood paneling. Hand-picked craftsmen and world-class millworkers delivered a one-of-a-kind ocean-side residence, featuring specialty wall finishes and custom built-ins with bent wood panels. Despite global challenges during the pandemic, the project was delivered on time and on budget. The residence was transformed from a stark white space into a warm, sophisticated sanctuary, earning praise from a world-renowned Interior Designer for its flawless fit and finish.",
     image: miamiBeachCover,
     images: [miamiBeachCover, miamiBeach1, miamiBeach2, miamiBeach3, miamiBeach4, miamiBeach5, miamiBeach6, miamiBeach7, miamiBeach8, miamiBeach9, miamiBeach10, miamiBeach11, miamiBeach12, miamiBeach13, miamiBeach14, miamiBeach15, miamiBeach16, miamiBeach17, miamiBeach18, miamiBeach19, miamiBeach20, miamiBeach21, miamiBeach22, miamiBeach23, miamiBeach24, miamiBeach25, miamiBeach26, miamiBeach27, miamiBeach28, miamiBeach29, miamiBeach30, miamiBeach31, miamiBeach32, miamiBeach33, miamiBeach34, miamiBeach35, miamiBeach36, miamiBeach37, miamiBeach38, miamiBeach39, miamiBeach40, miamiBeach41, miamiBeach42, miamiBeach43, miamiBeach44, miamiBeach45, miamiBeach46, miamiBeach47],
     coverRotation: 180,
     sqft: 4200,
     bedrooms: 4,
     baths: 4,
-    duration: "14 months",
+    duration: "5 months",
     features: ["Ocean Views", "Smart Home", "Chef's Kitchen", "Custom Millwork", "Italian Marble"],
+    roles: "Contractor Identification/Contract Negotiation/Project Management, Owner Representation, Property Management, International Furniture/Material/Art Receiving, Vehicle/Management/Procurement/Shipping",
   },
   {
     id: "high-alpine-ranch",
@@ -505,14 +507,15 @@ export const projects: Project[] = [
     location: "Montana",
     additionalInfo: "Montana",
     category: "Residential Construction",
-    description: "Nestled in the high-alpine region of Montana, this 8,500 sq ft luxury ranch was brought to life over 24 months. We merged modern mountain architecture with rustic charm, using exposed timber and custom stone masonry to complement the panoramic landscape. The residence features 22-foot vaulted ceilings and floor-to-ceiling windows that dissolve the boundary between the interior and the breathtaking mountain views. Radiant floor heating, a gourmet kitchen with natural stone countertops, and custom millwork throughout ensure that comfort and elegance are felt in every corner.",
+    description: "Nestled in the high-alpine region of Montana, this 2,300 sq ft luxury ranch was brought to life over 24 months. The emergence of modern mountain architecture with rustic charm, using exposed timber and custom stone masonry to complement the panoramic landscape. The residence features high volume vaulted ceilings and floor-to-ceiling Custom Bronze Windows / Doors Crafted in Italy that dissolve the boundary between the interior and the breathtaking mountain views. A Mix of Radiant and forced air system to maximize all efficiencies, a gourmet kitchen with natural stone countertops, and custom millwork throughout ensure that a special comfort and elegance are felt in every corner.",
     image: alpineRanchCover,
     images: [alpineRanchCover, alpineRanch1, alpineRanch2, alpineRanch3, alpineRanch4, alpineRanch5, alpineRanch6, alpineRanch7, alpineRanch8, alpineRanch9, alpineRanch10, alpineRanch11, alpineRanch12],
-    sqft: 8500,
+    sqft: 2300,
     bedrooms: 5,
     baths: 6,
     duration: "24 months",
     features: ["Mountain Views", "Vaulted Ceilings", "Radiant Heating", "Stone Masonry", "Gourmet Kitchen"],
+    roles: "OWNER REPRESENTATION, DESIGN OVERSIGHT, CONTRACTOR PROCUREMENT, CONTRACT NEGOTIATION, PROJECT MANAGEMENT, PROPERTY MANAGEMENT.",
   },
   // DESIGN/BUILD
   {
@@ -522,7 +525,7 @@ export const projects: Project[] = [
     location: "N. Utah",
     additionalInfo: "N. Utah",
     category: "Design/Build",
-    description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we orchestrated the creation of not just a home, but a complete two-acre landscape. The project’s exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. Our design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments.",
+    description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we orchestrated in the creation of not just a home, but a complete two-acre landscape. The project’s exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The separate 6 car garage/workshop was for antique restoration, and the two horse stall horse barn + storage rounded out the perfect home/estate/equestrian property.",
     image: syracuse1,
     images: [
       syracuse1, syracuse2, syracuse3, syracuse4, syracuse5, syracuse6,
@@ -537,6 +540,7 @@ export const projects: Project[] = [
     sqft: 6200,
     duration: "18 months",
     features: ["Craftsman Style", "2-Acre Landscape", "Water Features", "400 Tons Stone"],
+    roles: "OWNER REPRESENTATION, PROJECT MANAGEMENT, PROPERTY MANAGEMENT",
   },
   // RESIDENTIAL CONSTRUCTION
   {
@@ -546,13 +550,14 @@ export const projects: Project[] = [
     location: "Montana",
     additionalInfo: "Montana",
     category: "Residential Construction",
-    description: "In just eight months, we reimagined this 2,800 sq ft condo as a sophisticated mountain retreat. The renovation focused on creating a sanctuary of modern comfort, featuring spa-inspired bathrooms with heated floors and contemporary finishes throughout. We selected a palette of Calacatta marble, warm walnut, and refined brass fixtures to evoke a sense of understated luxury. The result is a space that perfectly balances modern living with the tranquility of a mountain setting.",
+    description: "In just eight months, this new 2,800 sq ft condo was completed as a new build, reimagined as a sophisticated mountain retreat. The new build focused on creating a sanctuary of modern comfort, featuring spa-inspired bathrooms with heated floors and contemporary finishes throughout. The selections were of a palette of Calacatta marble, and other fine marbles, many of which were installed as full slabs for floor to ceiling wall finishes, along with warm wood accents, and special hand-applied wall/ceiling finishes. The result is a space that perfectly balances modern living with the tranquility of a mountain setting.",
     image: montanaCover,
     images: [montanaCover, montana1, montana2, montana3, montana4, montana5, montana6, montana7, montana8, montana9, montana10, montana11],
     coverRotation: 90,
     sqft: 2800,
     duration: "8 months",
     features: ["Mountain Retreat", "Heated Floors", "Walnut & Brass", "Calacatta Marble"],
+    roles: "OWNER REPRESENTATION, PROJECT MANAGEMENT, PROPERTY MANAGEMENT.",
   },
   // HOSPITALITY
   {
@@ -562,12 +567,13 @@ export const projects: Project[] = [
     location: "SE Texas",
     additionalInfo: "SE Texas",
     category: "Hospitality",
-    description: "We orchestrated the creation of a 3-acre ultra-luxury private club amenity, a project that demanded the coordination of over 15 specialty trades. The centerpiece is a 4,500 sq ft free-form pool with a swim-up bar, complemented by two 1,200 sq ft pool houses. The design, inspired by 1950s New York smoking clubs, features imported travertine and custom stonework. This 18-month project delivered a resort-style oasis with professional landscaping, fire pits, and an outdoor kitchen, setting a new standard for private club luxury.",
+    description: "We orchestrated the creation of a 189,000 gallon ultra-luxury private club amenity, a project that demanded the coordination of over 15 specialty trades. The centerpiece is a 189,000 gallon free-form pool with a swim-up bar, complemented by two beautiful Int. Design 1,200 sq ft pool houses. The design, inspired by 1950s New York smoking clubs, features imported travertine and 10' high solid mahogany wood walls and doors. This 18-month project delivered a resort-style oasis with professional landscaping, fire pits, and an outdoor kitchen, setting a new standard for private club luxury.",
     image: poolDesignCover,
     images: [poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37],
-    sqft: 4500,
+    sqft: 189000,
     duration: "18 months",
     features: ["3-Acre Amenity", "Swim-up Bar", "Pool Houses", "Imported Travertine"],
+    roles: "OWNER REPRESENTATION, DAILY PROJECT MANAGEMENT, CO-DESIGN OF MANY ELEMENTS, PROPERTY MANAGEMENT",
     testimonial: "While this is my need to showcase my work, I do not want to take anything away from the extraordinary and beautiful work done by Michael and Robert Smelek. Truly gifted, always professionals, and absolute gentlemen!\n\nMichael and Robert designed all of the large element items on this pool, and surrounding structures, and I picked up and did all of the more finite detail work, including establishing the look and feel of the bathrooms, which were purposely patterned to have the look and design aesthetic of a 1950's NY Men's Smoking Club. While this was my initial idea, it was easily integrated into the project and plans, flawlessly by Smelek Design.\n\nI also designed the more finite details of this project, including making final decisions for all of the furniture and fabrics, pool plaster color, swim-up bar front design and back-bar layout and design and even including a custom 'blue' granite backsplash. Also included in this was the custom post and rail design for the railing, leading to the pool slides. The reason behind the meticulous design of these detail items is that with some forethought, subtle design elements make each of these items, extraordinary, and seamlessly blend with the surrounding Architecture and Landscaping, which all must be integral to the park-like setting, in which it sits.\n\nAt no time do I want to take away from the truly beautiful design work of Michael and Robert Smelek!\n\nThank you, both for your work!\n\n— Michael E. Chandler\n8215 Winding Hills Ln, Spring, Texas 77379\nCellular (435) 237-7373\nEmail mike.rcccon@yahoo.com",
   },
   // DESIGN/BUILD
@@ -584,6 +590,7 @@ export const projects: Project[] = [
     sqft: 3800,
     duration: "16 months",
     features: ["Ocean Views", "Skylights", "Waterfall Counters", "Radiant Heat"],
+    roles: "OWNER REPRESENTATIVE, DESIGNER, INT. DESIGNER, BUILDER, PROJECT MANAGER, OWNER ASSIGNEE - DURING PHOTO AD CAMPAIGN AND CINEMA MOVIE SHOOTS.",
   },
   {
     id: "carmel-valley-design-build",
@@ -598,6 +605,7 @@ export const projects: Project[] = [
     sqft: 4800,
     duration: "20 months",
     features: ["Exposed Steel", "Glass Walls", "Native Restoration", "Oak Landscape"],
+    roles: "DESIGNER, BUILDER, PROJECT MANAGER, CIVIL ENGINEERING CONTRACTOR",
   },
   // RESIDENTIAL CONSTRUCTION
   {
@@ -626,6 +634,7 @@ export const projects: Project[] = [
     sqft: 1800,
     duration: "6 months",
     features: ["Waterfront", "Hurricane Resistant", "Mahogany Millwork", "Covered Dock"],
+    roles: "PROJECT MANAGER IN A FOREIGN COUNTRY FOR US OWNERS.",
   },
   {
     id: "carmel-house-2",
@@ -638,6 +647,7 @@ export const projects: Project[] = [
     image: carmel2Cover,
     images: [carmel2Cover, carmel2_1, carmel2_2, carmel2_3, carmel2_4, carmel2_5],
     features: ["Ocean View", "Custom Addition", "Refined Craftsmanship"],
+    roles: "DESIGNER, BUILDER, PROJECT MANAGER",
   },
   // CIVIL
   {
@@ -652,6 +662,7 @@ export const projects: Project[] = [
     images: [bigsurCover, bigsur1, bigsur2, bigsur3, bigsur4, bigsur5, bigsur6, bigsur7, bigsur8, bigsur9, bigsur10, bigsur11, bigsur12, bigsur13, bigsur14, bigsur15],
     duration: "11 months",
     features: ["1.2-Acre Site", "3,000 cu yds Earthwork", "Retaining Walls", "Custom Garage"],
+    roles: "OWNER REPRESENTATIVE, DESIGNER, BUILDER, PROJECT MANAGER, PERMIT PROCUREMENT",
   },
   {
     id: "carmel-house-remdl-23",
@@ -666,6 +677,7 @@ export const projects: Project[] = [
     sqft: 2200,
     duration: "12 months",
     features: ["New Foundation", "Energy-Efficient Windows", "Composite Decking", "Landscape Renovation"],
+    roles: "DESIGNER, INT. DESIGNER, BUILDER, PROJECT MANAGER, PERMIT PROCUREMENT",
   },
   {
     id: "coastal-hillside-restoration-2",
@@ -679,6 +691,7 @@ export const projects: Project[] = [
     images: [coastalRestorationCover, coastalRestoration1, coastalRestoration2, coastalRestoration3, coastalRestoration4, coastalRestoration5, coastalRestoration6, coastalRestoration7, coastalRestoration8, coastalRestoration9, coastalRestoration10, coastalRestoration11, coastalRestoration12, coastalRestoration13, coastalRestoration14, coastalRestoration15],
     duration: "9 months",
     features: ["2,500 cu yds Material", "Engineered Walls", "Foundation Work", "Coastal Stabilization"],
+    roles: "CIVIL ENGINEERING CONTRACTOR, BUILDER, PERMIT PROCUREMENT (EMERG. CONST. PERMIT TO SAVE RESIDENCE)",
   },
   {
     id: "civil-engineering",
@@ -692,6 +705,7 @@ export const projects: Project[] = [
     images: [civilCover, civil1, civil2, civil3, civil4, civil5, civil6, civil7, civil8, civil9, civil10, civil11, civil12, civil13, civil14, civil15, civil16, civil17, civil18, civil19, civil20, civil21],
     duration: "2015 - 2024",
     features: ["50,000 cu yds Earthwork", "2,500 ft Retaining Walls", "Slope Stabilization", "Multi-State Projects"],
+    roles: "CIVIL ENGINEERING CONTRACTOR/BUILDER",
   },
   // RESIDENTIAL DEVELOPMENT
   {
@@ -706,6 +720,7 @@ export const projects: Project[] = [
     images: [beachfront1, beachfront2, beachfront3, beachfront4, beachfront5, beachfront6, beachfront7],
     sqft: 6800,
     features: ["2.5 Acres", "180ft Beach Frontage", "Solar Power", "Infinity Pool", "Guest Cottage"],
+    roles: "PROJECT MANAGER IN A FOREIGN COUNTRY FOR US OWNERS.",
   },
   {
     id: "development",
@@ -733,6 +748,7 @@ export const projects: Project[] = [
     ],
     duration: "36 months",
     features: ["45 Acres", "120 Home Sites", "3.2 Miles Roads", "Community Amenities"],
+    roles: "PROJECT MANAGEMENT DEVELOPMENT / CIVIL ENGINEERING PROJECT",
   },
   // DESIGN/BUILD
   {
@@ -760,6 +776,7 @@ export const projects: Project[] = [
     sqft: 2600,
     duration: "14 months",
     features: ["Historic District", "Cedar Shingle", "Energy Efficient", "Open Floor Plan"],
+    roles: "OWNERS REP. DESIGNER, BUILDER",
   },
   // CIVIL
   {
@@ -774,6 +791,7 @@ export const projects: Project[] = [
     images: [cleanupCover, cleanup1, cleanup2, cleanup3, cleanup4, cleanup5, cleanup6, cleanup7, cleanup8, cleanup9, cleanup10, cleanup11, cleanup12, cleanup13, cleanup14, cleanup15],
     duration: "4 months",
     features: ["1.5 Acres", "80 Tons Debris Removed", "Native Planting", "Drainage Improvement"],
+    roles: "CIVIL ENGINEERING CONTRACTOR/BUILDER, PERMIT PROCUREMENT",
   },
   // DESIGN/BUILD
   {
@@ -789,6 +807,7 @@ export const projects: Project[] = [
     sqft: 12000,
     duration: "22 months",
     features: ["Spanish Colonial Revival", "Clay Roof Tiles", "Custom Ironwork", "Arched Colonnades"],
+    roles: "OWNERS REPRESENTATIVE, DESIGNER, BUILDER, PERMIT PROCUREMENT",
   },
 ];
 
