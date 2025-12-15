@@ -512,7 +512,7 @@ export const projects: Project[] = [
     images: [alpineRanchCover, alpineRanch1, alpineRanch2, alpineRanch3, alpineRanch4, alpineRanch5, alpineRanch6, alpineRanch7, alpineRanch8, alpineRanch9, alpineRanch10, alpineRanch11, alpineRanch12],
     sqft: 8500,
     bedrooms: 5,
-    baths: 6,
+    baths: 2,
     duration: "24 months",
     features: ["Mountain Views", "Vaulted Ceilings", "Radiant Heating", "Stone Masonry", "Gourmet Kitchen"],
     roles: "OWNER REPRESENTATION, DESIGN OVERSIGHT, CONTRACTOR PROCUREMENT, CONTRACT NEGOTIATION, PROJECT MANAGEMENT, PROPERTY MANAGEMENT.",
