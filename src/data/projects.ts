@@ -142,6 +142,8 @@ import northFlorida9 from "@/assets/projects/north-florida-9.webp";
 import northFlorida10 from "@/assets/projects/north-florida-10.webp";
 import northFlorida11 from "@/assets/projects/north-florida-11.webp";
 import northFlorida12 from "@/assets/projects/north-florida-12.webp";
+import northFlorida13 from "@/assets/projects/north-florida-13.webp";
+import northFlorida14 from "@/assets/projects/north-florida-14.webp";
 
 // Pacific Grove Design/Build album
 import pgCover from "@/assets/projects/pg-cover.webp";
@@ -512,7 +514,7 @@ export const projects: Project[] = [
     images: [alpineRanchCover, alpineRanch1, alpineRanch2, alpineRanch3, alpineRanch4, alpineRanch5, alpineRanch6, alpineRanch7, alpineRanch8, alpineRanch9, alpineRanch10, alpineRanch11, alpineRanch12],
     sqft: 2300,
     bedrooms: 5,
-    baths: 6,
+    baths: 2,
     duration: "24 months",
     features: ["Mountain Views", "Vaulted Ceilings", "Radiant Heating", "Stone Masonry", "Gourmet Kitchen"],
     roles: "OWNER REPRESENTATION, DESIGN OVERSIGHT, CONTRACTOR PROCUREMENT, CONTRACT NEGOTIATION, PROJECT MANAGEMENT, PROPERTY MANAGEMENT.",
@@ -525,7 +527,7 @@ export const projects: Project[] = [
     location: "N. Utah",
     additionalInfo: "N. Utah",
     category: "Design/Build",
-    description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we were integral in the creation of not just a home, but a complete two-acre landscape. The project’s exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The separate 6 car garage/workshop was for antique restoration, and the two horse stall horse barn + storage rounded out the perfect home/estate/equestrian property.",
+    description: "This 6,200 sq ft craftsman-style estate is a testament to our integrated design-build approach. Over 18 months, we were integral in the creation of not just a home, but a complete two-acre landscape. The project's exterior is defined by over 400 tons of decorative stone, professional hardscaping, and dramatic low-voltage evening lighting. The design embraced drought-tolerant native plantings and elegant water features, creating a seamless transition between the built and natural environments. The separate 6 car garage/workshop was for antique restoration, and the two horse stall horse barn + storage rounded out the perfect home/estate/equestrian property.",
     image: syracuse1,
     images: [
       syracuse1, syracuse2, syracuse3, syracuse4, syracuse5, syracuse6,
@@ -572,7 +574,7 @@ export const projects: Project[] = [
     images: [poolDesignCover, poolDesign1, poolDesign2, poolDesign3, poolDesign4, poolDesign5, poolDesign6, poolDesign7, poolDesign8, poolDesign9, poolDesign10, poolDesign11, poolDesign12, poolDesign13, poolDesign14, poolDesign15, poolDesign16, poolDesign17, poolDesign18, poolDesign19, poolDesign20, poolDesign21, poolDesign22, poolDesign23, poolDesign24, poolDesign25, poolDesign26, poolDesign27, poolDesign28, poolDesign29, poolDesign30, poolDesign31, poolDesign32, poolDesign33, poolDesign34, poolDesign35, poolDesign36, poolDesign37],
     sqft: 189000,
     duration: "18 months",
-    features: ["3-Acre Amenity", "Swim-up Bar", "Pool Houses", "Imported Travertine"],
+    features: ["189,000 Gallon", "3-Acre Project", "Swim-up Bar", "Pool Houses", "Imported Travertine"],
     roles: "OWNER REPRESENTATION, DAILY PROJECT MANAGEMENT, CO-DESIGN OF MANY ELEMENTS, PROPERTY MANAGEMENT",
     testimonial: "While this is my need to showcase my work, I do not want to take anything away from the extraordinary and beautiful work done by Michael and Robert Smelek. Truly gifted, always professionals, and absolute gentlemen!\n\nMichael and Robert designed all of the large element items on this pool, and surrounding structures, and I picked up and did all of the more finite detail work, including establishing the look and feel of the bathrooms, which were purposely patterned to have the look and design aesthetic of a 1950's NY Men's Smoking Club. While this was my initial idea, it was easily integrated into the project and plans, flawlessly by Smelek Design.\n\nI also designed the more finite details of this project, including making final decisions for all of the furniture and fabrics, pool plaster color, swim-up bar front design and back-bar layout and design and even including a custom 'blue' granite backsplash. Also included in this was the custom post and rail design for the railing, leading to the pool slides. The reason behind the meticulous design of these detail items is that with some forethought, subtle design elements make each of these items, extraordinary, and seamlessly blend with the surrounding Architecture and Landscaping, which all must be integral to the park-like setting, in which it sits.\n\nAt no time do I want to take away from the truly beautiful design work of Michael and Robert Smelek!\n\nThank you, both for your work!\n\n— Michael E. Chandler\n8215 Winding Hills Ln, Spring, Texas 77379\nCellular (435) 237-7373\nEmail mike.rcccon@yahoo.com",
   },
@@ -615,8 +617,8 @@ export const projects: Project[] = [
     additionalInfo: "N. Florida",
     category: "Residential Construction",
     description: "We revitalized this 3,600 sq ft home with a 1,200 sq ft addition over a 10-month period. Our comprehensive approach included a new roof, impact windows, and updated electrical and plumbing systems. The interior was completely refreshed, and our estate management services ensured a seamless coordination of all trades. The result is a home that is not only more spacious and modern but also fortified and meticulously detailed.",
-    image: northFloridaCover,
-    images: [northFloridaCover, northFlorida1, northFlorida2, northFlorida3, northFlorida4, northFlorida5, northFlorida6, northFlorida7, northFlorida8, northFlorida9, northFlorida10, northFlorida11, northFlorida12],
+    image: northFlorida14,
+    images: [northFlorida14, northFloridaCover, northFlorida1, northFlorida2, northFlorida3, northFlorida4, northFlorida5, northFlorida6, northFlorida7, northFlorida8, northFlorida9, northFlorida10, northFlorida11, northFlorida12, northFlorida13],
     sqft: 3600,
     duration: "10 months",
     features: ["1,200 sq ft Addition", "New Roof", "Impact Windows", "Estate Management"],
@@ -747,7 +749,7 @@ export const projects: Project[] = [
       development13,
     ],
     duration: "36 months",
-    features: ["45 Acres", "120 Home Sites", "3.2 Miles Roads", "Community Amenities"],
+    features: ["45 Acres", "120+ Home Sites", "3.2 Miles Roads", "Community Amenities"],
     roles: "PROJECT MANAGEMENT DEVELOPMENT / CIVIL ENGINEERING PROJECT",
   },
   // DESIGN/BUILD
@@ -786,7 +788,7 @@ export const projects: Project[] = [
     location: "Carmel, CA",
     additionalInfo: "Carmel, CA",
     category: "Civil",
-    description: "In just four months, we executed a critical environmental cleanup on a 1.5-acre hillside. We removed over 80 tons of debris, including abandoned vehicles and construction waste. But our work didn’t stop there. We implemented erosion control measures, restored the native plant life with over 200 new specimens, and improved drainage systems. This project was about more than just cleaning up; it was about healing a piece of the natural landscape.",
+    description: "In just four months, we executed a critical environmental cleanup on a 1.5-acre hillside. We removed over 80 tons of debris, including abandoned vehicles and construction waste. But our work didn't stop there. We implemented erosion control measures, restored the native plant life with over 200 new specimens, and improved drainage systems. This project was about more than just cleaning up; it was about healing a piece of the natural landscape.",
     image: cleanupCover,
     images: [cleanupCover, cleanup1, cleanup2, cleanup3, cleanup4, cleanup5, cleanup6, cleanup7, cleanup8, cleanup9, cleanup10, cleanup11, cleanup12, cleanup13, cleanup14, cleanup15],
     duration: "4 months",
