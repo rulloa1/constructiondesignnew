@@ -13,6 +13,13 @@ import detailMarbleBath from "@/assets/details/detail-marble-bath.jpg";
 import detailMarbleCounter from "@/assets/details/detail-marble-counter.jpg";
 import detailOceanviewFraming from "@/assets/details/detail-oceanview-framing.jpg";
 import detailPendantLighting from "@/assets/details/detail-pendant-lighting.jpg";
+import detailProRange from "@/assets/details/detail-pro-range.jpg";
+import detailSculpturalChandelier from "@/assets/details/detail-sculptural-chandelier.jpg";
+import detailSkiStorage from "@/assets/details/detail-ski-storage.jpg";
+import detailSpaVanity from "@/assets/details/detail-spa-vanity.jpg";
+import detailTimberBeams from "@/assets/details/detail-timber-beams.jpg";
+import detailVanityNiche from "@/assets/details/detail-vanity-niche.jpg";
+import detailWallFaucet from "@/assets/details/detail-wall-faucet.jpg";
 
 type CategoryKey = "all" | "architecture" | "interiors" | "exterior" | "furniture" | "development";
 
@@ -59,13 +66,13 @@ const categoryData: Record<Exclude<CategoryKey, "all">, CategoryData> = {
         title: "Mountain Lodge Retreat",
         description: "Heavy timber construction and expansive glazing create intimate connection with alpine vistas.",
         tags: ["Timber Frame", "Mountain", "Rustic Modern"],
-        image: detailPendantLighting,
+        image: detailTimberBeams,
       },
       {
         title: "Resort Residential Compound",
         description: "Multiple pavilions connected by covered walkways, blending hospitality-inspired design with private residence.",
         tags: ["Pavilion", "Compound", "Hospitality"],
-        image: detailBronzeHardware,
+        image: detailSculpturalChandelier,
       },
     ],
     capabilities: [
@@ -85,19 +92,19 @@ const categoryData: Record<Exclude<CategoryKey, "all">, CategoryData> = {
         title: "Great Room Collection",
         description: "Double-height volumes with custom millwork, integrated lighting, and carefully considered sight lines.",
         tags: ["Millwork", "Lighting", "Volume"],
-        image: detailBronzeHardware,
+        image: detailPendantLighting,
       },
       {
         title: "Primary Suite Sanctuary",
         description: "Spa-inspired bathrooms, custom closeting systems, and bedroom environments designed for restoration.",
         tags: ["Spa", "Custom Closets", "Luxury"],
-        image: detailMarbleBath,
+        image: detailSpaVanity,
       },
       {
         title: "Chef's Kitchen",
         description: "Professional-grade equipment, custom cabinetry, butler's pantries, and workflow-optimized layouts.",
         tags: ["Professional", "Cabinetry", "Workflow"],
-        image: detailMarbleCounter,
+        image: detailProRange,
       },
       {
         title: "Wine & Spirits Gallery",
@@ -167,19 +174,19 @@ const categoryData: Record<Exclude<CategoryKey, "all">, CategoryData> = {
         title: "Built-In Cabinetry Systems",
         description: "Library walls, entertainment centers, and storage solutions with furniture-grade finishes and precision joinery.",
         tags: ["Built-In", "Library", "Millwork"],
-        image: detailLeatherCabinetry,
+        image: detailSkiStorage,
       },
       {
         title: "Vanity & Dressing Collections",
         description: "Coordinated vanities, dressing areas, and storage with integrated technology and premium materials.",
         tags: ["Vanity", "Marble", "Integrated Tech"],
-        image: detailFloatingVanity,
+        image: detailVanityNiche,
       },
       {
         title: "Specialty Storage Solutions",
         description: "Custom equipment rooms, wine storage, and specialty spaces designed for how you actually live.",
         tags: ["Storage", "Custom", "Functional"],
-        image: detailMarbleBath,
+        image: detailWallFaucet,
       },
     ],
     capabilities: [
@@ -205,13 +212,13 @@ const categoryData: Record<Exclude<CategoryKey, "all">, CategoryData> = {
         title: "Residential Communities",
         description: "Master-planned neighborhoods with cohesive design standards, shared amenities, and lasting value.",
         tags: ["Master Plan", "Community", "Amenities"],
-        image: detailPendantLighting,
+        image: detailMarbleBath,
       },
       {
         title: "Resort & Hospitality",
         description: "Mixed-use developments, golf communities, and hospitality venues requiring specialized construction expertise.",
         tags: ["Resort", "Golf", "Mixed-Use"],
-        image: detailMarbleBath,
+        image: detailBronzeHardware,
       },
       {
         title: "Renovation & Repositioning",
