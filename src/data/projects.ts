@@ -477,6 +477,7 @@ export interface Project {
   features?: string[];
   duration?: string;
   roles?: string;
+  budget?: string;
 }
 
 // Projects are organized in the exact order they appear on the portfolio page
