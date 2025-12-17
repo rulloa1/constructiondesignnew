@@ -3,35 +3,16 @@ import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Building2, Palette, Trees, Armchair, Building, Sparkles, Compass, PenLine, Truck } from "lucide-react";
 
-// Architecture images
-import beachfrontCover from "@/assets/projects/beachfront-1.webp";
-import alpineRanchCover from "@/assets/projects/alpine-ranch-cover.webp";
-import bigsurCover from "@/assets/projects/bigsur-cover.webp";
-import bakersBay from "@/assets/projects/bakers-bay-1.webp";
-
-// Interiors images
-import miamiBeach1 from "@/assets/projects/miami-beach-1.webp";
-import miamiBeach5 from "@/assets/projects/miami-beach-5.webp";
-import miamiBeach10 from "@/assets/projects/miami-beach-10.webp";
-import carmelKnolls5 from "@/assets/projects/carmel-knolls-5.webp";
-
-// Exterior images
-import syracuse1 from "@/assets/projects/syracuse-1.webp";
-import syracuse20 from "@/assets/projects/syracuse-20.webp";
-import syracuse30 from "@/assets/projects/syracuse-30.webp";
-import carmelValley1 from "@/assets/projects/carmel-valley-1.webp";
-
-// Furniture images
-import miamiBeach15 from "@/assets/projects/miami-beach-15.webp";
-import miamiBeach20 from "@/assets/projects/miami-beach-20.webp";
-import carmelKnolls10 from "@/assets/projects/carmel-knolls-10.webp";
-import beachfront5 from "@/assets/projects/beachfront-5.webp";
-
-// Development images
-import developmentCover from "@/assets/projects/development-cover.webp";
-import developmentPlan from "@/assets/projects/development-plan.webp";
-import abacoBoathouse from "@/assets/projects/abaco-luxe-boathouse-cover.webp";
-import coastalRestoration from "@/assets/projects/coastal-restoration-cover.webp";
+// Detail images for concept cards
+import detailBronzeBase from "@/assets/details/detail-bronze-base.jpg";
+import detailBronzeHardware from "@/assets/details/detail-bronze-hardware.jpg";
+import detailFloatingVanity from "@/assets/details/detail-floating-vanity.jpg";
+import detailLeatherCabinetry from "@/assets/details/detail-leather-cabinetry.jpg";
+import detailLimestoneFireplace from "@/assets/details/detail-limestone-fireplace.jpg";
+import detailMarbleBath from "@/assets/details/detail-marble-bath.jpg";
+import detailMarbleCounter from "@/assets/details/detail-marble-counter.jpg";
+import detailOceanviewFraming from "@/assets/details/detail-oceanview-framing.jpg";
+import detailPendantLighting from "@/assets/details/detail-pendant-lighting.jpg";
 
 type CategoryKey = "all" | "architecture" | "interiors" | "exterior" | "furniture" | "development";
 
@@ -65,26 +46,26 @@ const categoryData: Record<Exclude<CategoryKey, "all">, CategoryData> = {
       {
         title: "Coastal Modern Residence",
         description: "Cantilevered volumes maximize oceanfront views while hurricane-rated construction ensures lasting protection.",
-        tags: ["Oceanfront", "Concrete", "Glass"],
-        image: beachfrontCover,
+        tags: ["Oceanfront", "Glass", "Contemporary"],
+        image: detailOceanviewFraming,
       },
       {
         title: "Hill Country Contemporary",
-        description: "Native Texas limestone anchors this home to the landscape, with passive cooling strategies reducing energy demands.",
-        tags: ["Limestone", "Sustainable", "Texas"],
-        image: alpineRanchCover,
+        description: "Native limestone anchors the design to the landscape, with passive cooling strategies reducing energy demands.",
+        tags: ["Limestone", "Sustainable", "Regional"],
+        image: detailLimestoneFireplace,
       },
       {
         title: "Mountain Lodge Retreat",
         description: "Heavy timber construction and expansive glazing create intimate connection with alpine vistas.",
         tags: ["Timber Frame", "Mountain", "Rustic Modern"],
-        image: bigsurCover,
+        image: detailPendantLighting,
       },
       {
         title: "Resort Residential Compound",
         description: "Multiple pavilions connected by covered walkways, blending hospitality-inspired design with private residence.",
         tags: ["Pavilion", "Compound", "Hospitality"],
-        image: bakersBay,
+        image: detailBronzeHardware,
       },
     ],
     capabilities: [
@@ -104,25 +85,25 @@ const categoryData: Record<Exclude<CategoryKey, "all">, CategoryData> = {
         title: "Great Room Collection",
         description: "Double-height volumes with custom millwork, integrated lighting, and carefully considered sight lines.",
         tags: ["Millwork", "Lighting", "Volume"],
-        image: miamiBeach1,
+        image: detailBronzeHardware,
       },
       {
         title: "Primary Suite Sanctuary",
         description: "Spa-inspired bathrooms, custom closeting systems, and bedroom environments designed for restoration.",
         tags: ["Spa", "Custom Closets", "Luxury"],
-        image: miamiBeach5,
+        image: detailMarbleBath,
       },
       {
         title: "Chef's Kitchen",
         description: "Professional-grade equipment, custom cabinetry, butler's pantries, and workflow-optimized layouts.",
         tags: ["Professional", "Cabinetry", "Workflow"],
-        image: miamiBeach10,
+        image: detailMarbleCounter,
       },
       {
         title: "Wine & Spirits Gallery",
         description: "Climate-controlled cellars with custom racking, tasting rooms, and display-worthy bottle presentation.",
         tags: ["Wine Cellar", "Climate Control", "Display"],
-        image: carmelKnolls5,
+        image: detailLeatherCabinetry,
       },
     ],
     capabilities: [
@@ -142,25 +123,25 @@ const categoryData: Record<Exclude<CategoryKey, "all">, CategoryData> = {
         title: "Outdoor Living Pavilion",
         description: "Full outdoor kitchens, retractable screens, climate control, and seamless indoor-outdoor transitions.",
         tags: ["Outdoor Kitchen", "Pavilion", "Entertainment"],
-        image: syracuse1,
+        image: detailLimestoneFireplace,
       },
       {
         title: "Pool & Water Features",
         description: "Infinity edges, natural stone surrounds, integrated spas, and water features as sculptural elements.",
         tags: ["Infinity Pool", "Natural Stone", "Spa"],
-        image: syracuse20,
+        image: detailOceanviewFraming,
       },
       {
         title: "Motor Court & Entry Sequence",
         description: "Arrival experiences that set expectations, with specimen plantings and architectural lighting.",
         tags: ["Entry", "Hardscape", "Lighting"],
-        image: syracuse30,
+        image: detailBronzeBase,
       },
       {
         title: "Native Landscape Design",
         description: "Site-appropriate plantings that reduce maintenance while honoring regional character and ecology.",
         tags: ["Native Plants", "Sustainable", "Low Maintenance"],
-        image: carmelValley1,
+        image: detailPendantLighting,
       },
     ],
     capabilities: [
@@ -180,25 +161,25 @@ const categoryData: Record<Exclude<CategoryKey, "all">, CategoryData> = {
         title: "Statement Dining Tables",
         description: "Live-edge slabs, metal bases, expandable systems—each table designed for the specific space and client.",
         tags: ["Live Edge", "Custom", "Dining"],
-        image: miamiBeach15,
+        image: detailBronzeBase,
       },
       {
         title: "Built-In Cabinetry Systems",
         description: "Library walls, entertainment centers, and storage solutions with furniture-grade finishes and precision joinery.",
         tags: ["Built-In", "Library", "Millwork"],
-        image: miamiBeach20,
+        image: detailLeatherCabinetry,
       },
       {
-        title: "Bedroom Collections",
-        description: "Coordinated beds, nightstands, and dressers with integrated technology and upholstered headboards.",
-        tags: ["Bedroom", "Upholstered", "Integrated Tech"],
-        image: carmelKnolls10,
+        title: "Vanity & Dressing Collections",
+        description: "Coordinated vanities, dressing areas, and storage with integrated technology and premium materials.",
+        tags: ["Vanity", "Marble", "Integrated Tech"],
+        image: detailFloatingVanity,
       },
       {
-        title: "Outdoor Furniture Collections",
-        description: "Teak, ipe, and marine-grade fabrics designed to weather beautifully in harsh coastal environments.",
-        tags: ["Teak", "Marine Grade", "Outdoor"],
-        image: beachfront5,
+        title: "Specialty Storage Solutions",
+        description: "Custom equipment rooms, wine storage, and specialty spaces designed for how you actually live.",
+        tags: ["Storage", "Custom", "Functional"],
+        image: detailMarbleBath,
       },
     ],
     capabilities: [
@@ -218,25 +199,25 @@ const categoryData: Record<Exclude<CategoryKey, "all">, CategoryData> = {
         title: "Land Development",
         description: "Entitlements, infrastructure, and phasing strategies that maximize land value while respecting site character.",
         tags: ["Entitlements", "Infrastructure", "Planning"],
-        image: developmentCover,
+        image: detailOceanviewFraming,
       },
       {
         title: "Residential Communities",
         description: "Master-planned neighborhoods with cohesive design standards, shared amenities, and lasting value.",
         tags: ["Master Plan", "Community", "Amenities"],
-        image: developmentPlan,
+        image: detailPendantLighting,
       },
       {
         title: "Resort & Hospitality",
         description: "Mixed-use developments, golf communities, and hospitality venues requiring specialized construction expertise.",
         tags: ["Resort", "Golf", "Mixed-Use"],
-        image: abacoBoathouse,
+        image: detailMarbleBath,
       },
       {
         title: "Renovation & Repositioning",
         description: "Historic preservation, adaptive reuse, and strategic renovations that honor original character while meeting modern needs.",
         tags: ["Historic", "Adaptive Reuse", "Renovation"],
-        image: coastalRestoration,
+        image: detailFloatingVanity,
       },
     ],
     capabilities: [
