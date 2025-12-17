@@ -26,7 +26,7 @@ export const Hero = () => {
         <img src={heroImage} alt="Michael Chandler - 37 years of quality craftsmanship" width={1920} height={1080} className="w-full h-full object-cover object-center transition-transform duration-100 ease-out" style={{
           transform: `translateY(${scrollY * 0.3}px)`
         }} loading="eager" fetchPriority="high" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
       </div>
       
       {/* Hero Content */}
