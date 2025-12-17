@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Building2, Palette, Trees, Armchair, Building, Sparkles, Compass, PenLine, Truck } from "lucide-react";
+import { ArrowLeft, Building2, Palette, Trees, Armchair, Building } from "lucide-react";
 
 // Detail images for concept cards
 import detailBronzeBase from "@/assets/details/detail-bronze-base.jpg";
@@ -21,21 +21,53 @@ import detailTimberBeams from "@/assets/details/detail-timber-beams.jpg";
 import detailVanityNiche from "@/assets/details/detail-vanity-niche.jpg";
 import detailWallFaucet from "@/assets/details/detail-wall-faucet.jpg";
 
-type CategoryKey = "all" | "architecture" | "interiors" | "exterior" | "furniture" | "development";
+type CategoryKey = "architecture" | "interiors" | "exterior" | "furniture" | "development";
 
-interface ConceptCard {
+interface ConceptBoard {
   title: string;
-  description: string;
-  tags: string[];
-  image: string;
+  subtitle: string;
+  mainImage: string;
+  gridImages: string[];
+  details: string[];
 }
 
-interface CategoryData {
-  title: string;
-  tagline: string;
-  concepts: ConceptCard[];
-  capabilities: string[];
-}
+const conceptBoards: Record<CategoryKey, ConceptBoard> = {
+  architecture: {
+    title: "ARCHITECTURE",
+    subtitle: "Form Meets Function",
+    mainImage: detailOceanviewFraming,
+    gridImages: [detailLimestoneFireplace, detailTimberBeams, detailSculpturalChandelier],
+    details: ["Site-responsive design", "Structural engineering", "Energy efficiency", "Smart home integration"],
+  },
+  interiors: {
+    title: "INTERIORS",
+    subtitle: "Curated Living Spaces",
+    mainImage: detailSpaVanity,
+    gridImages: [detailPendantLighting, detailProRange, detailLeatherCabinetry],
+    details: ["Custom millwork", "Lighting design", "Premium flooring", "Art display systems"],
+  },
+  exterior: {
+    title: "EXTERIOR",
+    subtitle: "Landscape Integration",
+    mainImage: detailLimestoneFireplace,
+    gridImages: [detailOceanviewFraming, detailBronzeBase, detailPendantLighting],
+    details: ["Hardscape design", "Pool construction", "Outdoor kitchens", "Exterior lighting"],
+  },
+  furniture: {
+    title: "CUSTOM FURNITURE",
+    subtitle: "Bespoke Craftsmanship",
+    mainImage: detailBronzeBase,
+    gridImages: [detailSkiStorage, detailVanityNiche, detailWallFaucet],
+    details: ["Master craftsman partnerships", "Exotic material sourcing", "Custom finishes", "White-glove installation"],
+  },
+  development: {
+    title: "DEVELOPMENT",
+    subtitle: "Vision to Reality",
+    mainImage: detailMarbleBath,
+    gridImages: [detailBronzeHardware, detailFloatingVanity, detailMarbleCounter],
+    details: ["Feasibility analysis", "Entitlement processing", "Budget development", "Construction management"],
+  },
+};
 
 const categories: { key: CategoryKey; label: string; icon: React.ElementType }[] = [
   { key: "architecture", label: "Architecture", icon: Building2 },
@@ -45,352 +77,121 @@ const categories: { key: CategoryKey; label: string; icon: React.ElementType }[]
   { key: "development", label: "Development", icon: Building },
 ];
 
-const categoryData: Record<Exclude<CategoryKey, "all">, CategoryData> = {
-  architecture: {
-    title: "Architecture",
-    tagline: "Form Meets Function",
-    concepts: [
-      {
-        title: "Coastal Modern Residence",
-        description: "Cantilevered volumes maximize oceanfront views while hurricane-rated construction ensures lasting protection.",
-        tags: ["Oceanfront", "Glass", "Contemporary"],
-        image: detailOceanviewFraming,
-      },
-      {
-        title: "Hill Country Contemporary",
-        description: "Native limestone anchors the design to the landscape, with passive cooling strategies reducing energy demands.",
-        tags: ["Limestone", "Sustainable", "Regional"],
-        image: detailLimestoneFireplace,
-      },
-      {
-        title: "Mountain Lodge Retreat",
-        description: "Heavy timber construction and expansive glazing create intimate connection with alpine vistas.",
-        tags: ["Timber Frame", "Mountain", "Rustic Modern"],
-        image: detailTimberBeams,
-      },
-      {
-        title: "Resort Residential Compound",
-        description: "Multiple pavilions connected by covered walkways, blending hospitality-inspired design with private residence.",
-        tags: ["Pavilion", "Compound", "Hospitality"],
-        image: detailSculpturalChandelier,
-      },
-    ],
-    capabilities: [
-      "Site-responsive design",
-      "Architect collaboration",
-      "Structural engineering coordination",
-      "Material specification",
-      "Energy efficiency",
-      "Smart home integration",
-    ],
-  },
-  interiors: {
-    title: "Interiors",
-    tagline: "Curated Living Spaces",
-    concepts: [
-      {
-        title: "Great Room Collection",
-        description: "Double-height volumes with custom millwork, integrated lighting, and carefully considered sight lines.",
-        tags: ["Millwork", "Lighting", "Volume"],
-        image: detailPendantLighting,
-      },
-      {
-        title: "Primary Suite Sanctuary",
-        description: "Spa-inspired bathrooms, custom closeting systems, and bedroom environments designed for restoration.",
-        tags: ["Spa", "Custom Closets", "Luxury"],
-        image: detailSpaVanity,
-      },
-      {
-        title: "Chef's Kitchen",
-        description: "Professional-grade equipment, custom cabinetry, butler's pantries, and workflow-optimized layouts.",
-        tags: ["Professional", "Cabinetry", "Workflow"],
-        image: detailProRange,
-      },
-      {
-        title: "Wine & Spirits Gallery",
-        description: "Climate-controlled cellars with custom racking, tasting rooms, and display-worthy bottle presentation.",
-        tags: ["Wine Cellar", "Climate Control", "Display"],
-        image: detailLeatherCabinetry,
-      },
-    ],
-    capabilities: [
-      "Custom millwork design",
-      "Decorative ceiling treatments",
-      "Lighting design",
-      "Premium flooring installation",
-      "Interior designer coordination",
-      "Art display systems",
-    ],
-  },
-  exterior: {
-    title: "Exterior Spaces",
-    tagline: "Landscape & Hardscape Integration",
-    concepts: [
-      {
-        title: "Outdoor Living Pavilion",
-        description: "Full outdoor kitchens, retractable screens, climate control, and seamless indoor-outdoor transitions.",
-        tags: ["Outdoor Kitchen", "Pavilion", "Entertainment"],
-        image: detailLimestoneFireplace,
-      },
-      {
-        title: "Pool & Water Features",
-        description: "Infinity edges, natural stone surrounds, integrated spas, and water features as sculptural elements.",
-        tags: ["Infinity Pool", "Natural Stone", "Spa"],
-        image: detailOceanviewFraming,
-      },
-      {
-        title: "Motor Court & Entry Sequence",
-        description: "Arrival experiences that set expectations, with specimen plantings and architectural lighting.",
-        tags: ["Entry", "Hardscape", "Lighting"],
-        image: detailBronzeBase,
-      },
-      {
-        title: "Native Landscape Design",
-        description: "Site-appropriate plantings that reduce maintenance while honoring regional character and ecology.",
-        tags: ["Native Plants", "Sustainable", "Low Maintenance"],
-        image: detailPendantLighting,
-      },
-    ],
-    capabilities: [
-      "Hardscape design & construction",
-      "Pool & spa construction",
-      "Outdoor kitchen systems",
-      "Landscape architect coordination",
-      "Irrigation & drainage systems",
-      "Exterior lighting design",
-    ],
-  },
-  furniture: {
-    title: "Custom Furniture",
-    tagline: "Bespoke Craftsmanship",
-    concepts: [
-      {
-        title: "Statement Dining Tables",
-        description: "Live-edge slabs, metal bases, expandable systems—each table designed for the specific space and client.",
-        tags: ["Live Edge", "Custom", "Dining"],
-        image: detailBronzeBase,
-      },
-      {
-        title: "Built-In Cabinetry Systems",
-        description: "Library walls, entertainment centers, and storage solutions with furniture-grade finishes and precision joinery.",
-        tags: ["Built-In", "Library", "Millwork"],
-        image: detailSkiStorage,
-      },
-      {
-        title: "Vanity & Dressing Collections",
-        description: "Coordinated vanities, dressing areas, and storage with integrated technology and premium materials.",
-        tags: ["Vanity", "Marble", "Integrated Tech"],
-        image: detailVanityNiche,
-      },
-      {
-        title: "Specialty Storage Solutions",
-        description: "Custom equipment rooms, wine storage, and specialty spaces designed for how you actually live.",
-        tags: ["Storage", "Custom", "Functional"],
-        image: detailWallFaucet,
-      },
-    ],
-    capabilities: [
-      "Design & specification",
-      "Master craftsman partnerships",
-      "Exotic material sourcing",
-      "Custom finish development",
-      "White-glove installation",
-      "Maintenance programs",
-    ],
-  },
-  development: {
-    title: "Development",
-    tagline: "Vision to Reality",
-    concepts: [
-      {
-        title: "Land Development",
-        description: "Entitlements, infrastructure, and phasing strategies that maximize land value while respecting site character.",
-        tags: ["Entitlements", "Infrastructure", "Planning"],
-        image: detailOceanviewFraming,
-      },
-      {
-        title: "Residential Communities",
-        description: "Master-planned neighborhoods with cohesive design standards, shared amenities, and lasting value.",
-        tags: ["Master Plan", "Community", "Amenities"],
-        image: detailMarbleBath,
-      },
-      {
-        title: "Resort & Hospitality",
-        description: "Mixed-use developments, golf communities, and hospitality venues requiring specialized construction expertise.",
-        tags: ["Resort", "Golf", "Mixed-Use"],
-        image: detailBronzeHardware,
-      },
-      {
-        title: "Renovation & Repositioning",
-        description: "Historic preservation, adaptive reuse, and strategic renovations that honor original character while meeting modern needs.",
-        tags: ["Historic", "Adaptive Reuse", "Renovation"],
-        image: detailFloatingVanity,
-      },
-    ],
-    capabilities: [
-      "Feasibility analysis",
-      "Entitlement processing",
-      "Design team assembly",
-      "Budget development",
-      "Construction management",
-      "Quality assurance",
-    ],
-  },
-};
-
-const processSteps = [
-  {
-    title: "Discovery",
-    description: "Understanding vision, site, and requirements",
-    icon: Sparkles,
-  },
-  {
-    title: "Design",
-    description: "Collaborative development with architects and designers",
-    icon: PenLine,
-  },
-  {
-    title: "Development",
-    description: "Detailed planning, budgeting, and scheduling",
-    icon: Compass,
-  },
-  {
-    title: "Delivery",
-    description: "Meticulous construction and quality assurance",
-    icon: Truck,
-  },
+const materialSwatches = [
+  { name: "Calacatta Marble", color: "bg-gradient-to-br from-stone-100 via-stone-50 to-stone-200" },
+  { name: "Bronze Hardware", color: "bg-gradient-to-br from-amber-700 via-amber-600 to-amber-800" },
+  { name: "Natural Oak", color: "bg-gradient-to-br from-amber-100 via-amber-50 to-amber-200" },
+  { name: "Limestone", color: "bg-gradient-to-br from-stone-200 via-stone-100 to-stone-300" },
+  { name: "Travertine", color: "bg-gradient-to-br from-orange-50 via-amber-50 to-stone-100" },
+  { name: "Walnut", color: "bg-gradient-to-br from-amber-900 via-amber-800 to-amber-950" },
 ];
 
-const ConceptCardComponent: React.FC<{ concept: ConceptCard; index: number }> = ({ concept }) => {
-  return (
-    <div className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-border/50">
-      {/* Image */}
-      <div className="aspect-square relative overflow-hidden bg-muted">
-        <img
-          src={concept.image}
-          alt={concept.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 project-image"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+const processSteps = [
+  { number: "01", title: "Discovery", description: "Understanding vision, site conditions, and unique requirements." },
+  { number: "02", title: "Design", description: "Collaborative development with architects and interior designers." },
+  { number: "03", title: "Development", description: "Detailed planning, budgeting, and construction scheduling." },
+  { number: "04", title: "Delivery", description: "Meticulous construction execution and quality assurance." },
+];
+
+const ConceptBoardSection: React.FC<{ board: ConceptBoard; isReversed?: boolean }> = ({ board, isReversed }) => (
+  <section className="py-12 md:py-20">
+    <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Header */}
+      <div className="mb-8 md:mb-12">
+        <p className="font-inter text-xs tracking-[0.25em] text-muted-foreground uppercase mb-2">{board.title}</p>
+        <h2 className="font-playfair text-3xl md:text-4xl text-foreground">{board.subtitle}</h2>
       </div>
-      
-      {/* Content */}
-      <div className="p-5">
-        <h4 className="font-playfair text-lg font-semibold text-charcoal mb-2 group-hover:text-gold transition-colors duration-300">
-          {concept.title}
-        </h4>
-        <p className="font-inter text-sm text-charcoal/70 leading-relaxed mb-4">
-          {concept.description}
-        </p>
-        <div className="flex flex-wrap gap-2">
-          {concept.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-2 py-1 text-[10px] font-medium uppercase tracking-wider bg-cream text-charcoal/60 rounded"
-            >
-              {tag}
-            </span>
-          ))}
+
+      {/* Magazine Layout Grid */}
+      <div className={`grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 ${isReversed ? 'lg:[direction:rtl]' : ''}`}>
+        {/* Main Large Image */}
+        <div className={`lg:col-span-7 ${isReversed ? 'lg:[direction:ltr]' : ''}`}>
+          <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+            <img 
+              src={board.mainImage} 
+              alt={board.title}
+              className="w-full h-full object-cover project-image"
+            />
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+              <p className="font-playfair text-white text-xl md:text-2xl">{board.subtitle}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side Grid */}
+        <div className={`lg:col-span-5 ${isReversed ? 'lg:[direction:ltr]' : ''}`}>
+          <div className="grid grid-cols-2 gap-4 h-full">
+            {/* Top Two Images */}
+            {board.gridImages.slice(0, 2).map((img, idx) => (
+              <div key={idx} className="aspect-square overflow-hidden bg-muted">
+                <img src={img} alt="" className="w-full h-full object-cover project-image hover:scale-105 transition-transform duration-500" />
+              </div>
+            ))}
+            {/* Bottom Large Image */}
+            <div className="col-span-2 aspect-[2/1] overflow-hidden bg-muted">
+              <img src={board.gridImages[2]} alt="" className="w-full h-full object-cover project-image hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
 
-const CategorySection: React.FC<{ categoryKey: Exclude<CategoryKey, "all">; data: CategoryData }> = ({
-  categoryKey,
-  data,
-}) => {
-  return (
-    <div className="mb-20">
-      {/* Category Header */}
-      <div className="mb-8">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-8 h-[2px] bg-gold" />
-          <span className="font-inter text-xs uppercase tracking-[0.2em] text-gold font-medium">
-            {data.title}
+      {/* Capabilities Strip */}
+      <div className="mt-6 md:mt-8 flex flex-wrap gap-x-6 gap-y-2">
+        {board.details.map((detail, idx) => (
+          <span key={idx} className="font-inter text-sm text-muted-foreground">
+            {detail}
           </span>
-        </div>
-        <h3 className="font-playfair text-2xl sm:text-3xl font-semibold text-charcoal">
-          {data.tagline}
-        </h3>
-      </div>
-
-      {/* Concept Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {data.concepts.map((concept, index) => (
-          <ConceptCardComponent key={concept.title} concept={concept} index={index} />
         ))}
       </div>
-
-      {/* Capabilities */}
-      <div className="bg-cream/50 rounded-lg p-6">
-        <p className="font-inter text-xs uppercase tracking-[0.15em] text-charcoal/50 mb-3 font-medium">
-          Capabilities
-        </p>
-        <p className="font-inter text-sm text-charcoal/80 leading-relaxed">
-          {data.capabilities.join(" • ")}
-        </p>
-      </div>
     </div>
-  );
-};
+  </section>
+);
 
 const Design = () => {
   const navigate = useNavigate();
-  const [activeCategory, setActiveCategory] = useState<CategoryKey>("all");
+  const [activeCategory, setActiveCategory] = useState<CategoryKey | "all">("all");
 
-  const filteredCategories = activeCategory === "all"
-    ? Object.entries(categoryData)
-    : Object.entries(categoryData).filter(([key]) => key === activeCategory);
+  const displayedBoards = activeCategory === "all" 
+    ? Object.entries(conceptBoards) 
+    : Object.entries(conceptBoards).filter(([key]) => key === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#F8F6F3] text-charcoal">
+    <div className="min-h-screen bg-[#F5F3EF]">
       {/* Hero Section */}
-      <section className="pt-28 pb-16 px-4 sm:px-6 lg:px-12">
-        <div className="container mx-auto max-w-6xl">
-          {/* Back Button */}
+      <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#E8E4DE] to-transparent opacity-50" />
+        <div className="container mx-auto max-w-7xl relative">
           <Button
             variant="ghost"
-            className="mb-12 text-charcoal/60 hover:text-gold hover:bg-transparent -ml-4"
+            className="mb-8 text-muted-foreground hover:text-gold hover:bg-transparent -ml-2"
             onClick={() => navigate("/")}
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back
           </Button>
 
-          {/* Hero Content */}
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-charcoal mb-4">
+          <div className="max-w-3xl">
+            <p className="font-inter text-xs tracking-[0.25em] text-gold uppercase mb-4">Design Portfolio</p>
+            <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-foreground mb-6">
               Design Concepts
             </h1>
-            <p className="font-inter text-base sm:text-lg text-[#8B8680] mb-6">
+            <p className="font-inter text-lg text-muted-foreground leading-relaxed max-w-xl">
               Luxury Residential • Hospitality • Commercial Development
             </p>
-            <div className="w-16 h-[2px] bg-[#C9A961] mx-auto" />
           </div>
         </div>
       </section>
 
-      {/* Intro Text */}
-      <section className="pb-16 px-4 sm:px-6 lg:px-12">
-        <div className="container mx-auto max-w-3xl">
-          <p className="font-inter text-center text-charcoal/80 leading-relaxed text-base sm:text-lg">
-            Every exceptional project begins with a compelling vision. These concepts represent our design philosophy and construction capabilities—the synthesis of architectural innovation, master craftsmanship, and meticulous attention to detail that defines our work.
-          </p>
-        </div>
-      </section>
-
       {/* Category Navigation */}
-      <section className="pb-16 px-4 sm:px-6 lg:px-12">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-wrap justify-center gap-3 overflow-x-auto pb-2">
+      <section className="sticky top-16 z-30 bg-[#F5F3EF]/95 backdrop-blur-sm border-b border-border/30">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide">
             <button
               onClick={() => setActiveCategory("all")}
-              className={`px-5 py-2.5 rounded-full font-inter text-sm font-medium transition-all duration-300 flex items-center gap-2 whitespace-nowrap ${
+              className={`px-4 py-2 rounded-full font-inter text-sm transition-all whitespace-nowrap ${
                 activeCategory === "all"
-                  ? "bg-[#C9A961] text-white shadow-md"
-                  : "bg-transparent text-charcoal border border-charcoal/30 hover:border-[#C9A961] hover:text-[#C9A961]"
+                  ? "bg-foreground text-background"
+                  : "bg-transparent text-muted-foreground hover:text-foreground border border-border"
               }`}
             >
               All Concepts
@@ -399,13 +200,13 @@ const Design = () => {
               <button
                 key={key}
                 onClick={() => setActiveCategory(key)}
-                className={`px-5 py-2.5 rounded-full font-inter text-sm font-medium transition-all duration-300 flex items-center gap-2 whitespace-nowrap ${
+                className={`px-4 py-2 rounded-full font-inter text-sm transition-all flex items-center gap-2 whitespace-nowrap ${
                   activeCategory === key
-                    ? "bg-[#C9A961] text-white shadow-md"
-                    : "bg-transparent text-charcoal border border-charcoal/30 hover:border-[#C9A961] hover:text-[#C9A961]"
+                    ? "bg-foreground text-background"
+                    : "bg-transparent text-muted-foreground hover:text-foreground border border-border"
                 }`}
               >
-                <Icon className="w-4 h-4" />
+                <Icon className="w-3.5 h-3.5" />
                 {label}
               </button>
             ))}
@@ -413,97 +214,75 @@ const Design = () => {
         </div>
       </section>
 
-      {/* Category Sections */}
-      <section className="pb-8 px-4 sm:px-6 lg:px-12">
-        <div className="container mx-auto max-w-6xl">
-          {filteredCategories.map(([key, data]) => (
-            <CategorySection
-              key={key}
-              categoryKey={key as Exclude<CategoryKey, "all">}
-              data={data}
-            />
-          ))}
+      {/* Concept Board Sections */}
+      {displayedBoards.map(([key, board], idx) => (
+        <ConceptBoardSection key={key} board={board} isReversed={idx % 2 === 1} />
+      ))}
+
+      {/* Material Board Section */}
+      <section className="py-16 md:py-24 bg-[#E8E4DE]">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <p className="font-inter text-xs tracking-[0.25em] text-muted-foreground uppercase mb-2">Material Palette</p>
+            <h2 className="font-playfair text-3xl md:text-4xl text-foreground">Curated Materials</h2>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {materialSwatches.map((swatch) => (
+              <div key={swatch.name} className="group">
+                <div className={`aspect-square ${swatch.color} rounded-sm shadow-sm group-hover:shadow-md transition-shadow`} />
+                <p className="font-inter text-xs text-muted-foreground mt-3 text-center">{swatch.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-16 md:py-24 bg-[#F5F3EF]">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <p className="font-inter text-xs tracking-[0.25em] text-muted-foreground uppercase mb-2">Our Process</p>
+            <h2 className="font-playfair text-3xl md:text-4xl text-foreground">From Vision to Reality</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step) => (
+              <div key={step.number} className="relative">
+                <span className="font-playfair text-6xl md:text-7xl text-gold/20 absolute -top-4 -left-2">{step.number}</span>
+                <div className="pt-12">
+                  <h3 className="font-playfair text-xl text-foreground mb-2">{step.title}</h3>
+                  <p className="font-inter text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Philosophy Quote */}
-      <section className="py-20 px-4 sm:px-6 lg:px-12 bg-[#E8E4DE]">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="w-12 h-[2px] bg-[#C9A961] mx-auto mb-8" />
-          <blockquote className="font-playfair text-xl sm:text-2xl lg:text-3xl text-charcoal leading-relaxed italic">
+      <section className="py-20 md:py-28 bg-foreground text-background">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <blockquote className="font-playfair text-2xl md:text-3xl lg:text-4xl leading-relaxed italic">
             "We don't simply build structures—we craft environments that enhance how people live, work, and experience their world."
           </blockquote>
-          <div className="w-12 h-[2px] bg-[#C9A961] mx-auto mt-8" />
-        </div>
-      </section>
-
-      {/* Process Overview */}
-      <section className="py-20 px-4 sm:px-6 lg:px-12 bg-[#F8F6F3]">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="font-playfair text-2xl sm:text-3xl font-semibold text-charcoal mb-4">
-              Our Process
-            </h2>
-            <div className="w-12 h-[2px] bg-[#C9A961] mx-auto" />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <div key={step.title} className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-[#C9A961]/10 flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-7 h-7 text-[#C9A961]" />
-                  </div>
-                  <div className="font-inter text-xs text-[#8B8680] mb-2 uppercase tracking-wider">
-                    0{index + 1}
-                  </div>
-                  <h3 className="font-playfair text-xl font-semibold text-charcoal mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="font-inter text-sm text-charcoal/70 leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Confidentiality Notice */}
-      <section className="py-8 px-4 sm:px-6 lg:px-12 bg-[#F8F6F3] border-t border-charcoal/10">
-        <div className="container mx-auto max-w-4xl">
-          <p className="font-inter text-xs text-center text-[#8B8680] italic leading-relaxed">
-            Concepts shown represent design capabilities and construction expertise. Specific project details, client information, and proprietary designs are protected under confidentiality agreements.
-          </p>
+          <div className="mt-8 w-16 h-[2px] bg-gold mx-auto" />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-12 bg-charcoal">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-6">
-            Ready to Explore Your Vision?
-          </h2>
-          <p className="font-inter text-white/70 mb-8 max-w-xl mx-auto">
-            Let's discuss how we can bring your project to life with the same dedication to excellence that defines all our work.
+      <section className="py-16 md:py-24 bg-[#F5F3EF]">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-playfair text-3xl md:text-4xl text-foreground mb-4">Ready to Begin?</h2>
+          <p className="font-inter text-muted-foreground mb-8 max-w-lg mx-auto">
+            Every exceptional project starts with a conversation. Let's discuss your vision.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/contact">
-              <Button className="bg-[#C9A961] hover:bg-[#C9A961]/90 text-white px-8 py-3 font-inter font-medium">
-                Schedule Consultation
-              </Button>
-            </Link>
-            <Link to="/" state={{ openPortfolio: true }}>
-              <Button
-                variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 px-8 py-3 font-inter font-medium"
-              >
-                View Portfolio
-              </Button>
-            </Link>
-          </div>
+          <Button
+            onClick={() => navigate("/contact")}
+            className="bg-gold hover:bg-gold/90 text-white px-8 py-3"
+          >
+            Schedule Consultation
+          </Button>
         </div>
       </section>
     </div>
