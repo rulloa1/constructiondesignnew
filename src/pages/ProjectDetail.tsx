@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, X, ChevronLeft, ChevronRight, Ruler, BedDouble, Bath, Check, Clock, Briefcase } from "lucide-react";
+import { ArrowLeft, X, ChevronLeft, ChevronRight, Ruler, BedDouble, Bath, Check, Clock, Briefcase, DollarSign } from "lucide-react";
 import { getProjectById } from "@/data/projects";
 import { useState, useEffect, useMemo } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -148,7 +148,7 @@ const ProjectDetail = () => {
   }
 
   const heroImage = allImages.length > 0 ? allImages[0] : project.image;
-  const hasStats = project.sqft || project.bedrooms || project.baths || project.duration;
+  const hasStats = project.sqft || project.bedrooms || project.baths || project.duration || project.budget;
   const hasFeatures = project.features && project.features.length > 0;
   const hasRole = project.roles && project.roles.trim().length > 0;
 
@@ -238,6 +238,14 @@ const ProjectDetail = () => {
                     <Bath className="h-5 w-5 text-accent" />
                     <span className="text-foreground">
                       <strong>{project.baths}</strong> Baths
+                    </span>
+                  </div>
+                )}
+                {project.budget && (
+                  <div className="flex items-center gap-2">
+                    <DollarSign className="h-5 w-5 text-accent" />
+                    <span className="text-foreground">
+                      <strong>{project.budget}</strong>
                     </span>
                   </div>
                 )}
