@@ -211,69 +211,69 @@ const ProjectDetail = () => {
         </div>
 
         {/* Content */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
           
-          {/* Project Info Card */}
-          <div className="bg-secondary/50 rounded-lg p-6 mb-8">
+          {/* Project Details Section */}
+          <div className="mb-16">
+            {/* Section Header with Decorative Number */}
+            <div className="mb-8">
+              <span className="font-playfair text-7xl lg:text-8xl text-accent/10 font-light leading-none block -mb-4 lg:-mb-6">01</span>
+              <p className="font-inter text-xs tracking-[0.3em] text-muted-foreground uppercase mb-2">Project Details</p>
+              <h2 className="font-playfair text-2xl lg:text-3xl text-foreground">Overview</h2>
+            </div>
+
+            <div className="w-12 h-[1px] bg-accent mb-8" />
+
             {/* Category & Design Style */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">
-                  Category
-                </p>
-                <p className="text-accent font-medium">{project.category}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
+              <div className="border-l-2 border-accent/30 pl-6">
+                <p className="font-inter text-xs tracking-[0.2em] text-muted-foreground uppercase mb-2">Category</p>
+                <p className="font-playfair text-lg text-foreground">{project.category}</p>
               </div>
               {project.subtitle && (
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">
-                    Design Style
-                  </p>
-                  <p className="text-foreground">{project.subtitle}</p>
+                <div className="border-l-2 border-accent/30 pl-6">
+                  <p className="font-inter text-xs tracking-[0.2em] text-muted-foreground uppercase mb-2">Design Style</p>
+                  <p className="font-playfair text-lg text-foreground">{project.subtitle}</p>
                 </div>
               )}
             </div>
 
             {/* Stats Row */}
             {hasStats && (
-              <div className="flex flex-wrap gap-8 mb-6 py-4 border-t border-border">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-8 py-6 border-y border-border/30">
                 {project.duration && (
-                  <div className="flex items-center gap-2">
-                    <CalendarDays className="h-5 w-5 text-accent" />
-                    <span className="text-foreground">
-                      <strong>{project.duration}</strong>
-                    </span>
+                  <div className="text-center">
+                    <CalendarDays className="h-5 w-5 text-accent mx-auto mb-2" />
+                    <p className="font-playfair text-lg text-foreground">{project.duration}</p>
+                    <p className="font-inter text-xs text-muted-foreground uppercase tracking-wider">Duration</p>
                   </div>
                 )}
                 {project.sqft && (
-                  <div className="flex items-center gap-2">
-                    <Square className="h-5 w-5 text-accent" />
-                    <span className="text-foreground">
-                      <strong>{project.sqft.toLocaleString()}</strong> sqft
-                    </span>
+                  <div className="text-center">
+                    <Square className="h-5 w-5 text-accent mx-auto mb-2" />
+                    <p className="font-playfair text-lg text-foreground">{project.sqft.toLocaleString()}</p>
+                    <p className="font-inter text-xs text-muted-foreground uppercase tracking-wider">Sq Ft</p>
                   </div>
                 )}
                 {project.bedrooms && (
-                  <div className="flex items-center gap-2">
-                    <Bed className="h-5 w-5 text-accent" />
-                    <span className="text-foreground">
-                      <strong>{project.bedrooms}</strong> Bedrooms
-                    </span>
+                  <div className="text-center">
+                    <Bed className="h-5 w-5 text-accent mx-auto mb-2" />
+                    <p className="font-playfair text-lg text-foreground">{project.bedrooms}</p>
+                    <p className="font-inter text-xs text-muted-foreground uppercase tracking-wider">Bedrooms</p>
                   </div>
                 )}
                 {project.baths && (
-                  <div className="flex items-center gap-2">
-                    <Droplets className="h-5 w-5 text-accent" />
-                    <span className="text-foreground">
-                      <strong>{project.baths}</strong> Baths
-                    </span>
+                  <div className="text-center">
+                    <Droplets className="h-5 w-5 text-accent mx-auto mb-2" />
+                    <p className="font-playfair text-lg text-foreground">{project.baths}</p>
+                    <p className="font-inter text-xs text-muted-foreground uppercase tracking-wider">Baths</p>
                   </div>
                 )}
                 {project.budget && (
-                  <div className="flex items-center gap-2">
-                    <Wallet className="h-5 w-5 text-accent" />
-                    <span className="text-foreground">
-                      <strong>{project.budget}</strong>
-                    </span>
+                  <div className="text-center">
+                    <Wallet className="h-5 w-5 text-accent mx-auto mb-2" />
+                    <p className="font-playfair text-lg text-foreground">{project.budget}</p>
+                    <p className="font-inter text-xs text-muted-foreground uppercase tracking-wider">Budget</p>
                   </div>
                 )}
               </div>
@@ -281,16 +281,16 @@ const ProjectDetail = () => {
 
             {/* My Role Section */}
             {hasRole && (
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-3">
+              <div className="mb-8">
+                <div className="flex items-center gap-2 mb-4">
                   <Award className="h-4 w-4 text-accent" />
-                  <p className="text-sm font-semibold text-foreground">My Role</p>
+                  <p className="font-inter text-xs tracking-[0.2em] text-muted-foreground uppercase">My Role</p>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {project.roles!.split(',').map((role, index) => (
                     <span
                       key={index}
-                      className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-accent/10 text-accent border border-accent/20"
+                      className="inline-flex items-center px-4 py-2 rounded-full text-sm font-inter bg-accent/5 text-foreground border border-accent/20"
                     >
                       {role.trim()}
                     </span>
@@ -301,13 +301,13 @@ const ProjectDetail = () => {
 
             {/* Feature Highlights */}
             {hasFeatures && (
-              <div className="pt-4 border-t border-border">
-                <p className="text-sm font-semibold text-foreground mb-3">Feature Highlights</p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2">
+              <div className="pt-6 border-t border-border/30">
+                <p className="font-inter text-xs tracking-[0.2em] text-muted-foreground uppercase mb-4">Feature Highlights</p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-3">
                   {project.features!.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2">
+                    <div key={index} className="flex items-center gap-3">
                       <Check className="h-4 w-4 text-accent flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                      <span className="font-inter text-sm text-muted-foreground">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -317,8 +317,8 @@ const ProjectDetail = () => {
 
           {/* Project Description */}
           {project.description && (
-            <div className="mb-10">
-              <p className="text-muted-foreground leading-relaxed">
+            <div className="mb-16">
+              <p className="font-inter text-muted-foreground leading-relaxed max-w-3xl">
                 {project.description}
               </p>
             </div>
@@ -326,16 +326,21 @@ const ProjectDetail = () => {
 
           {/* Videos Section */}
           {videos.length > 0 && (
-            <div className="mt-10">
-              <h3 className="text-xl font-playfair font-semibold text-foreground mb-4">Project Videos</h3>
-              <div className="grid md:grid-cols-2 gap-4">
+            <div className="mb-16">
+              <div className="mb-8">
+                <span className="font-playfair text-7xl lg:text-8xl text-accent/10 font-light leading-none block -mb-4 lg:-mb-6">02</span>
+                <p className="font-inter text-xs tracking-[0.3em] text-muted-foreground uppercase mb-2">Media</p>
+                <h3 className="font-playfair text-2xl lg:text-3xl text-foreground">Project Videos</h3>
+              </div>
+              <div className="w-12 h-[1px] bg-accent mb-8" />
+              <div className="grid md:grid-cols-2 gap-6">
                 {videos.map(video => (
                   <div key={video.id} className="bg-card rounded-lg overflow-hidden border border-border shadow-sm">
                     <VideoPlayer url={video.video_url} />
                     {(video.title || video.description) && (
                       <div className="p-4">
-                        {video.title && <h4 className="font-semibold text-foreground mb-1">{video.title}</h4>}
-                        {video.description && <p className="text-sm text-muted-foreground">{video.description}</p>}
+                        {video.title && <h4 className="font-playfair font-semibold text-foreground mb-1">{video.title}</h4>}
+                        {video.description && <p className="font-inter text-sm text-muted-foreground">{video.description}</p>}
                       </div>
                     )}
                   </div>
@@ -346,9 +351,14 @@ const ProjectDetail = () => {
 
           {/* Gallery Grid */}
           {allImages.length > 0 && (
-            <div className="mt-10">
-              <h3 className="text-xl font-playfair font-semibold text-foreground mb-4">Gallery</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
+            <div className="mb-16">
+              <div className="mb-8">
+                <span className="font-playfair text-7xl lg:text-8xl text-accent/10 font-light leading-none block -mb-4 lg:-mb-6">{videos.length > 0 ? '03' : '02'}</span>
+                <p className="font-inter text-xs tracking-[0.3em] text-muted-foreground uppercase mb-2">Photography</p>
+                <h3 className="font-playfair text-2xl lg:text-3xl text-foreground">Gallery</h3>
+              </div>
+              <div className="w-12 h-[1px] bg-accent mb-8" />
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
                 {allImages.map((image, index) => {
                   const label = getImageLabel(image, index);
                   return (
@@ -360,7 +370,7 @@ const ProjectDetail = () => {
                         <img
                           src={image}
                           alt={`${project.title} - Image ${index + 1}`}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 gallery-image"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 gallery-image"
                         />
                         {label && (
                           <span className={`absolute top-2 right-2 px-2 py-1 text-xs font-semibold text-white rounded ${label === "Before" ? "bg-amber-500/90" : "bg-emerald-500/90"}`}>
