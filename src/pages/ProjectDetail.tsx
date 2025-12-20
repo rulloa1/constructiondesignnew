@@ -190,7 +190,7 @@ const ProjectDetail = () => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
           
           {/* Project Details Section */}
-          <div className="mb-16">
+          <div className="mb-16 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-10 lg:py-12 bg-secondary/50 rounded-xl">
             {/* Section Header */}
             <div className="mb-10">
               <p className="font-inter text-[11px] tracking-[0.3em] text-muted-foreground/70 uppercase mb-3">Project Details</p>
@@ -263,7 +263,7 @@ const ProjectDetail = () => {
                   {project.roles!.split(',').map((role, index) => (
                     <span 
                       key={index} 
-                      className="inline-flex items-center px-5 py-2.5 text-sm font-inter text-foreground bg-accent/8 border border-accent/20 rounded-full"
+                      className="inline-flex items-center px-5 py-2.5 text-sm font-inter text-foreground bg-background/80 border border-accent/20 rounded-full"
                     >
                       {role.trim()}
                     </span>
