@@ -61,6 +61,44 @@ const CompassMotif: React.FC<{ className?: string }> = ({ className = "" }) => (
   </svg>
 );
 
+// Interior-specific motifs
+const ChandelierMotif: React.FC<{ className?: string }> = ({ className = "" }) => (
+  <svg viewBox="0 0 40 40" className={className} fill="currentColor">
+    <rect x="18" y="2" width="4" height="6" opacity="0.8" />
+    <ellipse cx="20" cy="14" rx="14" ry="4" opacity="0.3" />
+    <circle cx="20" cy="14" r="3" />
+    <path d="M8 14v8M14 14v10M20 14v12M26 14v10M32 14v8" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.6" />
+    <circle cx="8" cy="24" r="2" opacity="0.8" />
+    <circle cx="14" cy="26" r="2" opacity="0.8" />
+    <circle cx="20" cy="28" r="2.5" />
+    <circle cx="26" cy="26" r="2" opacity="0.8" />
+    <circle cx="32" cy="24" r="2" opacity="0.8" />
+  </svg>
+);
+
+const BedMotif: React.FC<{ className?: string }> = ({ className = "" }) => (
+  <svg viewBox="0 0 40 40" className={className} fill="currentColor">
+    <rect x="2" y="24" width="36" height="8" rx="2" />
+    <rect x="4" y="18" width="14" height="8" rx="1" opacity="0.7" />
+    <rect x="22" y="18" width="14" height="8" rx="1" opacity="0.7" />
+    <rect x="2" y="32" width="4" height="6" opacity="0.8" />
+    <rect x="34" y="32" width="4" height="6" opacity="0.8" />
+    <rect x="6" y="20" width="4" height="4" rx="1" opacity="0.4" />
+    <rect x="30" y="20" width="4" height="4" rx="1" opacity="0.4" />
+  </svg>
+);
+
+const ChefHatMotif: React.FC<{ className?: string }> = ({ className = "" }) => (
+  <svg viewBox="0 0 40 40" className={className} fill="currentColor">
+    <ellipse cx="20" cy="12" rx="14" ry="10" opacity="0.8" />
+    <circle cx="10" cy="10" r="6" />
+    <circle cx="20" cy="6" r="6" />
+    <circle cx="30" cy="10" r="6" />
+    <rect x="8" y="18" width="24" height="16" rx="2" opacity="0.9" />
+    <path d="M10 24h20M10 30h20" stroke="white" strokeWidth="1.5" opacity="0.4" />
+  </svg>
+);
+
 /** 
  * Gradient placeholder component for image cards
  */
@@ -274,9 +312,9 @@ const Design = () => {
               
               {/* Stacked interior cards */}
               {[
-                { label: "Great Rooms", image: detailSpaVanity },
-                { label: "Primary Suites", image: detailMarbleBath },
-                { label: "Chef's Kitchens", image: detailProRange },
+                { label: "Great Rooms", image: detailSpaVanity, motif: <ChandelierMotif className="w-full h-full" /> },
+                { label: "Primary Suites", image: detailMarbleBath, motif: <BedMotif className="w-full h-full" /> },
+                { label: "Chef's Kitchens", image: detailProRange, motif: <ChefHatMotif className="w-full h-full" /> },
               ].map((item, idx) => (
                 <div 
                   key={item.label}
@@ -291,6 +329,10 @@ const Design = () => {
                       alt={item.label} 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                     />
+                    {/* Motif overlay */}
+                    <div className="absolute top-3 left-3 w-6 h-6 text-gold/90 transition-all duration-300 group-hover:drop-shadow-[0_0_6px_rgba(201,169,97,0.6)]">
+                      {item.motif}
+                    </div>
                   </div>
                   <div className="p-4">
                     <h4 className="font-playfair text-lg text-charcoal">{item.label}</h4>
