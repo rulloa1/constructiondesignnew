@@ -9,34 +9,34 @@ interface Service {
 
 const services: Service[] = [
   {
-    icon: Compass,
-    title: "Planning & Feasibility",
-    description: "Strategic planning, site analysis, permitting, and financial planning to ensure project viability.",
-  },
-  {
-    icon: PenLine,
-    title: "Design",
-    description: "Comprehensive architectural, interior, and landscape design with 3D visualization.",
-  },
-  {
-    icon: HardHat,
-    title: "Construction",
-    description: "Expert execution including ground-up construction, renovations, and finish carpentry.",
+    icon: BadgeCheck,
+    title: "Owner's Representation",
+    description: "Acting as your trusted advocate throughout the construction process, ensuring your vision is executed with precision while protecting your investment.",
   },
   {
     icon: ListChecks,
     title: "Project Management",
-    description: "Seamless coordination with schedule management, budget control, and progress reporting.",
+    description: "Full-cycle oversight from permitting to final inspections, maintaining rigorous quality standards and budget discipline across complex developments.",
   },
   {
-    icon: BadgeCheck,
-    title: "Quality Assurance",
-    description: "Rigorous quality control, safety compliance, and thorough final inspections.",
+    icon: PenLine,
+    title: "Design-Build Consulting",
+    description: "Leveraging architectural expertise to bridge the gap between design intent and constructability, eliminating costly change orders and delays.",
+  },
+  {
+    icon: Compass,
+    title: "International Logistics",
+    description: "Navigating complex supply chains, regulatory environments, and workforce challenges for remote and international construction projects.",
+  },
+  {
+    icon: HardHat,
+    title: "Construction Excellence",
+    description: "Expert execution of luxury residential, resort development, and hospitality construction with uncompromising attention to detail.",
   },
   {
     icon: Sprout,
-    title: "Sustainability",
-    description: "Green building practices, energy efficiency, and sustainable material selection.",
+    title: "Value Engineering",
+    description: "Strategic optimization of project budgets through innovative solutions while maintaining the highest quality standards.",
   },
 ];
 
@@ -45,16 +45,15 @@ export const Services = () => {
   const { elementRef: gridRef, isVisible: gridVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section 
-      id="services" 
-      ref={elementRef as React.RefObject<HTMLElement>} 
+    <section
+      id="services"
+      ref={elementRef as React.RefObject<HTMLElement>}
       className="relative py-20 lg:py-32 bg-foreground text-background"
     >
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className={`mb-16 lg:mb-20 transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div className={`mb-16 lg:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
           <span className="font-playfair text-8xl lg:text-[10rem] text-gold/20 font-light leading-none block -mb-6 lg:-mb-12">
             03
           </span>
@@ -66,18 +65,17 @@ export const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div 
+        <div
           ref={gridRef as React.RefObject<HTMLDivElement>}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div 
+              <div
                 key={service.title}
-                className={`group transition-all duration-700 ${
-                  gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                }`}
+                className={`group transition-all duration-700 ${gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                  }`}
                 style={{ transitionDelay: gridVisible ? `${200 + index * 100}ms` : '0ms' }}
               >
                 <div className="border-l border-gold/30 pl-6 py-2 group-hover:border-gold transition-colors duration-300">

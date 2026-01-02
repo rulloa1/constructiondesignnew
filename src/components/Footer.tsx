@@ -32,7 +32,7 @@ export const Footer = React.memo(() => {
           <div>
             <div className="mb-4 sm:mb-5">
               <img src={logo} alt="Michael Chandler Logo" className="h-12 w-auto mb-3" />
-              
+
               <p className="text-cream/80 text-sm sm:text-base font-inter mb-4 leading-relaxed">
                 Fine Construction & Design
               </p>
@@ -108,7 +108,7 @@ export const Footer = React.memo(() => {
               <div className="flex items-start gap-3">
                 <Navigation className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-cream/70 text-sm sm:text-base font-inter leading-relaxed">
-                  Spring, Texas
+                  Spring, Texas 77379
                 </span>
               </div>
               <div className="flex items-start gap-3">
@@ -141,7 +141,7 @@ export const Footer = React.memo(() => {
             <p className="text-cream/60 text-sm sm:text-base font-inter leading-relaxed">
               © {currentYear} Michael Chandler Fine Construction & Design. All rights reserved.
             </p>
-            
+
             <div className="flex items-center gap-4 sm:gap-6">
               <nav className="flex gap-4 sm:gap-6">
                 <a
