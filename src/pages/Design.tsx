@@ -106,10 +106,10 @@ const Design = () => {
 
           <div className="space-y-4 text-sm text-muted-foreground">
             <p className="font-inter">Michael Chandler</p>
-            <p className="font-inter">Design • Build • Develop</p>
+            <p className="font-inter">VP of Operations | Construction Executive</p>
             <div className="w-12 h-[1px] bg-gold my-6" />
             <p className="font-inter leading-relaxed max-w-sm">
-              37 years of creating exceptional residential environments through thoughtful design and meticulous craftsmanship.
+              $500M+ portfolio across 12 US states and 4 countries. Procore Certified professional with 37+ years delivering ultra-high-end residential and resort developments. Bilingual English/Spanish.
             </p>
           </div>
         </div>
@@ -132,8 +132,8 @@ const Design = () => {
               <div
                 key={item.num}
                 className={`group relative transition-all duration-700 ${moodBoardVisible
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-12'
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-12'
                   }`}
                 style={{ transitionDelay: moodBoardVisible ? `${200 + idx * 100}ms` : '0ms' }}
               >
