@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import { AlignJustify } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -19,6 +19,16 @@ interface HeaderProps {
 export const Header = React.memo(({ onPortfolioClick }: HeaderProps) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleSmoothScroll = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string, itemName: string) => {
     if (itemName === "Portfolio") {
@@ -66,7 +76,13 @@ export const Header = React.memo(({ onPortfolioClick }: HeaderProps) => {
   }, [onPortfolioClick, navigate, location]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-charcoal/80 shadow-lg transition-all duration-300 border-b border-white/5">
+    <header className={`
+      fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b
+      ${scrolled
+        ? 'bg-charcoal/95 backdrop-blur-xl shadow-luxury border-white/10'
+        : 'bg-charcoal/80 backdrop-blur-md shadow-lg border-white/5'
+      }
+    `}>
       <nav className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center group">

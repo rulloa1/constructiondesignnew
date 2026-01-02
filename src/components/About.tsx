@@ -1,6 +1,7 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { DecorativeSeparator } from "@/components/DecorativeSeparator";
 
 interface AboutProps {
   onPortfolioClick?: () => void;
@@ -11,16 +12,15 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
   const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation({ threshold: 0.15 });
 
   return (
-    <section 
-      id="about" 
-      ref={elementRef as React.RefObject<HTMLElement>} 
+    <section
+      id="about"
+      ref={elementRef as React.RefObject<HTMLElement>}
       className="relative py-20 lg:py-32 bg-[#FAF9F7]"
     >
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className={`mb-16 lg:mb-20 transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div className={`mb-16 lg:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
           <span className="font-playfair text-8xl lg:text-[10rem] text-gold/10 font-light leading-none block -mb-6 lg:-mb-12">
             02
           </span>
@@ -29,14 +29,13 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
         </div>
 
         {/* Main Content Grid */}
-        <div 
+        <div
           ref={contentRef as React.RefObject<HTMLDivElement>}
           className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16"
         >
           {/* Left Column - Main Text */}
-          <div className={`lg:col-span-7 transition-all duration-1000 ${
-            contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-          }`}>
+          <div className={`lg:col-span-7 transition-all duration-1000 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+            }`}>
             <div className="border-l-2 border-gold/40 pl-8">
               <p className="font-inter text-lg lg:text-xl text-foreground/90 leading-relaxed mb-6">
                 Through my experience of <span className="text-gold font-semibold">37 years</span> as a Business, Design, and Construction professional, I have found that exceptional results come from exceptional teams.
@@ -54,11 +53,10 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
           </div>
 
           {/* Right Column - Philosophy Cards */}
-          <div className={`lg:col-span-5 space-y-6 transition-all duration-1000 delay-200 ${
-            contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-          }`}>
+          <div className={`lg:col-span-5 space-y-6 transition-all duration-1000 delay-200 ${contentVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+            }`}>
             {/* Philosophy Card */}
-            <div className="bg-white p-8 shadow-sm">
+            <div className="bg-white p-8 shadow-luxury hover:shadow-luxury-lg transition-shadow duration-300">
               <span className="font-playfair text-4xl text-gold/30 font-light block mb-4">01</span>
               <h3 className="font-playfair text-xl text-foreground mb-3">My Philosophy</h3>
               <p className="font-inter text-sm text-muted-foreground leading-relaxed">
@@ -67,7 +65,7 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
             </div>
 
             {/* Commitment Card */}
-            <div className="bg-white p-8 shadow-sm">
+            <div className="bg-white p-8 shadow-luxury hover:shadow-luxury-lg transition-shadow duration-300">
               <span className="font-playfair text-4xl text-gold/30 font-light block mb-4">02</span>
               <h3 className="font-playfair text-xl text-foreground mb-3">My Commitment</h3>
               <p className="font-inter text-sm text-muted-foreground leading-relaxed">
@@ -83,6 +81,9 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
             </div>
           </div>
         </div>
+
+        {/* Decorative Separator */}
+        <DecorativeSeparator />
       </div>
     </section>
   );
