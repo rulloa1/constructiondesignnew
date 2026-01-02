@@ -47,7 +47,9 @@ export const Hero = () => {
               Michael Chandler
             </h1>
             <div className="w-16 h-[2px] bg-gold mb-6" />
-            <p className="text-white/80 leading-relaxed max-w-lg mb-8 font-extralight text-center font-serif text-base">VP of Operations | Owner’s Representative | Design & Construction Executive</p>
+            <p className="text-white/80 leading-relaxed max-w-lg mb-8 font-light text-lg">
+              Strategic Construction Executive with 37+ years of experience delivering multimillion-dollar developments for the world's most discerning clients. Portfolio exceeding $500M across 12 US states and 4 countries.
+            </p>
           </div>
 
           {/* CTAs */}

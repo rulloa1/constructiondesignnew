@@ -38,13 +38,13 @@ export const About = ({ onPortfolioClick }: AboutProps) => {
             }`}>
             <div className="border-l-2 border-gold/40 pl-8">
               <p className="font-inter text-lg lg:text-xl text-foreground/90 leading-relaxed mb-6">
-                Through my experience of <span className="text-gold font-semibold">37 years</span> as a Business, Design, and Construction professional, I have found that exceptional results come from exceptional teams.
+                With a <span className="text-gold font-semibold">Bachelor of Architecture</span> from Kansas State University and <span className="text-gold font-semibold">37+ years</span> of hands-on field experience, I possess a rare ability to bridge high-level architectural design with rigorous P&L stewardship and construction execution.
               </p>
               <p className="font-inter text-foreground/70 leading-relaxed mb-6">
-                My approach is simple: bring together the right people, create an environment built on mutual respect, and stay closely attuned to client feedback throughout every phase of a project.
+                I specialize in navigating the complex challenges of modern construction—labor shortages, technological integration, and international logistics—while consistently delivering exceptional results for high-net-worth individuals and institutional developers.
               </p>
-              <p className="font-inter text-foreground/70 leading-relaxed mb-8">
-                I've built my career on the universal business principle that quality construction isn't just about meeting standards—it's about exceeding them by combining rigorous processes with forward-thinking design.
+              <p className="font-inter text-foreground/70 leading-relaxed mb-6">
+                My portfolio exceeds <span className="text-gold font-semibold">$500M</span> across 12 US states and 4 countries, including developments in the Bahamas, Mexico, and Costa Rica. Native-level fluency in Spanish enables seamless communication with international workforces and stakeholders.
               </p>
               <p className="font-playfair text-lg italic text-foreground/60">
                 — Michael Chandler
