@@ -360,8 +360,8 @@ const Design = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6 bg-white shadow-luxury hover:shadow-luxury-lg transition-shadow duration-300">
               <div className="font-playfair text-5xl text-gold/30 mb-4">🎓</div>
-              <h3 className="font-playfair text-lg text-foreground mb-2">Bachelor of Architecture</h3>
-              <p className="font-inter text-sm text-muted-foreground">University of Texas at Austin</p>
+              <h3 className="font-playfair text-lg text-foreground mb-2">Architecture Studies</h3>
+              <p className="font-inter text-sm text-muted-foreground">University of Austin</p>
             </div>
 
             <div className="text-center p-6 bg-white shadow-luxury hover:shadow-luxury-lg transition-shadow duration-300">
