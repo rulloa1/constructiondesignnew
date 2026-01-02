@@ -1,1 +1,11 @@
-import React from \"react\";\n\nexport const DecorativeSeparator: React.FC = () => {\n  return (\n    <div className=\"flex items-center gap-4 my-16 lg:my-24\">\n      <div className=\"h-px flex-1 bg-gradient-to-r from-transparent via-gold/30 to-transparent\" />\n      <span className=\"text-gold/50 text-xs\">✦</span>\n      <div className=\"h-px flex-1 bg-gradient-to-r from-transparent via-gold/30 to-transparent\" />\n    </div>\n  );\n};\n
+import React from "react";
+
+export const DecorativeSeparator: React.FC = () => {
+    return (
+        <div className="flex items-center gap-4 my-16 lg:my-24">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+            <span className="text-gold/50 text-xs">✦</span>
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+        </div>
+    );
+};
