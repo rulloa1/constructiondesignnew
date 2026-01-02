@@ -24,8 +24,8 @@ export const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img src={heroImage} alt="Michael Chandler - 37 years of quality craftsmanship" width={1920} height={1080} className="w-full h-full object-cover object-center transition-transform duration-100 ease-out" style={{
-          transform: `translateY(${scrollY * 0.3}px)`
-        }} loading="eager" fetchPriority="high" />
+        transform: `translateY(${scrollY * 0.3}px)`
+      }} loading="eager" fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
       </div>
       
@@ -39,7 +39,7 @@ export const Hero = () => {
             </span>
 
             {/* Main heading */}
-            <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="">
               <p className="font-inter text-xs tracking-[0.3em] text-white/60 uppercase mb-4">
                 Design • Build • Develop
               </p>
@@ -47,22 +47,19 @@ export const Hero = () => {
                 Michael Chandler
               </h1>
               <div className="w-16 h-[2px] bg-gold mb-6" />
-              <p className="font-inter text-lg text-white/80 leading-relaxed max-w-lg mb-8">
-                37 years of creating exceptional residential environments through thoughtful design and meticulous craftsmanship.
-              </p>
+              <p className="text-white/80 leading-relaxed max-w-lg mb-8 font-extralight text-center font-serif text-base">VP of Operations | Owner’s Representative | Design & Construction Executive</p>
             </div>
 
             {/* CTAs */}
             <div className={`flex flex-wrap gap-4 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <Button 
-                onClick={() => {
-                  const portfolioSection = document.getElementById('portfolio-trigger');
-                  if (portfolioSection) {
-                    portfolioSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="bg-gold hover:bg-gold/90 text-white px-8 py-3 cursor-pointer"
-              >
+              <Button onClick={() => {
+              const portfolioSection = document.getElementById('portfolio-trigger');
+              if (portfolioSection) {
+                portfolioSection.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }
+            }} className="bg-gold hover:bg-gold/90 text-white px-8 py-3 cursor-pointer">
                 View Portfolio
               </Button>
               <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-3">
