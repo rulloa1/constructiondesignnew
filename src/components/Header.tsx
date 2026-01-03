@@ -3,6 +3,7 @@ import { AlignJustify } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useNavigate, useLocation, Link } from "react-router-dom";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import logo from "@/assets/mc-logo-new.png";
 
 const navigation = [
@@ -101,6 +102,9 @@ export const Header = React.memo(({ onPortfolioClick }: HeaderProps) => {
                 {item.name}
               </a>
             ))}
+            <div className="pl-4 ml-4 border-l border-white/20">
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile Navigation */}

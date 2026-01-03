@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { DecorativeSeparator } from "@/components/DecorativeSeparator";
 import { StatsSection } from "@/components/StatsSection";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 // Detail images
 import detailBronzeBase from "@/assets/details/detail-bronze-base.jpg";
@@ -132,28 +133,47 @@ const Design = () => {
             <h2 className="font-playfair text-3xl lg:text-4xl text-foreground">MOOD BOARD</h2>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+          <div className="columns-1 md:columns-2 lg:columns-4 gap-4 space-y-4">
             {moodBoardImages.map((item, idx) => (
-              <div
-                key={item.num}
-                className={`group relative transition-all duration-700 ${moodBoardVisible
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-12'
-                  }`}
-                style={{ transitionDelay: moodBoardVisible ? `${200 + idx * 100}ms` : '0ms' }}
-              >
-                <div className="aspect-[3/4] overflow-hidden bg-muted">
-                  <img
-                    src={item.image}
-                    alt={item.caption}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-                <span className="absolute top-4 right-4 font-playfair text-4xl lg:text-5xl text-white/80 font-light">
-                  {item.num}
-                </span>
-                <p className="font-inter text-xs text-muted-foreground mt-3 text-center">{item.caption}</p>
-              </div>
+              <Dialog key={item.num}>
+                <DialogTrigger asChild>
+                  <div
+                    className={`break-inside-avoid group relative cursor-zoom-in transition-all duration-700 ${moodBoardVisible
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-12'
+                      }`}
+                    style={{ transitionDelay: moodBoardVisible ? `${200 + idx * 100}ms` : '0ms' }}
+                  >
+                    <div className="overflow-hidden bg-muted rounded-lg shadow-md hover:shadow-xl transition-all duration-500">
+                      <img
+                        src={item.image}
+                        alt={item.caption}
+                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
+                    </div>
+                    <span className="absolute top-4 right-4 font-playfair text-4xl lg:text-5xl text-white/80 font-light drop-shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      {item.num}
+                    </span>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <p className="font-inter text-xs text-white tracking-wider text-center">{item.caption}</p>
+                    </div>
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl w-full p-0 overflow-hidden bg-transparent border-none shadow-none">
+                  <div className="relative w-full h-auto">
+                    <img
+                      src={item.image}
+                      alt={item.caption}
+                      className="w-full h-auto object-contain rounded-lg shadow-2xl"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                      <h3 className="text-white font-playfair text-2xl mb-1">{item.caption}</h3>
+                      <p className="text-white/80 font-inter text-sm">Mood Board Collection • {item.num}</p>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
