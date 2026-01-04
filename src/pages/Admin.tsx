@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/contexts/AuthContext";
 import { ProjectsManager } from "@/components/admin/ProjectsManager";
@@ -24,6 +24,18 @@ export default function Admin() {
   const [projects, setProjects] = useState<ProjectSummary[]>([]);
   const [fixingCovers, setFixingCovers] = useState(false);
 
+  const fetchProjects = useCallback(async () => {
+    const { data } = await supabase
+      .from("projects")
+      .select("id, title")
+      .order("title");
+    
+    if (data && data.length > 0) {
+      setProjects(data);
+      setSelectedProjectId(data[0].id);
+    }
+  }, []);
+
   useEffect(() => {
     if (!loading && !user) {
       navigate("/auth");
@@ -34,19 +46,7 @@ export default function Admin() {
     if (user && isAdmin) {
       fetchProjects();
     }
-  }, [user, isAdmin]);
-
-  const fetchProjects = async () => {
-    const { data } = await supabase
-      .from("projects")
-      .select("id, title")
-      .order("title");
-    
-    if (data && data.length > 0) {
-      setProjects(data);
-      setSelectedProjectId(data[0].id);
-    }
-  };
+  }, [user, isAdmin, fetchProjects]);
 
   const handleLogout = async () => {
     await supabase.auth.signOut();

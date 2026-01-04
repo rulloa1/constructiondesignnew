@@ -35,11 +35,12 @@ export const ProjectsManager = () => {
 
       if (error) throw error;
       setProjects(data || []);
-    } catch (error) {
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : 'An error occurred';
       toast({
         variant: "destructive",
         title: "Error",
-        description: error instanceof Error ? error.message : "An error occurred",
+        description: message,
       });
     } finally {
       setLoading(false);
@@ -90,11 +91,12 @@ export const ProjectsManager = () => {
         display_order: 0,
       });
       fetchProjects();
-    } catch (error) {
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : 'An error occurred';
       toast({
         variant: "destructive",
         title: "Error",
-        description: error instanceof Error ? error.message : "An error occurred",
+        description: message,
       });
     }
   };
@@ -127,11 +129,12 @@ export const ProjectsManager = () => {
         description: "Project deleted successfully",
       });
       fetchProjects();
-    } catch (error) {
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : 'An error occurred';
       toast({
         variant: "destructive",
         title: "Error",
-        description: error instanceof Error ? error.message : "An error occurred",
+        description: message,
       });
     }
   };
