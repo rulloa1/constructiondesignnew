@@ -109,18 +109,18 @@ export const HeroCarousel = ({ onExplorePortfolio }: HeroCarouselProps) => {
         <div className="flex items-center gap-12 sm:gap-20 mb-12">
           <div className="text-center">
             <span className="block font-playfair text-4xl sm:text-5xl md:text-6xl text-gold font-light">
-              19
+              $125M+
             </span>
             <span className="font-inter text-[10px] sm:text-xs tracking-[0.3em] text-white/50 uppercase">
-              Signature Projects
+              Largest Single Project
             </span>
           </div>
           <div className="text-center">
             <span className="block font-playfair text-4xl sm:text-5xl md:text-6xl text-gold font-light">
-              37
+              37+
             </span>
             <span className="font-inter text-[10px] sm:text-xs tracking-[0.3em] text-white/50 uppercase">
-              Years of Legacy
+              Years Excellence
             </span>
           </div>
         </div>
