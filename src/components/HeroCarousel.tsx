@@ -4,10 +4,10 @@ import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Import local hero images
-import alpineRanchCover from "@/assets/projects/alpine-ranch-cover.jpg";
-import bigsurCover from "@/assets/projects/bigsur-cover.jpg";
-import developmentCover from "@/assets/projects/development-cover.jpg";
-import carmelKnollsCover from "@/assets/projects/carmel-knolls-cover.jpg";
+import alpineRanchCover from "@/assets/projects/alpine-ranch-cover.webp";
+import bigsurCover from "@/assets/projects/bigsur-cover.webp";
+import developmentCover from "@/assets/projects/development-cover.webp";
+import carmelKnollsCover from "@/assets/projects/carmel-knolls-cover.webp";
 
 const heroSlides = [
   {

@@ -8,22 +8,22 @@ import { StatsSection } from "@/components/StatsSection";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 // Detail images
-import detailBronzeBase from "@/assets/details/detail-bronze-base.jpg";
-import detailBronzeHardware from "@/assets/details/detail-bronze-hardware.jpg";
-import detailFloatingVanity from "@/assets/details/detail-floating-vanity.jpg";
-import detailLeatherCabinetry from "@/assets/details/detail-leather-cabinetry.jpg";
-import detailLimestoneFireplace from "@/assets/details/detail-limestone-fireplace.jpg";
-import detailMarbleBath from "@/assets/details/detail-marble-bath.jpg";
-import detailMarbleCounter from "@/assets/details/detail-marble-counter.jpg";
-import detailOceanviewFraming from "@/assets/details/detail-oceanview-framing.jpg";
-import detailPendantLighting from "@/assets/details/detail-pendant-lighting.jpg";
-import detailProRange from "@/assets/details/detail-pro-range.jpg";
-import detailSculpturalChandelier from "@/assets/details/detail-sculptural-chandelier.jpg";
-import detailSkiStorage from "@/assets/details/detail-ski-storage.jpg";
-import detailSpaVanity from "@/assets/details/detail-spa-vanity.jpg";
-import detailTimberBeams from "@/assets/details/detail-timber-beams.jpg";
-import detailVanityNiche from "@/assets/details/detail-vanity-niche.jpg";
-import detailWallFaucet from "@/assets/details/detail-wall-faucet.jpg";
+import detailBronzeBase from "@/assets/details/detail-bronze-base.webp";
+import detailBronzeHardware from "@/assets/details/detail-bronze-hardware.webp";
+import detailFloatingVanity from "@/assets/details/detail-floating-vanity.webp";
+import detailLeatherCabinetry from "@/assets/details/detail-leather-cabinetry.webp";
+import detailLimestoneFireplace from "@/assets/details/detail-limestone-fireplace.webp";
+import detailMarbleBath from "@/assets/details/detail-marble-bath.webp";
+import detailMarbleCounter from "@/assets/details/detail-marble-counter.webp";
+import detailOceanviewFraming from "@/assets/details/detail-oceanview-framing.webp";
+import detailPendantLighting from "@/assets/details/detail-pendant-lighting.webp";
+import detailProRange from "@/assets/details/detail-pro-range.webp";
+import detailSculpturalChandelier from "@/assets/details/detail-sculptural-chandelier.webp";
+import detailSkiStorage from "@/assets/details/detail-ski-storage.webp";
+import detailSpaVanity from "@/assets/details/detail-spa-vanity.webp";
+import detailTimberBeams from "@/assets/details/detail-timber-beams.webp";
+import detailVanityNiche from "@/assets/details/detail-vanity-niche.webp";
+import detailWallFaucet from "@/assets/details/detail-wall-faucet.webp";
 
 const moodBoardImages = [
   { num: "01", image: detailSpaVanity, caption: "Spa-inspired primary suites" },

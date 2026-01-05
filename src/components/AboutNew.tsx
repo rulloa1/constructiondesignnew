@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import mikeProfile from "@/assets/michael-chandler.jpg";
+import mikeProfile from "@/assets/michael-chandler.webp";
 
 export const AboutNew = () => {
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });

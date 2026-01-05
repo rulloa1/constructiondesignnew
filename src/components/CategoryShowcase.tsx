@@ -1,11 +1,11 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import residentialImg from "@/assets/category-residential.jpg";
-import commercialImg from "@/assets/category-commercial.jpg";
-import hospitalityImg from "@/assets/category-hospitality.jpg";
-import designBuildImg from "@/assets/category-design-build.jpg";
-import pacificGroveImg from "@/assets/category-pacific-grove.jpg";
+import residentialImg from "@/assets/category-residential.webp";
+import commercialImg from "@/assets/category-commercial.webp";
+import hospitalityImg from "@/assets/category-hospitality.webp";
+import designBuildImg from "@/assets/category-design-build.webp";
+import pacificGroveImg from "@/assets/category-pacific-grove.webp";
 const categories = [{
   id: "residential",
   title: "Residential Construction",

@@ -34,41 +34,41 @@ import syracuse23 from "@/assets/projects/syracuse-23.png";
 import syracuse24 from "@/assets/projects/syracuse-24.png";
 import syracuse25 from "@/assets/projects/syracuse-25.png";
 import syracuse26 from "@/assets/projects/syracuse-26.png";
-import syracuse27 from "@/assets/projects/syracuse-27.jpg";
-import syracuse28 from "@/assets/projects/syracuse-28.jpg";
-import syracuse29 from "@/assets/projects/syracuse-29.jpg";
-import syracuse30 from "@/assets/projects/syracuse-30.jpg";
-import syracuse31 from "@/assets/projects/syracuse-31.jpg";
-import syracuse32 from "@/assets/projects/syracuse-32.jpg";
-import syracuse33 from "@/assets/projects/syracuse-33.jpg";
-import syracuse34 from "@/assets/projects/syracuse-34.jpg";
-import syracuse35 from "@/assets/projects/syracuse-35.jpg";
-import syracuse36 from "@/assets/projects/syracuse-36.jpg";
-import syracuse37 from "@/assets/projects/syracuse-37.jpg";
-import syracuse38 from "@/assets/projects/syracuse-38.jpg";
-import syracuse39 from "@/assets/projects/syracuse-39.jpg";
-import syracuse40 from "@/assets/projects/syracuse-40.jpg";
-import syracuse41 from "@/assets/projects/syracuse-41.jpg";
-import syracuse42 from "@/assets/projects/syracuse-42.jpg";
-import syracuse43 from "@/assets/projects/syracuse-43.jpg";
-import syracuse44 from "@/assets/projects/syracuse-44.jpg";
-import syracuse45 from "@/assets/projects/syracuse-45.jpg";
-import syracuse46 from "@/assets/projects/syracuse-46.jpg";
-import syracuse47 from "@/assets/projects/syracuse-47.jpg";
-import syracuse48 from "@/assets/projects/syracuse-48.jpg";
-import syracuse49 from "@/assets/projects/syracuse-49.jpg";
-import syracuse50 from "@/assets/projects/syracuse-50.jpg";
-import syracuse51 from "@/assets/projects/syracuse-51.jpg";
-import syracuse52 from "@/assets/projects/syracuse-52.jpg";
-import syracuse53 from "@/assets/projects/syracuse-53.jpg";
-import syracuse54 from "@/assets/projects/syracuse-54.jpg";
-import syracuse55 from "@/assets/projects/syracuse-55.jpg";
-import syracuse56 from "@/assets/projects/syracuse-56.jpg";
-import syracuse57 from "@/assets/projects/syracuse-57.jpg";
-import syracuse58 from "@/assets/projects/syracuse-58.jpg";
-import syracuse59 from "@/assets/projects/syracuse-59.jpg";
-import syracuse60 from "@/assets/projects/syracuse-60.jpg";
-import syracuse62 from "@/assets/projects/syracuse-62.jpg";
+import syracuse27 from "@/assets/projects/syracuse-27.webp";
+import syracuse28 from "@/assets/projects/syracuse-28.webp";
+import syracuse29 from "@/assets/projects/syracuse-29.webp";
+import syracuse30 from "@/assets/projects/syracuse-30.webp";
+import syracuse31 from "@/assets/projects/syracuse-31.webp";
+import syracuse32 from "@/assets/projects/syracuse-32.webp";
+import syracuse33 from "@/assets/projects/syracuse-33.webp";
+import syracuse34 from "@/assets/projects/syracuse-34.webp";
+import syracuse35 from "@/assets/projects/syracuse-35.webp";
+import syracuse36 from "@/assets/projects/syracuse-36.webp";
+import syracuse37 from "@/assets/projects/syracuse-37.webp";
+import syracuse38 from "@/assets/projects/syracuse-38.webp";
+import syracuse39 from "@/assets/projects/syracuse-39.webp";
+import syracuse40 from "@/assets/projects/syracuse-40.webp";
+import syracuse41 from "@/assets/projects/syracuse-41.webp";
+import syracuse42 from "@/assets/projects/syracuse-42.webp";
+import syracuse43 from "@/assets/projects/syracuse-43.webp";
+import syracuse44 from "@/assets/projects/syracuse-44.webp";
+import syracuse45 from "@/assets/projects/syracuse-45.webp";
+import syracuse46 from "@/assets/projects/syracuse-46.webp";
+import syracuse47 from "@/assets/projects/syracuse-47.webp";
+import syracuse48 from "@/assets/projects/syracuse-48.webp";
+import syracuse49 from "@/assets/projects/syracuse-49.webp";
+import syracuse50 from "@/assets/projects/syracuse-50.webp";
+import syracuse51 from "@/assets/projects/syracuse-51.webp";
+import syracuse52 from "@/assets/projects/syracuse-52.webp";
+import syracuse53 from "@/assets/projects/syracuse-53.webp";
+import syracuse54 from "@/assets/projects/syracuse-54.webp";
+import syracuse55 from "@/assets/projects/syracuse-55.webp";
+import syracuse56 from "@/assets/projects/syracuse-56.webp";
+import syracuse57 from "@/assets/projects/syracuse-57.webp";
+import syracuse58 from "@/assets/projects/syracuse-58.webp";
+import syracuse59 from "@/assets/projects/syracuse-59.webp";
+import syracuse60 from "@/assets/projects/syracuse-60.webp";
+import syracuse62 from "@/assets/projects/syracuse-62.webp";
 
 const PROJECT_ID = "syracuse-house";
 
@@ -101,41 +101,41 @@ const syracuseImages = [
   { image: syracuse24, filename: "syracuse-24.png" },
   { image: syracuse25, filename: "syracuse-25.png" },
   { image: syracuse26, filename: "syracuse-26.png" },
-  { image: syracuse27, filename: "syracuse-27.jpg" },
-  { image: syracuse28, filename: "syracuse-28.jpg" },
-  { image: syracuse29, filename: "syracuse-29.jpg" },
-  { image: syracuse30, filename: "syracuse-30.jpg" },
-  { image: syracuse31, filename: "syracuse-31.jpg" },
-  { image: syracuse32, filename: "syracuse-32.jpg" },
-  { image: syracuse33, filename: "syracuse-33.jpg" },
-  { image: syracuse34, filename: "syracuse-34.jpg" },
-  { image: syracuse35, filename: "syracuse-35.jpg" },
-  { image: syracuse36, filename: "syracuse-36.jpg" },
-  { image: syracuse37, filename: "syracuse-37.jpg" },
-  { image: syracuse38, filename: "syracuse-38.jpg" },
-  { image: syracuse39, filename: "syracuse-39.jpg" },
-  { image: syracuse40, filename: "syracuse-40.jpg" },
-  { image: syracuse41, filename: "syracuse-41.jpg" },
-  { image: syracuse42, filename: "syracuse-42.jpg" },
-  { image: syracuse43, filename: "syracuse-43.jpg" },
-  { image: syracuse44, filename: "syracuse-44.jpg" },
-  { image: syracuse45, filename: "syracuse-45.jpg" },
-  { image: syracuse46, filename: "syracuse-46.jpg" },
-  { image: syracuse47, filename: "syracuse-47.jpg" },
-  { image: syracuse48, filename: "syracuse-48.jpg" },
-  { image: syracuse49, filename: "syracuse-49.jpg" },
-  { image: syracuse50, filename: "syracuse-50.jpg" },
-  { image: syracuse51, filename: "syracuse-51.jpg" },
-  { image: syracuse52, filename: "syracuse-52.jpg" },
-  { image: syracuse53, filename: "syracuse-53.jpg" },
-  { image: syracuse54, filename: "syracuse-54.jpg" },
-  { image: syracuse55, filename: "syracuse-55.jpg" },
-  { image: syracuse56, filename: "syracuse-56.jpg" },
-  { image: syracuse57, filename: "syracuse-57.jpg" },
-  { image: syracuse58, filename: "syracuse-58.jpg" },
-  { image: syracuse59, filename: "syracuse-59.jpg" },
-  { image: syracuse60, filename: "syracuse-60.jpg" },
-  { image: syracuse62, filename: "syracuse-62.jpg" },
+  { image: syracuse27, filename: "syracuse-27.webp" },
+  { image: syracuse28, filename: "syracuse-28.webp" },
+  { image: syracuse29, filename: "syracuse-29.webp" },
+  { image: syracuse30, filename: "syracuse-30.webp" },
+  { image: syracuse31, filename: "syracuse-31.webp" },
+  { image: syracuse32, filename: "syracuse-32.webp" },
+  { image: syracuse33, filename: "syracuse-33.webp" },
+  { image: syracuse34, filename: "syracuse-34.webp" },
+  { image: syracuse35, filename: "syracuse-35.webp" },
+  { image: syracuse36, filename: "syracuse-36.webp" },
+  { image: syracuse37, filename: "syracuse-37.webp" },
+  { image: syracuse38, filename: "syracuse-38.webp" },
+  { image: syracuse39, filename: "syracuse-39.webp" },
+  { image: syracuse40, filename: "syracuse-40.webp" },
+  { image: syracuse41, filename: "syracuse-41.webp" },
+  { image: syracuse42, filename: "syracuse-42.webp" },
+  { image: syracuse43, filename: "syracuse-43.webp" },
+  { image: syracuse44, filename: "syracuse-44.webp" },
+  { image: syracuse45, filename: "syracuse-45.webp" },
+  { image: syracuse46, filename: "syracuse-46.webp" },
+  { image: syracuse47, filename: "syracuse-47.webp" },
+  { image: syracuse48, filename: "syracuse-48.webp" },
+  { image: syracuse49, filename: "syracuse-49.webp" },
+  { image: syracuse50, filename: "syracuse-50.webp" },
+  { image: syracuse51, filename: "syracuse-51.webp" },
+  { image: syracuse52, filename: "syracuse-52.webp" },
+  { image: syracuse53, filename: "syracuse-53.webp" },
+  { image: syracuse54, filename: "syracuse-54.webp" },
+  { image: syracuse55, filename: "syracuse-55.webp" },
+  { image: syracuse56, filename: "syracuse-56.webp" },
+  { image: syracuse57, filename: "syracuse-57.webp" },
+  { image: syracuse58, filename: "syracuse-58.webp" },
+  { image: syracuse59, filename: "syracuse-59.webp" },
+  { image: syracuse60, filename: "syracuse-60.webp" },
+  { image: syracuse62, filename: "syracuse-62.webp" },
 ];
 
 export const UploadSyracuseImages = () => {

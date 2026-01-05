@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 // Import local images
-import carmel1Cover from "@/assets/projects/carmel-1-cover.jpg";
-import carmelValleyNewCover from "@/assets/projects/carmel-valley-new-cover.jpg";
-import coastalRestorationCover from "@/assets/projects/coastal-restoration-cover.jpg";
-import civilCover from "@/assets/projects/civil-cover.jpg";
+import carmel1Cover from "@/assets/projects/carmel-1-cover.webp";
+import carmelValleyNewCover from "@/assets/projects/carmel-valley-new-cover.webp";
+import coastalRestorationCover from "@/assets/projects/coastal-restoration-cover.webp";
+import civilCover from "@/assets/projects/civil-cover.webp";
 
 const featuredProjects = [
   {
