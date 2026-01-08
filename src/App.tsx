@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 // Lazy load all route components for better code splitting
 const Index = lazy(() => import("./pages/Index"));
@@ -79,9 +80,11 @@ const App: React.FC = () => {
           <TooltipProvider>
             <Toaster />
             <Sonner />
-            <Suspense fallback={<PageLoader />}>
-              <RouterProvider router={router} future={{ v7_startTransition: true }} />
-            </Suspense>
+            <ErrorBoundary>
+              <Suspense fallback={<PageLoader />}>
+                <RouterProvider router={router} future={{ v7_startTransition: true }} />
+              </Suspense>
+            </ErrorBoundary>
           </TooltipProvider>
         </AuthProvider>
       </ThemeProvider>

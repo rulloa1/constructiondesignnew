@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { supabase } from "@/integrations/supabase/client";
 import { Loader2 } from "lucide-react";
 import { ProjectGallery } from "./ProjectGallery";
+import { useProjectsByCategory } from "@/hooks/useProjectsByCategory";
 
 interface ProjectImage {
   id: string;
@@ -18,67 +18,28 @@ interface Project {
   rotation_angle?: number;
   images?: ProjectImage[];
 }
+
 export const InteriorDesignShowcase = () => {
-  const [architectureProjects, setArchitectureProjects] = useState<Project[]>([]);
-  const [interiorProjects, setInteriorProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
+  const { projects: architectureProjects, loading: archLoading } = useProjectsByCategory("Architecture");
+  const { projects: interiorProjects, loading: intLoading } = useProjectsByCategory("Interiors");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [galleryOpen, setGalleryOpen] = useState(false);
-  useEffect(() => {
-    fetchProjects();
-  }, []);
-  const fetchProjects = async () => {
-    try {
-      // Fetch Architecture projects
-      const {
-        data: archData,
-        error: archError
-      } = await supabase.from("projects").select("*").eq("category", "Architecture").order("display_order");
-      if (archError) throw archError;
 
-      // Fetch Interior projects
-      const {
-        data: intData,
-        error: intError
-      } = await supabase.from("projects").select("*").eq("category", "Interiors").order("display_order");
-      if (intError) throw intError;
+  const loading = archLoading || intLoading;
 
-      const archWithImages = await Promise.all((archData || []).map(async project => {
-        const {
-          data: allImages
-        } = await supabase.from("project_images").select("id, image_url, rotation_angle").eq("project_id", project.id).order("display_order");
-        const images = allImages || [];
-        return {
-          ...project,
-          image_url: images[0]?.image_url,
-          rotation_angle: images[0]?.rotation_angle || 0,
-          images: images
-        };
-      }));
-
-      const intWithImages = await Promise.all((intData || []).map(async project => {
-        const {
-          data: allImages
-        } = await supabase.from("project_images").select("id, image_url, rotation_angle").eq("project_id", project.id).order("display_order");
-        const images = allImages || [];
-        return {
-          ...project,
-          image_url: images[0]?.image_url,
-          rotation_angle: images[0]?.rotation_angle || 0,
-          images: images
-        };
-      }));
-
-      setArchitectureProjects(archWithImages);
-      setInteriorProjects(intWithImages);
-    } catch (error) {
-      console.error("Error fetching projects:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
   const handleProjectClick = (project: Project) => {
-    setSelectedProject(project);
+    // Map the images to the expected format if needed, but the hook already provides images array
+    // We just need to ensure the types match what ProjectGallery expects
+    const galleryImages = project.images?.map(img => ({
+      id: img.id,
+      image_url: img.image_url,
+      rotation_angle: img.rotation_angle || 0
+    })) || [];
+
+    setSelectedProject({
+      ...project,
+      images: galleryImages
+    });
     setGalleryOpen(true);
   };
 
