@@ -22,7 +22,9 @@ export class ErrorBoundary extends React.Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error("Error caught by boundary:", error, errorInfo);
+    if (import.meta.env.DEV) {
+      console.error("Error caught by boundary:", error, errorInfo);
+    }
   }
 
   render() {
@@ -56,7 +58,9 @@ export class ErrorBoundary extends React.Component<Props, State> {
 
 export function RouteErrorElement() {
   const error = useRouteError();
-  console.error("Route error caught by boundary:", error);
+  if (import.meta.env.DEV) {
+    console.error("Route error caught by boundary:", error);
+  }
 
   let errorMessage = "An unexpected error occurred.";
   if (isRouteErrorResponse(error)) {

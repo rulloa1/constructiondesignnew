@@ -58,7 +58,7 @@ export const NumberedGallery = ({ images: externalImages, projectTitle, projectI
           const fileName = `${projectId}/${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
           const { error: uploadError } = await supabase.storage.from("project-gallery").upload(fileName, file);
           if (!uploadError) { const { data } = supabase.storage.from("project-gallery").getPublicUrl(fileName); publicUrl = data.publicUrl; }
-        } catch (err) { console.warn("Upload failed, using local URL", err); }
+        } catch (err) { if (import.meta.env.DEV) { console.warn("Upload failed, using local URL", err); } }
       }
       if (!publicUrl) publicUrl = URL.createObjectURL(file);
       const newImages = [...images]; newImages[index] = publicUrl;

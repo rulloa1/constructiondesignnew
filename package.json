@@ -10,7 +10,8 @@
     "lint": "cross-env NODE_OPTIONS='--disable-proto=delete' eslint .",
     "preview": "cross-env NODE_OPTIONS='--disable-proto=delete' vite preview",
     "generate-favicons": "cross-env NODE_OPTIONS='--disable-proto=delete' node scripts/generate-favicons.js",
-    "fix-cover-rotation": "node scripts/fix-cover-photo-rotation.js"
+    "fix-cover-rotation": "node scripts/fix-cover-photo-rotation.js",
+    "compress-images": "node scripts/compress-images.js"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
@@ -46,6 +47,7 @@
     "@radix-ui/react-tooltip": "^1.2.7",
     "@splinetool/react-spline": "^4.1.0",
     "@splinetool/runtime": "^1.12.58",
+    "@studio-freight/lenis": "^1.0.42",
     "@supabase/supabase-js": "^2.75.0",
     "@tanstack/react-query": "^5.83.0",
     "class-variance-authority": "^0.7.1",
@@ -54,6 +56,7 @@
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.37.0",
+    "gsap": "^3.14.2",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.462.0",
     "next-themes": "^0.3.0",
@@ -66,6 +69,7 @@
     "react-router-dom": "^6.30.3",
     "recharts": "^2.15.4",
     "sonner": "^1.7.4",
+    "split-type": "^0.3.4",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.9",

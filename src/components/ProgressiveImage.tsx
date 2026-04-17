@@ -54,7 +54,9 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
         setThumbDataUrl(dataUrl);
       } catch (e) {
         // CORS or other error - just skip thumbnail
-        console.warn("Could not generate thumbnail:", e);
+        if (import.meta.env.DEV) {
+          console.warn("Could not generate thumbnail:", e);
+        }
       }
     };
 

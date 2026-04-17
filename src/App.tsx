@@ -21,6 +21,7 @@ const DesignDetail = lazy(() => import("./pages/DesignDetail"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Services = lazy(() => import("./pages/Services"));
 const Contact = lazy(() => import("./pages/Contact"));
+const StrategicExecution = lazy(() => import("./pages/StrategicExecution"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Loading fallback component
@@ -72,6 +73,10 @@ const routes = [
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/strategic-execution",
+    element: <StrategicExecution />,
   },
   {
     path: "/design",
