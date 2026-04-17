@@ -421,6 +421,71 @@ export const projects: Project[] = [
         { url: civil10, alt: "Civil Development Project 10" },
     ],
   },
+  {
+    id: "miami-beach-condo",
+    title: "S. Florida High Rise Luxe Condo",
+    description: "The existing beautiful stone floors were the foundation from which color was added through bespoke millwork. This special residence was renovated using specially sourced wood, smart home technology, and a millwork company specializing in the most prestigious hotels & resorts in the world. All work was performed at the height of the pandemic with no delays.",
+    location: "Miami Beach, FL",
+    year: "2021",
+    category: "Custom Homes",
+    coverImage: lagunaGrandeCover,
+    images: [
+      { url: lagunaGrande1, alt: "S. Florida High Rise Condo 1" },
+      { url: lagunaGrande2, alt: "S. Florida High Rise Condo 2" },
+    ],
+  },
+  {
+    id: "montana-condo",
+    title: "Mountain Mid-Rise Luxe Condo",
+    description: "In just eight months, this 2,800 sq ft condo was reimagined as a sophisticated mountain retreat. Featuring spa-inspired bathrooms with heated floors, a Calacatta marble palette, full-slab marble walls, warm wood accents, and hand-applied wall and ceiling finishes that balance modern living with mountain tranquility.",
+    location: "Montana",
+    year: "2022",
+    category: "Custom Homes",
+    coverImage: alpineRanchCover,
+    images: [
+      { url: alpineRanch1, alt: "Mountain Mid-Rise Condo 1" },
+      { url: alpineRanch2, alt: "Mountain Mid-Rise Condo 2" },
+    ],
+  },
+  {
+    id: "carmel-house-2",
+    title: "Carmel Forest to Ocean View",
+    description: "A celebration of its stunning location — a coastal home that harmonizes with the natural beauty of the Carmel coastline. Refined craftsmanship and thoughtful design create a space that feels both luxurious and deeply connected to its environment.",
+    location: "Carmel, CA",
+    year: "2020",
+    category: "Custom Homes",
+    coverImage: carmelKnollsCover,
+    images: [
+      { url: carmelKnolls1, alt: "Carmel Forest to Ocean View 1" },
+      { url: carmelKnolls2, alt: "Carmel Forest to Ocean View 2" },
+    ],
+  },
+  {
+    id: "bahamas-beachfront-estate",
+    title: "Bahamas Beachfront Estate",
+    description: "A 2.5-acre beachfront estate with a 6,800 sq ft main residence embodying luxury Caribbean living. Features 180 feet of private beach frontage, Category 5 hurricane-resistant construction, infinity pool, guest cottage, dock facilities, solar power backup, and rainwater collection systems.",
+    location: "Abaco, Bahamas",
+    year: "2020",
+    category: "International",
+    coverImage: abacoCover,
+    images: [
+      { url: abaco1, alt: "Bahamas Beachfront Estate 1" },
+    ],
+  },
+  {
+    id: "hillside-environmental-restoration",
+    title: "Hillside Restoration & Environmental Cleanup",
+    description: "A complex environmental restoration project addressing hillside stabilization and ecological cleanup. Combined heavy civil work with native habitat restoration to preserve a sensitive coastal site for future generations.",
+    location: "California",
+    year: "2019",
+    category: "Renovations",
+    coverImage: coastalRestorationCover,
+    images: [
+      { url: coastalRestoration1, alt: "Hillside Restoration 1" },
+      { url: coastalRestoration2, alt: "Hillside Restoration 2" },
+      { url: coastalRestoration3, alt: "Hillside Restoration 3" },
+    ],
+  },
 ];
 
 // Helper to get featured projects
