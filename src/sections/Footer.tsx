@@ -118,6 +118,14 @@ export const Footer = ({ onPortfolioClick }: FooterProps) => {
                                 </div>
                             </li>
                         </ul>
+
+                        {/* Regions Served */}
+                        <div className="mt-10 pt-8 border-t border-white/[0.04]">
+                            <p className="text-[9px] uppercase tracking-[0.3em] text-white/15 mb-3">Regions Served</p>
+                            <p className="font-inter text-[11px] tracking-[0.2em] text-white/40 font-light">
+                                CA • Bahamas • TX • MT • UT • FL
+                            </p>
+                        </div>
                     </div>
                 </div>
 
