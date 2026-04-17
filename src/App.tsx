@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { ThemeProvider } from "@/components/ThemeProvider";
+console.log("Application starting...");
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";

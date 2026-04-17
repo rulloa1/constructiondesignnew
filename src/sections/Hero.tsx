@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getPlaceholderImage } from "@/lib/images";
-
 const heroSlides = [
     {
         image: getPlaceholderImage("alpine-ranch-hero", "architecture"),
