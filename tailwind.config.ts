@@ -15,8 +15,13 @@ export default {
     },
     extend: {
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        playfair: ['Playfair Display', 'serif'],
+        // Body sans
+        inter: ['Montserrat', 'Inter', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        // Display serif
+        playfair: ['"Cormorant Garamond"', 'Playfair Display', 'serif'],
+        cormorant: ['"Cormorant Garamond"', 'serif'],
+        serif: ['"Cormorant Garamond"', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
