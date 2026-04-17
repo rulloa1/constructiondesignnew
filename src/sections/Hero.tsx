@@ -29,6 +29,13 @@ interface HeroProps {
 export const Hero = ({ onExplorePortfolio }: HeroProps) => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => setScrolled(window.scrollY > 80);
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const nextSlide = useCallback(() => {
         if (isTransitioning) return;
@@ -188,9 +195,14 @@ export const Hero = ({ onExplorePortfolio }: HeroProps) => {
             </div>
 
             {/* Scroll indicator */}
-            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 hidden md:flex flex-col items-center gap-3 animate-in fade-in duration-1000 delay-[2000ms] fill-mode-both">
-                <span className="font-inter text-[9px] tracking-[0.4em] text-white/30 uppercase">Scroll</span>
-                <div className="w-px h-10 bg-gradient-to-b from-white/30 to-transparent animate-pulse" />
+            <div
+                className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-3 animate-in fade-in duration-1000 delay-[2000ms] fill-mode-both transition-opacity duration-700"
+                style={{ opacity: scrolled ? 0 : 1, pointerEvents: "none" }}
+            >
+                <span className="font-inter text-[9px] tracking-[0.4em] text-white/40 uppercase">Scroll</span>
+                <div className="relative w-5 h-8 border border-white/20 rounded-full flex justify-center pt-1">
+                    <div className="w-1 h-1.5 bg-gold rounded-full animate-bounce" />
+                </div>
             </div>
 
             {/* Bottom gradient for seamless transition */}
@@ -198,3 +210,4 @@ export const Hero = ({ onExplorePortfolio }: HeroProps) => {
         </section>
     );
 };
+
