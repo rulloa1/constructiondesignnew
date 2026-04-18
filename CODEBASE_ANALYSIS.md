@@ -1,3 +1,6 @@
+---
+layout: null
+---
 # Codebase Analysis & Improvement Recommendations
 
 **Generated**: 2025-12-13
