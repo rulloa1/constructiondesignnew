@@ -111,9 +111,10 @@ const ProjectDetail = () => {
   }, [id]);
 
   const hasStaticImages = project?.images && Array.isArray(project.images) && project.images.length > 0;
-  // Accept absolute URLs (http/https) AND relative paths (e.g. /projects/foo.webp)
+  // Only accept absolute URLs (http/https). Legacy relative paths like /projects/*.webp
+  // point to files that don't exist in /public, so we filter them out to avoid 404s.
   const isValidImageUrl = (url: string | null | undefined): url is string =>
-    !!url && (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('/'));
+    !!url && (url.startsWith('http://') || url.startsWith('https://'));
 
   const validDbImages = useMemo(
     () => dbImages.filter(img => isValidImageUrl(img.image_url)),
