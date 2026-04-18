@@ -111,19 +111,26 @@ const ProjectDetail = () => {
   }, [id]);
 
   const hasStaticImages = project?.images && Array.isArray(project.images) && project.images.length > 0;
-  const allImages = useMemo(() => {
-    if (hasStaticImages && project?.images) {
-      // Handle both string and object image formats
-      return project.images
-        .filter(img => img != null)
-        .map(img => typeof img === 'string' ? img : img.url);
-    }
-    const validDbImages = dbImages.filter(img => img.image_url && (img.image_url.startsWith('http') || img.image_url.startsWith('https://')));
-    if (validDbImages.length > 0) return validDbImages.map(img => img.image_url);
-    return [];
-  }, [hasStaticImages, project?.images, dbImages]);
+  // Accept absolute URLs (http/https) AND relative paths (e.g. /projects/foo.webp)
+  const isValidImageUrl = (url: string | null | undefined): url is string =>
+    !!url && (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('/'));
 
-  const validDbImages = dbImages.filter(img => img.image_url && (img.image_url.startsWith('http') || img.image_url.startsWith('https://')));
+  const validDbImages = useMemo(
+    () => dbImages.filter(img => isValidImageUrl(img.image_url)),
+    [dbImages]
+  );
+
+  const allImages = useMemo(() => {
+    const staticUrls = hasStaticImages && project?.images
+      ? project.images
+          .filter(img => img != null)
+          .map(img => typeof img === 'string' ? img : img.url)
+      : [];
+    const dbUrls = validDbImages.map(img => img.image_url);
+    // Merge static + DB images, de-duplicating by URL
+    const merged = [...staticUrls, ...dbUrls];
+    return Array.from(new Set(merged));
+  }, [hasStaticImages, project?.images, validDbImages]);
 
   const getImageLabel = (imageUrl: string, index: number): string | null => {
     const dbImage = validDbImages.find(img => img.image_url === imageUrl);
