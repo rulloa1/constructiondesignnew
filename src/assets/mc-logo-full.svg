@@ -1,0 +1,22 @@
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Placeholder Full Logo - Replace with your actual logo -->
+  <g>
+    <!-- MC Letters -->
+    <text x="50" y="120" font-family="serif" font-size="100" font-weight="600" fill="#D4AF37">
+      MC
+    </text>
+    
+    <!-- Divider -->
+    <line x1="280" y1="50" x2="280" y2="150" stroke="#D4AF37" stroke-width="2"/>
+    
+    <!-- MICHAEL CHANDLER -->
+    <text x="310" y="90" font-family="sans-serif" font-size="36" font-weight="400" fill="#4A4A4A">
+      MICHAEL CHANDLER
+    </text>
+    
+    <!-- DESIGN | BUILD | ELEVATE -->
+    <text x="310" y="130" font-family="sans-serif" font-size="18" font-weight="300" fill="#888888" letter-spacing="2">
+      DESIGN | BUILD | ELEVATE
+    </text>
+  </g>
+</svg>

@@ -4,13 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import logoMonogram from "@/assets/mc-logo-monogram.svg";
 
-// Text-based logo component
-const LogoText = ({ className = "" }: { className?: string }) => (
-  <span className={`font-playfair text-2xl font-semibold tracking-tight ${className}`}>
-    <span className="text-gold">MC</span>
-    <span className="text-white/80 font-light ml-1">Design</span>
-  </span>
+// Logo component using the MC monogram
+const Logo = ({ className = "" }: { className?: string }) => (
+  <img 
+    src={logoMonogram} 
+    alt="MC - Michael Chandler" 
+    className={`h-10 w-auto ${className}`}
+  />
 );
 
 const navigation = [
@@ -37,8 +39,10 @@ export const Header = React.memo(() => {
   const handleSmoothScroll = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string, itemName: string) => {
     if (itemName === "Portfolio") {
       e.preventDefault();
-      if (location.pathname === "/" && onPortfolioClick) {
-        onPortfolioClick();
+      if (location.pathname === "/") {
+        // Already on home page, just scroll to portfolio section
+        const portfolioSection = document.getElementById('portfolio');
+        portfolioSection?.scrollIntoView({ behavior: 'smooth' });
       } else {
         navigate("/", { state: { openPortfolio: true } });
       }
@@ -90,7 +94,7 @@ export const Header = React.memo(() => {
       <nav className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center group">
-            <LogoText className="transition-all duration-300 group-hover:scale-110" />
+            <Logo className="transition-all duration-300 group-hover:scale-110" />
           </Link>
 
           {/* Desktop Navigation */}

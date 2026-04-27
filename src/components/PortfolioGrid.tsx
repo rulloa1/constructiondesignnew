@@ -105,25 +105,25 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = React.memo(({ onClose
           </div>
 
           {/* Category Navigation */}
-          <nav className="pb-3 md:pb-4 border-b border-charcoal/10 -mx-4 px-4 overflow-x-auto scrollbar-hide">
-            <div className="flex justify-center gap-4 md:gap-8 min-w-max">
+          <nav className="pb-2 md:pb-3 lg:pb-4 border-b border-charcoal/10 -mx-3 sm:-mx-4 px-3 sm:px-4 overflow-x-auto scrollbar-hide">
+            <div className="flex justify-start sm:justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 min-w-max sm:min-w-fit">
               {categories.map((category) => {
                 const isActive = selectedCategory === category;
                 return (
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`relative pb-2 font-inter text-[10px] md:text-xs tracking-[0.15em] uppercase transition-all duration-300 whitespace-nowrap ${isActive
+                    className={`relative pb-2 font-inter text-[9px] sm:text-[10px] md:text-xs lg:text-xs tracking-[0.12em] sm:tracking-[0.15em] uppercase transition-all duration-300 whitespace-nowrap hover:text-charcoal/80 ${isActive
                       ? "text-gold font-medium"
-                      : "text-charcoal/50 hover:text-charcoal/80"
+                      : "text-charcoal/50"
                       }`}
                   >
-                    <span>
+                    <span className="flex items-center gap-1">
                       {category}
-                      <span className="ml-1.5 opacity-60">({getCategoryCount(category)})</span>
+                      <span className="opacity-60 text-[7px] sm:text-[9px]">({getCategoryCount(category)})</span>
                     </span>
                     {isActive && (
-                      <span className="absolute inset-x-0 -bottom-[1px] h-[2px] bg-gold rounded-full" />
+                      <span className="absolute inset-x-0 -bottom-[1px] h-[2px] bg-gold rounded-full transition-all duration-300" />
                     )}
                   </button>
                 );
@@ -134,40 +134,50 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = React.memo(({ onClose
       </header>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-8 md:py-12">
-        {/* Category breadcrumb - shows when specific category selected */}
-        {selectedCategory !== "All" && (
-          <div className="mb-6 md:mb-8">
-            <Button
-              onClick={() => setSelectedCategory("All")}
-              variant="ghost"
-              size="sm"
-              className="text-charcoal/60 hover:text-charcoal hover:bg-charcoal/5 font-inter text-xs gap-1.5 -ml-2"
-            >
-              <ArrowLeft className="h-3 w-3" />
-              All Projects
-            </Button>
+      <div className="w-full py-8 md:py-12 lg:py-16">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 2xl:px-0">
+          {/* Category breadcrumb - shows when specific category selected */}
+          {selectedCategory !== "All" && (
+            <div className="mb-6 md:mb-8 lg:mb-10">
+              <Button
+                onClick={() => setSelectedCategory("All")}
+                variant="ghost"
+                size="sm"
+                className="text-charcoal/60 hover:text-charcoal hover:bg-charcoal/5 font-inter text-xs gap-1.5 -ml-2"
+              >
+                <ArrowLeft className="h-3 w-3" />
+                All Projects
+              </Button>
+            </div>
+          )}
+
+          {/* Projects grid - Improved responsive layout */}
+          <div className="grid gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-7 2xl:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+            {filteredProjects.map((project, index) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={index}
+              />
+            ))}
           </div>
-        )}
 
-        {/* Projects grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-6 lg:gap-7 xl:gap-8">
-          {filteredProjects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              categoryColor={categoryColors[project.category]}
-              index={index}
-            />
-          ))}
-        </div>
+          {/* Empty state */}
+          {filteredProjects.length === 0 && (
+            <div className="flex flex-col items-center justify-center py-16 md:py-24">
+              <p className="font-inter text-charcoal/60 text-base md:text-lg">
+                No projects found in this category.
+              </p>
+            </div>
+          )}
 
-        {/* Bottom decoration */}
-        <div className="mt-20 mb-8 text-center">
-          <div className="h-px w-24 bg-gradient-to-r from-transparent via-gold/40 to-transparent mx-auto" />
-          <p className="mt-6 font-inter text-xs text-charcoal/40 tracking-wider uppercase">
-            {filteredProjects.length} {filteredProjects.length === 1 ? 'Project' : 'Projects'}
-          </p>
+          {/* Bottom decoration */}
+          <div className="mt-16 md:mt-20 lg:mt-24 mb-8 text-center">
+            <div className="h-px w-24 bg-gradient-to-r from-transparent via-gold/40 to-transparent mx-auto" />
+            <p className="mt-6 font-inter text-xs text-charcoal/40 tracking-wider uppercase">
+              {filteredProjects.length} {filteredProjects.length === 1 ? 'Project' : 'Projects'}
+            </p>
+          </div>
         </div>
       </div>
     </div>

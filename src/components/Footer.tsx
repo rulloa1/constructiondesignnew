@@ -1,13 +1,15 @@
 import React, { useMemo, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { AtSign, Smartphone, Navigation } from "lucide-react";
+import logoFull from "@/assets/mc-logo-full.svg";
 
-// Text-based logo component
-const LogoText = ({ className = "" }: { className?: string }) => (
-  <span className={`font-playfair text-2xl font-semibold tracking-tight ${className}`}>
-    <span className="text-gold">MC</span>
-    <span className="text-cream/80 font-light ml-1">Design</span>
-  </span>
+// Logo component using the full brand logo
+const Logo = ({ className = "" }: { className?: string }) => (
+  <img 
+    src={logoFull} 
+    alt="Michael Chandler - Design | Build | Elevate" 
+    className={`h-16 w-auto ${className}`}
+  />
 );
 
 export const Footer = React.memo(() => {
@@ -38,7 +40,7 @@ export const Footer = React.memo(() => {
           {/* Left Column - Brand */}
           <div>
             <div className="mb-4 sm:mb-5">
-              <LogoText className="block mb-3" />
+              <Logo className="block mb-3" />
               <p className="text-cream/80 text-sm sm:text-base font-inter mb-4 leading-relaxed">
                 Fine Construction & Design
               </p>

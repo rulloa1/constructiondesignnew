@@ -43,12 +43,12 @@ import alpineRanch9 from "@/assets/projects/alpine-ranch-9.webp";
 import alpineRanch10 from "@/assets/projects/alpine-ranch-10.webp";
 
 import hospitalityPoolCover from "@/assets/projects/pool-design-cover.webp";
-import hospitalityPool1 from "@/assets/projects/pool-design-1.png";
-import hospitalityPool2 from "@/assets/projects/pool-design-2.png";
-import hospitalityPool3 from "@/assets/projects/pool-design-3.png";
-import hospitalityPool4 from "@/assets/projects/pool-design-4.png";
-import hospitalityPool5 from "@/assets/projects/pool-design-5.png";
-import hospitalityPool6 from "@/assets/projects/pool-design-6.png";
+import hospitalityPool1 from "@/assets/projects/pool-design-1.webp";
+import hospitalityPool2 from "@/assets/projects/pool-design-2.webp";
+import hospitalityPool3 from "@/assets/projects/pool-design-3.webp";
+import hospitalityPool4 from "@/assets/projects/pool-design-4.webp";
+import hospitalityPool5 from "@/assets/projects/pool-design-5.webp";
+import hospitalityPool6 from "@/assets/projects/pool-design-6.webp";
 
 import northFloridaCover from "@/assets/projects/north-florida-cover.webp";
 import northFlorida1 from "@/assets/projects/north-florida-1.webp";

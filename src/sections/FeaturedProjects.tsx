@@ -30,50 +30,51 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                 </span>
             </div>
 
-            <div className="container mx-auto px-6 lg:px-12 relative z-10">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 lg:mb-28 gap-12">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 2xl:px-0 relative z-10">
+                {/* Header Section */}
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 lg:gap-12 mb-16 md:mb-20 lg:mb-28">
                     <div
-                        className={`max-w-2xl transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+                        className={`max-w-3xl transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                             }`}
                     >
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="w-12 h-px bg-gold" />
-                            <p className="font-inter text-[10px] tracking-[0.5em] text-gold uppercase">
+                        <div className="flex items-center gap-3 sm:gap-4 mb-6">
+                            <div className="w-8 sm:w-12 h-px bg-gold" />
+                            <p className="font-inter text-[9px] sm:text-[10px] tracking-[0.4em] sm:tracking-[0.5em] text-gold uppercase">
                                 Selected Works
                             </p>
                         </div>
-                        <h2 className="font-playfair text-5xl lg:text-7xl text-charcoal font-extralight leading-[1.05]">
+                        <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-charcoal font-extralight leading-[1.1]">
                             Crafting Legacy Through{" "}
                             <span className="italic text-charcoal/40 block sm:inline">Visionary Design</span>
                         </h2>
                     </div>
 
                     <div
-                        className={`transition-all duration-1000 delay-500 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+                        className={`transition-all duration-1000 delay-500 ease-out flex-shrink-0 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                             }`}
                     >
                         <Button
                             variant="outline"
                             onClick={onViewAllClick}
-                            className="h-16 border-charcoal/10 text-charcoal hover:bg-charcoal hover:text-white group px-14 rounded-none uppercase text-[10px] tracking-[0.3em] font-inter transition-all duration-500"
+                            className="h-12 md:h-14 lg:h-16 border-charcoal/10 text-charcoal hover:bg-charcoal hover:text-white group px-6 md:px-10 lg:px-14 rounded-none uppercase text-[8px] md:text-[9px] lg:text-[10px] tracking-[0.3em] font-inter transition-all duration-500"
                         >
                             View Full Portfolio
-                            <ArrowRight className="ml-3 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            <ArrowRight className="ml-2 md:ml-3 h-3.5 w-3.5 md:h-4 md:w-4 transition-transform group-hover:translate-x-1" />
                         </Button>
                     </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+                {/* Projects Grid - Responsive */}
+                <div className="grid gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
                     {featuredProjects.map((project, index) => (
                         <div
                             key={project.id}
-                            className={`transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+                            className={`transition-all duration-1000 ease-out transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
                                 }`}
-                            style={{ transitionDelay: `${(index + 2) * 200}ms` }}
+                            style={{ transitionDelay: `${(index + 2) * 150}ms` }}
                         >
                             <ProjectCard
                                 project={project}
-                                categoryColor="gold"
                                 index={index}
                             />
                         </div>

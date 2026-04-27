@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
+import logoFull from "@/assets/mc-logo-full.svg";
 
-// Text-based logo component
-const LogoText = ({ className = "" }: { className?: string }) => (
-  <span className={`font-playfair text-2xl font-semibold tracking-tight ${className}`}>
-    <span className="text-gold">MC</span>
-    <span className="text-white/80 font-light ml-1">Design</span>
-  </span>
+// Logo component using the full brand logo
+const Logo = ({ className = "" }: { className?: string }) => (
+  <img 
+    src={logoFull} 
+    alt="Michael Chandler - Design | Build | Elevate" 
+    className={`h-16 w-auto ${className}`}
+  />
 );
 
 interface FooterProps {
@@ -26,7 +28,7 @@ export const Footer = ({ onPortfolioClick }: FooterProps) => {
                     {/* Brand Column */}
                     <div className="lg:col-span-2">
                         <Link to="/" className="inline-block mb-10 group">
-                            <LogoText className="transition-all duration-500 group-hover:brightness-110" />
+                            <Logo className="transition-all duration-500 group-hover:brightness-110" />
                         </Link>
                         <p className="font-inter text-white/35 text-[15px] font-light leading-[1.85] max-w-md mb-10">
                             Strategic Construction Leader with over 37 years of experience steering
