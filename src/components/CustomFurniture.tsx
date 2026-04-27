@@ -1,8 +1,9 @@
 import { useProjectsByCategory } from "@/hooks/useProjectsByCategory";
 import { Card, CardContent } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
+import { memo } from "react";
 
-export const CustomFurniture = () => {
+export const CustomFurniture = memo(() => {
   const { projects, loading } = useProjectsByCategory("Custom Furniture");
 
   return (
@@ -61,4 +62,6 @@ export const CustomFurniture = () => {
       </div>
     </section>
   );
-};
+});
+
+CustomFurniture.displayName = "CustomFurniture";

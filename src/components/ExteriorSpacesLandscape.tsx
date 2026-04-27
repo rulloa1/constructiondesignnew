@@ -1,8 +1,9 @@
 import { useProjectsByCategory } from "@/hooks/useProjectsByCategory";
 import { Card, CardContent } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
+import { memo } from "react";
 
-export const ExteriorSpacesLandscape = () => {
+export const ExteriorSpacesLandscape = memo(() => {
   const { projects, loading } = useProjectsByCategory("Pools");
 
   return (
@@ -70,4 +71,6 @@ export const ExteriorSpacesLandscape = () => {
       </div>
     </section>
   );
-};
+});
+
+ExteriorSpacesLandscape.displayName = "ExteriorSpacesLandscape";

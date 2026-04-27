@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { DecorativeSeparator } from "@/components/DecorativeSeparator";
 
-interface AboutProps {
-  onPortfolioClick?: () => void;
-}
-
-export const About = ({ onPortfolioClick }: AboutProps) => {
+export const About = () => {
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
   const { elementRef: contentRef, isVisible: contentVisible } = useScrollAnimation({ threshold: 0.15 });
 

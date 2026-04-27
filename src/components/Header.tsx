@@ -20,11 +20,7 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
-interface HeaderProps {
-  onPortfolioClick?: () => void;
-}
-
-export const Header = React.memo(({ onPortfolioClick }: HeaderProps) => {
+export const Header = React.memo(() => {
   const navigate = useNavigate();
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
@@ -81,7 +77,7 @@ export const Header = React.memo(({ onPortfolioClick }: HeaderProps) => {
         behavior: 'smooth'
       });
     }
-  }, [onPortfolioClick, navigate, location]);
+  }, [navigate, location]);
 
   return (
     <header className={`

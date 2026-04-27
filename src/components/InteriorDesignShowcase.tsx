@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 import { ProjectGallery } from "./ProjectGallery";
@@ -19,7 +19,7 @@ interface Project {
   images?: ProjectImage[];
 }
 
-export const InteriorDesignShowcase = () => {
+export const InteriorDesignShowcase = memo(() => {
   const { projects: architectureProjects, loading: archLoading } = useProjectsByCategory("Architecture");
   const { projects: interiorProjects, loading: intLoading } = useProjectsByCategory("Interiors");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -126,4 +126,6 @@ export const InteriorDesignShowcase = () => {
 
     {selectedProject && <ProjectGallery open={galleryOpen} onOpenChange={setGalleryOpen} projectTitle={selectedProject.title} images={selectedProject.images || []} />}
   </>;
-};
+});
+
+InteriorDesignShowcase.displayName = "InteriorDesignShowcase";

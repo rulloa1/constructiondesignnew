@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 import { ProjectGallery } from "./ProjectGallery";
@@ -19,7 +19,7 @@ interface Project {
   images?: ProjectImage[];
 }
 
-export const PoolsAndFurniture = () => {
+export const PoolsAndFurniture = memo(() => {
   const { projects: poolProjects, loading: poolLoading } = useProjectsByCategory("Pools");
   const { projects: furnitureProjects, loading: furnitureLoading } = useProjectsByCategory("Custom Furniture");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -109,4 +109,6 @@ export const PoolsAndFurniture = () => {
 
       {selectedProject && <ProjectGallery open={galleryOpen} onOpenChange={setGalleryOpen} projectTitle={selectedProject.title} images={selectedProject.images || []} />}
     </>;
-};
+});
+
+PoolsAndFurniture.displayName = "PoolsAndFurniture";

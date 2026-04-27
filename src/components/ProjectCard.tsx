@@ -20,11 +20,10 @@ interface ProjectCardProps {
     coverImage?: string;
     images: (string | ProjectImage)[];
   };
-  categoryColor: string;
   index: number;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({ project, categoryColor, index }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({ project, index }) => {
   const {
     elementRef,
     isVisible

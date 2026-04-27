@@ -1,8 +1,9 @@
 import { useProjectsByCategory } from "@/hooks/useProjectsByCategory";
 import { Card, CardContent } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
+import { memo } from "react";
 
-export const DevelopAndConcepts = () => {
+export const DevelopAndConcepts = memo(() => {
   const { projects, loading } = useProjectsByCategory(["Development", "Concepts"]);
 
   return (
@@ -56,4 +57,6 @@ export const DevelopAndConcepts = () => {
       </div>
     </section>
   );
-};
+});
+
+DevelopAndConcepts.displayName = "DevelopAndConcepts";

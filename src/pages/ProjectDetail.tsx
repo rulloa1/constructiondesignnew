@@ -34,6 +34,16 @@ interface ProjectDocument {
   title: string | null;
 }
 
+interface ExtendedProject extends Omit<ReturnType<typeof getProjectById>, 'images'> {
+  images: (string | { url: string; alt: string })[];
+  duration?: string;
+  sqft?: number;
+  bedrooms?: number;
+  baths?: number;
+  budget?: string;
+  subtitle?: string;
+}
+
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: (i: number = 0) => ({
@@ -266,10 +276,10 @@ const ProjectDetail = () => {
                 <p className="font-inter text-[10px] tracking-[0.3em] text-muted-foreground uppercase mb-2 font-medium">Category</p>
                 <p className="font-playfair text-lg text-foreground">{project.category}</p>
               </motion.div>
-              {(project as any).subtitle && (
+              {(project as ExtendedProject).subtitle && (
                 <motion.div variants={fadeUp} custom={1} className="border-l-2 border-accent/40 pl-6 py-4">
                   <p className="font-inter text-[10px] tracking-[0.3em] text-muted-foreground uppercase mb-2 font-medium">Design Style</p>
-                  <p className="font-playfair text-lg text-foreground">{(project as any).subtitle}</p>
+                  <p className="font-playfair text-lg text-foreground">{(project as ExtendedProject).subtitle}</p>
                 </motion.div>
               )}
               {project.location && (
@@ -289,12 +299,12 @@ const ProjectDetail = () => {
                 className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px mb-12 bg-border/20 rounded-xl overflow-hidden border border-border/30"
               >
                 {[
-                  (project as any).duration && { icon: CalendarDays, value: (project as any).duration, label: "Duration" },
-                  (project as any).sqft && { icon: Square, value: (project as any).sqft.toLocaleString(), label: "Sq Ft" },
-                  (project as any).bedrooms && { icon: Bed, value: (project as any).bedrooms, label: "Bedrooms" },
-                  (project as any).baths && { icon: Droplets, value: (project as any).baths, label: "Baths" },
-                  (project as any).budget && { icon: Wallet, value: (project as any).budget, label: "Budget" },
-                ].filter(Boolean).map((stat: any, i) => (
+                  (project as ExtendedProject).duration && { icon: CalendarDays, value: (project as ExtendedProject).duration, label: "Duration" },
+                  (project as ExtendedProject).sqft && { icon: Square, value: (project as ExtendedProject).sqft.toLocaleString(), label: "Sq Ft" },
+                  (project as ExtendedProject).bedrooms && { icon: Bed, value: (project as ExtendedProject).bedrooms, label: "Bedrooms" },
+                  (project as ExtendedProject).baths && { icon: Droplets, value: (project as ExtendedProject).baths, label: "Baths" },
+                  (project as ExtendedProject).budget && { icon: Wallet, value: (project as ExtendedProject).budget, label: "Budget" },
+                ].filter(Boolean).map((stat: { icon: typeof CalendarDays; value: string | number; label: string }, i) => (
                   <motion.div
                     key={stat.label}
                     variants={fadeUp}
@@ -317,7 +327,7 @@ const ProjectDetail = () => {
                   <p className="font-inter text-[10px] tracking-[0.3em] text-muted-foreground uppercase font-medium">My Role</p>
                 </motion.div>
                 <motion.div variants={fadeUp} custom={1} className="flex flex-wrap gap-2">
-                  {(project as any).roles!.split(',').map((role: string, index: number) => (
+                  {(project as ExtendedProject).roles!.split(',').map((role: string, index: number) => (
                     <span
                       key={index}
                       className="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-inter bg-accent/5 text-foreground border border-accent/15 hover:border-accent/30 hover:bg-accent/10 transition-all duration-300"
@@ -341,7 +351,7 @@ const ProjectDetail = () => {
                   Feature Highlights
                 </motion.p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
-                  {(project as any).features!.map((feature: string, index: number) => (
+                  {(project as ExtendedProject).features!.map((feature: string, index: number) => (
                     <motion.div key={index} variants={fadeUp} custom={index * 0.3} className="flex items-center gap-3 group">
                       <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
                         <Check className="h-3 w-3 text-accent" />
